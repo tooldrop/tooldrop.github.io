@@ -618,6 +618,19 @@ a:hover {
   margin-top: 0.5rem;
 }
 
+/* Substack Embed */
+.substack-embed-container {
+  max-width: 480px;
+  margin: 0 auto;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.substack-embed-container iframe {
+  display: block;
+  max-width: 100%;
+}
+
 /* ================================
    Footer
    ================================ */
@@ -677,6 +690,11 @@ a:hover {
   color: var(--text-muted);
   font-size: 0.875rem;
   margin-bottom: 0.75rem;
+}
+
+.footer-subscribe-btn {
+  display: inline-flex;
+  margin-top: 0.5rem;
 }
 
 .footer-bottom {
