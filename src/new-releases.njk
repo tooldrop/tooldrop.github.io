@@ -1,0 +1,65 @@
+---
+layout: base.njk
+title: New AI Tool Releases
+description: Discover the latest AI tools for game development and vibe coding. Stay up to date with new releases in coding, art generation, music, voice, and more.
+permalink: /new-releases/
+---
+
+<section class="category-page">
+  <div class="container">
+    <nav class="breadcrumb">
+      <a href="/">Home</a> / New Releases
+    </nav>
+    
+    <h1>🔥 New AI Tool Releases</h1>
+    <p class="subtitle">The latest AI tools for indie game devs and vibe coders</p>
+    
+    <div class="tools-grid">
+      {% for tool in tools | getNewReleases %}
+      <div class="tool-card">
+        <div class="tool-card-header">
+          <h3><a href="/tool/{{ tool.name | slugify }}/">{{ tool.name }}</a></h3>
+          {% if tool.newRelease %}
+          <span class="new-badge">New</span>
+          {% endif %}
+        </div>
+        <p class="description">{{ tool.description }}</p>
+        <div class="meta">
+          {% for cat in tool.categories %}
+          <span class="tag category">{{ cat }}</span>
+          {% endfor %}
+          <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+          {% if tool.dateAdded %}
+          <span class="tag">Added {{ tool.dateAdded | dateDisplay }}</span>
+          {% endif %}
+        </div>
+        <div class="actions">
+          <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit →</a>
+          <a href="/tool/{{ tool.name | slugify }}/" class="btn btn-secondary">Details</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    
+    {% if (tools | getNewReleases).length == 0 %}
+    <div class="no-results">
+      <h3>No new releases yet</h3>
+      <p>Check back soon for the latest AI tools!</p>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="newsletter-section">
+      <h2>📬 Get Notified About New Tools</h2>
+      <p>Subscribe to get weekly updates on the latest AI tools for game devs</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="your@email.com" disabled>
+        <button type="submit" disabled>Subscribe</button>
+      </form>
+      <p class="placeholder-note">Newsletter coming soon!</p>
+    </div>
+  </div>
+</section>

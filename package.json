@@ -1,0 +1,13 @@
+{
+  "name": "tooldrop",
+  "version": "1.0.0",
+  "description": "AI tools directory for vibe coders and indie game devs",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

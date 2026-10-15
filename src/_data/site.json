@@ -1,0 +1,62 @@
+{
+  "name": "ToolDrop",
+  "description": "AI tools directory for vibe coders and indie game devs",
+  "url": "https://tooldrop.github.io",
+  "categories": [
+    {
+      "name": "AI Coding Agents & IDEs",
+      "icon": "💻",
+      "description": "AI-powered code editors, autocomplete tools, and coding assistants"
+    },
+    {
+      "name": "App Builders",
+      "icon": "🚀",
+      "description": "Vibe coding tools that turn ideas into working apps with AI"
+    },
+    {
+      "name": "Code Review & Testing",
+      "icon": "🔍",
+      "description": "AI tools for code review, test generation, and quality assurance"
+    },
+    {
+      "name": "Game Art & Sprites",
+      "icon": "🎨",
+      "description": "AI image generators for game assets, sprites, and concept art"
+    },
+    {
+      "name": "3D & Models",
+      "icon": "📦",
+      "description": "AI tools for creating 3D models, textures, and environments"
+    },
+    {
+      "name": "Audio, Music & SFX",
+      "icon": "🎵",
+      "description": "AI music generators, sound effects, and audio tools"
+    },
+    {
+      "name": "Voice",
+      "icon": "🎙️",
+      "description": "AI voice synthesis, text-to-speech, and voice cloning tools"
+    },
+    {
+      "name": "Game Design & Narrative",
+      "icon": "📖",
+      "description": "AI tools for game design, storytelling, dialogue, and NPCs"
+    },
+    {
+      "name": "Video & Trailers",
+      "icon": "🎬",
+      "description": "AI video generation, editing, and trailer creation tools"
+    },
+    {
+      "name": "Marketing & Store Page Copy",
+      "icon": "📝",
+      "description": "AI copywriting tools for game descriptions and marketing"
+    },
+    {
+      "name": "Agent Frameworks",
+      "icon": "🤖",
+      "description": "Frameworks and SDKs for building AI agents and applications"
+    }
+  ]
+}

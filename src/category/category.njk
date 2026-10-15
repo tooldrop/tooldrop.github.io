@@ -1,0 +1,89 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: "/category/{{ category.slug }}/"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best AI Tools for {{ category.name }} | ToolDrop</title>
+  <meta name="description" content="Discover the best AI tools for {{ category.name }}. Compare {{ category.tools.length }} tools for indie game devs and vibe coders.">
+  
+  <meta property="og:title" content="Best AI Tools for {{ category.name }} | ToolDrop">
+  <meta property="og:description" content="Discover the best AI tools for {{ category.name }}. Compare {{ category.tools.length }} tools.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tooldrop.github.io/category/{{ category.slug }}/">
+  <meta property="og:site_name" content="ToolDrop">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Best AI Tools for {{ category.name }} | ToolDrop">
+  <meta name="twitter:description" content="Discover the best AI tools for {{ category.name }}.">
+  
+  <link rel="canonical" href="https://tooldrop.github.io/category/{{ category.slug }}/">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">🛠️ ToolDrop</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/new-releases/">New Releases</a>
+        <a href="/about/">About</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="category-page">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="/">Home</a> / <a href="/#categories">Categories</a> / {{ category.name }}
+        </nav>
+        
+        <h1>Best AI Tools for {{ category.name }}</h1>
+        <p class="subtitle">{{ category.tools.length }} tools to help you with {{ category.name | lower }}</p>
+        
+        <div class="tools-grid">
+          {% for tool in category.tools %}
+          <div class="tool-card">
+            <div class="tool-card-header">
+              <h3><a href="/tool/{{ tool.name | slugify }}/">{{ tool.name }}</a></h3>
+              {% if tool.newRelease %}
+              <span class="new-badge">New</span>
+              {% endif %}
+            </div>
+            <p class="description">{{ tool.description }}</p>
+            <div class="meta">
+              <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+              {% if tool.pricingNote %}
+              <span class="tag">{{ tool.pricingNote }}</span>
+              {% endif %}
+            </div>
+            <div class="actions">
+              <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit →</a>
+              <a href="/tool/{{ tool.name | slugify }}/" class="btn btn-secondary">Details</a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 ToolDrop. Built for the indie dev community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

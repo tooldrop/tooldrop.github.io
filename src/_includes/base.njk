@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }} | ToolDrop</title>
+  <meta name="description" content="{{ description | default('Discover the best AI tools for vibe coders and indie game devs. Find AI coding agents, art generators, music tools, and more.') }}">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ title }} | ToolDrop">
+  <meta property="og:description" content="{{ description | default('Discover the best AI tools for vibe coders and indie game devs.') }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tooldrop.github.io{{ page.url }}">
+  <meta property="og:site_name" content="ToolDrop">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }} | ToolDrop">
+  <meta name="twitter:description" content="{{ description | default('Discover the best AI tools for vibe coders and indie game devs.') }}">
+  
+  <link rel="canonical" href="https://tooldrop.github.io{{ page.url }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">🛠️ ToolDrop</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/new-releases/">New Releases</a>
+        <a href="/about/">About</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo">🛠️ ToolDrop</span>
+          <p>AI tools for vibe coders and indie game devs</p>
+        </div>
+        <div class="footer-links">
+          <h4>Categories</h4>
+          <ul>
+            {% for cat in tools | getCategories | limit(6) %}
+            <li><a href="/category/{{ cat | slugify }}/">{{ cat }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/new-releases/">New Releases</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Get weekly AI tool updates</p>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" placeholder="your@email.com" disabled>
+            <button type="submit" disabled>Subscribe</button>
+          </form>
+          <p class="placeholder-note">Coming soon!</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {{ 2024 }} ToolDrop. Built for the indie dev community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
