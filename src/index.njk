@@ -109,7 +109,7 @@ description: Discover the best AI tools for indie game development and vibe codi
           {% for cat in tool.categories %}
           <span class="tag category">{{ cat }}</span>
           {% endfor %}
-          <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+          <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% elif tool.pricing == 'unknown' %}unknown{% endif %}">{% if tool.pricing == 'unknown' %}Pricing not published{% else %}{{ tool.pricing }}{% endif %}</span>
         </div>
         <div class="actions">
           <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit →</a>

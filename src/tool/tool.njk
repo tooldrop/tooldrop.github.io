@@ -58,7 +58,7 @@ permalink: "/tool/{{ tool.slug }}/"
             {% for cat in tool.categories %}
             <a href="/category/{{ cat | slugify }}/" class="tag category">{{ cat }}</a>
             {% endfor %}
-            <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+            <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% elif tool.pricing == 'unknown' %}unknown{% endif %}">{% if tool.pricing == 'unknown' %}Pricing not published{% else %}{{ tool.pricing }}{% endif %}</span>
             {% if tool.newRelease %}
             <span class="new-badge">New Release</span>
             {% endif %}
@@ -99,7 +99,7 @@ permalink: "/tool/{{ tool.slug }}/"
             
             <div class="info-item">
               <div class="info-label">Pricing</div>
-              <div class="info-value">{{ tool.pricing | capitalize }}</div>
+              <div class="info-value">{% if tool.pricing == 'unknown' %}Not published{% else %}{{ tool.pricing | capitalize }}{% endif %}</div>
             </div>
             
             {% if tool.pricingNote %}

@@ -360,16 +360,6 @@
     "dateAdded": "2024-09-02"
   },
   {
-    "name": "ChatGPT for Game Design",
-    "url": "https://chat.openai.com",
-    "description": "Use ChatGPT for brainstorming game mechanics, writing dialogue, and designing quests.",
-    "categories": ["Game Design & Narrative"],
-    "pricing": "freemium",
-    "pricingNote": "Free tier, Plus $20/mo",
-    "tags": ["brainstorming", "dialogue", "quests", "OpenAI"],
-    "dateAdded": "2024-07-01"
-  },
-  {
     "name": "Charisma.ai",
     "url": "https://charisma.ai",
     "description": "Immersive conversational AI platform for interactive training scenarios and brand experiences.",
@@ -601,8 +591,7 @@
     "url": "https://thrixel.com",
     "description": "Text/image-to-3D generator that outputs named, editable parts for Unity, Roblox, Unreal, and Three.js with MCP and API access.",
     "categories": ["3D & Models"],
-    "pricing": "freemium",
-    "pricingNote": "See site for pricing",
+    "pricing": "unknown",
     "tags": ["text-to-3D", "game assets", "MCP", "API", "open source skill"],
     "dateAdded": "2026-10-16",
     "newRelease": true
