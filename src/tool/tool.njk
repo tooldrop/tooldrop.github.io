@@ -1,0 +1,144 @@
+---
+pagination:
+  data: collections.toolPages
+  size: 1
+  alias: tool
+permalink: "/tool/{{ tool.slug }}/"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ tool.name }} - AI Tool Review | ToolDrop</title>
+  <meta name="description" content="{{ tool.description }} Learn about pricing, features, and use cases for {{ tool.name }}.">
+  
+  <meta property="og:title" content="{{ tool.name }} - AI Tool Review | ToolDrop">
+  <meta property="og:description" content="{{ tool.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tooldrop.github.io/tool/{{ tool.slug }}/">
+  <meta property="og:site_name" content="ToolDrop">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ tool.name }} - AI Tool Review | ToolDrop">
+  <meta name="twitter:description" content="{{ tool.description }}">
+  
+  <link rel="canonical" href="https://tooldrop.github.io/tool/{{ tool.slug }}/">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="/" class="logo">🛠️ ToolDrop</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/new-releases/">New Releases</a>
+        <a href="/about/">About</a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="tool-detail">
+      <div class="container">
+        <div class="tool-detail-header">
+          <nav class="breadcrumb">
+            <a href="/">Home</a> / 
+            {% if tool.categories[0] %}
+            <a href="/category/{{ tool.categories[0] | slugify }}/">{{ tool.categories[0] }}</a> / 
+            {% endif %}
+            {{ tool.name }}
+          </nav>
+          
+          <h1>{{ tool.name }}</h1>
+          <p class="tagline">{{ tool.description }}</p>
+          
+          <div class="tool-detail-meta">
+            {% for cat in tool.categories %}
+            <a href="/category/{{ cat | slugify }}/" class="tag category">{{ cat }}</a>
+            {% endfor %}
+            <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+            {% if tool.newRelease %}
+            <span class="new-badge">New Release</span>
+            {% endif %}
+          </div>
+          
+          <div class="actions">
+            <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit {{ tool.name }} →</a>
+          </div>
+        </div>
+
+        <div class="tool-detail-content">
+          <div class="tool-description">
+            <h2>About {{ tool.name }}</h2>
+            <p>{{ tool.description }}</p>
+            
+            {% if tool.tags and tool.tags.length > 0 %}
+            <h3>Features & Tags</h3>
+            <div class="meta" style="margin-top: 1rem;">
+              {% for tag in tool.tags %}
+              <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+            
+            {% if tool.categories.length > 1 %}
+            <h3>Related Categories</h3>
+            <p>This tool is useful for:</p>
+            <ul>
+              {% for cat in tool.categories %}
+              <li><a href="/category/{{ cat | slugify }}/">{{ cat }}</a></li>
+              {% endfor %}
+            </ul>
+            {% endif %}
+          </div>
+          
+          <aside class="tool-sidebar">
+            <h3>Details</h3>
+            
+            <div class="info-item">
+              <div class="info-label">Pricing</div>
+              <div class="info-value">{{ tool.pricing | capitalize }}</div>
+            </div>
+            
+            {% if tool.pricingNote %}
+            <div class="info-item">
+              <div class="info-label">Price</div>
+              <div class="info-value">{{ tool.pricingNote }}</div>
+            </div>
+            {% endif %}
+            
+            <div class="info-item">
+              <div class="info-label">Category</div>
+              <div class="info-value">{{ tool.categories[0] }}</div>
+            </div>
+            
+            {% if tool.dateAdded %}
+            <div class="info-item">
+              <div class="info-label">Added</div>
+              <div class="info-value">{{ tool.dateAdded | dateDisplay }}</div>
+            </div>
+            {% endif %}
+            
+            <div class="info-item">
+              <div class="info-label">Website</div>
+              <div class="info-value"><a href="{{ tool.url }}" target="_blank" rel="noopener">{{ tool.url | replace("https://", "") | replace("www.", "") }}</a></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2024 ToolDrop. Built for the indie dev community.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

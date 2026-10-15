@@ -1,0 +1,140 @@
+---
+layout: base.njk
+title: AI Tools for Vibe Coders & Indie Game Devs
+description: Discover the best AI tools for indie game development and vibe coding. Find AI coding agents, art generators, music tools, voice synthesis, and more.
+---
+
+<section class="hero">
+  <div class="container">
+    <h1>AI Tools for Creators</h1>
+    <p class="subtitle">Discover the best AI tools for vibe coders and indie game devs. From coding agents to art generators, find everything you need to build.</p>
+    
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="tool-search" class="search-box" placeholder="Search tools by name, category, or feature...">
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-section">
+      <div class="filter-group">
+        <span class="filter-label">Filter by category:</span>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter-type="category" data-filter-value="all">All</button>
+          {% for cat in site.categories %}
+          <button class="filter-pill" data-filter-type="category" data-filter-value="{{ cat.name | lower }}">{{ cat.icon }} {{ cat.name }}</button>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-label">Filter by pricing:</span>
+        <div class="filter-pills">
+          <button class="filter-pill active" data-filter-type="pricing" data-filter-value="all">All</button>
+          <button class="filter-pill" data-filter-type="pricing" data-filter-value="free">Free</button>
+          <button class="filter-pill" data-filter-type="pricing" data-filter-value="freemium">Freemium</button>
+          <button class="filter-pill" data-filter-type="pricing" data-filter-value="paid">Paid</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">🔥 Latest Releases</h2>
+      <a href="/new-releases/" class="section-link">View all →</a>
+    </div>
+    <div class="tools-grid">
+      {% for tool in tools | getNewReleases | limit(6) %}
+      {% include "tool-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">📂 Browse by Category</h2>
+    </div>
+    <div class="categories-grid">
+      {% for cat in site.categories %}
+      <div class="category-card">
+        <div class="icon">{{ cat.icon }}</div>
+        <h3><a href="/category/{{ cat.name | slugify }}/">{{ cat.name }}</a></h3>
+        <p class="count">{{ tools | filterByCategory(cat.name) | length }} tools</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">⭐ Featured Tools</h2>
+    </div>
+    <div class="tools-grid" id="all-tools">
+      {% for tool in tools | getFeatured %}
+      {% include "tool-card.njk" %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">🛠️ All Tools</h2>
+    </div>
+    <div class="tools-grid" id="filtered-tools">
+      {% for tool in tools %}
+      <div class="tool-card" data-tool="{{ tool.name | slugify }}" 
+           data-name="{{ tool.name }}" 
+           data-description="{{ tool.description }}"
+           data-categories="{{ tool.categories | join(',') | lower }}"
+           data-pricing="{{ tool.pricing }}"
+           data-tags="{{ tool.tags | join(',') }}">
+        <div class="tool-card-header">
+          <h3><a href="/tool/{{ tool.name | slugify }}/">{{ tool.name }}</a></h3>
+          {% if tool.newRelease %}
+          <span class="new-badge">New</span>
+          {% endif %}
+        </div>
+        <p class="description">{{ tool.description }}</p>
+        <div class="meta">
+          {% for cat in tool.categories %}
+          <span class="tag category">{{ cat }}</span>
+          {% endfor %}
+          <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+        </div>
+        <div class="actions">
+          <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit →</a>
+          <a href="/tool/{{ tool.name | slugify }}/" class="btn btn-secondary">Details</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div id="no-results" class="no-results" style="display: none;">
+      <h3>No tools found</h3>
+      <p>Try adjusting your search or filters</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="newsletter-section">
+      <h2>📬 Stay Updated</h2>
+      <p>Get weekly updates on the latest AI tools for game devs and vibe coders</p>
+      <form class="newsletter-form" action="#" method="post">
+        <input type="email" placeholder="your@email.com" disabled>
+        <button type="submit" disabled>Subscribe</button>
+      </form>
+      <p class="placeholder-note">Newsletter coming soon!</p>
+    </div>
+  </div>
+</section>

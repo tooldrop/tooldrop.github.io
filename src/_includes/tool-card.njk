@@ -1,0 +1,24 @@
+<div class="tool-card" data-tool="{{ tool.name | slugify }}" 
+     data-name="{{ tool.name }}" 
+     data-description="{{ tool.description }}"
+     data-categories="{{ tool.categories | join(',') | lower }}"
+     data-pricing="{{ tool.pricing }}"
+     data-tags="{{ tool.tags | join(',') }}">
+  <div class="tool-card-header">
+    <h3><a href="/tool/{{ tool.name | slugify }}/">{{ tool.name }}</a></h3>
+    {% if tool.newRelease %}
+    <span class="new-badge">New</span>
+    {% endif %}
+  </div>
+  <p class="description">{{ tool.description }}</p>
+  <div class="meta">
+    {% for cat in tool.categories %}
+    <span class="tag category">{{ cat }}</span>
+    {% endfor %}
+    <span class="tag pricing {% if tool.pricing == 'paid' %}paid{% endif %}">{{ tool.pricing }}</span>
+  </div>
+  <div class="actions">
+    <a href="{{ tool.url }}" target="_blank" rel="noopener" class="btn btn-primary">Visit →</a>
+    <a href="/tool/{{ tool.name | slugify }}/" class="btn btn-secondary">Details</a>
+  </div>
+</div>
