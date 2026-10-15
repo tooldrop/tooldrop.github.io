@@ -360,16 +360,6 @@
     "dateAdded": "2024-09-02"
   },
   {
-    "name": "ChatGPT for Game Design",
-    "url": "https://chat.openai.com",
-    "description": "Use ChatGPT for brainstorming game mechanics, writing dialogue, and designing quests.",
-    "categories": ["Game Design & Narrative"],
-    "pricing": "freemium",
-    "pricingNote": "Free tier, Plus $20/mo",
-    "tags": ["brainstorming", "dialogue", "quests", "OpenAI"],
-    "dateAdded": "2024-07-01"
-  },
-  {
     "name": "Charisma.ai",
     "url": "https://charisma.ai",
     "description": "Immersive conversational AI platform for interactive training scenarios and brand experiences.",
@@ -562,5 +552,70 @@
     "pricingNote": "Open source",
     "tags": ["TypeScript", "streaming", "web", "Vercel"],
     "dateAdded": "2024-09-10"
+  },
+  {
+    "name": "OpenCode",
+    "url": "https://opencode.ai",
+    "description": "Open-source AI coding agent for the terminal with background sub-agents, code mode, and a rebuilt plugin system.",
+    "categories": ["AI Coding Agents & IDEs"],
+    "pricing": "free",
+    "pricingNote": "Open source, free models included or BYO",
+    "tags": ["open source", "terminal", "coding agent", "background agents"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
+  },
+  {
+    "name": "Epherem",
+    "url": "https://epherem.com",
+    "description": "Free source-code security scanner for AI-built apps with 55 checks for auth, RLS, exposed keys, and vulnerable packages.",
+    "categories": ["Code Review & Testing"],
+    "pricing": "free",
+    "pricingNote": "Free during early access",
+    "tags": ["security", "vibe coding", "Supabase", "code scanning"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
+  },
+  {
+    "name": "Ludo.ai",
+    "url": "https://ludo.ai",
+    "description": "AI game asset suite for sprites, 3D models, video, SFX, music, and voices with a CLI for coding agents.",
+    "categories": ["Game Art & Sprites", "3D & Models", "Audio, Music & SFX"],
+    "pricing": "freemium",
+    "pricingNote": "Free trial, Indie $15/mo, Pro $35/mo (annual)",
+    "tags": ["game assets", "sprites", "3D", "SFX", "CLI"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
+  },
+  {
+    "name": "Thrixel",
+    "url": "https://thrixel.com",
+    "description": "Text/image-to-3D generator that outputs named, editable parts for Unity, Roblox, Unreal, and Three.js with MCP and API access.",
+    "categories": ["3D & Models"],
+    "pricing": "unknown",
+    "tags": ["text-to-3D", "game assets", "MCP", "API", "open source skill"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
+  },
+  {
+    "name": "Fish Audio",
+    "url": "https://fish.audio",
+    "description": "Expressive text-to-speech and voice cloning with plain-language direction, mid-sentence emotion shifts, and multi-character scenes.",
+    "categories": ["Voice"],
+    "pricing": "freemium",
+    "pricingNote": "Free to start, paid plans available",
+    "tags": ["text-to-speech", "voice cloning", "emotion", "games", "animation"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
+  },
+  {
+    "name": "Mirelo",
+    "url": "https://mirelo.ai",
+    "description": "Video-to-sound AI that generates foley, ambience, and SFX synced to video action while preserving dialogue.",
+    "categories": ["Audio, Music & SFX"],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (watermarked), Creator from €20/mo",
+    "tags": ["video-to-sound", "foley", "SFX", "MCP", "API"],
+    "dateAdded": "2026-10-16",
+    "newRelease": true
   }
 ]

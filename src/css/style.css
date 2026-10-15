@@ -335,6 +335,11 @@ a:hover {
   color: var(--accent-warning);
 }
 
+.tag.pricing.unknown {
+  background: rgba(110, 118, 129, 0.15);
+  color: var(--text-muted);
+}
+
 .tool-card .actions {
   display: flex;
   gap: 0.75rem;
