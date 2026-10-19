@@ -1,0 +1,1162 @@
+[
+  {
+    "name": "Cursor",
+    "url": "https://cursor.com",
+    "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro from $20/mo",
+    "tags": [
+      "code editor",
+      "autocomplete",
+      "chat",
+      "VS Code"
+    ],
+    "dateAdded": "2024-10-01",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "description": "AI pair programmer that offers code suggestions directly in your editor, powered by OpenAI.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $10/mo",
+    "tags": [
+      "autocomplete",
+      "code suggestions",
+      "GitHub"
+    ],
+    "dateAdded": "2024-09-15",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Zed",
+    "url": "https://zed.dev",
+    "description": "High-performance code editor with built-in AI assistance, real-time collaboration, and Rust-powered speed.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free, Pro features available",
+    "tags": [
+      "code editor",
+      "collaboration",
+      "fast",
+      "Rust"
+    ],
+    "dateAdded": "2024-10-12",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Tabnine",
+    "url": "https://www.tabnine.com",
+    "description": "AI code assistant now part of Tricentis, offering enterprise-grade code completion and security features.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "autocomplete",
+      "enterprise",
+      "privacy"
+    ],
+    "dateAdded": "2024-09-01",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Replit",
+    "url": "https://replit.com",
+    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Core from $20/mo",
+    "tags": [
+      "browser IDE",
+      "deployment",
+      "collaboration"
+    ],
+    "dateAdded": "2024-08-20",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Bolt",
+    "url": "https://bolt.new",
+    "description": "Full-stack web development platform with AI that writes, runs, and deploys code in the browser.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "full-stack",
+      "browser",
+      "deployment",
+      "vibe coding"
+    ],
+    "dateAdded": "2024-10-10",
+    "newRelease": true,
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "v0",
+    "url": "https://v0.dev",
+    "description": "AI-powered UI generation tool by Vercel that creates React components from text prompts.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Premium from $20/mo",
+    "tags": [
+      "UI generation",
+      "React",
+      "Vercel",
+      "components"
+    ],
+    "dateAdded": "2024-09-20",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Lovable",
+    "url": "https://lovable.dev",
+    "description": "AI software engineer that builds full-stack web applications from natural language descriptions.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "full-stack",
+      "vibe coding",
+      "web apps"
+    ],
+    "dateAdded": "2024-10-05",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Claude",
+    "url": "https://claude.ai",
+    "description": "Advanced AI assistant by Anthropic with strong coding capabilities and long context windows.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro $20/mo",
+    "tags": [
+      "chat",
+      "coding",
+      "long context",
+      "Anthropic"
+    ],
+    "dateAdded": "2024-08-01",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "description": "OpenAI's conversational AI with code interpreter, image generation, and plugin ecosystem.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Plus $20/mo",
+    "tags": [
+      "chat",
+      "coding",
+      "plugins",
+      "OpenAI"
+    ],
+    "dateAdded": "2024-07-15",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Devin",
+    "url": "https://devin.ai",
+    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "$500/mo",
+    "tags": [
+      "autonomous",
+      "agent",
+      "full-stack"
+    ],
+    "dateAdded": "2024-10-12",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Qodo",
+    "url": "https://www.qodo.ai",
+    "description": "AI-powered code review and governance platform that generates tests and enforces coding standards.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for individuals",
+    "tags": [
+      "testing",
+      "code review",
+      "test generation",
+      "governance"
+    ],
+    "dateAdded": "2024-09-05",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Sourcegraph Cody",
+    "url": "https://sourcegraph.com/cody",
+    "description": "AI coding assistant with deep codebase understanding and context-aware suggestions.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "codebase search",
+      "context",
+      "enterprise"
+    ],
+    "dateAdded": "2024-08-15",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "CodeRabbit",
+    "url": "https://coderabbit.ai",
+    "description": "AI code reviewer that provides contextual feedback on pull requests with actionable suggestions.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for open source",
+    "tags": [
+      "code review",
+      "pull requests",
+      "GitHub"
+    ],
+    "dateAdded": "2024-08-28",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Greptile",
+    "url": "https://www.greptile.com",
+    "description": "AI-powered code review that understands your entire codebase to catch bugs and security issues.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "code review",
+      "security",
+      "codebase understanding"
+    ],
+    "dateAdded": "2024-10-08",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "description": "Leading AI image generator known for artistic, high-quality visuals through Discord.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $10/mo",
+    "tags": [
+      "image generation",
+      "art",
+      "Discord"
+    ],
+    "dateAdded": "2024-07-01",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "DALL-E 3",
+    "url": "https://openai.com/dall-e-3",
+    "description": "OpenAI's latest image generation model with improved prompt understanding and detail.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Pay per image via API",
+    "tags": [
+      "image generation",
+      "OpenAI",
+      "API"
+    ],
+    "dateAdded": "2024-07-10",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Leonardo AI",
+    "url": "https://leonardo.ai",
+    "description": "AI image generation platform tailored for game assets, characters, and concept art.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $12/mo",
+    "tags": [
+      "game assets",
+      "characters",
+      "concept art"
+    ],
+    "dateAdded": "2024-08-05",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Scenario",
+    "url": "https://www.scenario.com",
+    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "game art",
+      "custom models",
+      "style consistency",
+      "workflows"
+    ],
+    "dateAdded": "2024-09-08",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Stable Diffusion",
+    "url": "https://stability.ai",
+    "description": "Open-source image generation model that can run locally with various fine-tuned versions.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source, self-hosted",
+    "tags": [
+      "open source",
+      "local",
+      "customizable"
+    ],
+    "dateAdded": "2024-07-20",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Pixel Lab",
+    "url": "https://www.pixellab.ai",
+    "description": "AI tool specifically designed for generating pixel art sprites, animations, and game assets.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "pixel art",
+      "sprites",
+      "retro",
+      "animation"
+    ],
+    "dateAdded": "2024-10-08",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Meshy",
+    "url": "https://www.meshy.ai",
+    "description": "AI 3D model generator that creates textured, print-ready models from text prompts or images.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro from $20/mo",
+    "tags": [
+      "3D models",
+      "textures",
+      "text-to-3D",
+      "3D printing"
+    ],
+    "dateAdded": "2024-09-18",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Luma AI",
+    "url": "https://lumalabs.ai",
+    "description": "AI creative platform for video, image, and 3D generation with photorealistic quality.",
+    "categories": [
+      "3D & Models",
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "3D capture",
+      "video",
+      "photorealistic"
+    ],
+    "dateAdded": "2024-08-12",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Kaedim",
+    "url": "https://www.kaedim3d.com",
+    "description": "Transform 2D images into production-ready 3D models for games and applications.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $15/mo",
+    "tags": [
+      "image-to-3D",
+      "game assets",
+      "production-ready"
+    ],
+    "dateAdded": "2024-08-25",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Tripo AI",
+    "url": "https://www.tripo3d.ai",
+    "description": "Fast AI-powered text-to-3D and image-to-3D model generation with high quality output.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "text-to-3D",
+      "fast generation",
+      "API"
+    ],
+    "dateAdded": "2024-10-03",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Spline AI",
+    "url": "https://spline.design",
+    "description": "3D design tool with AI features for generating objects, textures, and interactive web experiences.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro from $7/mo",
+    "tags": [
+      "3D design",
+      "web 3D",
+      "animations",
+      "interactive"
+    ],
+    "dateAdded": "2024-09-12",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Suno",
+    "url": "https://suno.com",
+    "description": "AI music generator that creates full songs with vocals from text prompts.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro from $10/mo",
+    "tags": [
+      "music generation",
+      "vocals",
+      "songs"
+    ],
+    "dateAdded": "2024-09-01",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Udio",
+    "url": "https://www.udio.com",
+    "description": "Create high-quality AI-generated music in any style with realistic vocals.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "music generation",
+      "vocals",
+      "high quality"
+    ],
+    "dateAdded": "2024-10-01",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Soundraw",
+    "url": "https://soundraw.io",
+    "description": "AI music generator for creating royalty-free background music trained only on in-house productions.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $16.99/mo",
+    "tags": [
+      "royalty-free",
+      "soundtracks",
+      "background music",
+      "copyright-safe"
+    ],
+    "dateAdded": "2024-08-10",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "ElevenLabs",
+    "url": "https://elevenlabs.io",
+    "description": "Industry-leading AI voice synthesis with realistic speech, voice cloning, and music generation.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $5/mo",
+    "tags": [
+      "text-to-speech",
+      "voice cloning",
+      "realistic",
+      "music"
+    ],
+    "dateAdded": "2024-07-25",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Murf AI",
+    "url": "https://murf.ai",
+    "description": "AI voice platform with ultra-fast TTS API for voice agents and studio-quality voiceovers.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $19/mo",
+    "tags": [
+      "voiceover",
+      "multi-language",
+      "studio quality",
+      "API"
+    ],
+    "dateAdded": "2024-08-22",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Inworld AI",
+    "url": "https://inworld.ai",
+    "description": "Models and inference for consumer AI apps: realtime TTS, STT, speech-to-speech, and LLM hosting.",
+    "categories": [
+      "Voice",
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Pay-as-you-go",
+    "tags": [
+      "TTS",
+      "STT",
+      "speech-to-speech",
+      "LLM",
+      "API"
+    ],
+    "dateAdded": "2024-08-30",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Resemble AI",
+    "url": "https://www.resemble.ai",
+    "description": "Multimodal deepfake detection and AI voice watermarking platform for enterprise security.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Contact for pricing",
+    "tags": [
+      "deepfake detection",
+      "voice cloning",
+      "security",
+      "enterprise"
+    ],
+    "dateAdded": "2024-09-02",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Charisma.ai",
+    "url": "https://charisma.ai",
+    "description": "Immersive conversational AI platform for interactive training scenarios and brand experiences.",
+    "categories": [
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "interactive fiction",
+      "storytelling",
+      "characters",
+      "training"
+    ],
+    "dateAdded": "2024-09-20",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "NovelAI",
+    "url": "https://novelai.net",
+    "description": "AI storytelling and anime image generation tool for narrative content and world-building.",
+    "categories": [
+      "Game Design & Narrative"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $10/mo",
+    "tags": [
+      "storytelling",
+      "narrative",
+      "world-building",
+      "anime"
+    ],
+    "dateAdded": "2024-08-08",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Sudowrite",
+    "url": "https://www.sudowrite.com",
+    "description": "AI writing assistant for creative fiction with story generation, editing, and visualization tools.",
+    "categories": [
+      "Game Design & Narrative"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $10/mo",
+    "tags": [
+      "fiction writing",
+      "story generation",
+      "editing"
+    ],
+    "dateAdded": "2024-08-15",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Runway",
+    "url": "https://runwayml.com",
+    "description": "AI-powered creative platform for video generation, editing, and real-world intelligence research.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $15/mo",
+    "tags": [
+      "video generation",
+      "text-to-video",
+      "editing",
+      "Gen-4"
+    ],
+    "dateAdded": "2024-07-15",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Pika",
+    "url": "https://pika.art",
+    "description": "AI creative platform with multiple models for video generation, image editing, and audio scoring.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier available",
+    "tags": [
+      "text-to-video",
+      "video editing",
+      "creative",
+      "multi-model"
+    ],
+    "dateAdded": "2024-09-28",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "HeyGen",
+    "url": "https://www.heygen.com",
+    "description": "Create AI avatar videos with lifelike digital twins for marketing and training content.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $29/mo",
+    "tags": [
+      "AI avatars",
+      "marketing videos",
+      "presenters",
+      "translation"
+    ],
+    "dateAdded": "2024-08-20",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io",
+    "description": "Enterprise AI video platform with realistic avatars for training and marketing videos.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $30/mo",
+    "tags": [
+      "AI avatars",
+      "enterprise",
+      "training videos"
+    ],
+    "dateAdded": "2024-07-28",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "description": "AI-powered video and podcast editor with transcription and text-based editing.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $15/mo",
+    "tags": [
+      "video editing",
+      "transcription",
+      "podcast"
+    ],
+    "dateAdded": "2024-08-05",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Jasper",
+    "url": "https://www.jasper.ai",
+    "description": "AI marketing platform for generating copy, blog posts, and social media content.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $49/mo",
+    "tags": [
+      "copywriting",
+      "marketing",
+      "content"
+    ],
+    "dateAdded": "2024-07-20",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "description": "GTM AI platform for sales prospecting, content creation, and lead processing workflows.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $49/mo",
+    "tags": [
+      "copywriting",
+      "product descriptions",
+      "sales",
+      "GTM"
+    ],
+    "dateAdded": "2024-07-25",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Writesonic",
+    "url": "https://writesonic.com",
+    "description": "AI writer for marketing content, landing pages, and SEO-optimized articles.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, from $20/mo",
+    "tags": [
+      "SEO",
+      "landing pages",
+      "articles"
+    ],
+    "dateAdded": "2024-08-02",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Hypotenuse AI",
+    "url": "https://www.hypotenuse.ai",
+    "description": "AI content platform for e-commerce product descriptions and marketing copy.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $29/mo",
+    "tags": [
+      "e-commerce",
+      "product descriptions",
+      "batch content"
+    ],
+    "dateAdded": "2024-09-05",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Anyword",
+    "url": "https://anyword.com",
+    "description": "AI copywriting with predictive performance scores for marketing content.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "paid",
+    "pricingNote": "From $49/mo",
+    "tags": [
+      "copywriting",
+      "analytics",
+      "performance"
+    ],
+    "dateAdded": "2024-08-28",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "LangChain",
+    "url": "https://www.langchain.com",
+    "description": "Open agent platform for building, testing, deploying, and monitoring LLM applications.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source, LangSmith paid",
+    "tags": [
+      "framework",
+      "LLM",
+      "open source",
+      "Python",
+      "agents"
+    ],
+    "dateAdded": "2024-07-05",
+    "featured": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "AutoGPT",
+    "url": "https://agpt.co",
+    "description": "AI team platform with specialized experts for content, sales, research, and automation tasks.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Pro $50/mo",
+    "tags": [
+      "autonomous",
+      "agent",
+      "experts",
+      "automation"
+    ],
+    "dateAdded": "2024-07-12",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "CrewAI",
+    "url": "https://www.crewai.com",
+    "description": "Enterprise agent build and runtime platform for orchestrating multi-agent workflows.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Open source, Enterprise available",
+    "tags": [
+      "multi-agent",
+      "orchestration",
+      "enterprise"
+    ],
+    "dateAdded": "2024-09-22",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Semantic Kernel",
+    "url": "https://github.com/microsoft/semantic-kernel",
+    "description": "Microsoft's SDK for integrating LLMs into applications with plugins and planners.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source",
+    "tags": [
+      "Microsoft",
+      "SDK",
+      "plugins",
+      "C#"
+    ],
+    "dateAdded": "2024-08-10",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Haystack",
+    "url": "https://haystack.deepset.ai",
+    "description": "Open-source AI orchestration framework for building production-ready agents and RAG pipelines.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source, Enterprise support available",
+    "tags": [
+      "RAG",
+      "pipelines",
+      "open source",
+      "agents"
+    ],
+    "dateAdded": "2024-08-18",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Vercel AI SDK",
+    "url": "https://sdk.vercel.ai",
+    "description": "TypeScript toolkit for building AI applications and agents with streaming support.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source",
+    "tags": [
+      "TypeScript",
+      "streaming",
+      "web",
+      "Vercel"
+    ],
+    "dateAdded": "2024-09-10",
+    "affiliateUrl": ""
+  },
+  {
+    "name": "OpenCode",
+    "url": "https://opencode.ai",
+    "description": "Open-source AI coding agent that works in your terminal, desktop app or IDE, with free models included or any provider's models.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source, free models included or bring your own",
+    "tags": [
+      "open source",
+      "terminal",
+      "coding agent",
+      "multi-session"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Epherem",
+    "url": "https://epherem.com",
+    "description": "Free source-code security scanner for AI-built apps with 55 checks for exposed keys, open database tables, missing login and ownership checks, and unsafe input.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free during early access (5 scans a day)",
+    "tags": [
+      "security",
+      "vibe coding",
+      "code scanning",
+      "GitHub"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Ludo.ai",
+    "url": "https://ludo.ai",
+    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video, with API, MCP and CLI access on Pro plans.",
+    "categories": [
+      "Game Art & Sprites",
+      "3D & Models",
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free credits to start, Indie $15/mo, Pro $35/mo (billed annually)",
+    "tags": [
+      "game assets",
+      "sprites",
+      "3D",
+      "audio",
+      "MCP"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Thrixel",
+    "url": "https://thrixel.com",
+    "description": "Text- and image-to-3D generator that outputs structured assets with labelled parts, usable in the browser or from coding agents like Claude Code, Codex and Cursor.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Pricing not published",
+    "tags": [
+      "text-to-3D",
+      "game assets",
+      "MCP",
+      "API"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Fish Audio",
+    "url": "https://fish.audio",
+    "description": "Expressive text-to-speech and voice cloning with emotion tags, powered by its Drama 3 voice model.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier, Plus from $11/mo (billed annually)",
+    "tags": [
+      "text-to-speech",
+      "voice cloning",
+      "emotion",
+      "characters"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Mirelo",
+    "url": "https://mirelo.ai",
+    "description": "Video-to-sound AI that generates footsteps, impacts, foley and ambience synced to your video while keeping dialogue.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan, Creator from €20/mo",
+    "tags": [
+      "video-to-sound",
+      "foley",
+      "SFX",
+      "MCP",
+      "API"
+    ],
+    "dateAdded": "2026-10-16",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Framefields",
+    "url": "https://framefields.dev",
+    "description": "Open-source, code-first video engine for coding agents: write motion graphics, type, 3D and audio in TypeScript and render frame-accurate MP4s on the GPU, no headless browser.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (Apache-2.0)",
+    "tags": [
+      "open source",
+      "motion graphics",
+      "trailers",
+      "TypeScript",
+      "coding agents"
+    ],
+    "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Effigy",
+    "url": "https://github.com/SifuInTheShell/Effigy",
+    "description": "Fully local pipeline that turns a prompt or image into a textured, rigged and animated 3D model, plus sprite sheets and pixel art, exported to Godot, Unreal or Unity.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (MIT), runs locally on a 16 GB NVIDIA GPU",
+    "tags": [
+      "open source",
+      "local",
+      "text-to-3D",
+      "rigging",
+      "sprites",
+      "MCP"
+    ],
+    "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Harness",
+    "url": "https://www.autonomous.ai/harness",
+    "description": "Open-source command center that runs Claude Code, Codex, Cursor, OpenCode and other coding agents side by side across all your machines, each on its own git worktree.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (MIT), free app on Mac and Linux",
+    "tags": [
+      "open source",
+      "coding agents",
+      "multi-agent",
+      "worktrees",
+      "desktop app"
+    ],
+    "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Hy Memory",
+    "url": "https://github.com/Tencent-Hunyuan/Hy-Memory",
+    "description": "Tencent Hunyuan's open-source memory framework and MemHub app that give agents long-term memory, including shared coding history across Claude Code, Cursor, Codex and OpenCode.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (Apache-2.0)",
+    "tags": [
+      "open source",
+      "agent memory",
+      "Python",
+      "coding agents",
+      "local"
+    ],
+    "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "NitroStack",
+    "url": "https://nitrostack.ai",
+    "description": "Platform for building, testing and deploying MCP servers and AI apps, with open-source TypeScript and Python SDKs, a visual Studio and one-step cloud deploys.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Open-source SDK and CLI, free tokens to start, paid pricing not published",
+    "tags": [
+      "MCP",
+      "open source",
+      "SDK",
+      "deployment",
+      "TypeScript"
+    ],
+    "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  }
+]
