@@ -2,7 +2,7 @@
 
 **AI tools directory for vibe coders and indie game devs**
 
-[Visit the site →](https://tooldrop.github.io)
+[Visit the live site →](https://tooldrop-hq.pages.dev)
 
 ## About
 
@@ -63,6 +63,20 @@ src/
 ├── sitemap.njk       # Sitemap generator
 └── robots.txt        # Robots file
 ```
+
+## Live Site (Cloudflare Pages)
+
+The live site is hosted on Cloudflare Pages at https://tooldrop-hq.pages.dev. Its source is in the `cloudflare-site/` directory.
+
+To build the Cloudflare site locally:
+
+```bash
+cd cloudflare-site
+SITE_URL=https://tooldrop-hq.pages.dev python3 build.py
+# Output is in cloudflare-site/dist/
+```
+
+The legacy Eleventy site in the root `src/` directory is no longer actively deployed. GitHub Pages (tooldrop.github.io) now redirects all visitors to the Cloudflare-hosted site.
 
 ## License
 

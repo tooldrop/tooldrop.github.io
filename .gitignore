@@ -1,5 +1,6 @@
 node_modules/
 _site/
+cloudflare-site/dist/
 .DS_Store
 *.log
 .env
