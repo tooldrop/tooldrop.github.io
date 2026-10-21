@@ -15,10 +15,10 @@ TODAY = date.today().isoformat()
 tools = json.load(open(os.environ.get("TOOLS_JSON", "data/tools.json")))
 CATS = [("AI Coding Agents & IDEs","💻"),("App Builders","🚀"),("Code Review & Testing","🔍"),("Game Art & Sprites","🎨"),
         ("3D & Models","📦"),("Audio, Music & SFX","🎵"),("Voice","🎙️"),("Game Design & Narrative","📖"),
-        ("Video & Trailers","🎬"),("Marketing & Store Page Copy","📝"),("Agent Frameworks","🤖")]
+        ("Video & Trailers","🎬"),("Marketing & Store Page Copy","📝"),("Agent Frameworks","🤖"),("Deploy & Hosting","☁️")]
 ICON = dict(CATS)
 APPCAT = {"AI Coding Agents & IDEs":"DeveloperApplication","App Builders":"DeveloperApplication","Code Review & Testing":"DeveloperApplication",
-          "Agent Frameworks":"DeveloperApplication","Game Art & Sprites":"DesignApplication","3D & Models":"DesignApplication",
+          "Agent Frameworks":"DeveloperApplication","Deploy & Hosting":"DeveloperApplication","Game Art & Sprites":"DesignApplication","3D & Models":"DesignApplication",
           "Audio, Music & SFX":"MultimediaApplication","Voice":"MultimediaApplication","Video & Trailers":"MultimediaApplication"}
 PRICE_LABEL = {"free":"Free","freemium":"Freemium","paid":"Paid","unknown":"Pricing not published"}
 DISCLOSURE_LINE = 'Some links on this page are affiliate links. If you sign up through them we may earn a commission at no extra cost to you. <a href="/disclosure/">Read our disclosure</a>.'
