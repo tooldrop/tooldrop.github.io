@@ -1,5 +1,105 @@
 [
   {
+    "name": "Composio",
+    "url": "https://composio.dev",
+    "description": "Gives AI agents and coding agents managed-auth access to 1,500+ app toolkits (GitHub, Slack, Notion and more) through SDKs, a CLI and an MCP gateway. The new Composio Instant lets agents pay for paid tools on their own.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Hobby plan (100,000 tool calls/mo), Pro $29/mo",
+    "tags": [
+      "MCP",
+      "tool calling",
+      "auth",
+      "SDK",
+      "agents"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Beacon",
+    "url": "https://beacon.sh",
+    "description": "Open-source memory layer for coding agents. It captures sessions from Claude Code, Cursor, Codex, OpenCode and 20+ other tools, then turns fixes and workflows into reusable skills any agent can load.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Open source (MIT) and a free cloud tier, Cloud Pro $20/mo billed annually",
+    "tags": [
+      "open source",
+      "memory",
+      "skills",
+      "MCP",
+      "coding agents"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Reticle",
+    "url": "https://www.reticle.sh",
+    "description": "Makes your coding agent verify its own work: it drives the running app, reads network calls, app state and console, and returns a pass, fail or can't-tell verdict with the file and line to fix.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Open-source SDK (Apache-2.0) and engine, hosted platform free to start, paid pricing not published",
+    "tags": [
+      "testing",
+      "verification",
+      "coding agents",
+      "CI",
+      "open source"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Phonon",
+    "url": "https://gradium.ai/phonon",
+    "description": "Gradium's open-weight text-to-speech, small enough to run offline on phones, laptops, browsers and a Raspberry Pi, with 100+ built-in voices in English, French, German, Spanish and Portuguese. Handy for in-game character voices.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "free",
+    "pricingNote": "31m English model is Apache-2.0; 40m and multilingual models are CC BY-NC (commercial use via Gradium sales)",
+    "tags": [
+      "text to speech",
+      "on-device",
+      "open weights",
+      "offline",
+      "multilingual"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Zetta 3D",
+    "url": "https://zetta3d.ai",
+    "description": "Turns a prompt, a photo or several reference views into game-ready 3D models with clean geometry, PBR textures, collision shapes and physics properties. It now also makes Gaussian splats from images or video (paid plans, early access).",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier with 140 one-off credits, paid plans from €5/mo",
+    "tags": [
+      "3D models",
+      "game assets",
+      "PBR",
+      "Gaussian splats",
+      "physics"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
     "name": "Cursor",
     "url": "https://cursor.com",
     "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities.",
@@ -981,7 +1081,7 @@
   {
     "name": "Ludo.ai",
     "url": "https://ludo.ai",
-    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video, with API, MCP and CLI access on Pro plans.",
+    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video. The new Ludo CLI (Oct 2026) lets you or coding agents like Claude Code generate assets straight into your project from the terminal, alongside its API and MCP on Pro plans.",
     "categories": [
       "Game Art & Sprites",
       "3D & Models",
@@ -990,13 +1090,14 @@
     "pricing": "freemium",
     "pricingNote": "Free credits to start, Indie $15/mo, Pro $35/mo (billed annually)",
     "tags": [
-      "game assets",
-      "sprites",
       "3D",
+      "CLI",
+      "MCP",
       "audio",
-      "MCP"
+      "game assets",
+      "sprites"
     ],
-    "dateAdded": "2026-10-16",
+    "dateAdded": "2026-10-22",
     "newRelease": true,
     "affiliateUrl": ""
   },
@@ -1041,7 +1142,7 @@
   {
     "name": "Mirelo",
     "url": "https://mirelo.ai",
-    "description": "Video-to-sound AI that generates footsteps, impacts, foley and ambience synced to your video while keeping dialogue.",
+    "description": "Video-to-sound AI that generates footsteps, impacts, foley and ambience synced to your video while keeping dialogue. SFX 2.0 (Oct 2026) designs a full, consistent soundtrack across clips of any length and is also on Runway and fal.",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -1054,7 +1155,7 @@
       "MCP",
       "API"
     ],
-    "dateAdded": "2026-10-16",
+    "dateAdded": "2026-10-22",
     "newRelease": true,
     "affiliateUrl": ""
   },
@@ -1156,6 +1257,226 @@
       "TypeScript"
     ],
     "dateAdded": "2026-10-20",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Vercel",
+    "url": "https://vercel.com",
+    "description": "Git-connected hosting for web apps and Next.js sites, with automatic preview deploys, serverless functions and a global CDN.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Hobby plan for personal, non-commercial use; Pro $20/mo per developer seat",
+    "tags": [
+      "hosting",
+      "deployment",
+      "Next.js",
+      "serverless",
+      "previews"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Netlify",
+    "url": "https://www.netlify.com",
+    "description": "Deploy sites and web apps from Git, an AI agent or the API, with unlimited deploy previews, functions and custom domains with SSL.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan with 300 credits/mo; Personal $9/mo, Pro $20/mo",
+    "tags": [
+      "hosting",
+      "deployment",
+      "static sites",
+      "serverless",
+      "previews"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Cloudflare Pages",
+    "url": "https://pages.cloudflare.com",
+    "description": "Fast static and full-stack site hosting on Cloudflare's global network, deployed from Git or the Wrangler CLI. ToolDrop runs on it.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan: unlimited sites, requests and bandwidth, 500 builds/mo",
+    "tags": [
+      "hosting",
+      "static sites",
+      "CDN",
+      "deployment",
+      "Git"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Railway",
+    "url": "https://railway.com",
+    "description": "Deploy backends, databases, workers and full-stack apps from a repo or Docker image, billed per second for what you use.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan with $1/mo usage credit (plus a $5 30-day trial); Hobby $5/mo, Pro $20/mo",
+    "tags": [
+      "hosting",
+      "backend",
+      "databases",
+      "Docker",
+      "deployment"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Render",
+    "url": "https://render.com",
+    "description": "Host web services, static sites, Postgres, Redis-compatible key value stores and cron jobs with auto-deploys from Git.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Hobby workspace with free web service and Postgres tiers; Pro $25/mo plus compute",
+    "tags": [
+      "hosting",
+      "backend",
+      "Postgres",
+      "static sites",
+      "deployment"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Pando",
+    "url": "https://trypando.ai",
+    "description": "Open-source, self-hosted platform for deploying AI-built apps behind sign-in, with security scans and isolated networks per app. Early-stage.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (AGPL-3.0), self-hosted",
+    "tags": [
+      "self-hosted",
+      "open source",
+      "deployment",
+      "access control",
+      "Docker"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "itch.io",
+    "url": "https://itch.io",
+    "description": "Upload and sell indie games, including playable browser games, with a pay-what-you-want model and no hosting fees.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free to use; you choose the revenue share (open revenue sharing)",
+    "tags": [
+      "game publishing",
+      "HTML5 games",
+      "indie games",
+      "storefront",
+      "hosting"
+    ],
+    "dateAdded": "2026-10-21",
+    "newRelease": false,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Summer Engine",
+    "url": "https://www.summerengine.com",
+    "description": "AI-native 2D/3D game engine built on Godot, where the built-in Summer Agent or any MCP coding agent builds scenes and scripts, generates 3D models, art, music and SFX, tests gameplay and exports to desktop, web and mobile.",
+    "categories": [
+      "Game Design & Narrative",
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free app with 5 AI messages a day and free MCP; Pro $20/mo, Pro+ $60/mo, Ultra $200/mo",
+    "tags": [
+      "game engine",
+      "Godot",
+      "MCP",
+      "vibe coding",
+      "game assets"
+    ],
+    "dateAdded": "2026-10-22",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Kling AI",
+    "url": "https://klingai.com",
+    "description": "AI video generator whose Kling 4.0 model makes native 30-second clips with up to 10 keyframes, multimodal references, stereo sound effects and multilingual lip sync. The 4.0 API opened to developers on Oct 21 2026. Good for trailers and cutscenes.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Basic plan (watermarked exports); paid credit plans",
+    "tags": [
+      "video generation",
+      "text to video",
+      "lip sync",
+      "API",
+      "trailers"
+    ],
+    "dateAdded": "2026-10-22",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "3D AI Studio",
+    "url": "https://www.3daistudio.com",
+    "description": "Text- and image-to-3D studio that bundles several 3D models (including Meshy, Tripo and Rodin) with AI texturing, rigging, image editing and an MCP connector. Its Oct 20 2026 update added voice prompts to the Flow canvas.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Basic plan with 1,000 credits/mo; paid Studio and Pro plans",
+    "tags": [
+      "text to 3D",
+      "image to 3D",
+      "texturing",
+      "rigging",
+      "MCP"
+    ],
+    "dateAdded": "2026-10-22",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "BAND",
+    "url": "https://www.band.ai",
+    "description": "Shared chat rooms where your coding agents and teammates work together, with governance and audit built in. The Band Desktop app lets you watch and coordinate local coding agents in one workspace.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for personal non-commercial use (up to 20 agents); Pro $17.99/mo",
+    "tags": [
+      "multi-agent",
+      "coding agents",
+      "collaboration",
+      "governance"
+    ],
+    "dateAdded": "2026-10-22",
     "newRelease": true,
     "affiliateUrl": ""
   }
