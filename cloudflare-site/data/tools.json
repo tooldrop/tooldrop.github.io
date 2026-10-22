@@ -1,5 +1,105 @@
 [
   {
+    "name": "heal.dev",
+    "url": "https://www.heal.dev",
+    "description": "Runtime bug and vulnerability hunter. It learns how to run your app in a production-like sandbox, hunts for bugs, security holes and performance issues that code review misses, and files only what it can reproduce, each with a failing test your coding agent can fix.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "unknown",
+    "tags": [
+      "QA",
+      "security",
+      "sandbox",
+      "testing",
+      "coding agents"
+    ],
+    "dateAdded": "2026-10-23",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Recursive Flint",
+    "url": "https://recursive.com/updates/introducing-recursive-flint",
+    "description": "Free, open-weight coding model built to run locally on a laptop. A 40B mixture-of-experts model with 2.5B active parameters, it runs over 125 tokens/sec on an M4 Pro MacBook and works with Ollama, LM Studio and llama.cpp, so you can code offline with no API fees.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open weights on Hugging Face (Apache 2.0)",
+    "tags": [
+      "local model",
+      "open source",
+      "offline",
+      "Ollama",
+      "LM Studio"
+    ],
+    "dateAdded": "2026-10-23",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Mistral Voxtral 3",
+    "url": "https://mistral.ai/news/voxtral-3/",
+    "description": "Mistral's new speech family: Voxtral TTS 3 text-to-speech with voice cloning and emotion and pace tags, fast multilingual transcription, and a real-time voice agent SDK. Useful for NPC voices, narration and voice-driven game or app features via API.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Usage-based API, Voxtral TTS 3 is $13 per 1M characters",
+    "tags": [
+      "text-to-speech",
+      "voice cloning",
+      "transcription",
+      "API",
+      "voice agents"
+    ],
+    "dateAdded": "2026-10-23",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Animatica",
+    "url": "https://animatica.ai/marionette",
+    "description": "Blender add-ons for character animation. Marionette lets you pose a humanoid by dragging a hand or foot while an offline pose model moves the rest of the body, then clean up sliding feet and jitter. Choreographer generates motion from prompts. Works with Rigify, Auto-Rig Pro and Mixamo rigs.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Choreographer free (10 cloud generations/mo), Marionette $59 one-time",
+    "tags": [
+      "Blender",
+      "animation",
+      "rigging",
+      "Mixamo",
+      "offline"
+    ],
+    "dateAdded": "2026-10-23",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Vercel fx",
+    "url": "https://github.com/vercel-labs/fx",
+    "description": "Open-source coding agent from Vercel Labs, written in Zig and built to be scripted or embedded. A tiny native binary with JSON output for scripts and CI, Agent Client Protocol support for editors, and a JS/WebAssembly library.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (Apache 2.0)",
+    "tags": [
+      "open source",
+      "CLI",
+      "Zig",
+      "ACP",
+      "embeddable"
+    ],
+    "dateAdded": "2026-10-23",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
     "name": "Composio",
     "url": "https://composio.dev",
     "description": "Gives AI agents and coding agents managed-auth access to 1,500+ app toolkits (GitHub, Slack, Notion and more) through SDKs, a CLI and an MCP gateway. The new Composio Instant lets agents pay for paid tools on their own.",
