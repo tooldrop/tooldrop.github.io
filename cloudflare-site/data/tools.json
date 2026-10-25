@@ -1,5 +1,86 @@
 [
   {
+    "name": "myPip",
+    "url": "https://mypip.dev",
+    "description": "Vibe-code playable games in your browser by describing them, then publish and monetize them with multiplayer, in-app purchases and ads. It also connects to Claude and ChatGPT as an MCP connector so you can build games from chat.",
+    "categories": [
+      "App Builders",
+      "Game Design & Narrative"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free AI game maker; new accounts get 40 free builds",
+    "tags": [
+      "vibe coding",
+      "browser games",
+      "MCP",
+      "monetization",
+      "no-code"
+    ],
+    "dateAdded": "2026-10-26",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "SimplyStream Strata",
+    "url": "https://simplystream.com",
+    "description": "Strata builds your Unreal Engine 5.8 or 6.0 project for the browser (WebAssembly and WebGPU), puts it online and plays it on a real GPU to check it works, then returns a play link. Coding agents like Claude Code can send builds without Unreal installed.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with 2 Strata runs a day and $10 trial credits; Indie $25/mo, Studio $250/mo",
+    "tags": [
+      "Unreal Engine",
+      "WebGPU",
+      "browser games",
+      "coding agents",
+      "game hosting"
+    ],
+    "dateAdded": "2026-10-26",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Cusp",
+    "url": "https://cusp.run",
+    "description": "Model-agnostic coding agent for desktop and terminal that works with Claude, GPT, Gemini, open models or local ones, giving each model its own edit format. It reads your existing CLAUDE.md, skills, hooks and MCP servers in place and can race one prompt across several models.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with 2,500 agent actions a month on your own keys; Max $80/mo, Team $25/seat/mo (billed yearly)",
+    "tags": [
+      "coding agent",
+      "any model",
+      "CLI",
+      "desktop",
+      "MCP"
+    ],
+    "dateAdded": "2026-10-26",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Ovren",
+    "url": "https://www.ovren.ai",
+    "description": "Describe a change in plain words and Ovren's AI engineers plan it, build it in your real GitHub codebase and open a pull request with a live preview and execution report. Nothing ships until you or your developer approve it.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for up to 5 changes; Pro $29 one-time for up to 50 changes",
+    "tags": [
+      "coding agent",
+      "pull requests",
+      "live preview",
+      "GitHub",
+      "no subscription"
+    ],
+    "dateAdded": "2026-10-26",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
     "name": "heal.dev",
     "url": "https://www.heal.dev",
     "description": "Runtime bug and vulnerability hunter. It learns how to run your app in a production-like sandbox, hunts for bugs, security holes and performance issues that code review misses, and files only what it can reproduce, each with a failing test your coding agent can fix.",
@@ -728,7 +809,7 @@
   {
     "name": "ElevenLabs",
     "url": "https://elevenlabs.io",
-    "description": "Industry-leading AI voice synthesis with realistic speech, voice cloning, and music generation.",
+    "description": "Industry-leading AI voice synthesis with realistic speech, voice cloning, and music generation. New in Oct 2026: Eleven Realtime speech-to-speech models (v1 Mini and v1 Max, 90+ languages) for low-latency voice agents and interactive characters, via an OpenAI-compatible Realtime API.",
     "categories": [
       "Voice"
     ],
@@ -738,11 +819,13 @@
       "text-to-speech",
       "voice cloning",
       "realistic",
-      "music"
+      "music",
+      "voice agents"
     ],
-    "dateAdded": "2024-07-25",
+    "dateAdded": "2026-10-26",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "newRelease": true
   },
   {
     "name": "Murf AI",
