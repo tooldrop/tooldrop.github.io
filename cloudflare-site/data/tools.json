@@ -1,5 +1,66 @@
 [
   {
+    "name": "Entire",
+    "url": "https://entire.com",
+    "description": "A Git-compatible code host from former GitHub CEO Thomas Dohmke, built for code written by agents. Trails replace pull requests with review agents that score every push for quality, security and slop, and your agent sessions and prompts are stored alongside the code.",
+    "categories": [
+      "Code Review & Testing",
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Hosting and other features are free; review agents use prepaid credits, starting with a one-time $100 trial credit",
+    "tags": [
+      "git hosting",
+      "code review",
+      "agent evals",
+      "coding agents",
+      "GitHub alternative"
+    ],
+    "dateAdded": "2026-10-27",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "VibeiDE",
+    "url": "https://vibeide.dev",
+    "description": "Desktop app that queues Claude Code, Codex and OpenCode tasks across your projects and runs them in parallel, each in its own terminal, git branch or worktree. Finished tasks wait for your review, so you can mark them done or send a follow-up in the same session.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "14-day free trial, no card; launch price $7.99/mo, $79/yr or $249 lifetime before Jan 1 2027; uses your own provider accounts",
+    "tags": [
+      "Claude Code",
+      "Codex",
+      "parallel agents",
+      "task queue",
+      "code review"
+    ],
+    "dateAdded": "2026-10-27",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "SurgePix",
+    "url": "https://surgepix.ai",
+    "description": "AI image maker with a layer editor, so you can swap text, repaint one area or keep visuals on-brand after you generate them. Open-source agent skills let Claude Code, Cursor or Codex make posters, logos, presentations and cut-outs for you.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with 25 credits a day; Basic $9.90/mo, Pro $24.90/mo (intro discounts for the first 3 months)",
+    "tags": [
+      "image generation",
+      "layer editing",
+      "agent skills",
+      "posters",
+      "brand kit"
+    ],
+    "dateAdded": "2026-10-27",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
     "name": "myPip",
     "url": "https://mypip.dev",
     "description": "Vibe-code playable games in your browser by describing them, then publish and monetize them with multiplayer, in-app purchases and ads. It also connects to Claude and ChatGPT as an MCP connector so you can build games from chat.",
@@ -939,8 +1000,8 @@
   },
   {
     "name": "Runway",
-    "url": "https://runwayml.com",
-    "description": "AI-powered creative platform for video generation, editing, and real-world intelligence research.",
+    "url": "https://runway.com",
+    "description": "AI-powered creative platform for video generation, editing, and real-world intelligence research. New in Oct 2026: App Studio lets you describe a custom image, video or audio app in plain words and Runway builds and hosts it for you or your team, no coding needed (paid plans).",
     "categories": [
       "Video & Trailers"
     ],
@@ -950,11 +1011,13 @@
       "video generation",
       "text-to-video",
       "editing",
-      "Gen-4"
+      "Gen-4",
+      "app builder"
     ],
-    "dateAdded": "2024-07-15",
+    "dateAdded": "2026-10-27",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "newRelease": true
   },
   {
     "name": "Pika",
