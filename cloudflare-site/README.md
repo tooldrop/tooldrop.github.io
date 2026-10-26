@@ -1,3 +1,5 @@
+> **NOTE (22 Oct 2026): deploy.sh currently FAILS silently (new pages 404). Deploy with wrangler from /tmp/wr instead: cd /tmp/wr && npx -y -p node@22 node /tmp/wr/node_modules/wrangler/bin/wrangler.js pages deploy dist --project-name tooldrop-hq --branch main**
+
 # ToolDrop backup site (Cloudflare Pages)
 
 `SITE_URL=https://tooldrop-hq.pages.dev python3 build.py` reads `data/tools.json` and writes `dist/`.
