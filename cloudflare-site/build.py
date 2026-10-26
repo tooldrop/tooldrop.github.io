@@ -56,7 +56,7 @@ def visit_link(t, label, where, cls="btn btn-primary"):
     return a
 
 def card(t, show_date=False):
-    cats = ",".join(c.lower() for c in t["categories"])
+    cats = "|".join(c.lower() for c in t["categories"])
     pc = "paid" if t["pricing"]=="paid" else ("free" if t["pricing"]=="free" else "")
     badge = '\n    <span class="new-badge">New</span>' if t.get("newRelease") else ""
     if t.get("sponsored"): badge += '\n    <span class="sponsored-badge">Sponsored</span>'
@@ -191,6 +191,8 @@ def sel_3d():
     return [t for t in tools if "3D & Models" in t["categories"]]
 def sel_voice():
     return [t for t in tools if "Voice" in t["categories"]]
+def sel_video():
+    return [t for t in tools if "Video & Trailers" in t["categories"]]
 
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
@@ -222,7 +224,12 @@ COMPARISONS = [
       title="Best AI Voice Generators for Games & Voiceover | ToolDrop",
       desc="Compare AI voice generators for game characters, narration and trailers: text-to-speech, voice cloning, pricing and free tiers.",
       cats=["Voice"], select=sel_voice,
-      intro="""Need voices for characters, narration or a trailer? These are the AI voice tools in the ToolDrop directory. ElevenLabs (free tier, from $5/mo) is the best-known option for realistic speech and voice cloning, and it does music too. Fish Audio (free tier, Plus from $11/mo billed annually) focuses on expressive text-to-speech with emotion tags. Murf AI (free tier, from $19/mo) is built for studio-quality voiceovers in multiple languages and has a text-to-speech API. Inworld AI (pay-as-you-go) offers realtime text-to-speech, speech-to-text and speech-to-speech models for apps that need live voice. Resemble AI (contact for pricing) is aimed at enterprises, with voice cloning plus deepfake detection and voice watermarking. Check each tool's licence and voice-cloning consent rules before you ship voices in a commercial release."""),
+      intro="""Need voices for characters, narration or a trailer? These are the AI voice tools in the ToolDrop directory. ElevenLabs (free tier, from $5/mo) is the best-known option for realistic speech and voice cloning, and it does music too. Fish Audio (free tier, Plus from $11/mo billed annually) focuses on expressive text-to-speech with emotion tags. Murf AI (free tier, from $19/mo) is built for studio-quality voiceovers in multiple languages and has a text-to-speech API. Inworld AI (pay-as-you-go) offers realtime text-to-speech, speech-to-text and speech-to-speech models for apps that need live voice. Resemble AI (contact for pricing) is aimed at enterprises, with voice cloning plus deepfake detection and voice watermarking. Mistral Voxtral 3 (usage-based API, $13 per 1M characters for Voxtral TTS 3) adds voice cloning with emotion and pace tags plus a real-time voice agent SDK. Phonon is Gradium's open-weight text-to-speech, small enough to run offline on phones, laptops and browsers; its 31m English model is Apache-2.0, while the larger and multilingual models are non-commercial unless licensed. Check each tool's licence and voice-cloning consent rules before you ship voices in a commercial release."""),
+ dict(path="/compare/ai-video-trailer-tools-for-games/", h1="Best AI video and trailer tools for indie game devs",
+      title="Best AI Video & Trailer Tools for Indie Game Devs | ToolDrop",
+      desc="Compare AI video generators and editors for game trailers, devlogs and store page videos: what each does, pricing and free tiers.",
+      cats=["Video & Trailers"], select=sel_video,
+      intro="""A short trailer or devlog clip does a lot of work on a Steam page or social feed. These are the AI video tools in the ToolDrop directory. Runway (free tier, from $15/mo), Pika (free tier) and Kling AI (free Basic plan with watermarked exports, paid credit plans) generate video clips from text and images, and Kling 4.0 makes native 30-second clips with keyframes, sound effects and lip sync. Luma AI (free tier) does photorealistic video alongside image and 3D generation. Descript (free tier, from $15/mo) edits video by editing the transcript, which is handy for devlogs. Framefields is open source (Apache-2.0) and lets coding agents write motion graphics in TypeScript and render MP4s. HeyGen (free tier, from $29/mo) and Synthesia (from $30/mo) make AI avatar presenter videos, which suit explainers more than gameplay trailers. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
 ]
 
 def names_list(ts):

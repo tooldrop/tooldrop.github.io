@@ -11,7 +11,7 @@
     cards.forEach(function (c) {
       var hay = (c.dataset.name + ' ' + c.dataset.description + ' ' + c.dataset.categories + ' ' + c.dataset.tags).toLowerCase();
       var ok = (!state.q || hay.indexOf(state.q) !== -1) &&
-        (state.category === 'all' || c.dataset.categories.split(',').indexOf(state.category) !== -1) &&
+        (state.category === 'all' || c.dataset.categories.split('|').indexOf(state.category) !== -1) &&
         (state.pricing === 'all' || c.dataset.pricing === state.pricing);
       c.style.display = ok ? '' : 'none'; if (ok) shown++;
     });
