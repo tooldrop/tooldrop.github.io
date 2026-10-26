@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# NOTE (22 Oct 2026): deploy.sh currently FAILS silently (new pages 404). Deploy with wrangler from /tmp/wr instead: cd /tmp/wr && npx -y -p node@22 node /tmp/wr/node_modules/wrangler/bin/wrangler.js pages deploy dist --project-name tooldrop-hq --branch main
 # Usage: CLOUDFLARE_ACCOUNT_ID=<32-hex id> ./deploy.sh   (CLOUDFLARE_API_TOKEN must already be set)
 set -euo pipefail
 cd "$(dirname "$0")"
