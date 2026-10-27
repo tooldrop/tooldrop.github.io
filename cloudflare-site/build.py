@@ -38,6 +38,24 @@ def price_text(t):
     lab = PRICE_LABEL.get(t["pricing"], t["pricing"])
     note = t.get("pricingNote", "")
     return f"{lab} ({note})" if note and note != lab else lab
+SPEND_CAVEAT = "Rough estimates from vendors' public pricing, checked 28 Oct 2026. Not exact — always check the vendor."
+def money(v): return "Free" if v == 0 else f"${v:g}"
+def spend_text(t):
+    sp = t.get("spend")
+    if not sp: return "Unknown"
+    vals = [v for v in (sp["light"], sp["medium"], sp["heavy"]) if v is not None]
+    lo, hi = min(vals), max(vals)
+    if hi == 0: return "Free · est."
+    r = money(lo) if lo == hi else f"{money(lo)}–{money(hi)}"
+    return f"{r}/mo" + ("+" if sp["heavy"] is None else "") + " · est."
+def spend_attr(t, k):
+    sp = t.get("spend")
+    return "" if not sp or sp.get(k) is None else f"{sp[k]:g}"
+def spend_dd(t):
+    sp = t.get("spend")
+    if not sp: return "Unknown. Check the vendor's site for current pricing."
+    f = lambda v: "not listed" if v is None else (money(v) if v == 0 else f"{money(v)}/mo")
+    return (f'Light {f(sp["light"])} · Medium {f(sp["medium"])} · Heavy {f(sp["heavy"])} (est.)<br><small>{e(sp["basis"])}. {e(SPEND_CAVEAT)}</small>')
 def clip(s, n=155):
     s = " ".join(s.split())
     if len(s) <= n: return s
@@ -62,7 +80,7 @@ def card(t, show_date=False):
     if t.get("sponsored"): badge += '\n    <span class="sponsored-badge">Sponsored</span>'
     dt = f'\n  <p class="date-added">Added {nicedate(t["dateAdded"])}</p>' if show_date else ""
     tags = "".join(f'\n    <span class="tag category">{e(c)}</span>' for c in t["categories"])
-    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}">
+    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}">
   <div class="tool-card-header">
     <h3><a href="{tool_path(t)}">{e(t["name"])}</a></h3>{badge}
   </div>
@@ -70,6 +88,7 @@ def card(t, show_date=False):
   <div class="meta">{tags}
     <span class="tag pricing {pc}">{e(t["pricing"])}</span>
   </div>
+  <p class="spend-est" title="{e(SPEND_CAVEAT)}">Est. monthly spend: {e(spend_text(t))}</p>
   <div class="actions">
     {visit_link(t, "Visit →", "card")}
     <a href="{tool_path(t)}" class="btn btn-secondary">Details</a>
@@ -199,7 +218,7 @@ COMPARISONS = [
       title="Best AI Pixel Art & Sprite Tools for Game Devs | ToolDrop",
       desc="Compare AI pixel art, sprite and game art tools for indie devs: what each does, pricing and free tiers, side by side.",
       cats=["Game Art & Sprites"], select=sel_pixel,
-      intro="""Need sprites, tiles or animation frames without spending weeks in an editor? These are the AI tools in the ToolDrop directory for game art, with pixel art first. Pixel Lab is built specifically for pixel art sprites, animations and game assets, and it has a free tier. Ludo.ai is a game asset suite that covers sprites and 2D assets alongside 3D, audio and video, with free credits to start and an Indie plan from $15/mo (billed annually). For broader game art, Leonardo AI (free tier, from $12/mo) and Scenario (free tier, with custom models for style consistency) target game assets directly. Stable Diffusion is open source and runs locally, so you can use pixel art fine-tunes at no cost. Midjourney (from $10/mo) and DALL-E 3 (pay per image via the API) are general image generators that are good for concept art. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
+      intro="""Need sprites, tiles or animation frames without spending weeks in an editor? These are the AI tools in the ToolDrop directory for game art, with pixel art first. Pixel Lab is built specifically for pixel art sprites, animations and game assets, and it has a free tier. Ludo.ai is a game asset suite that covers sprites and 2D assets alongside 3D, audio and video, with free credits to start and an Indie plan from $15/mo (billed annually). For broader game art, Leonardo AI (free tier, from $12/mo) and Scenario (free tier, with custom models for style consistency) target game assets directly. Stable Diffusion is open source and runs locally, so you can use pixel art fine-tunes at no cost. Midjourney (from $10/mo) and OpenAI's GPT Image 2.5 (pay as you go via the API) are general image generators that are good for concept art. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
  dict(path="/compare/ai-game-music-sfx-tools/", h1="AI music and sound effects tools for games",
       title="AI Music & Sound Effects Tools for Games | ToolDrop",
       desc="Compare AI music, soundtrack and sound effects (SFX) generators for indie games: what each does, pricing and free tiers.",
@@ -277,6 +296,9 @@ home = f'''<section class="hero"><div class="container">
 <section class="section"><div class="container"><div class="filter-section">
   <div class="filter-group"><span class="filter-label">Filter by category:</span><div class="filter-pills"><button class="filter-pill active" data-filter-type="category" data-filter-value="all">All</button>{pills}</div></div>
   <div class="filter-group"><span class="filter-label">Filter by pricing:</span><div class="filter-pills"><button class="filter-pill active" data-filter-type="pricing" data-filter-value="all">All</button><button class="filter-pill" data-filter-type="pricing" data-filter-value="free">Free</button><button class="filter-pill" data-filter-type="pricing" data-filter-value="freemium">Freemium</button><button class="filter-pill" data-filter-type="pricing" data-filter-value="paid">Paid</button></div></div>
+  <div class="filter-group"><span class="filter-label">Est. monthly spend — my usage:</span><div class="filter-pills"><button class="filter-pill" data-filter-type="usage" data-filter-value="light">Light</button><button class="filter-pill active" data-filter-type="usage" data-filter-value="medium">Medium</button><button class="filter-pill" data-filter-type="usage" data-filter-value="heavy">Heavy</button></div></div>
+  <div class="filter-group"><span class="filter-label">Budget:</span><div class="filter-pills"><button class="filter-pill active" data-filter-type="budget" data-filter-value="any">Any</button><button class="filter-pill" data-filter-type="budget" data-filter-value="0">Free</button><button class="filter-pill" data-filter-type="budget" data-filter-value="10">Under $10</button><button class="filter-pill" data-filter-type="budget" data-filter-value="25">Under $25</button><button class="filter-pill" data-filter-type="budget" data-filter-value="50">Under $50</button></div></div>
+  <p class="spend-caveat">Light = hobby or occasional use, Medium = a regular solo dev, Heavy = daily heavy use. {e(SPEND_CAVEAT)} Tools with unknown pricing are hidden when a budget is picked.</p>
 </div></div></section>
 <section class="section browse"><div class="container"><div class="section-header"><h2 class="section-title">🔥 Latest Releases</h2><a href="/new-releases/" class="section-link">View all →</a></div>
 {grid(newest()[:6])}
@@ -299,12 +321,14 @@ home_ld = ld({"@type": "WebSite", "name": "ToolDrop", "url": SITE + "/", "inLang
 page("/", "AI Tools for Vibe Coders & Indie Game Devs | ToolDrop", "Discover the best AI tools for indie game development and vibe coding. Find AI coding agents, art generators, music tools, voice synthesis, and more.", home, home_ld)
 
 # Categories
+SPEND_FILTER = home[home.index('  <div class="filter-group"><span class="filter-label">Est. monthly'):home.index('</p>\n</div>', home.index('spend-caveat'))+4]
+SPEND_FILTER = f'<div class="filter-section">{SPEND_FILTER}</div>'
 for c,i in CATS:
     ts = in_cat(c)
     path = f"/category/{slug(c)}/"
     bc, bcld = crumbs([("Home", "/"), (c, path)])
     body = f'''<section class="hero hero-small"><div class="container">{bc}<h1>{i} {e(c)}</h1><p class="subtitle">{len(ts)} AI tools for {e(c.lower())}, picked for vibe coders and indie game devs.</p>{compare_links(comparisons_for_cat(c))}</div></section>
-<section class="section"><div class="container">{grid(ts)}</div></section>{SUBSCRIBE}'''
+<section class="section"><div class="container">{SPEND_FILTER}{grid(ts, "filtered-tools")}<div id="no-results" class="no-results" style="display: none;"><h3>No tools found</h3><p>Try a bigger budget or a lighter usage level</p></div></div></section>{SUBSCRIBE}'''
     title = f"Best AI Tools for {c} | ToolDrop"
     if len(title) > 60: title = f"AI Tools for {c} | ToolDrop"
     names = ", ".join(t["name"] for t in ts[:4])
@@ -340,13 +364,16 @@ for t in tools:
           "applicationCategory": APPCAT.get(c0, "BusinessApplication")}
     if any("browser" in g for g in tags_lc(t)): sw["operatingSystem"] = "Web"
     if t["pricing"] == "free": sw["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    if t.get("spend"):
+        sw["additionalProperty"] = {"@type": "PropertyValue", "name": "Estimated monthly spend (USD, rough estimate)", "value": spend_text(t),
+                                    "description": f'Light {t["spend"]["light"]}, medium {t["spend"]["medium"]}, heavy {t["spend"]["heavy"] if t["spend"]["heavy"] is not None else "not listed"} USD/mo. {t["spend"]["basis"]}. {SPEND_CAVEAT}'}
     if t.get("tags"): sw["keywords"] = ", ".join(t["tags"])
     sponsored = ' <span class="sponsored-badge">Sponsored</span>' if t.get("sponsored") else ""
     body = f'''<section class="hero hero-small"><div class="container">{bc}
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
 <section class="section"><div class="container"><div class="tool-details">
-<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
+<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{SUBSCRIBE}'''
     title = f"{t['name']}: {c0} AI Tool | ToolDrop"
@@ -411,9 +438,9 @@ page("/404.html", "Page not found | ToolDrop", "Page not found.", '<section clas
 
 # llms.txt / llms-full.txt
 L = ["# ToolDrop", "", "> ToolDrop is an AI tools directory for vibe coders and indie game devs, organised by use case (coding agents, app builders, game art, 3D, audio, voice, video and more), with a weekly newsletter.", "",
-     f"The directory lists {len(tools)} tools. Pricing is as published by each vendor and can change. Tool pages link to each tool's official site.", ""]
+     f"The directory lists {len(tools)} tools. Pricing is as published by each vendor and can change. Tool pages link to each tool's official site.", "", f"Est. monthly spend figures are {SPEND_CAVEAT[0].lower()+SPEND_CAVEAT[1:]}", ""]
 for c,_ in CATS:
-    L += [f"## {c}", ""] + [f"- [{t['name']}]({SITE}{tool_path(t)}): {t['description']} Pricing: {price_text(t)}." for t in in_cat(c)] + [""]
+    L += [f"## {c}", ""] + [f"- [{t['name']}]({SITE}{tool_path(t)}): {t['description']} Pricing: {price_text(t)}. Est. monthly spend: {spend_text(t).replace(" · est.", " (est.)")}" for t in in_cat(c)] + [""]
 L += ["## Comparisons", ""] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
 L += ["## More", "", f"- [New releases]({SITE}/new-releases/): the newest tools added to the directory.",
       f"- [Newsletter]({SUB}): weekly ToolDrop newsletter on Substack.", f"- [Affiliate disclosure]({SITE}/disclosure/): how affiliate links and sponsorships are handled.",
@@ -426,6 +453,7 @@ for c,_ in CATS:
     for t in in_cat(c):
         F += [f"### {t['name']}", "", f"- Official URL: {t['url']}", f"- ToolDrop page: {SITE}{tool_path(t)}", f"- Description: {t['description']}",
               f"- Categories: {', '.join(t['categories'])}", f"- Pricing: {PRICE_LABEL.get(t['pricing'], t['pricing'])}" + (f" ({t['pricingNote']})" if t.get('pricingNote') else ""),
+              f"- Est. monthly spend (USD, rough estimate): " + (f"light {t['spend']['light']}, medium {t['spend']['medium']}, heavy {t['spend']['heavy'] if t['spend']['heavy'] is not None else 'not listed'} ({t['spend']['basis']}; checked {t['spend']['checked']})" if t.get('spend') else "unknown"),
               f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}"]
         if t.get("newRelease"): F.append("- New release: yes")
         F.append("")
