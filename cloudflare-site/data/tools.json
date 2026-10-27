@@ -18,7 +18,14 @@
     ],
     "dateAdded": "2026-10-27",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 50,
+      "basis": "Hosting free; heavy use of review agents burns prepaid credits (after $100 trial)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "VibeiDE",
@@ -38,7 +45,14 @@
     ],
     "dateAdded": "2026-10-27",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 8,
+      "medium": 8,
+      "heavy": 8,
+      "basis": "$7.99/mo launch price; AI usage billed separately by your own provider",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "SurgePix",
@@ -58,7 +72,14 @@
     ],
     "dateAdded": "2026-10-27",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 25,
+      "basis": "Free 25 credits/day; Basic $9.90/mo; Pro $24.90/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "myPip",
@@ -79,7 +100,14 @@
     ],
     "dateAdded": "2026-10-26",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free; 40 free builds for new accounts",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "SimplyStream Strata",
@@ -99,7 +127,14 @@
     ],
     "dateAdded": "2026-10-26",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 250,
+      "basis": "Free 2 runs/day; Indie $25/mo; Studio $250/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Cusp",
@@ -119,7 +154,14 @@
     ],
     "dateAdded": "2026-10-26",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 80,
+      "basis": "Free tier on your own keys (key costs extra); Max $80/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Ovren",
@@ -139,7 +181,14 @@
     ],
     "dateAdded": "2026-10-26",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 3,
+      "heavy": 3,
+      "basis": "Free for 5 changes; Pro is $29 one-time (≈$2.40/mo over a year)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "heal.dev",
@@ -158,7 +207,8 @@
     ],
     "dateAdded": "2026-10-23",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Recursive Flint",
@@ -178,7 +228,14 @@
     ],
     "dateAdded": "2026-10-23",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open weights; free, but self-hosting needs your own GPU/compute",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Mistral Voxtral 3",
@@ -198,7 +255,14 @@
     ],
     "dateAdded": "2026-10-23",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 1,
+      "medium": 7,
+      "heavy": 30,
+      "basis": "Usage-based at $13 per 1M characters; ~0.1M/0.5M/2M+ chars a month",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Animatica",
@@ -218,7 +282,14 @@
     ],
     "dateAdded": "2026-10-23",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 5,
+      "heavy": 5,
+      "basis": "Free tier; Marionette $59 one-time (≈$5/mo over a year)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Vercel fx",
@@ -239,7 +310,14 @@
     ],
     "dateAdded": "2026-10-23",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Composio",
@@ -259,7 +337,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 29,
+      "basis": "Free Hobby 100k tool calls/mo; Pro $29/mo incl. $29 usage",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Beacon",
@@ -279,7 +364,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 20,
+      "basis": "Open source + free cloud tier; Cloud Pro $20/mo (annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Reticle",
@@ -299,7 +391,8 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Phonon",
@@ -319,7 +412,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open weights, runs locally; commercial use of larger models needs a licence",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Zetta 3D",
@@ -339,7 +439,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 6,
+      "heavy": 20,
+      "basis": "Free credits; paid from €5/mo (≈$6); heavy assumes a higher plan",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Cursor",
@@ -349,7 +456,7 @@
       "AI Coding Agents & IDEs"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Pro from $20/mo",
+    "pricingNote": "Free tier; Premium $30/mo; Super $100/mo (Plus $8, Ultra $200 also listed)",
     "tags": [
       "code editor",
       "autocomplete",
@@ -358,7 +465,14 @@
     ],
     "dateAdded": "2024-10-01",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 30,
+      "heavy": 100,
+      "basis": "Free tier; Premium $30/mo; heavy assumes Super $100/mo (Plus $8, Ultra $200 also listed)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "GitHub Copilot",
@@ -367,8 +481,8 @@
     "categories": [
       "AI Coding Agents & IDEs"
     ],
-    "pricing": "paid",
-    "pricingNote": "From $10/mo",
+    "pricing": "freemium",
+    "pricingNote": "Free tier; Pro $10/mo; Pro+ $39/mo (Max $100 also listed)",
     "tags": [
       "autocomplete",
       "code suggestions",
@@ -376,7 +490,14 @@
     ],
     "dateAdded": "2024-09-15",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 39,
+      "basis": "Free tier; Pro $10/mo; heavy assumes Pro+ $39/mo (Max $100 also listed)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Zed",
@@ -395,7 +516,14 @@
     ],
     "dateAdded": "2024-10-12",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 20,
+      "basis": "Free editor; Pro $10/mo incl. $5 AI credit; heavy ~$10 extra token usage",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Tabnine",
@@ -404,15 +532,16 @@
     "categories": [
       "AI Coding Agents & IDEs"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricing": "paid",
+    "pricingNote": "No public price list; contact sales for a quote",
     "tags": [
       "autocomplete",
       "enterprise",
       "privacy"
     ],
     "dateAdded": "2024-09-01",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Replit",
@@ -423,7 +552,7 @@
       "App Builders"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Core from $20/mo",
+    "pricingNote": "Free Starter; Core $20/mo; Pro $100/mo; agent overage extra",
     "tags": [
       "browser IDE",
       "deployment",
@@ -433,7 +562,14 @@
     "dateAdded": "2026-10-28",
     "featured": true,
     "affiliateUrl": "",
-    "newRelease": true
+    "newRelease": true,
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 100,
+      "basis": "Free Starter; Core $20/mo; heavy assumes Pro $100/mo; agent overage extra",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Bolt",
@@ -443,7 +579,7 @@
       "App Builders"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free tier; Pro $25/mo monthly ($18 annual); 26M-token tier ~$50/mo",
     "tags": [
       "full-stack",
       "browser",
@@ -453,7 +589,14 @@
     "dateAdded": "2024-10-10",
     "newRelease": true,
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 50,
+      "basis": "Free tier; Pro $25/mo monthly ($18 annual); heavy assumes 26M-token tier ~$50/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "v0",
@@ -463,7 +606,7 @@
       "App Builders"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Premium from $20/mo",
+    "pricingNote": "Free tier; Plus $30/user/mo (Premium $20 closed to new users); top-ups extra",
     "tags": [
       "UI generation",
       "React",
@@ -472,7 +615,14 @@
     ],
     "dateAdded": "2024-09-20",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 30,
+      "heavy": 30,
+      "basis": "Free tier; Plus $30/user/mo (Premium $20 closed to new users); top-ups extra",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Lovable",
@@ -490,7 +640,14 @@
     ],
     "dateAdded": "2024-10-05",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 50,
+      "basis": "Free tier; Pro $25/mo for 100 credits; heavy assumes 200-credit tier $50/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Claude",
@@ -509,7 +666,14 @@
     ],
     "dateAdded": "2024-08-01",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 100,
+      "basis": "Free tier; Pro $20/mo ($17 annual); heavy assumes Max from $100/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "ChatGPT",
@@ -519,7 +683,7 @@
       "AI Coding Agents & IDEs"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Plus $20/mo",
+    "pricingNote": "Free tier; Go $8, Plus $20/mo; the $100 Pro tier (Pro also $200/$500)",
     "tags": [
       "chat",
       "coding",
@@ -527,7 +691,14 @@
       "OpenAI"
     ],
     "dateAdded": "2024-07-15",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 100,
+      "basis": "Free tier; Go $8, Plus $20/mo; heavy assumes the $100 Pro tier (Pro also $200/$500)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Devin",
@@ -537,7 +708,7 @@
       "AI Coding Agents & IDEs"
     ],
     "pricing": "paid",
-    "pricingNote": "$500/mo",
+    "pricingNote": "Teams plan from $80/mo plus $40 per developer seat; usage credits extra",
     "tags": [
       "autonomous",
       "agent",
@@ -545,7 +716,14 @@
     ],
     "dateAdded": "2024-10-12",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 120,
+      "medium": 120,
+      "heavy": null,
+      "basis": "Teams plan from $80/mo plus $40 per developer seat; usage credits extra",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Qodo",
@@ -563,7 +741,14 @@
       "governance"
     ],
     "dateAdded": "2024-09-05",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 30,
+      "basis": "Free for individuals; Pro Team $30/mo for 2,500 pooled credits",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Sourcegraph Cody",
@@ -581,7 +766,8 @@
       "enterprise"
     ],
     "dateAdded": "2024-08-15",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "CodeRabbit",
@@ -591,14 +777,21 @@
       "Code Review & Testing"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free for open source",
+    "pricingNote": "Free for open source; Essentials $30/dev/mo monthly ($24 annual)",
     "tags": [
       "code review",
       "pull requests",
       "GitHub"
     ],
     "dateAdded": "2024-08-28",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 30,
+      "heavy": 30,
+      "basis": "Free for open source; Essentials $30/dev/mo monthly ($24 annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Greptile",
@@ -608,7 +801,7 @@
       "Code Review & Testing"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free Starter for 1 dev; Pro $30/active seat/mo",
     "tags": [
       "code review",
       "security",
@@ -616,7 +809,14 @@
     ],
     "dateAdded": "2024-10-08",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 30,
+      "heavy": 30,
+      "basis": "Free Starter for 1 dev; Pro $30/active seat/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Midjourney",
@@ -634,24 +834,33 @@
     ],
     "dateAdded": "2024-07-01",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 10,
+      "medium": 30,
+      "heavy": 60,
+      "basis": "Basic $10, Standard $30, Pro $60/mo (Mega $120)",
+      "checked": "2026-10-28"
+    }
   },
   {
-    "name": "DALL-E 3",
-    "url": "https://openai.com/dall-e-3",
-    "description": "OpenAI's latest image generation model with improved prompt understanding and detail.",
+    "name": "GPT Image 2.5 Sunburst",
+    "url": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+    "description": "OpenAI's most capable image model for generating and editing images from text and image prompts, via the OpenAI API. It replaced DALL·E 3, which was retired from the API in May 2026.",
     "categories": [
       "Game Art & Sprites"
     ],
     "pricing": "paid",
-    "pricingNote": "Pay per image via API",
+    "pricingNote": "Pay as you go via the API: image output $30 per 1M tokens ($15 with Batch)",
     "tags": [
       "image generation",
+      "image editing",
       "OpenAI",
       "API"
     ],
     "dateAdded": "2024-07-10",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Leonardo AI",
@@ -669,7 +878,14 @@
     ],
     "dateAdded": "2024-08-05",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 12,
+      "heavy": 30,
+      "basis": "Free tier; Essential $12/mo; heavy assumes Premium $30/mo (Ultimate $60)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Scenario",
@@ -679,7 +895,7 @@
       "Game Art & Sprites"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free 50 credits/day; Starter $15/mo; Pro $45/mo",
     "tags": [
       "game art",
       "custom models",
@@ -687,7 +903,14 @@
       "workflows"
     ],
     "dateAdded": "2024-09-08",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 45,
+      "basis": "Free 50 credits/day; Starter $15/mo; heavy assumes Pro $45/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Stable Diffusion",
@@ -704,7 +927,14 @@
       "customizable"
     ],
     "dateAdded": "2024-07-20",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source; self-hosting needs your own GPU/compute",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Pixel Lab",
@@ -714,7 +944,7 @@
       "Game Art & Sprites"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free trial; Apprentice $12/mo; Artisan $24/mo",
     "tags": [
       "pixel art",
       "sprites",
@@ -723,7 +953,14 @@
     ],
     "dateAdded": "2024-10-08",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 12,
+      "heavy": 24,
+      "basis": "Free trial; Apprentice $12/mo; heavy assumes Artisan $24/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Meshy",
@@ -733,7 +970,7 @@
       "3D & Models"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Pro from $20/mo",
+    "pricingNote": "Free tier; Pro $20/mo; Premium $40/mo (Ultra $100)",
     "tags": [
       "3D models",
       "textures",
@@ -742,7 +979,14 @@
     ],
     "dateAdded": "2024-09-18",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 40,
+      "basis": "Free tier; Pro $20/mo; heavy assumes Premium $40/mo (Ultra $100)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Luma AI",
@@ -752,15 +996,22 @@
       "3D & Models",
       "Video & Trailers"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricing": "paid",
+    "pricingNote": "Plus $30/mo; Pro $90/mo (Ultra $300)",
     "tags": [
       "3D capture",
       "video",
       "photorealistic"
     ],
     "dateAdded": "2024-08-12",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 30,
+      "medium": 30,
+      "heavy": 90,
+      "basis": "Plus $30/mo; heavy assumes Pro $90/mo (Ultra $300)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Kaedim",
@@ -770,14 +1021,21 @@
       "3D & Models"
     ],
     "pricing": "paid",
-    "pricingNote": "From $15/mo",
+    "pricingNote": "Indie $400/mo (20 credits); Pro $1,200/mo; $50 7-day trial",
     "tags": [
       "image-to-3D",
       "game assets",
       "production-ready"
     ],
     "dateAdded": "2024-08-25",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 400,
+      "medium": 400,
+      "heavy": 1200,
+      "basis": "Indie $400/mo (20 credits); heavy assumes Pro $1,200/mo; $50 7-day trial",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Tripo AI",
@@ -787,7 +1045,7 @@
       "3D & Models"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free tier; Pro $20/mo",
     "tags": [
       "text-to-3D",
       "fast generation",
@@ -795,7 +1053,14 @@
     ],
     "dateAdded": "2024-10-03",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 20,
+      "basis": "Free tier; Pro $20/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Spline AI",
@@ -805,7 +1070,7 @@
       "3D & Models"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Pro from $7/mo",
+    "pricingNote": "Free tier; Hobby $15/seat/mo; Pro $30/seat/mo (monthly billing)",
     "tags": [
       "3D design",
       "web 3D",
@@ -813,7 +1078,14 @@
       "interactive"
     ],
     "dateAdded": "2024-09-12",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 30,
+      "basis": "Free tier; Hobby $15/seat/mo; Pro $30/seat/mo (monthly billing)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Suno",
@@ -831,7 +1103,14 @@
     ],
     "dateAdded": "2024-09-01",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 30,
+      "basis": "Free tier; Pro $10/mo; Premier $30/mo ($24 annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Udio",
@@ -841,7 +1120,7 @@
       "Audio, Music & SFX"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free tier; Standard $10/mo; Pro $30/mo",
     "tags": [
       "music generation",
       "vocals",
@@ -849,7 +1128,14 @@
     ],
     "dateAdded": "2024-10-01",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 30,
+      "basis": "Free tier; Standard $10/mo; Pro $30/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Soundraw",
@@ -859,7 +1145,7 @@
       "Audio, Music & SFX"
     ],
     "pricing": "paid",
-    "pricingNote": "From $16.99/mo",
+    "pricingNote": "Creator $16.99/mo; Artist Unlimited $50/mo",
     "tags": [
       "royalty-free",
       "soundtracks",
@@ -867,7 +1153,14 @@
       "copyright-safe"
     ],
     "dateAdded": "2024-08-10",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 17,
+      "medium": 17,
+      "heavy": 50,
+      "basis": "Creator $16.99/mo; heavy assumes Artist Unlimited $50/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "ElevenLabs",
@@ -877,7 +1170,7 @@
       "Voice"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, from $5/mo",
+    "pricingNote": "Free tier; Starter $6/mo; Creator $22/mo (Pro $99)",
     "tags": [
       "text-to-speech",
       "voice cloning",
@@ -888,7 +1181,14 @@
     "dateAdded": "2026-10-26",
     "featured": true,
     "affiliateUrl": "",
-    "newRelease": true
+    "newRelease": true,
+    "spend": {
+      "light": 0,
+      "medium": 6,
+      "heavy": 22,
+      "basis": "Free tier; Starter $6/mo; heavy assumes Creator $22/mo (Pro $99)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Murf AI",
@@ -898,7 +1198,7 @@
       "Voice"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, from $19/mo",
+    "pricingNote": "Free trial; Creator $29/mo ($19 annual); Business $99/mo",
     "tags": [
       "voiceover",
       "multi-language",
@@ -906,7 +1206,14 @@
       "API"
     ],
     "dateAdded": "2024-08-22",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 29,
+      "heavy": 99,
+      "basis": "Free trial; Creator $29/mo ($19 annual); heavy assumes Business $99/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Inworld AI",
@@ -927,7 +1234,8 @@
     ],
     "dateAdded": "2024-08-30",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Resemble AI",
@@ -936,8 +1244,8 @@
     "categories": [
       "Voice"
     ],
-    "pricing": "paid",
-    "pricingNote": "Contact for pricing",
+    "pricing": "freemium",
+    "pricingNote": "Flex $0 + pay-as-you-go credits; Team $350/mo (5 seats)",
     "tags": [
       "deepfake detection",
       "voice cloning",
@@ -945,7 +1253,14 @@
       "enterprise"
     ],
     "dateAdded": "2024-09-02",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 350,
+      "heavy": 350,
+      "basis": "Flex $0 + pay-as-you-go credits; Team $350/mo (5 seats)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Charisma.ai",
@@ -963,7 +1278,8 @@
       "training"
     ],
     "dateAdded": "2024-09-20",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "NovelAI",
@@ -981,7 +1297,14 @@
       "anime"
     ],
     "dateAdded": "2024-08-08",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 10,
+      "medium": 15,
+      "heavy": 25,
+      "basis": "Tablet $10, Scroll $15, Opus $25/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Sudowrite",
@@ -991,14 +1314,21 @@
       "Game Design & Narrative"
     ],
     "pricing": "paid",
-    "pricingNote": "From $10/mo",
+    "pricingNote": "Hobby $19, Professional $29, Max $59/mo monthly (cheaper annually)",
     "tags": [
       "fiction writing",
       "story generation",
       "editing"
     ],
     "dateAdded": "2024-08-15",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 19,
+      "medium": 29,
+      "heavy": 59,
+      "basis": "Hobby $19, Professional $29, Max $59/mo monthly (cheaper annually)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Runway",
@@ -1019,7 +1349,14 @@
     "dateAdded": "2026-10-27",
     "featured": true,
     "affiliateUrl": "",
-    "newRelease": true
+    "newRelease": true,
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 35,
+      "basis": "Free 125 one-off credits; Standard $15/mo; heavy assumes Pro $35/mo (Max $95)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Pika",
@@ -1029,7 +1366,7 @@
       "Video & Trailers"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricingNote": "Free tier; Starter $10/mo; Creator $35/mo",
     "tags": [
       "text-to-video",
       "video editing",
@@ -1038,7 +1375,14 @@
     ],
     "dateAdded": "2024-09-28",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 35,
+      "basis": "Free tier; Starter $10/mo; heavy assumes Creator $35/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "HeyGen",
@@ -1048,7 +1392,7 @@
       "Video & Trailers"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, from $29/mo",
+    "pricingNote": "Free tier; Creator $29/mo; Pro from $49/mo",
     "tags": [
       "AI avatars",
       "marketing videos",
@@ -1056,7 +1400,14 @@
       "translation"
     ],
     "dateAdded": "2024-08-20",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 29,
+      "heavy": 49,
+      "basis": "Free tier; Creator $29/mo; heavy assumes Pro from $49/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Synthesia",
@@ -1066,14 +1417,21 @@
       "Video & Trailers"
     ],
     "pricing": "paid",
-    "pricingNote": "From $30/mo",
+    "pricingNote": "Starter $29/mo monthly ($18 annual); Pro $89/mo",
     "tags": [
       "AI avatars",
       "enterprise",
       "training videos"
     ],
     "dateAdded": "2024-07-28",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 29,
+      "medium": 29,
+      "heavy": 89,
+      "basis": "Starter $29/mo monthly ($18 annual); heavy assumes Pro $89/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Descript",
@@ -1083,14 +1441,21 @@
       "Video & Trailers"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, from $15/mo",
+    "pricingNote": "Free tier; Hobbyist $24/mo; Creator $35/mo (monthly billing)",
     "tags": [
       "video editing",
       "transcription",
       "podcast"
     ],
     "dateAdded": "2024-08-05",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 24,
+      "heavy": 35,
+      "basis": "Free tier; Hobbyist $24/mo; Creator $35/mo (monthly billing)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Jasper",
@@ -1100,7 +1465,7 @@
       "Marketing & Store Page Copy"
     ],
     "pricing": "paid",
-    "pricingNote": "From $49/mo",
+    "pricingNote": "Pro $69/seat/mo monthly ($59 annual)",
     "tags": [
       "copywriting",
       "marketing",
@@ -1108,7 +1473,14 @@
     ],
     "dateAdded": "2024-07-20",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 69,
+      "medium": 69,
+      "heavy": 69,
+      "basis": "Pro $69/seat/mo monthly ($59 annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Copy.ai",
@@ -1118,7 +1490,7 @@
       "Marketing & Store Page Copy"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, from $49/mo",
+    "pricingNote": "Free tier; Chat $29/mo monthly ($24 annual)",
     "tags": [
       "copywriting",
       "product descriptions",
@@ -1126,7 +1498,14 @@
       "GTM"
     ],
     "dateAdded": "2024-07-25",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 29,
+      "heavy": 29,
+      "basis": "Free tier; Chat $29/mo monthly ($24 annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Writesonic",
@@ -1135,15 +1514,22 @@
     "categories": [
       "Marketing & Store Page Copy"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free tier, from $20/mo",
+    "pricing": "paid",
+    "pricingNote": "Starter $99/mo; Basic $249/mo (monthly billing)",
     "tags": [
       "SEO",
       "landing pages",
       "articles"
     ],
     "dateAdded": "2024-08-02",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 99,
+      "medium": 99,
+      "heavy": 249,
+      "basis": "Starter $99/mo; heavy assumes Basic $249/mo (monthly billing)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Hypotenuse AI",
@@ -1153,14 +1539,15 @@
       "Marketing & Store Page Copy"
     ],
     "pricing": "paid",
-    "pricingNote": "From $29/mo",
+    "pricingNote": "No public price list; contact sales for a quote",
     "tags": [
       "e-commerce",
       "product descriptions",
       "batch content"
     ],
     "dateAdded": "2024-09-05",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Anyword",
@@ -1177,7 +1564,14 @@
       "performance"
     ],
     "dateAdded": "2024-08-28",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 49,
+      "medium": 49,
+      "heavy": 99,
+      "basis": "Starter $49/mo; heavy assumes Data-Driven $99/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "LangChain",
@@ -1197,7 +1591,14 @@
     ],
     "dateAdded": "2024-07-05",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 39,
+      "basis": "Open source; heavy assumes a LangSmith Plus seat $39/mo (LLM API costs extra)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "AutoGPT",
@@ -1215,7 +1616,14 @@
       "automation"
     ],
     "dateAdded": "2024-07-12",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 50,
+      "basis": "Free tier; Pro $50/mo monthly; workflow runs billed from a credit wallet",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "CrewAI",
@@ -1232,7 +1640,14 @@
       "enterprise"
     ],
     "dateAdded": "2024-09-22",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": null,
+      "basis": "Open source (LLM API costs extra); hosted pricing not listed",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Semantic Kernel",
@@ -1250,7 +1665,14 @@
       "C#"
     ],
     "dateAdded": "2024-08-10",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source (LLM API costs extra)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Haystack",
@@ -1268,7 +1690,14 @@
       "agents"
     ],
     "dateAdded": "2024-08-18",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source (LLM API costs extra)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Vercel AI SDK",
@@ -1286,7 +1715,14 @@
       "Vercel"
     ],
     "dateAdded": "2024-09-10",
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source (LLM API costs extra)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "OpenCode",
@@ -1305,7 +1741,14 @@
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source; free models included, or pay your own model provider",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Epherem",
@@ -1324,7 +1767,14 @@
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free during early access",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Ludo.ai",
@@ -1347,7 +1797,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 35,
+      "basis": "Free credits; Indie $15/mo, Pro $35/mo (annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Thrixel",
@@ -1366,7 +1823,8 @@
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Fish Audio",
@@ -1376,7 +1834,7 @@
       "Voice"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier, Plus from $11/mo (billed annually)",
+    "pricingNote": "Free tier; Plus $15/mo monthly ($11 annual)",
     "tags": [
       "text-to-speech",
       "voice cloning",
@@ -1385,7 +1843,14 @@
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 15,
+      "basis": "Free tier; Plus $15/mo monthly ($11 annual)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Mirelo",
@@ -1405,7 +1870,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 22,
+      "heavy": 22,
+      "basis": "Free plan; Creator from €20/mo (≈$22)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Framefields",
@@ -1425,7 +1897,14 @@
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source; runs on your own hardware",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Effigy",
@@ -1446,7 +1925,14 @@
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source; runs locally on a 16 GB NVIDIA GPU",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Harness",
@@ -1466,7 +1952,14 @@
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source, free app",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Hy Memory",
@@ -1486,7 +1979,14 @@
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "NitroStack",
@@ -1506,7 +2006,8 @@
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "Vercel",
@@ -1526,7 +2027,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 20,
+      "basis": "Free Hobby (non-commercial); Pro $20/seat/mo incl. $20 usage credit",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Netlify",
@@ -1546,7 +2054,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 9,
+      "heavy": 20,
+      "basis": "Free plan; Personal $9/mo; Pro from $20/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Cloudflare Pages",
@@ -1566,7 +2081,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 5,
+      "basis": "Free plan covers most sites; heavy assumes Workers Paid $5/mo minimum",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Railway",
@@ -1586,7 +2108,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 5,
+      "heavy": 20,
+      "basis": "Hobby $5/mo incl. $5 usage; Pro $20/mo incl. $20 usage",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Render",
@@ -1606,7 +2135,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 7,
+      "heavy": 25,
+      "basis": "Free tier; paid instances from ~$7/mo; Pro $25/workspace/mo plus compute",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Pando",
@@ -1626,7 +2162,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source, self-hosted (your own server costs)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "itch.io",
@@ -1646,7 +2189,14 @@
     ],
     "dateAdded": "2026-10-21",
     "newRelease": false,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free; you choose the revenue share on sales",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Summer Engine",
@@ -1667,7 +2217,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 60,
+      "basis": "Free 5 msgs/day; Pro $20, Pro+ $60, Ultra $200/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Kling AI",
@@ -1677,7 +2234,7 @@
       "Video & Trailers"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free Basic plan (watermarked exports); paid credit plans",
+    "pricingNote": "Free daily credits; Standard ~$8.80/mo; Pro ~$32.56/mo",
     "tags": [
       "video generation",
       "text to video",
@@ -1687,7 +2244,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 9,
+      "heavy": 33,
+      "basis": "Free daily credits; Standard ~$8.80/mo; heavy assumes Pro ~$32.56/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "3D AI Studio",
@@ -1696,8 +2260,8 @@
     "categories": [
       "3D & Models"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free Basic plan with 1,000 credits/mo; paid Studio and Pro plans",
+    "pricing": "paid",
+    "pricingNote": "Basic $19, Studio $29, Pro $149/mo (cheaper annually)",
     "tags": [
       "text to 3D",
       "image to 3D",
@@ -1707,7 +2271,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 19,
+      "medium": 29,
+      "heavy": 149,
+      "basis": "Basic $19, Studio $29, Pro $149/mo (cheaper annually)",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "BAND",
@@ -1726,7 +2297,14 @@
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 18,
+      "heavy": 18,
+      "basis": "Free for personal non-commercial; Pro $17.99/mo",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "SuperPlane",
@@ -1747,7 +2325,14 @@
     ],
     "dateAdded": "2026-10-28",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 50,
+      "basis": "Self-host free or $0 + usage; Starter $20/org; Team $50/user",
+      "checked": "2026-10-28"
+    }
   },
   {
     "name": "Bito Governor",
@@ -1766,7 +2351,8 @@
     ],
     "dateAdded": "2026-10-28",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": null
   },
   {
     "name": "2G",
@@ -1786,6 +2372,13 @@
     ],
     "dateAdded": "2026-10-28",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 10,
+      "basis": "Free 20 credits; Studio $10/mo for 200 credits",
+      "checked": "2026-10-28"
+    }
   }
 ]
