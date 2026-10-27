@@ -417,7 +417,7 @@
   {
     "name": "Replit",
     "url": "https://replit.com",
-    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly.",
+    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly. New in Oct 2026: Cloud Agents let anyone on a team describe a change in plain words; the agent tests it in the running app and opens a reviewed GitHub PR or GitLab MR (Pro and Enterprise).",
     "categories": [
       "AI Coding Agents & IDEs",
       "App Builders"
@@ -427,11 +427,13 @@
     "tags": [
       "browser IDE",
       "deployment",
-      "collaboration"
+      "collaboration",
+      "cloud agents"
     ],
-    "dateAdded": "2024-08-20",
+    "dateAdded": "2026-10-28",
     "featured": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "newRelease": true
   },
   {
     "name": "Bolt",
@@ -1723,6 +1725,66 @@
       "governance"
     ],
     "dateAdded": "2026-10-22",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "SuperPlane",
+    "url": "https://superplane.com",
+    "description": "An open-source, model-agnostic software factory that wraps your coding agents and takes work from a ticket to a tested, merged pull request, with shared team standards and every run visible. Version 1.0 launched Oct 27 2026.",
+    "categories": [
+      "Agent Frameworks",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Pay-as-you-go plan at $0/month plus usage, Starter $20/org/month, Team $50/user/month; Apache 2.0 community version can be self-hosted",
+    "tags": [
+      "software factory",
+      "coding agents",
+      "open source",
+      "self-hosted",
+      "pull requests"
+    ],
+    "dateAdded": "2026-10-28",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Bito Governor",
+    "url": "https://bito.ai/governor/",
+    "description": "A model router that sits between your coding agents (Claude Code, Cursor, Codex, Copilot) and your models, sending each request to the right model and grounding it in your codebase so agents spend less on searching. Bito reports 40-70% lower agent costs.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Usage-based, free to start",
+    "tags": [
+      "model router",
+      "cost savings",
+      "coding agents",
+      "code context"
+    ],
+    "dateAdded": "2026-10-28",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "2G",
+    "url": "https://scrapbrainaudio.com/2g",
+    "description": "A tiny neural sampler styled after early-2000s phones: describe a sound and it generates it, then trim, loop and play it from your keyboard. Runs as a plugin or standalone app on Windows and macOS, handy for retro game SFX.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free download with 20 generation credits; Studio $10/month (7-day trial) for 200 credits a month",
+    "tags": [
+      "sound effects",
+      "sampler",
+      "text-to-sound",
+      "retro",
+      "VST plugin"
+    ],
+    "dateAdded": "2026-10-28",
     "newRelease": true,
     "affiliateUrl": ""
   }
