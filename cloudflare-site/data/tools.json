@@ -1,5 +1,116 @@
 [
   {
+    "name": "Floot",
+    "url": "https://floot.com",
+    "description": "Vibe-coding app builder that turns a chat description into a real full-stack app with a database, user logins and a live URL. The new Floot connector (Oct 29 2026) works inside ChatGPT and Claude, so your existing subscription does the thinking while Floot builds, hosts and deploys, and it can now publish to iOS and Android too.",
+    "categories": [
+      "App Builders",
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free $0/mo (100 building actions a day, 2 mobile builds a month); Pro $25/mo (1,000 actions a day, 5,000 AI credits, $10 hosting); Power $100/mo; yearly billing gives 2 months free. App store publishing needs your own Apple/Google developer accounts",
+    "tags": [
+      "vibe coding",
+      "full-stack apps",
+      "ChatGPT",
+      "Claude",
+      "mobile apps"
+    ],
+    "dateAdded": "2026-10-30",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 100,
+      "basis": "Free plan; Pro $25/mo; heavy assumes Power $100/mo (monthly billing)",
+      "checked": "2026-10-30"
+    }
+  },
+  {
+    "name": "Our Silly Games",
+    "url": "https://oursilly.games",
+    "description": "A free home for small browser games built with Claude Code or Codex. Install its skill, ask for \"a game about...\", and it builds, reviews and publishes the game with multiplayer rooms, leaderboards, saves and phone-as-controller support already built in. Launched on Product Hunt Oct 28 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "Deploy & Hosting"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free for creators and players, including hosting and multiplayer; you need your own Claude Code or Codex access to build",
+    "tags": [
+      "browser games",
+      "Claude Code",
+      "multiplayer",
+      "leaderboards",
+      "game hosting"
+    ],
+    "dateAdded": "2026-10-30",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free platform; AI usage comes from your own Claude Code or Codex plan",
+      "checked": "2026-10-30"
+    }
+  },
+  {
+    "name": "App Store Screenshots",
+    "url": "https://github.com/ParthJadhav/app-store-screenshots",
+    "description": "Open-source skill for Claude Code, Codex, Cursor and other coding agents that scaffolds a local editor for App Store and Google Play marketing screenshots: real device frames, 18 visual styles, a copy idea library, locales, and one-click export at every required store size. Handy for mobile game store pages. Launched on Product Hunt Oct 29 2026.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); install with npx skills add ParthJadhav/app-store-screenshots",
+    "tags": [
+      "app store",
+      "screenshots",
+      "agent skill",
+      "open source",
+      "store page"
+    ],
+    "dateAdded": "2026-10-30",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source (MIT); runs with the coding agent you already use",
+      "checked": "2026-10-30"
+    }
+  },
+  {
+    "name": "Viggle JST-2",
+    "url": "https://viggle.ai/jst2",
+    "description": "Viggle's 3D model family (released Oct 19 2026, on Product Hunt Oct 29) that makes explorable 3D scenes as Gaussian splats, animation-ready 3D characters from a single image with no separate rigging, and full-body motion from text or video exported as GLB or FBX for Mixamo and MetaHuman rigs. Try it free in the PINOC browser app, or use the API and PINOC MCP server from a coding agent.",
+    "categories": [
+      "3D & Models",
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free to try in the PINOC browser app; API gives 100 free credits (1 credit = $0.01), then $0.01 per scene view, $0.25-$0.30 per 3D character, $0.05 per source-video second for video-to-motion, $0.10 per text-to-motion",
+    "tags": [
+      "3D characters",
+      "motion capture",
+      "text to motion",
+      "Gaussian splats",
+      "MCP"
+    ],
+    "dateAdded": "2026-10-30",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 30,
+      "basis": "Pay per use: $0.30/character, $0.10/text-to-motion; ~20 characters + 40 motions (medium) or 60 + 120 (heavy) a month",
+      "checked": "2026-10-30"
+    }
+  },
+  {
     "name": "Entire",
     "url": "https://entire.com",
     "description": "A Git-compatible code host from former GitHub CEO Thomas Dohmke, built for code written by agents. Trails replace pull requests with review agents that score every push for quality, security and slop, and your agent sessions and prompts are stored alongside the code.",
@@ -477,7 +588,7 @@
   {
     "name": "GitHub Copilot",
     "url": "https://github.com/features/copilot",
-    "description": "AI pair programmer that offers code suggestions directly in your editor, powered by OpenAI.",
+    "description": "AI pair programmer that offers code suggestions directly in your editor, powered by OpenAI. New in Oct 2026: Copilot Fusion picks and combines models for each task (Standard, High or Max effort) to balance quality, speed and cost, on all Copilot plans in VS Code, JetBrains, the Copilot app and CLI.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -486,9 +597,10 @@
     "tags": [
       "autocomplete",
       "code suggestions",
-      "GitHub"
+      "GitHub",
+      "model routing"
     ],
-    "dateAdded": "2024-09-15",
+    "dateAdded": "2026-10-29",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -497,7 +609,8 @@
       "heavy": 39,
       "basis": "Free tier; Pro $10/mo; heavy assumes Pro+ $39/mo (Max $100 also listed)",
       "checked": "2026-10-28"
-    }
+    },
+    "newRelease": true
   },
   {
     "name": "Zed",
@@ -1090,7 +1203,7 @@
   {
     "name": "Suno",
     "url": "https://suno.com",
-    "description": "AI music generator that creates full songs with vocals from text prompts.",
+    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits.",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -1099,9 +1212,10 @@
     "tags": [
       "music generation",
       "vocals",
-      "songs"
+      "songs",
+      "MCP"
     ],
-    "dateAdded": "2024-09-01",
+    "dateAdded": "2026-10-29",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -1110,7 +1224,8 @@
       "heavy": 30,
       "basis": "Free tier; Pro $10/mo; Premier $30/mo ($24 annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "newRelease": true
   },
   {
     "name": "Udio",
@@ -1779,7 +1894,7 @@
   {
     "name": "Ludo.ai",
     "url": "https://ludo.ai",
-    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video. The new Ludo CLI (Oct 2026) lets you or coding agents like Claude Code generate assets straight into your project from the terminal, alongside its API and MCP on Pro plans.",
+    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video. The Ludo CLI lets you or coding agents like Claude Code generate assets straight into your project from the terminal, alongside its API and MCP on Pro plans. New Oct 27 2026: the free Asset Toolbox adds 32 offline tools (no account or credits) that agents use to slice spritesheets, set pivots and colliders, and write Godot, Unity and Phaser import files.",
     "categories": [
       "Game Art & Sprites",
       "3D & Models",
@@ -1793,9 +1908,10 @@
       "MCP",
       "audio",
       "game assets",
-      "sprites"
+      "sprites",
+      "asset pipeline"
     ],
-    "dateAdded": "2026-10-22",
+    "dateAdded": "2026-10-29",
     "newRelease": true,
     "affiliateUrl": "",
     "spend": {
@@ -2379,6 +2495,89 @@
       "heavy": 10,
       "basis": "Free 20 credits; Studio $10/mo for 200 credits",
       "checked": "2026-10-28"
+    }
+  },
+  {
+    "name": "PulseDev",
+    "url": "https://pulsedev.app",
+    "description": "A Mac app for fixing UI on your local site: click any element, say what's wrong, and Claude Code, Codex, Gemini CLI or OpenCode edits the real source. Nothing is written until you approve the diff on the page. Uses the agent plan you already pay for and runs fully on your machine.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for 1 project; Pro $12/mo (5-day trial, cheaper yearly); Founder Lifetime $149 once (first 200). macOS only for now",
+    "tags": [
+      "UI fixes",
+      "localhost",
+      "coding agents",
+      "diff review",
+      "vibe coding"
+    ],
+    "dateAdded": "2026-10-29",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 12,
+      "heavy": 12,
+      "basis": "Free for 1 project; Pro $12/mo (Lifetime $149 once)",
+      "checked": "2026-10-29"
+    }
+  },
+  {
+    "name": "Remix",
+    "url": "https://remix.gg",
+    "description": "Describe a game and an AI agent builds it, then publish it to remix.gg and the Remix iOS/Android app with free hosting, leaderboards and achievements. The new Remix Desktop (Oct 26 2026, macOS, Windows, Linux) runs the Claude, Codex, Cursor or OpenCode you already pay for, and adds multiplayer rooms and a trailer recorder.",
+    "categories": [
+      "Game Design & Narrative",
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan publishes and hosts games and lets you bring your own AI coding tools; Starter $5/mo (250 AI credits), Pro $15/mo, Max $100/mo",
+    "tags": [
+      "game maker",
+      "vibe coding",
+      "publishing",
+      "multiplayer",
+      "bring your own agent"
+    ],
+    "dateAdded": "2026-10-29",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 5,
+      "heavy": 15,
+      "basis": "Free with your own AI tools; Starter $5/mo; heavy assumes Pro $15/mo (Max $100)",
+      "checked": "2026-10-29"
+    }
+  },
+  {
+    "name": "Higgsfield",
+    "url": "https://higgsfield.ai",
+    "description": "AI image and video platform whose new Playable (Oct 26 2026) builds a small 2D or 3D browser game from one prompt, a gameplay idea or your assets, with style, genre and multiplayer options. You can also build from Claude through the Higgsfield MCP. Handy for testing a game idea or making trailer clips.",
+    "categories": [
+      "Game Design & Narrative",
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (no credits, no commercial use); Starter $15/mo (200 credits), Plus $49/mo, Ultra $129/mo; games use credits (vendor says a build starts around 70 credits); Playable Ads are Enterprise only",
+    "tags": [
+      "prompt to game",
+      "video generation",
+      "MCP",
+      "playable ads",
+      "trailers"
+    ],
+    "dateAdded": "2026-10-29",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 49,
+      "basis": "Free (no credits); Starter $15/mo; heavy assumes Plus $49/mo (Ultra $129)",
+      "checked": "2026-10-29"
     }
   }
 ]
