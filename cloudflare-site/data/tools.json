@@ -1,5 +1,112 @@
 [
   {
+    "name": "Aura Autopilot",
+    "url": "https://www.tryaura.dev/autopilot/",
+    "description": "Open-source game tester from Ramen (Oct 30 2026) that plays your game in real time inside Unreal Engine 5, Unity 6 or Godot 4 on Windows and macOS. Give it a plain-English prompt like exploring a level, verifying that a tree shakes when hit, or beating a boss, and it reads your project's code, plays, and writes a bug report. It learns the game the more it plays, and also runs from Claude Code or Codex through its skills and MCP server.",
+    "categories": [
+      "Code Review & Testing",
+      "Game Design & Narrative"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (Apache-2.0); use your own API key or Claude Code/Codex subscription. Also included in an Aura subscription, which has a free trial",
+    "tags": [
+      "playtesting",
+      "QA",
+      "Unreal",
+      "Unity",
+      "Godot",
+      "MCP"
+    ],
+    "dateAdded": "2026-11-02",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Open source; AI usage comes from your own API key or Claude Code/Codex plan",
+      "checked": "2026-11-02"
+    }
+  },
+  {
+    "name": "OhMyGame",
+    "url": "https://www.ohmygame.ai",
+    "description": "Open-source one-person game studio for macOS (Apple silicon) and Windows. You describe a game and an AI agent drafts the design doc, generates art, 3D, video and audio on a shared canvas, writes the code, playtests the build and publishes it to a shareable link. Beta 5 (Oct 29 2026) lets Claude Code, Codex or OpenCode run the studio and adds interactive stories and engine plugins.",
+    "categories": [
+      "Game Design & Narrative",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (Apache-2.0); bring your own API keys or a supported subscription and pay providers directly, with no per-run credits or markup",
+    "tags": [
+      "prompt to game",
+      "game studio",
+      "playtesting",
+      "Three.js",
+      "Phaser",
+      "open source"
+    ],
+    "dateAdded": "2026-11-02",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source; AI usage is billed by your own model providers",
+      "checked": "2026-11-02"
+    }
+  },
+  {
+    "name": "Stageshow",
+    "url": "https://benji.org/stageshow",
+    "description": "Free agent skill by Benji Taylor (Oct 31 2026) that teaches Claude Code, Codex, Cursor and other coding agents to build polished faux product UI: hero stills, feature cards, bento grids and animated cursor demos. The agent starts from dozens of gold examples, films its own result and fixes what it finds, then hands you an ordinary React component. Good for landing pages and store-page visuals.",
+    "categories": [
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source (MIT); install with npx skills add benjitaylor/skills --skill stageshow",
+    "tags": [
+      "agent skill",
+      "product demos",
+      "landing pages",
+      "React",
+      "animation"
+    ],
+    "dateAdded": "2026-11-02",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source (MIT); runs with the coding agent you already use",
+      "checked": "2026-11-02"
+    }
+  },
+  {
+    "name": "Kimi 3D Make",
+    "url": "https://www.kimi.com/en/make3d",
+    "description": "3D creation mode in Kimi (Nov 2026), powered by Kimi K3.1 Pro. Describe an idea or upload a sketch and it builds interactive 3D web scenes and web games, detailed 3D models, or print-ready files, then you refine them over several turns and share a link. In the Kimi Work desktop app it can also drive Blender, Unity, Godot and Unreal through local plugins.",
+    "categories": [
+      "3D & Models",
+      "Game Design & Narrative"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Uses Kimi's shared membership usage quota; Kimi lists Plus $19/mo, Pro $39, Max $99 and Ultra $199 (international). No 3D-specific price published, and free-plan access to 3D Make isn't confirmed",
+    "tags": [
+      "3D generation",
+      "web games",
+      "Blender",
+      "Unity",
+      "Godot",
+      "3D printing"
+    ],
+    "dateAdded": "2026-11-02",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
     "name": "Floot",
     "url": "https://floot.com",
     "description": "Vibe-coding app builder that turns a chat description into a real full-stack app with a database, user logins and a live URL. The new Floot connector (Oct 29 2026) works inside ChatGPT and Claude, so your existing subscription does the thinking while Floot builds, hosts and deploys, and it can now publish to iOS and Android too.",
@@ -1476,19 +1583,21 @@
   {
     "name": "Pika",
     "url": "https://pika.art",
-    "description": "AI creative platform with multiple models for video generation, image editing, and audio scoring.",
+    "description": "AI creative platform with multiple models for video generation, image editing, and audio scoring. New Oct 29 2026: Pika H3 Flex, an open-weights video model that generates up to 4K faster than real time and can return five separate audio stems (dialogue, score, SFX, foley, ambience) for editing trailers. It's available in the Pika API, ComfyUI and Diffusers.",
     "categories": [
       "Video & Trailers"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier; Starter $10/mo; Creator $35/mo",
+    "pricingNote": "Free tier; Starter $10/mo; Creator $35/mo. H3 Flex via the API from $0.01 per output second at launch pricing (480p), audio stems $0.001 per second",
     "tags": [
       "text-to-video",
       "video editing",
       "creative",
-      "multi-model"
+      "multi-model",
+      "open weights",
+      "audio stems"
     ],
-    "dateAdded": "2024-09-28",
+    "dateAdded": "2026-11-02",
     "newRelease": true,
     "affiliateUrl": "",
     "spend": {
