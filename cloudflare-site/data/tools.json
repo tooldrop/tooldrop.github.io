@@ -1260,18 +1260,20 @@
   {
     "name": "Tripo AI",
     "url": "https://www.tripo3d.ai",
-    "description": "Fast AI-powered text-to-3D and image-to-3D model generation with high quality output.",
+    "description": "Fast AI-powered text-to-3D and image-to-3D model generation with high quality output. New Nov 2 2026: Tripo Agentic Canvas (beta), an AI agent that builds node-based 3D workflows you can inspect and edit, chaining generation, texturing, retopology, Smart UV, PBR, segmentation, rigging and export, with reusable workflows and batch processing for game assets.",
     "categories": [
       "3D & Models"
     ],
     "pricing": "freemium",
-    "pricingNote": "Free tier; Pro $20/mo",
+    "pricingNote": "Free tier (200 credits/mo); Professional $20/mo ($13/mo yearly); Max $90/mo. Agentic Canvas beta is open to Max and Team first and rolling out to all accounts (free users get 24 hours); nodes use normal Studio credits",
     "tags": [
       "text-to-3D",
       "fast generation",
-      "API"
+      "API",
+      "agentic canvas",
+      "game assets"
     ],
-    "dateAdded": "2024-10-03",
+    "dateAdded": "2026-11-03",
     "newRelease": true,
     "affiliateUrl": "",
     "spend": {
@@ -2687,6 +2689,116 @@
       "heavy": 49,
       "basis": "Free (no credits); Starter $15/mo; heavy assumes Plus $49/mo (Ultra $129)",
       "checked": "2026-10-29"
+    }
+  },
+  {
+    "name": "Clayzo",
+    "url": "https://clayzo.com",
+    "description": "Free animation engine built for coding agents (Product Hunt launch Nov 2 2026). Ask Claude Code, Codex or Cursor for launch videos, logo stings, product UI animations or interactive web effects; the agent writes the animation as code, renders and checks its own frames, then you export MP4, WebM, GIF or MOV with alpha, or play it live on your site with a small WebGL player (also native Swift). Handy for trailers, store-page clips and social posts.",
+    "categories": [
+      "Video & Trailers",
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free to create, embed and export animations for your own sites and apps (sign-in needed for preview and export); a licence is needed only to build a product that generates animations for other users. Install with npx clayzo@latest init",
+    "tags": [
+      "coding agents",
+      "motion graphics",
+      "launch videos",
+      "web animation",
+      "agent skill"
+    ],
+    "dateAdded": "2026-11-03",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free for your own sites and apps; runs with the coding agent you already use",
+      "checked": "2026-11-03"
+    }
+  },
+  {
+    "name": "Hera",
+    "url": "https://hera.video",
+    "description": "YC-backed AI creative canvas (#1 Product of the Day on Product Hunt, Nov 2 2026). Generate images, designs and animations on one board, direct several AI agents at once, and get every result back as editable layers. Built for ads, launch videos and social posts in your own brand, so it suits game trailers, store-page art and launch campaigns.",
+    "categories": [
+      "Marketing & Store Page Copy",
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier with limits; paid plans listed from $20/mo (Standard), $40/mo (Pro) and $100/mo (Mega), about 40% less billed yearly",
+    "tags": [
+      "creative canvas",
+      "motion graphics",
+      "ads",
+      "launch videos",
+      "editable layers"
+    ],
+    "dateAdded": "2026-11-03",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 40,
+      "basis": "Free tier; Standard $20/mo; heavy assumes Pro $40/mo (prices from third-party listings)",
+      "checked": "2026-11-03"
+    }
+  },
+  {
+    "name": "T3 Code",
+    "url": "https://t3.codes",
+    "description": "Free, open-source control plane for coding agents from Theo Browne's team. Run Claude Code, Codex, Cursor, OpenCode, Antigravity and Grok from one desktop, web or phone app with your own subscriptions; each thread works on its own branch, and one button commits, pushes and opens a GitHub PR with a generated title and changelog. Widely discussed on X in early Nov 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source (MIT); bring your own Claude, Codex, Cursor or other agent subscription",
+    "tags": [
+      "open source",
+      "coding agents",
+      "orchestration",
+      "desktop app",
+      "mobile"
+    ],
+    "dateAdded": "2026-11-03",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source; agent subscriptions you already pay for are extra",
+      "checked": "2026-11-03"
+    }
+  },
+  {
+    "name": "Open Duet",
+    "url": "https://github.com/Anil-matcha/open-duet",
+    "description": "Open-source, self-hosted workspace for a team of named AI coworkers. Give each agent a job, instructions, memory, a workspace and approval settings; a Claude or Codex lead delegates to specialists, routines run on a schedule, and anything that changes your apps waits for your approval. Desktop app and self-hosted server; pre-release and still evolving (trending on GitHub, Nov 2026).",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source (Apache-2.0); no model included, bring your own Claude, Codex, Gemini or local model",
+    "tags": [
+      "open source",
+      "self-hosted",
+      "multi-agent",
+      "routines",
+      "memory"
+    ],
+    "dateAdded": "2026-11-03",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": null,
+      "basis": "Free, open source; model or subscription costs extra",
+      "checked": "2026-11-03"
     }
   }
 ]
