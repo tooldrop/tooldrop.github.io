@@ -65,7 +65,7 @@ def tool_path(t): return f"/tool/{t['slug']}/"
 # ---- outbound links (affiliate-aware) ----
 def visit_link(t, label, where, cls="btn btn-primary"):
     """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note."""
-    aff = (t.get("affiliateUrl") or "").strip()
+    aff = (t.get("affiliateUrl") or "").strip() if t.get("affiliate", True) else ""
     href, rel = (aff, "sponsored nofollow noopener") if aff else (t["url"], "noopener")
     c = f' class="{cls}"' if cls else ""
     a = (f'<a href="{e(href)}" target="_blank" rel="{rel}"{c} data-tool="{e(t["name"])}" data-goatcounter-click="out-{t["slug"]}" '
@@ -181,7 +181,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
       <div class="footer-links"><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/new-releases/">New Releases</a></li><li><a href="/compare/">Comparisons</a></li><li><a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a></li><li><a href="/about/">About</a></li><li><a href="/disclosure/">Disclosure</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="{XURL}" target="_blank" rel="noopener">X / Twitter</a></li></ul></div>
       <div class="footer-newsletter"><h4>Newsletter</h4><p>Get weekly AI tool updates</p><a href="{SUB}/subscribe" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="subscribe-click" data-goatcounter-title="Subscribe on Substack" data-goatcounter-referrer="__GC_PAGE__">Subscribe on Substack →</a></div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p></div>
+    <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p><p class="footer-disclosure">Some links are affiliate links; ToolDrop may earn a commission at no cost to you.</p></div>
   </div></footer>
   <script src="/js/main.js"></script>
 </body>
