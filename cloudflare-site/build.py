@@ -143,10 +143,15 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
   <meta property="og:url" content="{url}">
   <meta property="og:site_name" content="ToolDrop">
   <meta property="og:locale" content="en_AU">
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@trytooldrop">
   <meta name="twitter:title" content="{e(title)}">
   <meta name="twitter:description" content="{e(desc)}">
+  <meta name="twitter:image" content="{SITE}/img/share.png">
+  <meta property="og:image" content="{SITE}/img/share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ToolDrop: AI tools for vibe coders and indie game devs">
   <link rel="canonical" href="{url}">
   <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
@@ -212,6 +217,8 @@ def sel_voice():
     return [t for t in tools if "Voice" in t["categories"]]
 def sel_video():
     return [t for t in tools if "Video & Trailers" in t["categories"]]
+def sel_app_builders():
+    return [t for t in tools if "App Builders" in t["categories"]]
 
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
@@ -249,11 +256,76 @@ COMPARISONS = [
       desc="Compare AI video generators and editors for game trailers, devlogs and store page videos: what each does, pricing and free tiers.",
       cats=["Video & Trailers"], select=sel_video,
       intro="""A short trailer or devlog clip does a lot of work on a Steam page or social feed. These are the AI video tools in the ToolDrop directory. Runway (free tier, from $15/mo), Pika (free tier) and Kling AI (free Basic plan with watermarked exports, paid credit plans) generate video clips from text and images, and Kling 4.0 makes native 30-second clips with keyframes, sound effects and lip sync. Luma AI (free tier) does photorealistic video alongside image and 3D generation. Descript (free tier, from $15/mo) edits video by editing the transcript, which is handy for devlogs. Framefields is open source (Apache-2.0) and lets coding agents write motion graphics in TypeScript and render MP4s. HeyGen (free tier, from $29/mo) and Synthesia (from $30/mo) make AI avatar presenter videos, which suit explainers more than gameplay trailers. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
+ dict(path="/compare/ai-app-builders-for-vibe-coding/", h1="Best AI app builders for vibe coding",
+      title="AI App Builders for Vibe Coding Compared | ToolDrop",
+      desc="Compare AI app builders for vibe coding: Bolt, v0, Lovable, Replit, Floot, myPip and Remix, with pricing and free tiers.",
+      cats=["App Builders"], select=sel_app_builders,
+      intro="""Vibe coding lets you describe an app and watch AI build it. These are the dedicated app builders in the ToolDrop directory, all with free tiers. Bolt writes, runs and deploys full-stack web apps in the browser (free tier, Pro $25/mo). Lovable builds full-stack web apps from plain-English descriptions (free tier available). v0 by Vercel generates React components from text prompts (free tier, Plus $30/user/mo). Replit is a browser-based IDE with AI that codes, debugs and deploys (Free Starter, Core $20/mo, Pro $100/mo). Floot turns chat descriptions into full-stack apps with a database and user logins, and now publishes to iOS and Android (free tier, Pro $25/mo, Power $100/mo). myPip builds playable browser games from descriptions and publishes them with multiplayer and monetization (free, 40 free builds for new accounts). Remix lets you describe a game and an AI agent builds it, then publishes to remix.gg and mobile apps (free plan, Starter $5/mo, Pro $15/mo). Prices are as listed by each vendor and can change."""),
 ]
 
 def names_list(ts):
     links = [f'<a href="{tool_path(t)}">{e(t["name"])}</a>' for t in ts]
     return links[0] if len(links) == 1 else ", ".join(links[:-1]) + " and " + links[-1]
+
+def generate_faqs(ts, cp):
+    """Generate 2-3 FAQ Q&A pairs from tools data for a compare page."""
+    faqs = []
+    category_name = cp["cats"][0].lower() if cp["cats"] else "tools"
+    
+    # Q1: What is the best free X tool?
+    free_tools = [t for t in ts if t["pricing"] == "free"]
+    freemium_tools = [t for t in ts if t["pricing"] == "freemium" and has_free_way_in(t)]
+    if free_tools or freemium_tools:
+        if free_tools:
+            names = ", ".join(t["name"] for t in free_tools[:3])
+            answer = f"The completely free options in this comparison are {names}."
+            if free_tools[0].get("pricingNote"):
+                answer += f" {free_tools[0]['name']} is {free_tools[0]['pricingNote'].split(';')[0].lower()}."
+        else:
+            names = ", ".join(t["name"] for t in freemium_tools[:3])
+            answer = f"Tools with a free tier include {names}. Each has limits on the free plan, so check the vendor's site for details."
+        faqs.append((f"What is the best free {category_name} tool?", answer))
+    
+    # Q2: Which tool is cheapest?
+    priced_tools = [(t, t.get("spend", {}).get("medium") or 999) for t in ts if t.get("spend") and t["spend"].get("medium") is not None]
+    if priced_tools:
+        priced_tools.sort(key=lambda x: x[1])
+        cheapest = [p for p in priced_tools if p[1] == priced_tools[0][1]]
+        if priced_tools[0][1] == 0:
+            names = ", ".join(t[0]["name"] for t in cheapest[:3])
+            answer = f"For typical use, {names} can be free or very low cost. Check each tool's free tier limits."
+        else:
+            t = cheapest[0][0]
+            answer = f"For typical use, {t['name']} has an estimated monthly cost around ${int(cheapest[0][1])}/mo. {t.get('pricingNote', '').split(';')[0]}."
+        faqs.append((f"Which {category_name} tool is cheapest?", answer))
+    
+    # Q3: Which tool has the best features for [specific use]?
+    if "App Builders" in cp["cats"]:
+        faqs.append(("Which app builder is best for beginners?", "For beginners, Bolt and Lovable let you describe what you want in plain English and handle the code, deployment and hosting. Both have free tiers to try before you pay."))
+    elif "Game Art & Sprites" in cp["cats"]:
+        pixel_tools = [t for t in ts if tagged(t, "pixel art")]
+        if pixel_tools:
+            names = ", ".join(t["name"] for t in pixel_tools[:2])
+            faqs.append(("Which tool is best for pixel art?", f"For pixel art specifically, {names} are designed for pixel-style sprites and game assets."))
+    elif "3D & Models" in cp["cats"]:
+        faqs.append(("Which 3D tool is best for game assets?", "Meshy and Tripo AI both generate game-ready 3D models from text or images and have free tiers. Kaedim focuses on production-ready models from 2D images."))
+    elif "Voice" in cp["cats"]:
+        faqs.append(("Which voice tool supports voice cloning?", "ElevenLabs, Fish Audio and Resemble AI all support voice cloning. Check each tool's consent and licensing requirements before using cloned voices commercially."))
+    elif "Video & Trailers" in cp["cats"]:
+        faqs.append(("Which video tool is best for game trailers?", "Runway, Pika and Kling AI generate video from text and images, good for trailer clips. Descript is better for editing devlogs with its transcript-based editing."))
+    elif "Audio, Music & SFX" in cp["cats"]:
+        faqs.append(("Which tool is best for game soundtracks?", "Suno and Udio generate full tracks with vocals. Soundraw focuses on royalty-free background music with copyright-safe licensing."))
+    
+    return faqs[:3]  # Return at most 3 FAQs
+
+def faq_html(faqs):
+    """Generate visible FAQ HTML section."""
+    items = "\n".join(f'<dt>{e(q)}</dt>\n<dd>{e(a)}</dd>' for q, a in faqs)
+    return f'<section class="section"><div class="container prose prose-wide"><h2 class="section-title">FAQ</h2>\n<dl class="faq-list">\n{items}\n</dl></div></section>'
+
+def faqpage_ld(faqs):
+    """Generate FAQPage JSON-LD."""
+    return ld({"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]})
 def how_to_choose(ts):
     rules = [
         ("Completely free", lambda t: t["pricing"] == "free", "Listed as free in our data (pricing note: open source, self-hosted or early access)."),
@@ -397,6 +469,9 @@ for cp in COMPARISONS:
     else:
         tables = compare_table(ts)
     rel_cats = " · ".join(f'<a href="/category/{slug(c)}/">{e(c)}</a>' for c in cp["cats"])
+    faqs = generate_faqs(ts, cp)
+    faq_section = faq_html(faqs) if faqs else ""
+    faq_ld = faqpage_ld(faqs) if faqs else ""
     body = f'''<section class="hero hero-small"><div class="container">{bc}<h1>{e(cp["h1"])}</h1></div></section>
 <section class="section"><div class="container prose prose-wide"><p>{e(cp["intro"])}</p>
 <p class="muted">Prices and details come from the ToolDrop directory and are as listed by each vendor. They can change, so check each tool's site.</p></div></section>
@@ -404,8 +479,9 @@ for cp in COMPARISONS:
 {tables}</div></section>
 <section class="section"><div class="container prose prose-wide"><h2 class="section-title">How to choose</h2>
 {how_to_choose(ts)}
-<p>Related categories: {rel_cats}</p></div></section>{SUBSCRIBE}'''
-    page(cp["path"], cp["title"], cp["desc"], body, itemlist(cp["h1"], tl(ts)) + "\n" + bcld, max(t["dateAdded"] for t in ts))
+<p>Related categories: {rel_cats}</p></div></section>
+{faq_section}{SUBSCRIBE}'''
+    page(cp["path"], cp["title"], cp["desc"], body, itemlist(cp["h1"], tl(ts)) + "\n" + bcld + ("\n" + faq_ld if faq_ld else ""), max(t["dateAdded"] for t in ts))
 
 # Compare hub
 bc, bcld = crumbs([("Home", "/"), ("Compare", "/compare/")])

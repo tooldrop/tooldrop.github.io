@@ -71,3 +71,4 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 
 .spend-est{font-size:.85rem;opacity:.8;margin:.4rem 0 0}
 .spend-caveat{font-size:.8rem;opacity:.75;margin-top:.5rem}
+.faq-list{margin:16px 0}.faq-list dt{font-weight:600;color:var(--text);margin-top:16px}.faq-list dd{color:var(--muted);margin:6px 0 0 0}
