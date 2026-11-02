@@ -65,7 +65,7 @@ def tool_path(t): return f"/tool/{t['slug']}/"
 # ---- outbound links (affiliate-aware) ----
 def visit_link(t, label, where, cls="btn btn-primary"):
     """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note."""
-    aff = (t.get("affiliateUrl") or "").strip()
+    aff = (t.get("affiliateUrl") or "").strip() if t.get("affiliate", True) else ""
     href, rel = (aff, "sponsored nofollow noopener") if aff else (t["url"], "noopener")
     c = f' class="{cls}"' if cls else ""
     a = (f'<a href="{e(href)}" target="_blank" rel="{rel}"{c} data-tool="{e(t["name"])}" data-goatcounter-click="out-{t["slug"]}" '
@@ -178,10 +178,10 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
     <div class="footer-content">
       <div class="footer-brand"><span class="logo">🛠️ ToolDrop</span><p>AI tools for vibe coders and indie game devs</p></div>
       <div class="footer-links"><h4>Categories</h4><ul>{footer_cats}</ul></div>
-      <div class="footer-links"><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/new-releases/">New Releases</a></li><li><a href="/compare/">Comparisons</a></li><li><a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a></li><li><a href="/about/">About</a></li><li><a href="/disclosure/">Disclosure</a></li><li><a href="{XURL}" target="_blank" rel="noopener">X / Twitter</a></li></ul></div>
+      <div class="footer-links"><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/new-releases/">New Releases</a></li><li><a href="/compare/">Comparisons</a></li><li><a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a></li><li><a href="/about/">About</a></li><li><a href="/disclosure/">Disclosure</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="{XURL}" target="_blank" rel="noopener">X / Twitter</a></li></ul></div>
       <div class="footer-newsletter"><h4>Newsletter</h4><p>Get weekly AI tool updates</p><a href="{SUB}/subscribe" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="subscribe-click" data-goatcounter-title="Subscribe on Substack" data-goatcounter-referrer="__GC_PAGE__">Subscribe on Substack →</a></div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p></div>
+    <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p><p class="footer-disclosure">Some links are affiliate links; ToolDrop may earn a commission at no cost to you.</p></div>
   </div></footer>
   <script src="/js/main.js"></script>
 </body>
@@ -502,6 +502,33 @@ page("/disclosure/", "Affiliate Disclosure | ToolDrop", "How ToolDrop handles af
 </div></section>''', bcld)
 
 # About
+# ---- advertise page (LIVE Stripe links, acct Tool Drop) ----
+ADV_LINKS = {
+    "featured": "https://buy.stripe.com/3cI6oHbXu9Y468l5AP6Na00",
+    "homepage": "https://buy.stripe.com/14A8wP1iQ2vCbsFfbp6Na01",
+    "homepage_monthly": "https://buy.stripe.com/eVq5kD7He1ry0O11kz6Na02",
+    "newsletter": "https://buy.stripe.com/14A00j4v2gms9kx8N16Na03",
+    "bundle": "https://buy.stripe.com/8x29ATd1y6LS8gtfbp6Na04",
+}
+def adv_card(key, name, price, per, blurb):
+    return f'''<div class="adv-card"><h3>{name}</h3><div class="adv-price">from NZ${price}<span>{per}</span></div><p>{blurb}</p><a class="btn btn-primary" href="{ADV_LINKS[key]}" target="_blank" rel="noopener" data-goatcounter-click="advertise-{key}" data-goatcounter-title="Advertise: {name}">Book now →</a></div>'''
+bc, bcld = crumbs([("Home", "/"), ("Advertise", "/advertise/")])
+page("/advertise/", "Advertise on ToolDrop | Featured listings and sponsorships", "Featured listings, homepage spots and newsletter sponsorships for AI tool makers on ToolDrop. Listing is always free.",
+     f'''<style>.adv-grid{{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;margin:1.5rem 0}}.adv-card{{border:1px solid rgba(127,127,127,.3);border-radius:10px;padding:1.2rem;display:flex;flex-direction:column}}.adv-card p{{flex:1}}.adv-price{{font-size:1.5rem;font-weight:700;margin:.3rem 0}}.adv-price span{{font-size:.9rem;font-weight:400;opacity:.75}}.adv-note{{border-left:4px solid #888;padding:.8rem 1rem;margin:1.5rem 0;background:rgba(127,127,127,.08)}}</style>
+<section class="hero hero-small"><div class="container">{bc}<h1>Advertise on ToolDrop</h1><p>ToolDrop is a free directory of AI tools for vibe coders and indie game devs. Listing is always free. These options just give your tool extra visibility.</p></div></section>
+<section class="section"><div class="container">
+<div class="adv-grid">
+{adv_card("featured","Featured listing",29,"/month","Featured badge and top placement in your tool&#39;s category. Cancel anytime.")}
+<div class="adv-card"><h3>Homepage spot</h3><div class="adv-price">from NZ$49<span>/week</span></div><p>Your tool in the sponsored spot on the ToolDrop homepage. Or NZ$79/month to save. Cancel anytime.</p><a class="btn btn-primary" href="{ADV_LINKS['homepage']}" target="_blank" rel="noopener" data-goatcounter-click="advertise-homepage" data-goatcounter-title="Advertise: Homepage weekly">NZ$49/week →</a><a class="btn btn-primary" style="margin-top:8px" href="{ADV_LINKS['homepage_monthly']}" target="_blank" rel="noopener" data-goatcounter-click="advertise-homepage-monthly" data-goatcounter-title="Advertise: Homepage monthly">NZ$79/month →</a></div>
+{adv_card("newsletter","Newsletter sponsorship",39," one-off","A labelled sponsor blurb in one issue of our weekly newsletter.")}
+{adv_card("bundle","Sponsor bundle",119,"/month","Featured listing, a month on the homepage and a newsletter slot. About 20% off.")}
+</div>
+<div class="adv-note"><strong>Our promise:</strong> paid placements are always labelled. Payment never changes our descriptions, spend estimates, or whether a tool is listed.</div>
+<h2>How it works</h2>
+<p>Book through the secure Stripe checkout and tell us your tool&#39;s name and website. We&#39;ll email you within a couple of days to grab a logo and a short blurb (about 40 words), then put it live.</p>
+<p>Got something custom in mind? Email <a href="mailto:trytooldrop@gmail.com">trytooldrop@gmail.com</a>.</p>
+</div></section>''', bcld)
+
 bc, bcld = crumbs([("Home", "/"), ("About", "/about/")])
 page("/about/", "About ToolDrop", "ToolDrop is a directory and weekly newsletter of AI tools for vibe coders and indie game devs.",
      f'''<section class="hero hero-small"><div class="container">{bc}<h1>About ToolDrop</h1><p class="subtitle">A directory of AI tools for vibe coders and indie game devs, sorted by the job you need done.</p></div></section>

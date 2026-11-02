@@ -1430,14 +1430,15 @@
       "API"
     ],
     "dateAdded": "2024-08-22",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://get.murf.ai/5shyee8tfgy4",
     "spend": {
       "light": 0,
       "medium": 29,
       "heavy": 99,
       "basis": "Free trial; Creator $29/mo ($19 annual); heavy assumes Business $99/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "affiliate": true
   },
   {
     "name": "Inworld AI",
