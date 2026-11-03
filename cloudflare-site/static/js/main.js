@@ -32,6 +32,7 @@
       var type = p.dataset.filterType;
       document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]').forEach(function (o) { o.classList.remove('active'); });
       p.classList.add('active'); state[type] = p.dataset.filterValue; apply();
+      try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'filter/' + type + '/' + p.dataset.filterValue, title: 'Filter: ' + type + ' = ' + p.textContent.trim() + ' (' + location.pathname + ')', event: true }); } catch (e) {}
     });
   });
   var q = new URLSearchParams(location.search).get('q');
