@@ -1,5 +1,143 @@
 [
   {
+    "name": "Wanaka Studio",
+    "url": "https://wanaka.app",
+    "description": "AI-native, browser-based 3D game engine: describe a game and its AI agent builds models, auto-rigging, gameplay logic and sound, plays the game to test and fix its own work, and lets you edit the scene directly. Native multiplayer and one-click publish to a shareable browser link. Version 1.0 launched Nov 2 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free to start; paid monthly and yearly plans (see site)",
+    "tags": [
+      "game engine",
+      "no-code",
+      "3D",
+      "multiplayer",
+      "browser"
+    ],
+    "dateAdded": "2026-11-04",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": null,
+      "heavy": null,
+      "basis": "Free to start; paid plan prices not checked",
+      "checked": "2026-11-04"
+    }
+  },
+  {
+    "name": "Spielerando",
+    "url": "https://spielerando.com/en",
+    "description": "Game-creation workbench for Claude Code, Cursor and other MCP coding assistants. Your AI looks up tested game recipes (story, quests, game logic and odds, animation math), runs a checker over branching stories and rules before it builds, and saves your project version by version. Launched as a Show HN, Nov 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free to start (sign in with Google or email); see site for paid options",
+    "tags": [
+      "MCP",
+      "game design",
+      "narrative",
+      "vibe coding",
+      "Claude Code"
+    ],
+    "dateAdded": "2026-11-04",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": null,
+      "heavy": null,
+      "basis": "Free to start; paid options not checked",
+      "checked": "2026-11-04"
+    }
+  },
+  {
+    "name": "Testifly",
+    "url": "https://testifly.dev",
+    "description": "Autonomous AI QA for web apps: give it your URL and logins and it discovers user flows, writes end-to-end tests, self-heals when the UI changes and explains failures with video. Reports to Jira, Linear, Notion and Slack. Handy for vibe-coded apps with no QA. Launched on Product Hunt Nov 3 2026.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "paid",
+    "pricingNote": "30-day free trial, no credit card; paid plans after (see site)",
+    "tags": [
+      "QA",
+      "end-to-end testing",
+      "self-healing",
+      "web apps",
+      "CI"
+    ],
+    "dateAdded": "2026-11-04",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": null,
+      "heavy": null,
+      "basis": "30-day free trial; paid plan prices not checked",
+      "checked": "2026-11-04"
+    }
+  },
+  {
+    "name": "AgentKit by Scalekit",
+    "url": "https://www.scalekit.com",
+    "description": "MCP gateway that lets production agents use 30,000+ tools across 600+ apps (GitHub, Salesforce and more) with per-user auth, so each action runs as the user who asked within their granted scopes. Virtual MCP servers limit each agent to the tools it needs, plus custom connectors, triggers and full call logs. Launched on Product Hunt Nov 3 2026.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free $0/mo (10,000 tool calls and 10,000 trigger events/mo); Growth $99/mo",
+    "tags": [
+      "MCP",
+      "auth",
+      "tool calling",
+      "agents",
+      "gateway"
+    ],
+    "dateAdded": "2026-11-04",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 99,
+      "basis": "Free 10k tool calls/mo; Growth $99/mo",
+      "checked": "2026-11-04"
+    }
+  },
+  {
+    "name": "Hex",
+    "url": "https://anoma.ly/hex/",
+    "description": "Free, open-source local voice dictation for Mac, Windows and Linux from the OpenCode team: hold a shortcut, speak, and it transcribes on-device and pastes into any app, great for dictating prompts to coding agents. Can optionally clean up transcripts through a running OpenCode service. Trending among developers, Nov 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Voice"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source (MIT); runs locally, no subscription",
+    "tags": [
+      "dictation",
+      "speech-to-text",
+      "open source",
+      "on-device",
+      "OpenCode"
+    ],
+    "dateAdded": "2026-11-04",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source, runs locally",
+      "checked": "2026-11-04"
+    }
+  },
+  {
     "name": "Aura Autopilot",
     "url": "https://www.tryaura.dev/autopilot/",
     "description": "Open-source game tester from Ramen (Oct 30 2026) that plays your game in real time inside Unreal Engine 5, Unity 6 or Godot 4 on Windows and macOS. Give it a plain-English prompt like exploring a level, verifying that a tree shakes when hit, or beating a boss, and it reads your project's code, plays, and writes a bug report. It learns the game the more it plays, and also runs from Claude Code or Codex through its skills and MCP server.",
@@ -1185,7 +1323,7 @@
   {
     "name": "Meshy",
     "url": "https://www.meshy.ai",
-    "description": "AI 3D model generator that creates textured, print-ready models from text prompts or images.",
+    "description": "AI 3D model generator that creates textured, print-ready models from text prompts or images. New Nov 3 2026: Meshy N1, its first native 3D texturing model, paints textures directly in 3D for cleaner results with fewer projection seams, in about 14 seconds; multi-view texture references for subscribers.",
     "categories": [
       "3D & Models"
     ],
@@ -1195,9 +1333,10 @@
       "3D models",
       "textures",
       "text-to-3D",
-      "3D printing"
+      "3D printing",
+      "texturing"
     ],
-    "dateAdded": "2024-09-18",
+    "dateAdded": "2026-11-04",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -1206,7 +1345,8 @@
       "heavy": 40,
       "basis": "Free tier; Pro $20/mo; heavy assumes Premium $40/mo (Ultra $100)",
       "checked": "2026-10-28"
-    }
+    },
+    "newRelease": true
   },
   {
     "name": "Luma AI",
@@ -1389,7 +1529,7 @@
   {
     "name": "ElevenLabs",
     "url": "https://elevenlabs.io",
-    "description": "Industry-leading AI voice synthesis with realistic speech, voice cloning, and music generation. New in Oct 2026: Eleven Realtime speech-to-speech models (v1 Mini and v1 Max, 90+ languages) for low-latency voice agents and interactive characters, via an OpenAI-compatible Realtime API.",
+    "description": "Industry-leading AI voice synthesis with realistic speech, voice cloning, and music generation. New in Oct 2026: Eleven Realtime speech-to-speech models (v1 Mini and v1 Max, 90+ languages) for low-latency voice agents and interactive characters, via an OpenAI-compatible Realtime API. New Nov 2 2026: SFX v3 sound effects model in the API (eleven_text_to_sound_v3), which follows multi-part prompts more closely and handles vocals and music better.",
     "categories": [
       "Voice"
     ],
@@ -1400,9 +1540,10 @@
       "voice cloning",
       "realistic",
       "music",
-      "voice agents"
+      "voice agents",
+      "sound effects"
     ],
-    "dateAdded": "2026-10-26",
+    "dateAdded": "2026-11-04",
     "featured": true,
     "affiliateUrl": "",
     "newRelease": true,
