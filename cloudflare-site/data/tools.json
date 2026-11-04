@@ -1,5 +1,106 @@
 [
   {
+    "name": "FlutterFlow",
+    "url": "https://flutterflow.io",
+    "description": "Prompt-to-app builder for native mobile: describe an app and an AI agent builds one iOS and Android app with a built-in backend (database, auth, functions, secrets) and analytics, runs several tasks in parallel, lets you test on your own phone and publishes to the App Store and Google Play. The classic visual editor continues as FlutterFlow Studio on the same plan. Launched Nov 4 2026.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free AI allowance; Basic $39/mo; Pro $80/mo; Max $150/mo (25% off yearly)",
+    "tags": [
+      "mobile apps",
+      "iOS",
+      "Android",
+      "Flutter",
+      "app store deployment",
+      "vibe coding"
+    ],
+    "dateAdded": "2026-11-05",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 39,
+      "heavy": 80,
+      "basis": "Free AI allowance; Basic $39/mo; heavy assumes Pro $80/mo (Max $150)",
+      "checked": "2026-11-05"
+    }
+  },
+  {
+    "name": "QualityLayer",
+    "url": "https://qualitylayer.dev",
+    "description": "Plan-first workflow around the coding agent you already use (Claude Code, Codex, Cursor, Grok, Antigravity, Pi, OpenCode, Copilot): each change goes through Discuss, Research, Plan, Outline, Implement, Verify and Review. You approve the plan from diagrams and clickable mockups, the agent builds test-first, and a separate agent that didn't write the code reviews it. Runs locally on your own subscription. Launched on Product Hunt Nov 4 2026.",
+    "categories": [
+      "Code Review & Testing",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "7-day trial; Solo €19/mo; Team €29/seat/mo (prices in EUR); uses your own agent subscription",
+    "tags": [
+      "planning",
+      "independent review",
+      "test-first",
+      "Claude Code",
+      "Codex",
+      "local"
+    ],
+    "dateAdded": "2026-11-05",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": null
+  },
+  {
+    "name": "Xogot",
+    "url": "https://xogot.com",
+    "description": "Apple-native Godot editor for iPad, iPhone and Mac (beta). New Nov 3 2026: a built-in AI agent writes and edits code, debugs and refactors scenes directly in your Godot project, keeps running in the background with Live Activities, and supports skills and MCP. Bring your own Claude, ChatGPT, Copilot, API key or local model.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Core features free; Pro $5.99/mo, $39.99/yr or $149.99 lifetime (App Store, US); AI agent uses your own AI subscription or key",
+    "tags": [
+      "Godot",
+      "iPad",
+      "game engine",
+      "mobile",
+      "coding agent",
+      "BYO model"
+    ],
+    "dateAdded": "2026-11-05",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 5.99,
+      "heavy": 5.99,
+      "basis": "Core free; Pro $5.99/mo ($39.99/yr, $149.99 lifetime); AI provider costs extra",
+      "checked": "2026-11-05"
+    }
+  },
+  {
+    "name": "Gemini 3.8 Flash TTS",
+    "url": "https://aistudio.google.com/docs/speech-generation",
+    "description": "Google's expressive text-to-speech model in the Gemini API and AI Studio: 2,000+ library voices, voice design from a text prompt, 30-second voice replication, per-line acting direction and two-speaker scenes in 130 languages. New Nov 4 2026: Voice Remixing lets you tweak any voice's timbre, pitch, pace, accent and delivery with a prompt, handy for NPC and character voices.",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free tier in the Gemini API; paid $0.50/1M input text tokens and $9/1M audio output tokens (~$0.00225 per 10s) through Dec 31 2026, doubling Jan 1 2027",
+    "tags": [
+      "text-to-speech",
+      "voice design",
+      "voice cloning",
+      "API",
+      "character voices"
+    ],
+    "dateAdded": "2026-11-05",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": null
+  },
+  {
     "name": "Wanaka Studio",
     "url": "https://wanaka.app",
     "description": "AI-native, browser-based 3D game engine: describe a game and its AI agent builds models, auto-rigging, gameplay logic and sound, plays the game to test and fix its own work, and lets you edit the scene directly. Native multiplayer and one-click publish to a shareable browser link. Version 1.0 launched Nov 2 2026.",
@@ -1452,7 +1553,7 @@
   {
     "name": "Suno",
     "url": "https://suno.com",
-    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits.",
+    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it.",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -1462,9 +1563,10 @@
       "music generation",
       "vocals",
       "songs",
-      "MCP"
+      "MCP",
+      "MIDI"
     ],
-    "dateAdded": "2026-10-29",
+    "dateAdded": "2026-11-05",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -2489,7 +2591,7 @@
   {
     "name": "Render",
     "url": "https://render.com",
-    "description": "Host web services, static sites, Postgres, Redis-compatible key value stores and cron jobs with auto-deploys from Git.",
+    "description": "Host web services, static sites, Postgres, Redis-compatible key value stores and cron jobs with auto-deploys from Git. New Nov 4 2026: Render Sandboxes give each AI agent its own isolated Firecracker microVM that starts in under a second, can run Docker Compose to test your full app, limits outbound domains, and suspends when idle so compute charges stop.",
     "categories": [
       "Deploy & Hosting"
     ],
@@ -2500,10 +2602,11 @@
       "backend",
       "Postgres",
       "static sites",
-      "deployment"
+      "deployment",
+      "agent sandboxes"
     ],
-    "dateAdded": "2026-10-21",
-    "newRelease": false,
+    "dateAdded": "2026-11-05",
+    "newRelease": true,
     "affiliateUrl": "",
     "spend": {
       "light": 0,
