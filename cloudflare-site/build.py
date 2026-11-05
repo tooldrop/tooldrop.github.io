@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Static rebuild of ToolDrop (backup for Cloudflare Pages). Usage: SITE_URL=https://x.pages.dev python3 build.py
+"""Static rebuild of ToolDrop (backup for Cloudflare Pages). Usage: SITE_URL=https://trytooldrop.com python3 build.py
 
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
@@ -7,7 +7,7 @@ sponsored? (optional, renders a "Sponsored" label). See README.md.
 """
 import json, os, re, shutil, html
 from datetime import date
-SITE = os.environ.get("SITE_URL", "https://tooldrop.pages.dev").rstrip("/")
+SITE = os.environ.get("SITE_URL", "https://trytooldrop.com").rstrip("/")
 SUB = "https://tooldrophq.substack.com"
 XURL = "https://x.com/trytooldrop"
 OUT = "dist"
