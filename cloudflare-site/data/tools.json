@@ -1,5 +1,191 @@
 [
   {
+    "name": "OpenMail",
+    "url": "https://openmail.sh",
+    "description": "Email API and inboxes built for AI agents: create a dedicated address per agent via API or CLI, send/receive in real time over webhooks or WebSocket, parse attachments to LLM-ready text, scope keys per inbox, and enforce correspondent allowlists. MCP/CLI plugins for OpenClaw, Hermes and other agents. Product Hunt launch ~Nov 4 2026.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free €0/mo (3 inboxes, 3,000 emails/mo); Pro €9/mo + usage (10 inboxes, 10,000 emails included)",
+    "tags": [
+      "email",
+      "agents",
+      "API",
+      "MCP",
+      "inbox"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 9,
+      "heavy": 9,
+      "basis": "Free 3 inboxes/3k emails; Pro €9/mo base (usage extra)",
+      "checked": "2026-11-06"
+    }
+  },
+  {
+    "name": "Cloudbrowser",
+    "url": "https://cloudbrowser.tv",
+    "description": "Managed persistent Chrome for AI agents: isolated cloud browsers with saved login state (cookies/local storage), CDP connect for Playwright and similar tools, live view, plus fork/pause/resume. Free plan needs a verified email. Submitted/noted ~Nov 4–5 2026.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free (1 browser-hour/mo, 1 running browser); Basic $20/mo (250 hours, 10 concurrent); Pro $99/mo (1,250 hours, 100 concurrent)",
+    "tags": [
+      "browser",
+      "agents",
+      "CDP",
+      "Playwright",
+      "automation"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 99,
+      "basis": "Free 1 browser-hour; Basic $20/mo; Pro $99/mo",
+      "checked": "2026-11-06"
+    }
+  },
+  {
+    "name": "Glasshand",
+    "url": "https://glasshand.com",
+    "description": "Rent a real dedicated iPhone or Mac (not a simulator) for AI agents via API: see the screen, tap/type, install App Store apps, add eSIM for SMS verification, and keep the device between tasks until you release it. Works with Claude Code, Codex, Cursor and other agents. Product Hunt ~Nov 5 2026.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "paid",
+    "pricingNote": "iPhone $60/mo; Mac $90/mo (month to month, cancel anytime; eSIM/carrier extra)",
+    "tags": [
+      "iPhone",
+      "Mac",
+      "device farm",
+      "agents",
+      "native apps",
+      "testing"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 60,
+      "medium": 60,
+      "heavy": 90,
+      "basis": "iPhone $60/mo; Mac $90/mo",
+      "checked": "2026-11-06"
+    }
+  },
+  {
+    "name": "Rerun",
+    "url": "https://rerun.build",
+    "description": "Open-source (AGPL) AI coworker platform that turns your ChatGPT or Claude subscription (or API keys) into scheduled/triggered agents with their own cloud computer, 3,000+ integrations, human approval before risky actions, and unlimited team seats. Self-hostable. Product Hunt #2 on Nov 5 2026.",
+    "categories": [
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "5-day free trial (card required, $0 charged during trial); Pro $29/mo for 5 Coworkers + 500 credits; +5 Coworkers $10/mo; +1,000 credits $10/mo",
+    "tags": [
+      "agents",
+      "coworkers",
+      "open source",
+      "automation",
+      "BYO model"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 29,
+      "heavy": 39,
+      "basis": "Trial then Pro $29/mo (5 coworkers); heavy assumes +5 coworkers add-on $10",
+      "checked": "2026-11-06"
+    }
+  },
+  {
+    "name": "OpusClip",
+    "url": "https://www.opus.pro",
+    "description": "AI video editor that turns long footage into short clips with captions, reframing, B-roll, voice-over and social scheduling. OpusClip 4.0 (Nov 2026) goes further toward finished videos from raw footage, with Agent Opus B-roll, speech cleanup, gameplay/screenshare layouts and an MCP connector on Pro.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free $0; Starter $15/mo; Pro $29/mo; Business custom",
+    "tags": [
+      "video editing",
+      "clips",
+      "captions",
+      "trailers",
+      "MCP",
+      "gaming layout"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 15,
+      "heavy": 29,
+      "basis": "Free; Starter $15/mo; Pro $29/mo",
+      "checked": "2026-11-06"
+    }
+  },
+  {
+    "name": "SFXMint",
+    "url": "https://sfxmint.com",
+    "description": "9,800+ CC0 sound effects for games, videos and apps, with free preview and 20 MP3 downloads/day without signup. Includes an HTTP MCP server and API so Claude Code, Cursor or Codex can search packs (platformer, horror, UI) and pull sounds into a project. Show HN ~Nov 3–4 2026.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free listening + 20 MP3 downloads/day; paid download packs unlock WAV, unlimited library downloads, API/MCP and ZIP packs for 30 days (see site for pack prices)",
+    "tags": [
+      "SFX",
+      "CC0",
+      "game audio",
+      "MCP",
+      "API",
+      "royalty-free"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": null
+  },
+  {
+    "name": "CXAgent",
+    "url": "https://nickprotop.github.io/cxagent/",
+    "description": "Local multi-agent terminal coding workbench (MIT): run several coding agents side by side on your machine with BYO model keys, human-in-the-loop gates and a shared workboard. Free open-source; you pay your model provider. Show HN Nov 4 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Open source (MIT); BYO model / API keys",
+    "tags": [
+      "multi-agent",
+      "terminal",
+      "open source",
+      "BYO model",
+      "local"
+    ],
+    "dateAdded": "2026-11-06",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Tool free; model provider costs separate",
+      "checked": "2026-11-06"
+    }
+  },
+  {
     "name": "FlutterFlow",
     "url": "https://flutterflow.io",
     "description": "Prompt-to-app builder for native mobile: describe an app and an AI agent builds one iOS and Android app with a built-in backend (database, auth, functions, secrets) and analytics, runs several tasks in parallel, lets you test on your own phone and publishes to the App Store and Google Play. The classic visual editor continues as FlutterFlow Studio on the same plan. Launched Nov 4 2026.",
