@@ -16,3 +16,4 @@
 ## Generated extras
 llms.txt, llms-full.txt, sitemap.xml, robots.txt (AI crawlers allowed), _headers, JSON-LD (WebSite + SearchAction,
 Organization, ItemList, SoftwareApplication, BreadcrumbList), /compare/* pages (selection rules in build.py), /disclosure/.
+An IndexNow key file lives in static/ and `submit_indexnow.py` can be run after deploy with `SITE_URL=https://trytooldrop.com`.
