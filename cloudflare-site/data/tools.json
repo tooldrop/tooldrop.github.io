@@ -1094,7 +1094,7 @@
   {
     "name": "Cursor",
     "url": "https://cursor.com",
-    "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities.",
+    "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities. New Nov 2026: realtime voice chat with its agents, available in the Agents Window, IDE, web and iOS.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1104,9 +1104,10 @@
       "code editor",
       "autocomplete",
       "chat",
-      "VS Code"
+      "VS Code",
+      "voice chat"
     ],
-    "dateAdded": "2024-10-01",
+    "dateAdded": "2026-11-09",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -1115,7 +1116,8 @@
       "heavy": 100,
       "basis": "Free tier; Premium $30/mo; heavy assumes Super $100/mo (Plus $8, Ultra $200 also listed)",
       "checked": "2026-10-28"
-    }
+    },
+    "newRelease": true
   },
   {
     "name": "GitHub Copilot",
@@ -1535,7 +1537,7 @@
   {
     "name": "Scenario",
     "url": "https://www.scenario.com",
-    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio.",
+    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio. New Nov 2026: text-to-motion (NVIDIA Kimodo Text to Motion) turns a prompt into a 3D skeleton animation, up to 10 seconds at 30fps, with BVH export.",
     "categories": [
       "Game Art & Sprites"
     ],
@@ -1545,9 +1547,10 @@
       "game art",
       "custom models",
       "style consistency",
-      "workflows"
+      "workflows",
+      "text-to-motion"
     ],
-    "dateAdded": "2024-09-08",
+    "dateAdded": "2026-11-09",
     "affiliateUrl": "",
     "spend": {
       "light": 0,
@@ -1555,7 +1558,8 @@
       "heavy": 45,
       "basis": "Free 50 credits/day; Starter $15/mo; heavy assumes Pro $45/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "newRelease": true
   },
   {
     "name": "Stable Diffusion",
@@ -3230,6 +3234,132 @@
       "heavy": null,
       "basis": "Free, open source; model or subscription costs extra",
       "checked": "2026-11-03"
+    }
+  },
+  {
+    "name": "Ziva",
+    "url": "https://ziva.sh",
+    "description": "AI agent that works inside the Godot editor: builds scenes and code, makes sprites and sound effects, can playtest a scene, and lets Claude Code or Cursor drive Godot.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Hobby plan; Basic $20/mo",
+    "tags": [
+      "Godot",
+      "game engine",
+      "agents",
+      "sprites",
+      "SFX",
+      "playtesting"
+    ],
+    "dateAdded": "2026-11-09",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 20,
+      "basis": "Free Hobby; Basic $20/mo",
+      "checked": "2026-11-09"
+    }
+  },
+  {
+    "name": "AI CodeOps",
+    "url": "https://aicodeops.dev",
+    "description": "Browser platform where AI agents plan, build, review and test code on your repo. Nothing merges until your tests pass and a person approves it.",
+    "categories": [
+      "Code Review & Testing",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free during open beta",
+    "tags": [
+      "agents",
+      "code review",
+      "testing",
+      "human approval",
+      "browser"
+    ],
+    "dateAdded": "2026-11-09",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free during open beta",
+      "checked": "2026-11-09"
+    }
+  },
+  {
+    "name": "Screen Studio",
+    "url": "https://screen.studio",
+    "description": "Mac screen recorder that turns recordings into polished demo or trailer videos with automatic zooms and smooth cursor motion. Version 4.0 (Nov 2026) adds editing by transcript.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Pricing not listed here; see site",
+    "tags": [
+      "screen recording",
+      "Mac",
+      "demo video",
+      "trailers",
+      "transcript editing"
+    ],
+    "dateAdded": "2026-11-09",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Rogue",
+    "url": "https://rogueon.ai",
+    "description": "No-code AI app builder. New Nov 6 2026: make a playable browser game from one sentence and publish it as a shareable link.",
+    "categories": [
+      "App Builders",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Pricing not listed here; see site",
+    "tags": [
+      "no-code",
+      "app builder",
+      "browser games",
+      "publish"
+    ],
+    "dateAdded": "2026-11-09",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "DSH Game Studio",
+    "url": "https://github.com/zseven-w/dsh-game-studio",
+    "description": "Open-source plugin for DeepSeek Harness that turns a prompt into a 2D or 3D browser game, playtests it automatically, and exports it as one offline HTML file.",
+    "categories": [
+      "Game Design & Narrative",
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source",
+    "tags": [
+      "open source",
+      "DeepSeek",
+      "browser games",
+      "2D",
+      "3D",
+      "HTML export"
+    ],
+    "dateAdded": "2026-11-09",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source",
+      "checked": "2026-11-09"
     }
   }
 ]
