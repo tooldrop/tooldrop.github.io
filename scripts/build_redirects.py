@@ -17,7 +17,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-CLOUDFLARE_BASE = "https://tooldrop-hq.pages.dev"
+CLOUDFLARE_BASE = "https://trytooldrop.com"
 OUT_DIR = Path("_site")
 
 def slugify(s):
@@ -92,6 +92,7 @@ def get_cloudflare_paths():
 
 KNOWN_REDIRECTS = {
     "/tool/play-ht/": "/category/voice/",
+    "/tool/cusp/": "/category/ai-coding-agents-ides/",
 }
 
 def map_path(old_path, cf_paths):

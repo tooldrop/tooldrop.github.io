@@ -220,6 +220,14 @@ def sel_video():
 def sel_app_builders():
     return [t for t in tools if "App Builders" in t["categories"]]
 
+def sel_game_makers():
+    return [t for t in tools if tagged(t, "prompt to game", "game maker", "game studio") or
+            ("Game Design & Narrative" in t["categories"] and
+             any(kw in t["description"].lower() for kw in ["describe a game", "prompt into", "one-person game studio", "playable game", "playable browser game"]))]
+
+def sel_code_review():
+    return [t for t in tools if "Code Review & Testing" in t["categories"]]
+
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
       title="Best AI Pixel Art & Sprite Tools for Game Devs | ToolDrop",
@@ -261,6 +269,16 @@ COMPARISONS = [
       desc="Compare AI app builders for vibe coding: Bolt, v0, Lovable, Replit, Floot, myPip and Remix, with pricing and free tiers.",
       cats=["App Builders"], select=sel_app_builders,
       intro="""Vibe coding lets you describe an app and watch AI build it. These are the dedicated app builders in the ToolDrop directory, all with free tiers. Bolt writes, runs and deploys full-stack web apps in the browser (free tier, Pro $25/mo). Lovable builds full-stack web apps from plain-English descriptions (free tier available). v0 by Vercel generates React components from text prompts (free tier, Plus $30/user/mo). Replit is a browser-based IDE with AI that codes, debugs and deploys (Free Starter, Core $20/mo, Pro $100/mo). Floot turns chat descriptions into full-stack apps with a database and user logins, and now publishes to iOS and Android (free tier, Pro $25/mo, Power $100/mo). myPip builds playable browser games from descriptions and publishes them with multiplayer and monetization (free, 40 free builds for new accounts). Remix lets you describe a game and an AI agent builds it, then publishes to remix.gg and mobile apps (free plan, Starter $5/mo, Pro $15/mo). Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-game-makers/", h1="Best AI game makers for indie devs",
+      title="Best AI Game Makers for Indie Devs | ToolDrop",
+      desc="Compare AI game makers that turn a prompt into a playable game: OhMyGame, myPip, Remix, Spielerando, Higgsfield and more.",
+      cats=["Game Design & Narrative", "App Builders"], select=sel_game_makers,
+      intro="""Want to describe a game and have AI build it? These are the AI game makers in the ToolDrop directory that turn a prompt into a playable game or run a one-person AI game studio. OhMyGame is open source (Apache-2.0) and runs locally on macOS or Windows, drafting the design doc, generating art and audio, writing code and playtesting the build. myPip lets you vibe-code browser games by describing them, then publish with multiplayer and monetization (free, 40 free builds for new accounts). Remix builds games from descriptions and publishes them to remix.gg and mobile apps (free plan, Starter $5/mo, Pro $15/mo). Spielerando is an MCP workbench for Claude Code and Cursor that looks up tested game recipes and checks branching stories before you build (free to start). Higgsfield Playable (free plan, Starter $15/mo) creates 2D or 3D browser games from a prompt or assets and connects to Claude via MCP. DSH Game Studio is an open-source DeepSeek Harness plugin that exports games as a single HTML file. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-code-review-testing-tools/", h1="Best AI code review and testing tools",
+      title="Best AI Code Review & Testing Tools | ToolDrop",
+      desc="Compare AI code review and testing tools: CodeRabbit, Qodo, Greptile, Epherem, heal.dev, Testifly and more.",
+      cats=["Code Review & Testing"], select=sel_code_review,
+      intro="""Shipping code that agents wrote? These are the AI code review and testing tools in the ToolDrop directory. CodeRabbit (free for open source, Essentials from $24/dev/mo annual) reviews pull requests with contextual feedback. Greptile (free Starter, Pro $30/seat/mo) understands your entire codebase to catch bugs and security issues. Qodo (free for individuals) generates tests and enforces coding standards. Epherem is free during early access and runs 55 security checks for exposed keys, open database tables and unsafe input. heal.dev learns how to run your app in a sandbox, hunts for bugs your code review missed, and files only what it can reproduce with a failing test. Testifly (30-day free trial) discovers user flows, writes end-to-end tests and self-heals when the UI changes. Reticle (open-source SDK, hosted free to start) makes your coding agent verify its own work by driving the running app. QualityLayer (paid) adds a plan-first workflow around any coding agent with a separate review agent. Entire (free for small teams) is a Git host built for agent-written code with review agents that score every push. AI CodeOps (free) is a browser platform where agents plan, build, review and test code on your repo. Prices are as listed by each vendor and can change."""),
 ]
 
 def names_list(ts):
@@ -315,6 +333,10 @@ def generate_faqs(ts, cp):
         faqs.append(("Which video tool is best for game trailers?", "Runway, Pika and Kling AI generate video from text and images, good for trailer clips. Descript is better for editing devlogs with its transcript-based editing."))
     elif "Audio, Music & SFX" in cp["cats"]:
         faqs.append(("Which tool is best for game soundtracks?", "Suno and Udio generate full tracks with vocals. Soundraw focuses on royalty-free background music with copyright-safe licensing."))
+    elif "Game Design & Narrative" in cp["cats"] and "/ai-game-makers/" in cp["path"]:
+        faqs.append(("Which AI game maker is best for beginners?", "myPip and Remix let you describe a game in plain English and publish it with free tiers. OhMyGame is more powerful but requires running locally with your own API keys."))
+    elif "Code Review & Testing" in cp["cats"]:
+        faqs.append(("Which code review tool works with AI-generated code?", "CodeRabbit and Greptile review pull requests, including AI-generated ones. Epherem specifically scans AI-built apps for security issues like exposed keys and open database tables."))
     
     return faqs[:3]  # Return at most 3 FAQs
 
@@ -448,9 +470,9 @@ for t in tools:
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{SUBSCRIBE}'''
-    title = f"{t['name']}: {c0} AI Tool | ToolDrop"
-    if len(title) > 60: title = f"{t['name']}: AI Tool for {c0.split(' & ')[0].split(',')[0]} | ToolDrop"
-    if len(title) > 60: title = f"{t['name']} | AI Tool | ToolDrop"
+    title = f"{t['name']}: pricing, features & alternatives | ToolDrop"
+    if len(title) > 65: title = f"{t['name']}: pricing & alternatives | ToolDrop"
+    if len(title) > 65: title = f"{t['name']} | ToolDrop"
     page(path, title, clip(f"{t['name']}: {t['description']}"), body, ld(sw) + "\n" + bcld, t["dateAdded"])
 
 # Comparison pages

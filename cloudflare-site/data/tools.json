@@ -780,33 +780,6 @@
     }
   },
   {
-    "name": "Cusp",
-    "url": "https://cusp.run",
-    "description": "Model-agnostic coding agent for desktop and terminal that works with Claude, GPT, Gemini, open models or local ones, giving each model its own edit format. It reads your existing CLAUDE.md, skills, hooks and MCP servers in place and can race one prompt across several models.",
-    "categories": [
-      "AI Coding Agents & IDEs"
-    ],
-    "pricing": "freemium",
-    "pricingNote": "Free with 2,500 agent actions a month on your own keys; Max $80/mo, Team $25/seat/mo (billed yearly)",
-    "tags": [
-      "coding agent",
-      "any model",
-      "CLI",
-      "desktop",
-      "MCP"
-    ],
-    "dateAdded": "2026-10-26",
-    "newRelease": true,
-    "affiliateUrl": "",
-    "spend": {
-      "light": 0,
-      "medium": 0,
-      "heavy": 80,
-      "basis": "Free tier on your own keys (key costs extra); Max $80/mo",
-      "checked": "2026-10-28"
-    }
-  },
-  {
     "name": "Ovren",
     "url": "https://www.ovren.ai",
     "description": "Describe a change in plain words and Ovren's AI engineers plan it, build it in your real GitHub codebase and open a pull request with a live preview and execution report. Nothing ships until you or your developer approve it.",

@@ -2,7 +2,7 @@
 
 # ToolDrop backup site (Cloudflare Pages)
 
-`SITE_URL=https://tooldrop-hq.pages.dev python3 build.py` reads `data/tools.json` and writes `dist/`.
+`SITE_URL=https://trytooldrop.com python3 build.py` reads `data/tools.json` and writes `dist/`.
 
 ## Tool fields
 `name, url, description, categories[], pricing (free|freemium|paid|unknown), pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl?, sponsored?`
