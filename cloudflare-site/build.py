@@ -548,7 +548,7 @@ page("/advertise/", "Advertise on ToolDrop | Featured listings and sponsorships"
 <div class="adv-note"><strong>Our promise:</strong> paid placements are always labelled. Payment never changes our descriptions, spend estimates, or whether a tool is listed.</div>
 <h2>How it works</h2>
 <p>Book through the secure Stripe checkout and tell us your tool&#39;s name and website. We&#39;ll email you within a couple of days to grab a logo and a short blurb (about 40 words), then put it live.</p>
-<p>Got something custom in mind? Email <a href="mailto:trytooldrop@gmail.com">trytooldrop@gmail.com</a>.</p>
+<p>Got something custom in mind? Email <a href="mailto:hello@trytooldrop.com">hello@trytooldrop.com</a>.</p>
 </div></section>''', bcld)
 
 bc, bcld = crumbs([("Home", "/"), ("About", "/about/")])
