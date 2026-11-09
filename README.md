@@ -2,7 +2,7 @@
 
 **AI tools directory for vibe coders and indie game devs**
 
-[Visit the live site →](https://tooldrop-hq.pages.dev)
+[Visit the live site →](https://trytooldrop.com)
 
 ## About
 
@@ -66,13 +66,13 @@ src/
 
 ## Live Site (Cloudflare Pages)
 
-The live site is hosted on Cloudflare Pages at https://tooldrop-hq.pages.dev. Its source is in the `cloudflare-site/` directory.
+The live site is hosted on Cloudflare Pages at https://trytooldrop.com. Its source is in the `cloudflare-site/` directory.
 
 To build the Cloudflare site locally:
 
 ```bash
 cd cloudflare-site
-SITE_URL=https://tooldrop-hq.pages.dev python3 build.py
+SITE_URL=https://trytooldrop.com python3 build.py
 # Output is in cloudflare-site/dist/
 ```
 
