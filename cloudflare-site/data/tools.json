@@ -3361,5 +3361,140 @@
       "basis": "Free, open source",
       "checked": "2026-11-09"
     }
+  },
+  {
+    "name": "Nilo",
+    "url": "https://nilo.io",
+    "description": "Browser-based AI game maker: describe a game and Nilo AI builds 3D models, environments, logic, characters, animations, sound effects, UI and leaderboards while keeping an editable game design document. Mini Agents tweak single objects, there's a code editor, and games are multiplayer from a shared link. New Nov 9 2026: playable games launched.",
+    "categories": [
+      "Game Design & Narrative",
+      "3D & Models",
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Starter free; Builder $29.99/mo, Pro $74.99/mo (50% off launch offer at time of check)",
+    "tags": [
+      "browser games",
+      "3D",
+      "multiplayer",
+      "no-code",
+      "game design doc"
+    ],
+    "dateAdded": "2026-11-10",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 30,
+      "heavy": 75,
+      "basis": "Starter free; Builder $29.99/mo, Pro $74.99/mo list price",
+      "checked": "2026-11-10"
+    }
+  },
+  {
+    "name": "AgentMon Live",
+    "url": "https://github.com/codenotary/agentmon-live",
+    "description": "Free, open-source Claude Code plugin from Codenotary with a live dashboard of agent activity, tool use and file changes. Its Done Gate checks the session for failed or stale tests and unfinished tasks before the agent finishes, and it flags wasted tokens like repeated file reads and unused MCP servers. Released Nov 9 2026.",
+    "categories": [
+      "Code Review & Testing",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open source (Apache 2.0)",
+    "tags": [
+      "open source",
+      "Claude Code",
+      "plugin",
+      "token usage",
+      "verification"
+    ],
+    "dateAdded": "2026-11-10",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free, open source",
+      "checked": "2026-11-10"
+    }
+  },
+  {
+    "name": "FoliMesh",
+    "url": "https://folimesh.com",
+    "description": "Game environment generator that started with procedural trees, rocks, grass and biomes and now adds 3D props from a picture or description (GLB with PBR textures), sound effects, background music with a built-in audio editor, and blocks for Minecraft, Blockbench and MagicaVoxel, plus an MCP server for agents. Big update announced Nov 7 2026.",
+    "categories": [
+      "3D & Models",
+      "Audio, Music & SFX",
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Editor free with 3 free downloads; Indie $10/mo, Pro $39/mo, Studio $99/mo",
+    "tags": [
+      "environments",
+      "procedural",
+      "GLB",
+      "sound effects",
+      "MCP",
+      "game assets"
+    ],
+    "dateAdded": "2026-11-10",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 39,
+      "basis": "Free editor; Indie $10, Pro $39, Studio $99/mo",
+      "checked": "2026-11-10"
+    }
+  },
+  {
+    "name": "Paradev",
+    "url": "https://paradev.com",
+    "description": "Desktop app (formerly Superset) that runs several CLI coding agents like Claude Code, Codex, OpenCode, Gemini CLI and Cursor Agent in parallel, each in its own Git worktree and branch, with one place to review diffs, commit and open pull requests. Paid plans add remote and cloud workspaces, automations, and Linear and Slack integrations.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free for individuals; Pro $20/user/mo ($16 yearly), Team $60/user/mo, Ultra $200/user/mo",
+    "tags": [
+      "parallel agents",
+      "git worktrees",
+      "Claude Code",
+      "Codex",
+      "open source"
+    ],
+    "dateAdded": "2026-11-10",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 60,
+      "basis": "Free; Pro $20, Team $60, Ultra $200 per user/mo",
+      "checked": "2026-11-10"
+    }
+  },
+  {
+    "name": "Coderick AI",
+    "url": "https://world.siteground.com/coderick-ai",
+    "description": "SiteGround's AI website and web app builder: describe what you want and it builds the front end, back end and database, with visual editing, a code tab, Stripe payments and SiteGround hosting. New Nov 9 2026: Import Design turns Claude Design or Google Stitch exports into working apps.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan with monthly credits for building; paid plans (Essential, Plus, Pro) needed to publish. Prices vary by region",
+    "tags": [
+      "vibe coding",
+      "no-code",
+      "hosting",
+      "Stripe",
+      "design import"
+    ],
+    "dateAdded": "2026-11-10",
+    "newRelease": true,
+    "affiliateUrl": ""
   }
 ]
