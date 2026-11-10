@@ -64,12 +64,16 @@ def tool_path(t): return f"/tool/{t['slug']}/"
 
 # ---- outbound links (affiliate-aware) ----
 def visit_link(t, label, where, cls="btn btn-primary"):
-    """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note."""
+    """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note.
+    GoatCounter outbound click events: out-{slug} for normal visits, out-aff-{slug} for affiliate links,
+    so weekly reports can separate affiliate click intent from plain visit-outs."""
     aff = (t.get("affiliateUrl") or "").strip() if t.get("affiliate", True) else ""
     href, rel = (aff, "sponsored nofollow noopener") if aff else (t["url"], "noopener")
     c = f' class="{cls}"' if cls else ""
-    a = (f'<a href="{e(href)}" target="_blank" rel="{rel}"{c} data-tool="{e(t["name"])}" data-goatcounter-click="out-{t["slug"]}" '
-         f'data-goatcounter-title="Visit {e(t["name"])} ({where})" data-goatcounter-referrer="__GC_PAGE__">{label}</a>')
+    click = f"out-aff-{t['slug']}" if aff else f"out-{t['slug']}"
+    title = f"Visit {e(t['name'])} ({where}{' · affiliate' if aff else ''})"
+    a = (f'<a href="{e(href)}" target="_blank" rel="{rel}"{c} data-tool="{e(t["name"])}" data-goatcounter-click="{click}" '
+         f'data-goatcounter-title="{title}" data-goatcounter-referrer="__GC_PAGE__">{label}</a>')
     if aff: a += ' <small class="affiliate-note" data-affiliate="1">Affiliate link</small>'
     return a
 
