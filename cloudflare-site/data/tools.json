@@ -3469,5 +3469,105 @@
     "dateAdded": "2026-11-10",
     "newRelease": true,
     "affiliateUrl": ""
+  },
+  {
+    "name": "Tryll Engine",
+    "url": "https://tryllengine.com",
+    "description": "On-device AI middleware for Unity, Unreal Engine 5 and custom engines: give NPCs a mind that understands plain-language text or voice, remembers what the player did and acts within rules you set, with language models, speech-to-text and text-to-speech running on the player's GPU. Free open beta for Windows PC launched Nov 10 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "Voice"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free to develop with and ship until a game passes $200,000 gross revenue, then a 1% royalty; no seat licences or per-token fees",
+    "tags": [
+      "NPCs",
+      "Unity",
+      "Unreal Engine",
+      "on-device",
+      "dialogue"
+    ],
+    "dateAdded": "2026-11-11",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Lottie AI",
+    "url": "https://lottie.ai",
+    "description": "LottieFiles' prompt-to-animation tool: describe motion in a sentence (or start from an SVG) and get a real, editable vector Lottie animation, refine it by chat or auto-generated controls, then export Lottie/dotLottie or native code for web, iOS and Android. Handy for UI loaders, menus and onboarding moments. Launched Nov 10 2026.",
+    "categories": [
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Starter plan includes 10 Lottie AI generations (lifetime); Individual $19.99/user/mo and Team $24.99/user/mo billed annually, with monthly AI credits",
+    "tags": [
+      "animation",
+      "Lottie",
+      "UI motion",
+      "vector",
+      "SVG"
+    ],
+    "dateAdded": "2026-11-11",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Seldon Wren",
+    "url": "https://www.seldon.com/products/wren",
+    "description": "Behavioral QA agents for end-to-end testing: describe a test in plain English, Wren runs agents in parallel that use your product like real customers, finds edge cases you never scripted, and gives recorded step-by-step runs with evidence for every failure. Launched on Product Hunt Nov 10 2026.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "unknown",
+    "pricingNote": "Pricing not listed on the product page",
+    "tags": [
+      "QA",
+      "end-to-end testing",
+      "agents",
+      "browser testing"
+    ],
+    "dateAdded": "2026-11-11",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Runpod for Agents",
+    "url": "https://agents.runpod.io",
+    "description": "Runpod's hosted MCP server, tested skills library and plugins for Claude Code, Codex and ChatGPT that let coding agents pick GPUs, deploy Pods or Serverless endpoints, diagnose failures and shut down idle resources, with read-only versus destructive actions flagged for confirmation. Expanded to all popular agents on Nov 10 2026.",
+    "categories": [
+      "Deploy & Hosting",
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Skills, plugins and MCP server are free to install; compute is billed at Runpod's usual usage rates",
+    "tags": [
+      "MCP",
+      "GPU",
+      "serverless",
+      "Claude Code",
+      "Codex"
+    ],
+    "dateAdded": "2026-11-11",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Gemini 4 Carbon",
+    "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-4-carbon-developers/",
+    "description": "Google's strongest model for developer agents, built for long-running, multi-step work across software engineering and full-stack web development, with strong cybersecurity skills. Available Nov 10 2026 in the Gemini API, Google AI Studio, Android Studio and the Google Antigravity agent platform.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Paid tier of the Gemini API; Google AI Ultra subscribers can try it in AI Studio and Antigravity",
+    "tags": [
+      "LLM",
+      "coding model",
+      "agents",
+      "Gemini API"
+    ],
+    "dateAdded": "2026-11-11",
+    "newRelease": true,
+    "affiliateUrl": ""
   }
 ]
