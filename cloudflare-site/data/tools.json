@@ -1153,7 +1153,7 @@
   {
     "name": "Cursor",
     "url": "https://cursor.com",
-    "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities. New Nov 2026: realtime voice chat with its agents, available in the Agents Window, IDE, web and iOS.",
+    "description": "AI-first code editor built on VS Code with intelligent autocomplete, chat, and code generation capabilities. New Nov 2026: realtime voice chat with its agents, available in the Agents Window, IDE, web and iOS. New Nov 11 2026: Projects multiplayer beta for all users, where teammates' coordinator agents share project context and a task board and can talk to each other to sort out overlapping work.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1164,9 +1164,10 @@
       "autocomplete",
       "chat",
       "VS Code",
-      "voice chat"
+      "voice chat",
+      "multiplayer"
     ],
-    "dateAdded": "2026-11-09",
+    "dateAdded": "2026-11-12",
     "featured": true,
     "affiliateUrl": "",
     "spend": {
@@ -3998,5 +3999,69 @@
     "dateAdded": "2026-11-11",
     "newRelease": true,
     "affiliateUrl": ""
+  },
+  {
+    "name": "Qwen Code",
+    "url": "https://github.com/QwenLM/qwen-code",
+    "description": "Alibaba's open-source AI coding agent for the terminal. The v1.0 preview, released Nov 11 2026, merges the agent capabilities of the Qoder IDE and the Qwen Code CLI into one agent for understanding, writing, debugging and testing code, with native installers for macOS, Linux and Windows (no separate Node.js needed), session resume and non-interactive runs for scripts. The release notes say interfaces may still change during the preview.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free, open-source CLI; sign in with a Qwen or Qoder account, or use another model provider or a compatible custom endpoint",
+    "tags": [
+      "coding agent",
+      "CLI",
+      "open source",
+      "Qoder",
+      "Qwen"
+    ],
+    "dateAdded": "2026-11-12",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "Skillbox",
+    "url": "https://skillbox.so",
+    "description": "Keeps your AI agent skills in one library and syncs the ones each project needs to Claude Code, Cursor and Codex. Skills added from GitHub or GitLab keep following their source so you can review diffs before updating, each version is scanned for prompt injection, data exfiltration and secrets (including with Cisco's Skill Scanner), and Trim shortens noisy test, git and build output so agent sessions last longer. Launched on Product Hunt Nov 11 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Permanent free plan for the library, sync, updates and security checks; Trim and AI features are on the paid Individual plan with a 7-day trial",
+    "tags": [
+      "agent skills",
+      "Claude Code",
+      "Cursor",
+      "Codex",
+      "security scanning"
+    ],
+    "dateAdded": "2026-11-12",
+    "newRelease": true,
+    "affiliateUrl": ""
+  },
+  {
+    "name": "ACE Music",
+    "url": "https://acemusic.ai",
+    "description": "Browser-based AI song generator from ACE Studio. Its ACE Music v1 model, which topped Artificial Analysis's blind vocal-music leaderboard ahead of Suno v6 in Nov 2026, makes full songs with vocals or instrumentals from a text description or your own lyrics, with performance cues in brackets. Songs can be converted to MIDI and split into stems for your DAW, and the open ACE-Step v1.5 model is free with unlimited generations.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan with 20 credits a day (unlimited ACE-Step v1.5); Creator $7.90/mo; Artist plans add the ACE Studio app",
+    "tags": [
+      "music generation",
+      "vocals",
+      "lyrics to song",
+      "stems",
+      "MIDI"
+    ],
+    "dateAdded": "2026-11-12",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "commercialUse": "paid",
+    "commercialUseNote": "ACE Music v1 songs made on a paid plan have commercial rights; free-plan v1 songs don't. ACE-Step v1.5 songs include commercial use on the free plan.",
+    "commercialUseSource": "https://acemusic.ai/acemusic-v1/",
+    "rightsChecked": "2026-11-12"
   }
 ]
