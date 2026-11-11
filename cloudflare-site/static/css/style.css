@@ -72,3 +72,9 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .spend-est{font-size:.85rem;opacity:.8;margin:.4rem 0 0}
 .spend-caveat{font-size:.8rem;opacity:.75;margin-top:.5rem}
 .faq-list{margin:16px 0}.faq-list dt{font-weight:600;color:var(--text);margin-top:16px}.faq-list dd{color:var(--muted);margin:6px 0 0 0}
+/* commercial use + export formats (staged 2026-11-11) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.rights-line{font-size:.85rem;opacity:.8;margin:.25rem 0 0}
+.tag.rights{border:1px solid var(--border);border-radius:999px;padding:1px 8px;font-size:.8rem}
+.tag.rights-yes{color:var(--green);border-color:var(--green)}.tag.rights-paid,.tag.rights-limited{color:var(--amber);border-color:var(--amber)}.tag.rights-no{color:#f87171;border-color:#f87171}
+.filter-pill:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}

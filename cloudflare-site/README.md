@@ -17,3 +17,16 @@
 llms.txt, llms-full.txt, sitemap.xml, robots.txt (AI crawlers allowed), _headers, JSON-LD (WebSite + SearchAction,
 Organization, ItemList, SoftwareApplication, BreadcrumbList), /compare/* pages (selection rules in build.py), /disclosure/.
 An IndexNow key file lives in static/ and `submit_indexnow.py` can be run after deploy with `SITE_URL=https://trytooldrop.com`.
+
+## Commercial use and export formats (staged 11 Nov 2026)
+
+Optional per-tool fields in `data/tools.json`, filled only from the vendor's own pages:
+
+- `commercialUse`: `yes` (allowed, incl. free plan or a paid-only tool), `paid` (paid plans only), `limited` (allowed with restrictions, see note), `no`, or `unknown`. Missing = `unknown`.
+- `commercialUseNote`: one or two plain sentences summarising the terms.
+- `commercialUseSource`: URL of the vendor page the note comes from (required unless `unknown`).
+- `exportFormats`: list such as `["GLB","FBX","OBJ"]`; leave out if not verified.
+- `exportFormatsSource`: URL for the formats.
+- `rightsChecked`: date the above was checked (YYYY-MM-DD).
+
+build.py shows these on cards (verified data only) and tool pages, adds "Commercial use" and "Export format" filter pills on the home page and category pages, and writes them into llms-full.txt.

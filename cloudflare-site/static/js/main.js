@@ -4,7 +4,7 @@
   var search = document.getElementById('tool-search'), grid = document.getElementById('filtered-tools');
   if (!grid) return;
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.tool-card'));
-  var noRes = document.getElementById('no-results'), state = { category: 'all', pricing: 'all', q: '', usage: 'medium', budget: 'any' };
+  var noRes = document.getElementById('no-results'), state = { category: 'all', pricing: 'all', q: '', usage: 'medium', budget: 'any', commercial: 'all', format: 'all' };
   var browse = document.querySelectorAll('.section.browse');
   function withinBudget(c) {
     if (state.budget === 'any') return true;
@@ -13,25 +13,34 @@
     var v = parseFloat(raw), b = parseFloat(state.budget);
     return b === 0 ? v === 0 : v < b;
   }
+  function hasFormat(c) {
+    if (state.format === 'all') return true;
+    var have = (c.getAttribute('data-formats') || '').split('|'), want = state.format.split(',');
+    for (var i = 0; i < want.length; i++) if (have.indexOf(want[i]) !== -1) return true;
+    return false;
+  }
   function apply() {
-    var shown = 0, filtering = state.q || state.category !== 'all' || state.pricing !== 'all' || state.budget !== 'any';
+    var shown = 0, filtering = state.q || state.category !== 'all' || state.pricing !== 'all' || state.budget !== 'any' || state.commercial !== 'all' || state.format !== 'all';
     cards.forEach(function (c) {
       var hay = (c.dataset.name + ' ' + c.dataset.description + ' ' + c.dataset.categories + ' ' + c.dataset.tags).toLowerCase();
       var ok = (!state.q || hay.indexOf(state.q) !== -1) &&
         (state.category === 'all' || c.dataset.categories.split('|').indexOf(state.category) !== -1) &&
         (state.pricing === 'all' || c.dataset.pricing === state.pricing) &&
-        withinBudget(c);
+        withinBudget(c) &&
+        (state.commercial === 'all' || (c.getAttribute('data-commercial') || 'unknown') === state.commercial) &&
+        hasFormat(c);
       c.style.display = ok ? '' : 'none'; if (ok) shown++;
     });
     if (noRes) noRes.style.display = shown ? 'none' : 'block';
     browse.forEach(function (s) { s.style.display = filtering ? 'none' : ''; });
   }
   if (search) search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
+  document.querySelectorAll('.filter-pill').forEach(function (p) { p.setAttribute('aria-pressed', p.classList.contains('active') ? 'true' : 'false'); });
   document.querySelectorAll('.filter-pill').forEach(function (p) {
     p.addEventListener('click', function () {
       var type = p.dataset.filterType;
-      document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]').forEach(function (o) { o.classList.remove('active'); });
-      p.classList.add('active'); state[type] = p.dataset.filterValue; apply();
+      document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]').forEach(function (o) { o.classList.remove('active'); o.setAttribute('aria-pressed', 'false'); });
+      p.classList.add('active'); p.setAttribute('aria-pressed', 'true'); state[type] = p.dataset.filterValue; apply();
       try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: 'filter/' + type + '/' + p.dataset.filterValue, title: 'Filter: ' + type + ' = ' + p.textContent.trim() + ' (' + location.pathname + ')', event: true }); } catch (e) {}
     });
   });
