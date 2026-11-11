@@ -2350,7 +2350,7 @@
       "podcast"
     ],
     "dateAdded": "2024-08-05",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://get.descript.com/xxjbzyhh2yr4",
     "spend": {
       "light": 0,
       "medium": 24,
@@ -2358,6 +2358,7 @@
       "basis": "Free tier; Hobbyist $24/mo; Creator $35/mo (monthly billing)",
       "checked": "2026-10-28"
     },
+    "affiliate": true,
     "commercialUse": "unknown",
     "commercialUseNote": "No clear commercial-use statement found.",
     "exportFormats": [
