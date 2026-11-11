@@ -134,7 +134,14 @@
       "heavy": 29,
       "basis": "Free; Starter $15/mo; Pro $29/mo",
       "checked": "2026-11-06"
-    }
+    },
+    "commercialUse": "unknown",
+    "exportFormats": [
+      "MP4",
+      "XML (Premiere Pro / DaVinci Resolve)"
+    ],
+    "exportFormatsSource": "https://www.opus.pro/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "SFXMint",
@@ -156,7 +163,16 @@
     "dateAdded": "2026-11-06",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "commercialUse": "yes",
+    "commercialUseNote": "CC0 sound effects: use in games, videos and apps, no credit needed.",
+    "commercialUseSource": "https://sfxmint.com",
+    "exportFormats": [
+      "WAV",
+      "MP3"
+    ],
+    "exportFormatsSource": "https://sfxmint.com",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "CXAgent",
@@ -263,7 +279,11 @@
       "heavy": 5.99,
       "basis": "Core free; Pro $5.99/mo ($39.99/yr, $149.99 lifetime); AI provider costs extra",
       "checked": "2026-11-05"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Built on Godot; Xogot says you can distribute games with a runtime free from commercial redistribution restrictions.",
+    "commercialUseSource": "https://xogot.com",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Gemini 3.8 Flash TTS",
@@ -284,7 +304,15 @@
     "dateAdded": "2026-11-05",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "commercialUse": "yes",
+    "commercialUseNote": "Google's Gemini API terms say Google won't claim ownership of generated content. Paid tier required for apps serving users in the EEA, Switzerland or UK.",
+    "commercialUseSource": "https://aistudio.google.com/docs/terms",
+    "exportFormats": [
+      "WAV"
+    ],
+    "exportFormatsSource": "https://aistudio.google.com/docs/speech-generation",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Wanaka Studio",
@@ -480,7 +508,16 @@
       "heavy": 0,
       "basis": "Free, open source; AI usage is billed by your own model providers",
       "checked": "2026-11-02"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Open source under Apache-2.0, which allows commercial use. Check the terms of the AI models and keys you connect.",
+    "commercialUseSource": "https://www.ohmygame.ai",
+    "exportFormats": [
+      "GLB",
+      "PNG"
+    ],
+    "exportFormatsSource": "https://www.ohmygame.ai",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Stageshow",
@@ -529,7 +566,19 @@
     ],
     "dateAdded": "2026-11-02",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "commercialUse": "no",
+    "commercialUseNote": "Kimi's terms say you can't use Kimi or its generated content commercially without written consent.",
+    "commercialUseSource": "https://www.kimi.com/user/agreement/en/modelUse",
+    "exportFormats": [
+      "GLB",
+      "OBJ",
+      "STL",
+      "3MF",
+      "STEP"
+    ],
+    "exportFormatsSource": "https://www.kimi.com/en/help/3d-make/3d-make-faq",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Floot",
@@ -640,7 +689,17 @@
       "heavy": 30,
       "basis": "Pay per use: $0.30/character, $0.10/text-to-motion; ~20 characters + 40 motions (medium) or 60 + 120 (heavy) a month",
       "checked": "2026-10-30"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Viggle says all content generated with it is cleared for commercial use. Free plan outputs carry a watermark.",
+    "commercialUseSource": "https://viggle.ai/motion-control",
+    "exportFormats": [
+      "MP4",
+      "FBX",
+      "GLB"
+    ],
+    "exportFormatsSource": "https://viggle.ai/motion-control",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Entire",
@@ -878,7 +937,11 @@
       "heavy": 30,
       "basis": "Usage-based at $13 per 1M characters; ~0.1M/0.5M/2M+ chars a month",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Under Mistral's Commercial Terms of Service, the customer owns all output and Mistral assigns its rights in it.",
+    "commercialUseSource": "https://legal.mistral.ai/terms/commercial-terms-of-service",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Animatica",
@@ -905,7 +968,11 @@
       "heavy": 5,
       "basis": "Free tier; Marionette $59 one-time (≈$5/mo over a year)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "You own the motion you make, with commercial use on every plan. Marionette's $59 Indie licence covers studios under US$100k a year in revenue.",
+    "commercialUseSource": "https://animatica.ai/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Vercel fx",
@@ -1035,7 +1102,15 @@
       "heavy": 0,
       "basis": "Open weights, runs locally; commercial use of larger models needs a licence",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "limited",
+    "commercialUseNote": "The 31m English model is Apache 2.0 (commercial use OK). The 40m and multilingual models are CC BY-NC; commercial use needs a licence from sales.",
+    "commercialUseSource": "https://gradium.ai/phonon",
+    "exportFormats": [
+      "WAV"
+    ],
+    "exportFormatsSource": "https://gradium.ai/phonon",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Zetta 3D",
@@ -1062,7 +1137,18 @@
       "heavy": 20,
       "basis": "Free credits; paid from €5/mo (≈$6); heavy assumes a higher plan",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Models you generate are yours to use commercially, including in shipped games, on every plan.",
+    "commercialUseSource": "https://zetta3d.ai/faq",
+    "exportFormats": [
+      "GLB",
+      "FBX",
+      "OBJ",
+      "STL"
+    ],
+    "exportFormatsSource": "https://zetta3d.ai/faq",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Cursor",
@@ -1318,7 +1404,11 @@
       "heavy": 100,
       "basis": "Free tier; Go $8, Plus $20/mo; heavy assumes the $100 Pro tier (Pro also $200/$500)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "OpenAI's Terms of Use say you own the output and OpenAI assigns you its rights in it.",
+    "commercialUseSource": "https://openai.com/policies/row-terms-of-use/",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Devin",
@@ -1461,7 +1551,11 @@
       "heavy": 60,
       "basis": "Basic $10, Standard $30, Pro $60/mo (Mega $120)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Paid-only tool. You own the assets you create; companies earning over US$1M a year need a Pro or Mega plan to own their assets.",
+    "commercialUseSource": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "GPT Image 2.5 Sunburst",
@@ -1480,7 +1574,11 @@
     ],
     "dateAdded": "2024-07-10",
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "commercialUse": "yes",
+    "commercialUseNote": "Under the OpenAI Services Agreement (API), you own all output and OpenAI assigns you its rights in it.",
+    "commercialUseSource": "https://openai.com/policies/business-terms/",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Leonardo AI",
@@ -1505,7 +1603,11 @@
       "heavy": 30,
       "basis": "Free tier; Essential $12/mo; heavy assumes Premium $30/mo (Ultimate $60)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Paid plans: you own your images and can use them commercially. Free plan: Leonardo owns the images but grants you a non-exclusive, royalty-free licence for commercial use.",
+    "commercialUseSource": "https://leonardo.ai/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Scenario",
@@ -1532,7 +1634,29 @@
       "basis": "Free 50 credits/day; Starter $15/mo; heavy assumes Pro $45/mo",
       "checked": "2026-10-28"
     },
-    "newRelease": true
+    "newRelease": true,
+    "commercialUse": "paid",
+    "commercialUseNote": "All paid plans include a full commercial licence. Free plan outputs are for personal and evaluation use only.",
+    "commercialUseSource": "https://www.scenario.com/pricing",
+    "exportFormats": [
+      "PNG",
+      "JPEG",
+      "WebP",
+      "SVG",
+      "MP4",
+      "MOV",
+      "WebM",
+      "GIF",
+      "WAV",
+      "MP3",
+      "GLB",
+      "OBJ",
+      "FBX",
+      "STL",
+      "VOX"
+    ],
+    "exportFormatsSource": "https://www.scenario.com/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Stable Diffusion",
@@ -1556,7 +1680,11 @@
       "heavy": 0,
       "basis": "Open source; self-hosting needs your own GPU/compute",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Free under the Stability AI Community License, including commercial use, if your annual revenue is under US$1M; above that you need an Enterprise licence.",
+    "commercialUseSource": "https://stability.ai/license",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Pixel Lab",
@@ -1582,7 +1710,19 @@
       "heavy": 24,
       "basis": "Free trial; Apprentice $12/mo; heavy assumes Artisan $24/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Yes on all tiers; PixelLab only asks that you don't use the images to train new models.",
+    "commercialUseSource": "https://www.pixellab.ai/docs/faq",
+    "exportFormats": [
+      "PNG",
+      "Sprite sheet",
+      "GIF",
+      "Animated PNG",
+      "ZIP"
+    ],
+    "exportFormatsSource": "https://www.pixellab.ai/llms.txt",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Meshy",
@@ -1611,7 +1751,20 @@
       "checked": "2026-10-28"
     },
     "newRelease": true,
-    "affiliate": true
+    "affiliate": true,
+    "commercialUse": "yes",
+    "commercialUseNote": "Free plan: CC BY 4.0 (commercial use with attribution). Paid plans: private, customer-owned licence.",
+    "commercialUseSource": "https://www.meshy.ai/pricing",
+    "exportFormats": [
+      "FBX",
+      "OBJ",
+      "USDZ",
+      "GLB",
+      "STL",
+      "BLEND"
+    ],
+    "exportFormatsSource": "https://www.meshy.ai/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Luma AI",
@@ -1636,7 +1789,11 @@
       "heavy": 90,
       "basis": "Plus $30/mo; heavy assumes Pro $90/mo (Ultra $300)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free and Lite plans are personal, non-commercial use only. Plus, Unlimited and Enterprise plans include commercial rights.",
+    "commercialUseSource": "https://lumalabs.ai/learning-hub/licensing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Kaedim",
@@ -1660,7 +1817,19 @@
       "heavy": 1200,
       "basis": "Indie $400/mo (20 credits); heavy assumes Pro $1,200/mo; $50 7-day trial",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Paid-only (custom plans). Models you create are your IP while you're subscribed.",
+    "commercialUseSource": "https://docs.kaedim3d.com/welcome/faq",
+    "exportFormats": [
+      "GLB",
+      "glTF",
+      "OBJ",
+      "FBX",
+      "USD"
+    ],
+    "exportFormatsSource": "https://docs.kaedim3d.com/managing-assets/exporting-assets/download",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Tripo AI",
@@ -1688,7 +1857,20 @@
       "basis": "Free tier; Pro $20/mo",
       "checked": "2026-10-28"
     },
-    "affiliate": true
+    "affiliate": true,
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan: public models, non-commercial use. Pro and above: private models, commercial use.",
+    "commercialUseSource": "https://www.tripo3d.ai/pricing",
+    "exportFormats": [
+      "GLB",
+      "FBX",
+      "OBJ",
+      "USDZ",
+      "STL",
+      "3MF"
+    ],
+    "exportFormatsSource": "https://www.tripo3d.ai/product-doc/export-and-integration/export-dcc",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Spline AI",
@@ -1713,7 +1895,21 @@
       "heavy": 30,
       "basis": "Free tier; Hobby $15/seat/mo; Pro $30/seat/mo (monthly billing)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "unknown",
+    "commercialUseNote": "No clear commercial-use statement found on the pricing page or FAQ.",
+    "exportFormats": [
+      "GLB",
+      "glTF",
+      "USDZ",
+      "STL",
+      "PNG",
+      "JPG",
+      "MP4",
+      "WebM"
+    ],
+    "exportFormatsSource": "https://docs.spline.design/basics/faq",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Suno",
@@ -1741,7 +1937,19 @@
       "basis": "Free tier; Pro $10/mo; Premier $30/mo ($24 annual)",
       "checked": "2026-10-28"
     },
-    "newRelease": true
+    "newRelease": true,
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan songs are for personal, non-commercial use. Songs downloaded while on a paid plan get commercial use rights, including use in video games.",
+    "commercialUseSource": "https://help.suno.com/en/articles/9601665",
+    "exportFormats": [
+      "MP3",
+      "WAV",
+      "Stems",
+      "MIDI",
+      "Video"
+    ],
+    "exportFormatsSource": "https://help.suno.com/en/articles/13926081",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Udio",
@@ -1766,7 +1974,10 @@
       "heavy": 30,
       "basis": "Free tier; Standard $10/mo; Pro $30/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "unknown",
+    "commercialUseNote": "Couldn't confirm current terms on udio.com (pages didn't load).",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Soundraw",
@@ -1791,7 +2002,17 @@
       "heavy": 50,
       "basis": "Creator $16.99/mo; heavy assumes Artist Unlimited $50/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Paid-only tool; commercial use is listed on every paid plan.",
+    "commercialUseSource": "https://soundraw.io/pricing",
+    "exportFormats": [
+      "MP3",
+      "WAV",
+      "Stems"
+    ],
+    "exportFormatsSource": "https://soundraw.io/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "ElevenLabs",
@@ -1820,7 +2041,16 @@
       "heavy": 22,
       "basis": "Free tier; Starter $6/mo; heavy assumes Creator $22/mo (Pro $99)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan has no commercial licence; Starter and above include a commercial licence.",
+    "commercialUseSource": "https://elevenlabs.io/pricing",
+    "exportFormats": [
+      "MP3",
+      "WAV"
+    ],
+    "exportFormatsSource": "https://elevenlabs.io/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Murf AI",
@@ -1846,7 +2076,11 @@
       "basis": "Free trial; Creator $29/mo ($19 annual); heavy assumes Business $99/mo",
       "checked": "2026-10-28"
     },
-    "affiliate": true
+    "affiliate": true,
+    "commercialUse": "paid",
+    "commercialUseNote": "All paid plans include commercial rights; the free trial has no downloads. TV/radio broadcast rights are Enterprise only.",
+    "commercialUseSource": "https://help.murf.ai/do-i-have-commercial-rights-over-the-voice-over-created",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Inworld AI",
@@ -1868,7 +2102,11 @@
     "dateAdded": "2024-08-30",
     "featured": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "commercialUse": "yes",
+    "commercialUseNote": "Commercial licence listed on its pay-as-you-go On-Demand plan and paid tiers.",
+    "commercialUseSource": "https://inworld.ai/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Resemble AI",
@@ -1893,7 +2131,15 @@
       "heavy": 350,
       "basis": "Flex $0 + pay-as-you-go credits; Team $350/mo (5 seats)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "unknown",
+    "commercialUseNote": "Couldn't confirm current terms; a third-party review says the hosted service may no longer be sold to new customers. Worth rechecking the listing.",
+    "exportFormats": [
+      "WAV",
+      "MP3"
+    ],
+    "exportFormatsSource": "https://docs.resemble.ai/api-reference/text-to-speech/synthesize.md",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Charisma.ai",
@@ -1937,7 +2183,11 @@
       "heavy": 25,
       "basis": "Tablet $10, Scroll $15, Opus $25/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "NovelAI's FAQ says your content is yours to the fullest extent of the law; check it doesn't copy existing copyrighted material before commercialising.",
+    "commercialUseSource": "https://docs.novelai.net/en/faq/",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Sudowrite",
@@ -1989,7 +2239,11 @@
       "heavy": 35,
       "basis": "Free 125 one-off credits; Standard $15/mo; heavy assumes Pro $35/mo (Max $95)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "You own what you make on every plan, including Free, with no non-commercial restrictions. Free-plan videos carry a watermark.",
+    "commercialUseSource": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Pika",
@@ -2017,7 +2271,11 @@
       "heavy": 35,
       "basis": "Free tier; Starter $10/mo; heavy assumes Creator $35/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan: no commercial licence. Starter and above include a commercial licence.",
+    "commercialUseSource": "https://pika.art/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "HeyGen",
@@ -2042,7 +2300,11 @@
       "heavy": 49,
       "basis": "Free tier; Creator $29/mo; heavy assumes Pro from $49/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan output is licensed for personal, non-commercial and internal evaluation use only. Paid plans and the API allow commercial use.",
+    "commercialUseSource": "https://www.heygen.com/terms",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Synthesia",
@@ -2066,7 +2328,11 @@
       "heavy": 89,
       "basis": "Starter $29/mo monthly ($18 annual); heavy assumes Pro $89/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "limited",
+    "commercialUseNote": "You can use videos commercially (website, YouTube, social), but stock and synthetic avatars and voices can't be used in paid ads, paid promotion or TV broadcast without permission. Custom avatars follow your agreement with the person.",
+    "commercialUseSource": "https://help.synthesia.io/en/articles/6341928-synthesia-video-licensing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Descript",
@@ -2090,7 +2356,18 @@
       "heavy": 35,
       "basis": "Free tier; Hobbyist $24/mo; Creator $35/mo (monthly billing)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "unknown",
+    "commercialUseNote": "No clear commercial-use statement found.",
+    "exportFormats": [
+      "MP4",
+      "GIF",
+      "MP3",
+      "WAV",
+      "M4A"
+    ],
+    "exportFormatsSource": "https://help.descript.com/export-and-share/audio",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Jasper",
@@ -2440,7 +2717,14 @@
       "heavy": 35,
       "basis": "Free credits; Indie $15/mo, Pro $35/mo (annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "unknown",
+    "exportFormats": [
+      "GLB",
+      "Sprite sheet"
+    ],
+    "exportFormatsSource": "https://ludo.ai/docs/game-asset-generation",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Thrixel",
@@ -2460,7 +2744,11 @@
     "dateAdded": "2026-10-16",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan assets come under a Creative Commons licence (the exact type isn't stated). Pro and above list commercial use.",
+    "commercialUseSource": "https://thrixel.com/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Fish Audio",
@@ -2486,7 +2774,18 @@
       "heavy": 15,
       "basis": "Free tier; Plus $15/mo monthly ($11 annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan: personal, non-commercial use only. Premium plans: commercial use of voices you own.",
+    "commercialUseSource": "https://fish.audio/plan/",
+    "exportFormats": [
+      "MP3",
+      "WAV",
+      "PCM",
+      "Opus"
+    ],
+    "exportFormatsSource": "https://docs.fish.audio/features/text-to-speech",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Mirelo",
@@ -2513,7 +2812,11 @@
       "heavy": 22,
       "basis": "Free plan; Creator from €20/mo (≈$22)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan: commercial use only once you buy extra credits, and exports are watermarked. Commercial use included on paid plans.",
+    "commercialUseSource": "https://mirelo.ai/pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Framefields",
@@ -2540,7 +2843,15 @@
       "heavy": 0,
       "basis": "Open source; runs on your own hardware",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Open source under Apache-2.0, which allows commercial use.",
+    "commercialUseSource": "https://framefields.dev",
+    "exportFormats": [
+      "MP4"
+    ],
+    "exportFormatsSource": "https://framefields.dev",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Effigy",
@@ -2568,7 +2879,23 @@
       "heavy": 0,
       "basis": "Open source; runs locally on a 16 GB NVIDIA GPU",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Open source (MIT) and fully local. Its 'commercial-clean' profile only uses models and tools that allow commercial use of what they make, and each export carries its credits and licences.",
+    "commercialUseSource": "https://github.com/SifuInTheShell/Effigy",
+    "exportFormats": [
+      "GLB",
+      "USDZ",
+      "OBJ",
+      "STL",
+      "3MF",
+      "Sprite sheet",
+      "Godot scene",
+      "Unreal",
+      "Unity"
+    ],
+    "exportFormatsSource": "https://github.com/SifuInTheShell/Effigy",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Harness",
@@ -2861,7 +3188,11 @@
       "heavy": 60,
       "basis": "Free 5 msgs/day; Pro $20, Pro+ $60, Ultra $200/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "You can export your game and sell it anywhere lawful, including Steam, with no fee, revenue share or per-install charge for the runtime.",
+    "commercialUseSource": "https://www.summerengine.com/legal/runtime-license",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Kling AI",
@@ -2888,7 +3219,11 @@
       "heavy": 33,
       "basis": "Free daily credits; Standard ~$8.80/mo; heavy assumes Pro ~$32.56/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Free plan outputs can't be used commercially without written permission; paid members can use outputs commercially.",
+    "commercialUseSource": "https://kling.ai/docs/user-policy",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "3D AI Studio",
@@ -2915,7 +3250,20 @@
       "heavy": 149,
       "basis": "Basic $19, Studio $29, Pro $149/mo (cheaper annually)",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Commercial use allowed on all generated models; assets are private and owned by you.",
+    "commercialUseSource": "https://www.3daistudio.com/Pricing",
+    "exportFormats": [
+      "GLB",
+      "OBJ",
+      "FBX",
+      "STL",
+      "USDZ",
+      "PLY"
+    ],
+    "exportFormatsSource": "https://www.3daistudio.com/Pricing",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "BAND",
@@ -3016,7 +3364,11 @@
       "heavy": 10,
       "basis": "Free 20 credits; Studio $10/mo for 200 credits",
       "checked": "2026-10-28"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Generated sounds are royalty-free for personal and commercial music; don't resell them as standalone samples or libraries.",
+    "commercialUseSource": "https://scrapbrainaudio.com/2g",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "PulseDev",
@@ -3099,7 +3451,11 @@
       "heavy": 49,
       "basis": "Free (no credits); Starter $15/mo; heavy assumes Plus $49/mo (Ultra $129)",
       "checked": "2026-10-29"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Higgsfield's help centre says it doesn't restrict commercial use of outputs, for all users. (A search summary claimed the Free plan excludes commercial use; the pricing page didn't load to confirm.)",
+    "commercialUseSource": "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Clayzo",
@@ -3155,7 +3511,17 @@
       "heavy": 40,
       "basis": "Free tier; Standard $20/mo; heavy assumes Pro $40/mo (prices from third-party listings)",
       "checked": "2026-11-03"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Hera says everything you export comes with full commercial rights, including ads and client work.",
+    "commercialUseSource": "https://hera.video/learn-more",
+    "exportFormats": [
+      "MP4",
+      "GIF",
+      "MOV"
+    ],
+    "exportFormatsSource": "https://hera.video/learn-more",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "T3 Code",
@@ -3286,7 +3652,14 @@
     ],
     "dateAdded": "2026-11-09",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "commercialUse": "unknown",
+    "exportFormats": [
+      "MP4",
+      "GIF"
+    ],
+    "exportFormatsSource": "https://screen.studio/guide/exporting-the-video",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Rogue",
@@ -3306,7 +3679,13 @@
     ],
     "dateAdded": "2026-11-09",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "commercialUse": "unknown",
+    "exportFormats": [
+      "Code"
+    ],
+    "exportFormatsSource": "https://rogueon.ai",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "DSH Game Studio",
@@ -3335,7 +3714,15 @@
       "heavy": 0,
       "basis": "Free, open source",
       "checked": "2026-11-09"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Open source under the MIT licence, which allows commercial use. Check the terms of any AI art service you plug in.",
+    "commercialUseSource": "https://github.com/zseven-w/dsh-game-studio",
+    "exportFormats": [
+      "HTML"
+    ],
+    "exportFormatsSource": "https://github.com/zseven-w/dsh-game-studio",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Nilo",
@@ -3364,7 +3751,17 @@
       "heavy": 75,
       "basis": "Starter free; Builder $29.99/mo, Pro $74.99/mo list price",
       "checked": "2026-11-10"
-    }
+    },
+    "commercialUse": "unknown",
+    "commercialUseNote": "No clear statement found on commercial use of assets you make.",
+    "exportFormats": [
+      "FBX",
+      "GLB",
+      "STL",
+      "RBXMX"
+    ],
+    "exportFormatsSource": "https://help.nilo.io/articles/7170306-exporting-from-nilo",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "AgentMon Live",
@@ -3422,7 +3819,22 @@
       "heavy": 39,
       "basis": "Free editor; Indie $10, Pro $39, Studio $99/mo",
       "checked": "2026-11-10"
-    }
+    },
+    "commercialUse": "paid",
+    "commercialUseNote": "Everything exported on a paid plan, or bought as a pack, is royalty-free for commercial games, renders and film.",
+    "commercialUseSource": "https://folimesh.com",
+    "exportFormats": [
+      "GLB",
+      "glTF",
+      "FBX",
+      "OBJ",
+      "PNG",
+      "Unity package",
+      "Unreal package",
+      "Godot package"
+    ],
+    "exportFormatsSource": "https://folimesh.com",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Paradev",
@@ -3491,7 +3903,11 @@
     ],
     "dateAdded": "2026-11-11",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "commercialUse": "yes",
+    "commercialUseNote": "Free until your game earns US$200k in gross revenue, then 1% of the game's gross revenue.",
+    "commercialUseSource": "https://tryllengine.com",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Lottie AI",
@@ -3511,7 +3927,18 @@
     ],
     "dateAdded": "2026-11-11",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "commercialUse": "yes",
+    "commercialUseNote": "Everything you generate belongs to you, with a full commercial AI licence.",
+    "commercialUseSource": "https://lottie.ai",
+    "exportFormats": [
+      "dotLottie",
+      "Lottie JSON",
+      "GIF",
+      "MP4"
+    ],
+    "exportFormatsSource": "https://lottie.ai",
+    "rightsChecked": "2026-11-11"
   },
   {
     "name": "Seldon Wren",

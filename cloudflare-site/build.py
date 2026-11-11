@@ -3,7 +3,8 @@
 
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
-sponsored? (optional, renders a "Sponsored" label). See README.md.
+sponsored? (optional, renders a "Sponsored" label), commercialUse? (yes|paid|limited|no|unknown),
+commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD). See README.md.
 """
 import json, os, re, shutil, html
 from datetime import date
@@ -62,6 +63,37 @@ def clip(s, n=155):
     return s[:n-1].rsplit(" ", 1)[0].rstrip(",.;:") + "…"
 def tool_path(t): return f"/tool/{t['slug']}/"
 
+# ---- commercial use + export formats (from vendors' own pages; see data/tools.json) ----
+CU_LABEL = {"yes": "Allowed", "paid": "Paid plans only", "limited": "Allowed with limits", "no": "Not allowed", "unknown": "Not verified"}
+RIGHTS_CAVEAT = "Commercial-use and export details come from each vendor's own pages, checked 11 Nov 2026. Terms change, and this isn't legal advice, so check the current terms before you ship."
+# filter pills: (label, comma-separated lowercase formats that count as a match)
+FORMAT_PILLS = [("GLB / glTF", "glb,gltf"), ("FBX", "fbx"), ("OBJ", "obj"), ("USDZ", "usdz"), ("PNG", "png"), ("Sprite sheet", "sprite sheet"),
+                ("WAV", "wav"), ("MP3", "mp3"), ("MP4", "mp4")]
+def cu(t): return t.get("commercialUse") if t.get("commercialUse") in CU_LABEL else "unknown"
+def fmt_attr(t): return "|".join(f.lower() for f in t.get("exportFormats", []))
+def src_link(url, label="Source"):
+    return f'<a href="{e(url)}" target="_blank" rel="nofollow noopener">{label}<span class="sr-only"> (opens in a new tab)</span></a>'
+def cu_dd(t):
+    v = cu(t)
+    if v == "unknown" and not t.get("commercialUseNote"):
+        return "Not verified yet. Check the vendor's terms before you ship anything commercial."
+    out = f'<span class="tag rights rights-{v}">{e(CU_LABEL[v])}</span>'
+    if t.get("commercialUseNote"): out += f' {e(t["commercialUseNote"])}'
+    if t.get("commercialUseSource"): out += f' {src_link(t["commercialUseSource"])}'
+    return out
+def formats_dd(t):
+    fs = t.get("exportFormats")
+    if not fs: return "Not verified yet."
+    return " · ".join(e(f) for f in fs) + (f' {src_link(t["exportFormatsSource"])}' if t.get("exportFormatsSource") else "")
+def rights_line(t):
+    """Short line on cards; only shown for verified data."""
+    bits = []
+    if cu(t) != "unknown": bits.append(f"Commercial use: {CU_LABEL[cu(t)]}")
+    if t.get("exportFormats"):
+        fs = t["exportFormats"]
+        bits.append("Exports: " + ", ".join(fs[:4]) + ("…" if len(fs) > 4 else ""))
+    return f'\n  <p class="rights-line">{e(" · ".join(bits))}</p>' if bits else ""
+
 # ---- outbound links (affiliate-aware) ----
 def visit_link(t, label, where, cls="btn btn-primary"):
     """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note.
@@ -84,7 +116,7 @@ def card(t, show_date=False):
     if t.get("sponsored"): badge += '\n    <span class="sponsored-badge">Sponsored</span>'
     dt = f'\n  <p class="date-added">Added {nicedate(t["dateAdded"])}</p>' if show_date else ""
     tags = "".join(f'\n    <span class="tag category">{e(c)}</span>' for c in t["categories"])
-    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}">
+    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}" data-commercial="{cu(t)}" data-formats="{e(fmt_attr(t))}">
   <div class="tool-card-header">
     <h3><a href="{tool_path(t)}">{e(t["name"])}</a></h3>{badge}
   </div>
@@ -92,7 +124,7 @@ def card(t, show_date=False):
   <div class="meta">{tags}
     <span class="tag pricing {pc}">{e(t["pricing"])}</span>
   </div>
-  <p class="spend-est" title="{e(SPEND_CAVEAT)}">Est. monthly spend: {e(spend_text(t))}</p>
+  <p class="spend-est" title="{e(SPEND_CAVEAT)}">Est. monthly spend: {e(spend_text(t))}</p>{rights_line(t)}
   <div class="actions">
     {visit_link(t, "Visit →", "card")}
     <a href="{tool_path(t)}" class="btn btn-secondary">Details</a>
@@ -380,6 +412,14 @@ def compare_links(cps):
     if not cps: return ""
     return '<p class="compare-links">Compare: ' + " · ".join(f'<a href="{cp["path"]}">{e(cp["h1"])}</a>' for cp in cps) + "</p>"
 
+def pill_group(label, gid, pills):
+    """Accessible filter group: visible label names the group; pills are toggle buttons."""
+    btns = "".join(f'<button type="button" class="filter-pill{" active" if i == 0 else ""}" aria-pressed="{"true" if i == 0 else "false"}" data-filter-type="{gid}" data-filter-value="{e(v)}">{e(l)}</button>' for i,(l,v) in enumerate(pills))
+    return f'  <div class="filter-group" role="group" aria-labelledby="fl-{gid}"><span class="filter-label" id="fl-{gid}">{label}</span><div class="filter-pills">{btns}</div></div>\n'
+RIGHTS_FILTER = (pill_group("Commercial use:", "commercial", [("Any", "all"), ("Allowed", "yes"), ("Paid plans only", "paid"), ("Allowed with limits", "limited"), ("Not allowed", "no"), ("Not verified", "unknown")]) +
+                 pill_group("Export format:", "format", [("Any", "all")] + FORMAT_PILLS) +
+                 f'  <p class="spend-caveat">{e(RIGHTS_CAVEAT)} Tools we haven\'t checked yet show as "Not verified" and are hidden when you pick a format.</p>\n')
+
 # ================= build =================
 shutil.rmtree(OUT, ignore_errors=True); shutil.copytree("static", OUT)
 # Home
@@ -397,7 +437,7 @@ home = f'''<section class="hero"><div class="container">
   <div class="filter-group"><span class="filter-label">Est. monthly spend — my usage:</span><div class="filter-pills"><button class="filter-pill" data-filter-type="usage" data-filter-value="light">Light</button><button class="filter-pill active" data-filter-type="usage" data-filter-value="medium">Medium</button><button class="filter-pill" data-filter-type="usage" data-filter-value="heavy">Heavy</button></div></div>
   <div class="filter-group"><span class="filter-label">Budget:</span><div class="filter-pills"><button class="filter-pill active" data-filter-type="budget" data-filter-value="any">Any</button><button class="filter-pill" data-filter-type="budget" data-filter-value="0">Free</button><button class="filter-pill" data-filter-type="budget" data-filter-value="10">Under $10</button><button class="filter-pill" data-filter-type="budget" data-filter-value="25">Under $25</button><button class="filter-pill" data-filter-type="budget" data-filter-value="50">Under $50</button></div></div>
   <p class="spend-caveat">Light = hobby or occasional use, Medium = a regular solo dev, Heavy = daily heavy use. {e(SPEND_CAVEAT)} Tools with unknown pricing are hidden when a budget is picked.</p>
-</div></div></section>
+{RIGHTS_FILTER}</div></div></section>
 <section class="section browse"><div class="container"><div class="section-header"><h2 class="section-title">🔥 Latest Releases</h2><a href="/new-releases/" class="section-link">View all →</a></div>
 {grid(newest()[:6])}
 </div></section>
@@ -420,13 +460,14 @@ page("/", "AI Tools for Vibe Coders & Indie Game Devs | ToolDrop", "Discover the
 
 # Categories
 SPEND_FILTER = home[home.index('  <div class="filter-group"><span class="filter-label">Est. monthly'):home.index('</p>\n</div>', home.index('spend-caveat'))+4]
-SPEND_FILTER = f'<div class="filter-section">{SPEND_FILTER}</div>'
+SPEND_FILTER = f'<div class="filter-section">{SPEND_FILTER}</div>'   # slice above now also carries RIGHTS_FILTER (licence + format pills)
+assert RIGHTS_FILTER.strip() in SPEND_FILTER
 for c,i in CATS:
     ts = in_cat(c)
     path = f"/category/{slug(c)}/"
     bc, bcld = crumbs([("Home", "/"), (c, path)])
     body = f'''<section class="hero hero-small"><div class="container">{bc}<h1>{i} {e(c)}</h1><p class="subtitle">{len(ts)} AI tools for {e(c.lower())}, picked for vibe coders and indie game devs.</p>{compare_links(comparisons_for_cat(c))}</div></section>
-<section class="section"><div class="container">{SPEND_FILTER}{grid(ts, "filtered-tools")}<div id="no-results" class="no-results" style="display: none;"><h3>No tools found</h3><p>Try a bigger budget or a lighter usage level</p></div></div></section>{SUBSCRIBE}'''
+<section class="section"><div class="container">{SPEND_FILTER}{grid(ts, "filtered-tools")}<div id="no-results" class="no-results" style="display: none;"><h3>No tools found</h3><p>Try a bigger budget, a lighter usage level or a different licence or format filter</p></div></div></section>{SUBSCRIBE}'''
     title = f"Best AI Tools for {c} | ToolDrop"
     if len(title) > 60: title = f"AI Tools for {c} | ToolDrop"
     names = ", ".join(t["name"] for t in ts[:4])
@@ -471,7 +512,8 @@ for t in tools:
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
 <section class="section"><div class="container"><div class="tool-details">
-<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
+<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
+<p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{SUBSCRIBE}'''
     title = f"{t['name']}: pricing, features & alternatives | ToolDrop"
@@ -583,6 +625,8 @@ for c,_ in CATS:
         F += [f"### {t['name']}", "", f"- Official URL: {t['url']}", f"- ToolDrop page: {SITE}{tool_path(t)}", f"- Description: {t['description']}",
               f"- Categories: {', '.join(t['categories'])}", f"- Pricing: {PRICE_LABEL.get(t['pricing'], t['pricing'])}" + (f" ({t['pricingNote']})" if t.get('pricingNote') else ""),
               f"- Est. monthly spend (USD, rough estimate): " + (f"light {t['spend']['light']}, medium {t['spend']['medium']}, heavy {t['spend']['heavy'] if t['spend']['heavy'] is not None else 'not listed'} ({t['spend']['basis']}; checked {t['spend']['checked']})" if t.get('spend') else "unknown"),
+              f"- Commercial use: {CU_LABEL[cu(t)]}" + (f" ({t['commercialUseNote']})" if t.get('commercialUseNote') else "") + (f" Source: {t['commercialUseSource']}" if t.get('commercialUseSource') else ""),
+              f"- Export formats: " + (", ".join(t['exportFormats']) + (f" (source: {t['exportFormatsSource']})" if t.get('exportFormatsSource') else "") if t.get('exportFormats') else "not verified"),
               f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}"]
         if t.get("newRelease"): F.append("- New release: yes")
         F.append("")
