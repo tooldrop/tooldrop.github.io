@@ -2034,7 +2034,7 @@
     ],
     "dateAdded": "2026-11-04",
     "featured": true,
-    "affiliateUrl": "",
+    "affiliateUrl": "https://try.elevenlabs.io/d1ant2zafv29",
     "newRelease": true,
     "spend": {
       "light": 0,
@@ -2043,6 +2043,7 @@
       "basis": "Free tier; Starter $6/mo; heavy assumes Creator $22/mo (Pro $99)",
       "checked": "2026-10-28"
     },
+    "affiliate": true,
     "commercialUse": "paid",
     "commercialUseNote": "Free plan has no commercial licence; Starter and above include a commercial licence.",
     "commercialUseSource": "https://elevenlabs.io/pricing",
@@ -2350,7 +2351,7 @@
       "podcast"
     ],
     "dateAdded": "2024-08-05",
-    "affiliateUrl": "",
+    "affiliateUrl": "https://get.descript.com/xxjbzyhh2yr4",
     "spend": {
       "light": 0,
       "medium": 24,
@@ -2358,6 +2359,7 @@
       "basis": "Free tier; Hobbyist $24/mo; Creator $35/mo (monthly billing)",
       "checked": "2026-10-28"
     },
+    "affiliate": true,
     "commercialUse": "unknown",
     "commercialUseNote": "No clear commercial-use statement found.",
     "exportFormats": [
