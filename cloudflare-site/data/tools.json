@@ -1602,7 +1602,7 @@
     ],
     "dateAdded": "2026-11-04",
     "featured": true,
-    "affiliateUrl": "",
+    "affiliateUrl": "https://meshy.sjv.io/0GNx6M",
     "spend": {
       "light": 0,
       "medium": 20,
@@ -1610,7 +1610,8 @@
       "basis": "Free tier; Pro $20/mo; heavy assumes Premium $40/mo (Ultra $100)",
       "checked": "2026-10-28"
     },
-    "newRelease": true
+    "newRelease": true,
+    "affiliate": true
   },
   {
     "name": "Luma AI",
@@ -1679,14 +1680,15 @@
     ],
     "dateAdded": "2026-11-03",
     "newRelease": true,
-    "affiliateUrl": "",
+    "affiliateUrl": "https://tripo.pxf.io/oN9XKb",
     "spend": {
       "light": 0,
       "medium": 20,
       "heavy": 20,
       "basis": "Free tier; Pro $20/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "affiliate": true
   },
   {
     "name": "Spline AI",
