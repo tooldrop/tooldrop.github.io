@@ -5062,5 +5062,148 @@
     ],
     "platformsSource": "https://acemusic.ai",
     "platformsChecked": "2026-11-12"
+  },
+  {
+    "dateAdded": "2026-11-13",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-13",
+    "platformsChecked": "2026-11-13",
+    "name": "Spacefast",
+    "url": "https://spacefast.com",
+    "description": "Hosting made for what your AI builds, from Automattic (the WordPress.com company), launched Nov 2026. Ask Claude, ChatGPT, Codex, Cursor or another agent to publish to Spacefast and you get a live link back in the chat. Each project is a private-by-default Space with a database, file uploads, version history with rollback, on-page comments and built-in stats. You can also publish by dropping a folder on drop.fast, pushing to git, or running npx spacefast publish. Supports static sites, games and supported Next.js, Astro, TanStack Start and PHP apps.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Personal plan with no card required; paid and Enterprise plans for more Spaces and teams",
+    "tags": [
+      "hosting",
+      "publish from chat",
+      "MCP",
+      "database",
+      "version history",
+      "vibe coding"
+    ],
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "platformsSource": "https://spacefast.com"
+  },
+  {
+    "dateAdded": "2026-11-13",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-13",
+    "platformsChecked": "2026-11-13",
+    "name": "Expo Simulators",
+    "url": "https://expo.dev/services/simulators",
+    "description": "Cloud iOS simulators and Android emulators built for AI coding agents, launched by Expo on Nov 12 2026. Claude Code, Codex, Cursor or any agent that runs shell commands can start a session, install your build, tap through it and verify a fix, then leave screenshots, a recording and logs on the pull request. No Mac needed, sessions run in parallel, and it works with React Native, Swift, Kotlin, Flutter and Unity builds, not just Expo apps.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Expo paid plans only: $0.10 per simulator minute, with 60 minutes a month included on Starter, Production and Enterprise",
+    "tags": [
+      "iOS simulator",
+      "Android emulator",
+      "mobile testing",
+      "agents",
+      "pull request evidence"
+    ],
+    "platforms": [
+      "CLI",
+      "API"
+    ],
+    "platformsSource": "https://expo.dev/services/simulators"
+  },
+  {
+    "dateAdded": "2026-11-13",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-13",
+    "platformsChecked": "2026-11-13",
+    "name": "Patch",
+    "url": "https://patch.gg",
+    "description": "A place to build, remix and play browser games and PC game mods with your coding agent, opened to everyone on Nov 9 2026 by New Save Labs. The pch CLI and MCP server plug into Claude Code, Codex and Cursor so your agent can search and remix open game repos, pull from a library of about 50,000 open-source, game-ready 3D models, textures and sound effects (each with its licence and credit line), then test and publish. Browser games play on patch.gg; mods need the Windows app.",
+    "categories": [
+      "Game Design & Narrative",
+      "Game Art & Sprites"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free: Patch's terms say nothing on Patch costs money today (your coding agent is billed separately)",
+    "tags": [
+      "browser games",
+      "mods",
+      "MCP",
+      "CLI",
+      "open-source assets",
+      "remix"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.patch.gg/cli"
+  },
+  {
+    "dateAdded": "2026-11-13",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-13",
+    "platformsChecked": "2026-11-13",
+    "name": "Letter",
+    "url": "https://letter.dev/commandl",
+    "description": "Letter's ⌘+L lets you press ⌘L on your own live website to edit it like a design file: type over text, drag and resize elements, circle something and describe the change, or record your screen and talk it through. Letter then has Letterpress-1, Claude or GPT turn the changes into one pull request against your repo, with a preview and your checks, and can auto-merge once checks pass. Also does A/B tests and per-element click and scroll data. Launched on Product Hunt Nov 12 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Usage-based token plans from Hobbyist $25/mo (2,500 tokens) up to Scale $2,500/mo; a token is a cent at list price",
+    "tags": [
+      "visual editing",
+      "pull requests",
+      "website editor",
+      "A/B testing",
+      "no-code edits"
+    ],
+    "platforms": [
+      "Web",
+      "CLI",
+      "API"
+    ],
+    "platformsSource": "https://letter.dev/pricing"
+  },
+  {
+    "dateAdded": "2026-11-13",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-13",
+    "platformsChecked": "2026-11-13",
+    "name": "Stable Audio",
+    "url": "https://stableaudio.com",
+    "description": "Stability AI's music and sound-effect generator, rebuilt in Nov 2026 around one workspace. The new Generate app makes full tracks and SFX from text or a visual mixer of genres and instruments, then lets you trim, extend or replace sections. The new Sampler app makes packs of up to eight samples, loops or drum one-shots with a built-in 16-step sequencer and ZIP export, and Sessions (beta) layers up to eight tracks. A DAW plugin is also available.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "50 free credits on sign-up; Creator $12/mo (660 credits), Pro $30/mo, Studio $90/mo, Max $199/mo",
+    "tags": [
+      "sound effects",
+      "music generation",
+      "sample packs",
+      "loops",
+      "DAW plugin"
+    ],
+    "commercialUse": "yes",
+    "commercialUseNote": "Stability says its Stable Audio models are commercially safe and you own and can freely distribute your outputs.",
+    "commercialUseSource": "https://kb.stability.ai/knowledge-base/whats-new-in-stable-audio-november-2026-release-notes",
+    "rightsChecked": "2026-11-13",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://stableaudio.com"
   }
 ]
