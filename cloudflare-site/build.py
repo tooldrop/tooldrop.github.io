@@ -4,7 +4,8 @@
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
 sponsored? (optional, renders a "Sponsored" label), commercialUse? (yes|paid|limited|no|unknown),
-commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD). See README.md.
+commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD), lastChecked (YYYY-MM-DD), platforms? [fixed vocabulary, see PLATFORMS],
+platformsSource?, platformsChecked?. See README.md. Scout and reviews must bump lastChecked whenever they touch a listing.
 """
 import json, os, re, shutil, html
 from datetime import date
@@ -26,7 +27,7 @@ DISCLOSURE_LINE = 'Some links on this page are affiliate links. If you sign up t
 e = lambda s: html.escape(str(s), quote=True)
 slug = lambda s: re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 for t in tools:
-    t["slug"] = slug(t["name"])
+    t["slug"] = t.get("slug") or slug(t["name"])   # optional "slug" keeps old URLs stable after a rename
     t.setdefault("affiliateUrl", "")
 assert len({t["slug"] for t in tools}) == len(tools)
 BY_NAME = {t["name"]: t for t in tools}
@@ -94,6 +95,26 @@ def rights_line(t):
         bits.append("Exports: " + ", ".join(fs[:4]) + ("…" if len(fs) > 4 else ""))
     return f'\n  <p class="rights-line">{e(" · ".join(bits))}</p>' if bits else ""
 
+# ---- platforms + last checked (staged 12 Nov 2026) ----
+# Fixed vocabulary, in display order. Only values from the vendor's own site/docs; empty list = not verified yet.
+PLATFORMS = ["Web", "Windows", "macOS", "Linux", "iOS", "Android", "API", "CLI", "Unity", "Unreal", "Godot", "Blender",
+             "VS Code", "JetBrains", "Figma", "Chrome extension"]
+PLATFORM_LABEL = {"API": "API / SDK", "Unreal": "Unreal Engine"}
+for t in tools:
+    bad = [p for p in t.get("platforms", []) if p not in PLATFORMS]
+    assert not bad, (t["name"], bad)
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", t.get("lastChecked", "")), ("lastChecked missing", t["name"])
+def plats(t): return sorted(t.get("platforms", []), key=PLATFORMS.index)
+def plat_label(p): return PLATFORM_LABEL.get(p, p)
+def plat_attr(t): return "|".join(p.lower() for p in plats(t)) or "unknown"
+def platforms_dd(t):
+    ps = plats(t)
+    if not ps: return "Not verified yet. Check the vendor's site for supported platforms."
+    return " · ".join(e(plat_label(p)) for p in ps) + (f' {src_link(t["platformsSource"])}' if t.get("platformsSource") else "")
+def platform_line(t):
+    ps = plats(t)
+    return f'\n  <p class="platform-line">Platforms: {e(", ".join(plat_label(p) for p in ps))}</p>' if ps else ""
+
 # ---- outbound links (affiliate-aware) ----
 def visit_link(t, label, where, cls="btn btn-primary"):
     """Visit link uses affiliateUrl || url. Affiliate links get rel=sponsored nofollow noopener and a visible note.
@@ -116,7 +137,7 @@ def card(t, show_date=False):
     if t.get("sponsored"): badge += '\n    <span class="sponsored-badge">Sponsored</span>'
     dt = f'\n  <p class="date-added">Added {nicedate(t["dateAdded"])}</p>' if show_date else ""
     tags = "".join(f'\n    <span class="tag category">{e(c)}</span>' for c in t["categories"])
-    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}" data-commercial="{cu(t)}" data-formats="{e(fmt_attr(t))}">
+    return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}" data-commercial="{cu(t)}" data-formats="{e(fmt_attr(t))}" data-platforms="{e(plat_attr(t))}">
   <div class="tool-card-header">
     <h3><a href="{tool_path(t)}">{e(t["name"])}</a></h3>{badge}
   </div>
@@ -124,7 +145,8 @@ def card(t, show_date=False):
   <div class="meta">{tags}
     <span class="tag pricing {pc}">{e(t["pricing"])}</span>
   </div>
-  <p class="spend-est" title="{e(SPEND_CAVEAT)}">Est. monthly spend: {e(spend_text(t))}</p>{rights_line(t)}
+  <p class="spend-est" title="{e(SPEND_CAVEAT)}">Est. monthly spend: {e(spend_text(t))}</p>{rights_line(t)}{platform_line(t)}
+  <p class="last-checked">Last checked {nicedate(t["lastChecked"])}</p>
   <div class="actions">
     {visit_link(t, "Visit →", "card")}
     <a href="{tool_path(t)}" class="btn btn-secondary">Details</a>
@@ -418,7 +440,8 @@ def pill_group(label, gid, pills):
     return f'  <div class="filter-group" role="group" aria-labelledby="fl-{gid}"><span class="filter-label" id="fl-{gid}">{label}</span><div class="filter-pills">{btns}</div></div>\n'
 RIGHTS_FILTER = (pill_group("Commercial use:", "commercial", [("Any", "all"), ("Allowed", "yes"), ("Paid plans only", "paid"), ("Allowed with limits", "limited"), ("Not allowed", "no"), ("Not verified", "unknown")]) +
                  pill_group("Export format:", "format", [("Any", "all")] + FORMAT_PILLS) +
-                 f'  <p class="spend-caveat">{e(RIGHTS_CAVEAT)} Tools we haven\'t checked yet show as "Not verified" and are hidden when you pick a format.</p>\n')
+                 pill_group("Platform:", "platform", [("Any", "all")] + [(plat_label(p), p.lower()) for p in PLATFORMS if any(p in t.get("platforms", []) for t in tools)]) +
+                 f'  <p class="spend-caveat">{e(RIGHTS_CAVEAT)} Tools we haven\'t checked yet show as "Not verified" and are hidden when you pick a format or platform. Platforms come from each vendor\'s site, checked 12 Nov 2026.</p>\n')
 
 # ================= build =================
 shutil.rmtree(OUT, ignore_errors=True); shutil.copytree("static", OUT)
@@ -447,8 +470,9 @@ home = f'''<section class="hero"><div class="container">
 {grid([t for t in tools if t.get("featured")])}
 </div></section>
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">🛠️ All Tools <span class="count-pill">{len(tools)}</span></h2></div>
+<p id="results-count" class="results-count" role="status" aria-live="polite" data-total="{len(tools)}">Showing all {len(tools)} tools</p>
 {grid(tools, "filtered-tools")}
-<div id="no-results" class="no-results" style="display: none;"><h3>No tools found</h3><p>Try adjusting your search or filters</p></div>
+<div id="no-results" class="no-results" style="display: none;"><h3>No tools match</h3><p>Nothing fits that search and these filters. Try fewer filters or a different word.</p><p><button type="button" class="btn btn-secondary" id="clear-filters">Clear search and filters</button></p></div>
 </div></section>
 {SUBSCRIBE}'''
 home_ld = ld({"@type": "WebSite", "name": "ToolDrop", "url": SITE + "/", "inLanguage": "en-AU",
@@ -467,7 +491,7 @@ for c,i in CATS:
     path = f"/category/{slug(c)}/"
     bc, bcld = crumbs([("Home", "/"), (c, path)])
     body = f'''<section class="hero hero-small"><div class="container">{bc}<h1>{i} {e(c)}</h1><p class="subtitle">{len(ts)} AI tools for {e(c.lower())}, picked for vibe coders and indie game devs.</p>{compare_links(comparisons_for_cat(c))}</div></section>
-<section class="section"><div class="container">{SPEND_FILTER}{grid(ts, "filtered-tools")}<div id="no-results" class="no-results" style="display: none;"><h3>No tools found</h3><p>Try a bigger budget, a lighter usage level or a different licence or format filter</p></div></div></section>{SUBSCRIBE}'''
+<section class="section"><div class="container">{SPEND_FILTER}<p id="results-count" class="results-count" role="status" aria-live="polite" data-total="{len(ts)}">Showing all {len(ts)} tools</p>{grid(ts, "filtered-tools")}<div id="no-results" class="no-results" style="display: none;"><h3>No tools match</h3><p>Try a bigger budget, a lighter usage level, or a different licence, format or platform filter.</p><p><button type="button" class="btn btn-secondary" id="clear-filters">Clear filters</button></p></div></div></section>{SUBSCRIBE}'''
     title = f"Best AI Tools for {c} | ToolDrop"
     if len(title) > 60: title = f"AI Tools for {c} | ToolDrop"
     names = ", ".join(t["name"] for t in ts[:4])
@@ -501,7 +525,9 @@ for t in tools:
     in_cmp = [cp for cp in COMPARISONS if t in cp["select"]()]
     sw = {"@type": "SoftwareApplication", "name": t["name"], "url": t["url"], "description": t["description"],
           "applicationCategory": APPCAT.get(c0, "BusinessApplication")}
-    if any("browser" in g for g in tags_lc(t)): sw["operatingSystem"] = "Web"
+    os_list = [p for p in plats(t) if p in ("Web", "Windows", "macOS", "Linux", "iOS", "Android")]
+    if os_list: sw["operatingSystem"] = ", ".join(os_list)
+    elif any("browser" in g for g in tags_lc(t)): sw["operatingSystem"] = "Web"
     if t["pricing"] == "free": sw["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
     if t.get("spend"):
         sw["additionalProperty"] = {"@type": "PropertyValue", "name": "Estimated monthly spend (USD, rough estimate)", "value": spend_text(t),
@@ -512,14 +538,14 @@ for t in tools:
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
 <section class="section"><div class="container"><div class="tool-details">
-<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd></dl>
+<dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
 <section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{SUBSCRIBE}'''
     title = f"{t['name']}: pricing, features & alternatives | ToolDrop"
     if len(title) > 65: title = f"{t['name']}: pricing & alternatives | ToolDrop"
     if len(title) > 65: title = f"{t['name']} | ToolDrop"
-    page(path, title, clip(f"{t['name']}: {t['description']}"), body, ld(sw) + "\n" + bcld, t["dateAdded"])
+    page(path, title, clip(f"{t['name']}: {t['description']}"), body, ld(sw) + "\n" + bcld, max(t["dateAdded"], t["lastChecked"]))
 
 # Comparison pages
 for cp in COMPARISONS:
@@ -627,7 +653,8 @@ for c,_ in CATS:
               f"- Est. monthly spend (USD, rough estimate): " + (f"light {t['spend']['light']}, medium {t['spend']['medium']}, heavy {t['spend']['heavy'] if t['spend']['heavy'] is not None else 'not listed'} ({t['spend']['basis']}; checked {t['spend']['checked']})" if t.get('spend') else "unknown"),
               f"- Commercial use: {CU_LABEL[cu(t)]}" + (f" ({t['commercialUseNote']})" if t.get('commercialUseNote') else "") + (f" Source: {t['commercialUseSource']}" if t.get('commercialUseSource') else ""),
               f"- Export formats: " + (", ".join(t['exportFormats']) + (f" (source: {t['exportFormatsSource']})" if t.get('exportFormatsSource') else "") if t.get('exportFormats') else "not verified"),
-              f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}"]
+              f"- Platforms: " + (", ".join(plat_label(p) for p in plats(t)) + (f" (source: {t['platformsSource']})" if t.get('platformsSource') else "") if plats(t) else "not verified"),
+              f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}", f"- Last checked: {t['lastChecked']}"]
         if t.get("newRelease"): F.append("- New release: yes")
         F.append("")
 open(f"{OUT}/llms-full.txt", "w").write("\n".join(F))
