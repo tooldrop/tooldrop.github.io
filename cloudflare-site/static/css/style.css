@@ -78,3 +78,8 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .tag.rights{border:1px solid var(--border);border-radius:999px;padding:1px 8px;font-size:.8rem}
 .tag.rights-yes{color:var(--green);border-color:var(--green)}.tag.rights-paid,.tag.rights-limited{color:var(--amber);border-color:var(--amber)}.tag.rights-no{color:#f87171;border-color:#f87171}
 .filter-pill:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* 12 Nov 2026: live results count, platforms, last checked */
+.results-count{font-size:.9rem;color:var(--muted);margin:0 0 12px}
+.platform-line{font-size:.85rem;opacity:.8;margin:.25rem 0 0}
+.last-checked{font-size:.75rem;color:var(--muted);margin:.25rem 0 0}

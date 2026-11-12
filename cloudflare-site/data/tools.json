@@ -24,7 +24,14 @@
       "heavy": 9,
       "basis": "Free 3 inboxes/3k emails; Pro €9/mo base (usage extra)",
       "checked": "2026-11-06"
-    }
+    },
+    "lastChecked": "2026-11-06",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://openmail.sh",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Cloudbrowser",
@@ -51,7 +58,17 @@
       "heavy": 99,
       "basis": "Free 1 browser-hour; Basic $20/mo; Pro $99/mo",
       "checked": "2026-11-06"
-    }
+    },
+    "lastChecked": "2026-11-06",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://cloudbrowser.tv",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Glasshand",
@@ -79,7 +96,13 @@
       "heavy": 90,
       "basis": "iPhone $60/mo; Mac $90/mo",
       "checked": "2026-11-06"
-    }
+    },
+    "lastChecked": "2026-11-06",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://glasshand.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Rerun",
@@ -106,7 +129,9 @@
       "heavy": 39,
       "basis": "Trial then Pro $29/mo (5 coworkers); heavy assumes +5 coworkers add-on $10",
       "checked": "2026-11-06"
-    }
+    },
+    "lastChecked": "2026-11-06",
+    "platforms": []
   },
   {
     "name": "OpusClip",
@@ -141,7 +166,14 @@
       "XML (Premiere Pro / DaVinci Resolve)"
     ],
     "exportFormatsSource": "https://www.opus.pro/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.opus.pro",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "SFXMint",
@@ -172,7 +204,14 @@
       "MP3"
     ],
     "exportFormatsSource": "https://sfxmint.com",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://sfxmint.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "CXAgent",
@@ -199,7 +238,16 @@
       "heavy": 0,
       "basis": "Tool free; model provider costs separate",
       "checked": "2026-11-06"
-    }
+    },
+    "lastChecked": "2026-11-06",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://nickprotop.github.io/cxagent/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "FlutterFlow",
@@ -227,7 +275,15 @@
       "heavy": 80,
       "basis": "Free AI allowance; Basic $39/mo; heavy assumes Pro $80/mo (Max $150)",
       "checked": "2026-11-05"
-    }
+    },
+    "lastChecked": "2026-11-05",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://flutterflow.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "QualityLayer",
@@ -250,7 +306,16 @@
     "dateAdded": "2026-11-05",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2026-11-05",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://qualitylayer.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Xogot",
@@ -283,7 +348,15 @@
     "commercialUse": "yes",
     "commercialUseNote": "Built on Godot; Xogot says you can distribute games with a runtime free from commercial redistribution restrictions.",
     "commercialUseSource": "https://xogot.com",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "macOS",
+      "iOS",
+      "Godot"
+    ],
+    "platformsSource": "https://xogot.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Gemini 3.8 Flash TTS",
@@ -312,7 +385,13 @@
       "WAV"
     ],
     "exportFormatsSource": "https://aistudio.google.com/docs/speech-generation",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://aistudio.google.com/docs/speech-generation",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Wanaka Studio",
@@ -340,7 +419,13 @@
       "heavy": null,
       "basis": "Free to start; paid plan prices not checked",
       "checked": "2026-11-04"
-    }
+    },
+    "lastChecked": "2026-11-04",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://wanaka.app",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Spielerando",
@@ -368,7 +453,9 @@
       "heavy": null,
       "basis": "Free to start; paid options not checked",
       "checked": "2026-11-04"
-    }
+    },
+    "lastChecked": "2026-11-04",
+    "platforms": []
   },
   {
     "name": "Testifly",
@@ -395,7 +482,13 @@
       "heavy": null,
       "basis": "30-day free trial; paid plan prices not checked",
       "checked": "2026-11-04"
-    }
+    },
+    "lastChecked": "2026-11-04",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://testifly.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "AgentKit by Scalekit",
@@ -422,7 +515,14 @@
       "heavy": 99,
       "basis": "Free 10k tool calls/mo; Growth $99/mo",
       "checked": "2026-11-04"
-    }
+    },
+    "lastChecked": "2026-11-04",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://www.scalekit.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Hex",
@@ -450,7 +550,15 @@
       "heavy": 0,
       "basis": "Free, open source, runs locally",
       "checked": "2026-11-04"
-    }
+    },
+    "lastChecked": "2026-11-04",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://anoma.ly/hex/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Aura Autopilot",
@@ -479,7 +587,17 @@
       "heavy": 0,
       "basis": "Open source; AI usage comes from your own API key or Claude Code/Codex plan",
       "checked": "2026-11-02"
-    }
+    },
+    "lastChecked": "2026-11-02",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Unity",
+      "Unreal",
+      "Godot"
+    ],
+    "platformsSource": "https://www.tryaura.dev/autopilot/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "OhMyGame",
@@ -517,7 +635,18 @@
       "PNG"
     ],
     "exportFormatsSource": "https://www.ohmygame.ai",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Unity",
+      "Unreal",
+      "Godot",
+      "Blender"
+    ],
+    "platformsSource": "https://www.ohmygame.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Stageshow",
@@ -544,7 +673,9 @@
       "heavy": 0,
       "basis": "Free, open source (MIT); runs with the coding agent you already use",
       "checked": "2026-11-02"
-    }
+    },
+    "lastChecked": "2026-11-02",
+    "platforms": []
   },
   {
     "name": "Kimi 3D Make",
@@ -578,7 +709,9 @@
       "STEP"
     ],
     "exportFormatsSource": "https://www.kimi.com/en/help/3d-make/3d-make-faq",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": []
   },
   {
     "name": "Floot",
@@ -606,7 +739,13 @@
       "heavy": 100,
       "basis": "Free plan; Pro $25/mo; heavy assumes Power $100/mo (monthly billing)",
       "checked": "2026-10-30"
-    }
+    },
+    "lastChecked": "2026-10-30",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://floot.com/docs",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Our Silly Games",
@@ -634,7 +773,13 @@
       "heavy": 0,
       "basis": "Free platform; AI usage comes from your own Claude Code or Codex plan",
       "checked": "2026-10-30"
-    }
+    },
+    "lastChecked": "2026-10-30",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://oursilly.games",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "App Store Screenshots",
@@ -661,7 +806,9 @@
       "heavy": 0,
       "basis": "Free, open source (MIT); runs with the coding agent you already use",
       "checked": "2026-10-30"
-    }
+    },
+    "lastChecked": "2026-10-30",
+    "platforms": []
   },
   {
     "name": "Viggle JST-2",
@@ -699,7 +846,14 @@
       "GLB"
     ],
     "exportFormatsSource": "https://viggle.ai/motion-control",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://viggle.ai/jst2",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Entire",
@@ -727,7 +881,14 @@
       "heavy": 50,
       "basis": "Hosting free; heavy use of review agents burns prepaid credits (after $100 trial)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.entire.com/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "VibeiDE",
@@ -754,7 +915,15 @@
       "heavy": 8,
       "basis": "$7.99/mo launch price; AI usage billed separately by your own provider",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://vibeide.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "SurgePix",
@@ -781,7 +950,9 @@
       "heavy": 25,
       "basis": "Free 25 credits/day; Basic $9.90/mo; Pro $24.90/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": []
   },
   {
     "name": "myPip",
@@ -809,7 +980,13 @@
       "heavy": 0,
       "basis": "Free; 40 free builds for new accounts",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://mypip.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "SimplyStream Strata",
@@ -836,7 +1013,15 @@
       "heavy": 250,
       "basis": "Free 2 runs/day; Indie $25/mo; Studio $250/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "Unity",
+      "Unreal"
+    ],
+    "platformsSource": "https://simplystream.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Ovren",
@@ -863,7 +1048,9 @@
       "heavy": 3,
       "basis": "Free for 5 changes; Pro is $29 one-time (≈$2.40/mo over a year)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": []
   },
   {
     "name": "heal.dev",
@@ -883,7 +1070,9 @@
     "dateAdded": "2026-10-23",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2026-10-23",
+    "platforms": []
   },
   {
     "name": "Recursive Flint",
@@ -910,7 +1099,9 @@
       "heavy": 0,
       "basis": "Open weights; free, but self-hosting needs your own GPU/compute",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": []
   },
   {
     "name": "Mistral Voxtral 3",
@@ -941,7 +1132,13 @@
     "commercialUse": "yes",
     "commercialUseNote": "Under Mistral's Commercial Terms of Service, the customer owns all output and Mistral assigns its rights in it.",
     "commercialUseSource": "https://legal.mistral.ai/terms/commercial-terms-of-service",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://mistral.ai/news/voxtral-3/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Animatica",
@@ -972,7 +1169,16 @@
     "commercialUse": "yes",
     "commercialUseNote": "You own the motion you make, with commercial use on every plan. Marionette's $59 Indie licence covers studios under US$100k a year in revenue.",
     "commercialUseSource": "https://animatica.ai/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Blender"
+    ],
+    "platformsSource": "https://animatica.ai/marionette",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Vercel fx",
@@ -1000,7 +1206,15 @@
       "heavy": 0,
       "basis": "Open source",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "macOS",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/vercel-labs/fx",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Composio",
@@ -1027,7 +1241,14 @@
       "heavy": 29,
       "basis": "Free Hobby 100k tool calls/mo; Pro $29/mo incl. $29 usage",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://composio.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Beacon",
@@ -1054,7 +1275,17 @@
       "heavy": 20,
       "basis": "Open source + free cloud tier; Cloud Pro $20/mo (annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.beacon.sh/cli/install",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Reticle",
@@ -1075,7 +1306,14 @@
     "dateAdded": "2026-10-21",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2026-10-21",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.reticle.sh/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Phonon",
@@ -1110,7 +1348,17 @@
       "WAV"
     ],
     "exportFormatsSource": "https://gradium.ai/phonon",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "macOS",
+      "iOS",
+      "Android",
+      "API",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://gradium.ai/phonon",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Zetta 3D",
@@ -1148,7 +1396,13 @@
       "STL"
     ],
     "exportFormatsSource": "https://zetta3d.ai/faq",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://zetta3d.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Cursor",
@@ -1177,7 +1431,16 @@
       "basis": "Free tier; Premium $30/mo; heavy assumes Super $100/mo (Plus $8, Ultra $200 also listed)",
       "checked": "2026-10-28"
     },
-    "newRelease": true
+    "newRelease": true,
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://cursor.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "GitHub Copilot",
@@ -1204,7 +1467,16 @@
       "basis": "Free tier; Pro $10/mo; heavy assumes Pro+ $39/mo (Max $100 also listed)",
       "checked": "2026-10-28"
     },
-    "newRelease": true
+    "newRelease": true,
+    "lastChecked": "2026-10-29",
+    "platforms": [
+      "macOS",
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://github.com/features/copilot",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Zed",
@@ -1230,7 +1502,15 @@
       "heavy": 20,
       "basis": "Free editor; Pro $10/mo incl. $5 AI credit; heavy ~$10 extra token usage",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://zed.dev/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Tabnine",
@@ -1248,7 +1528,15 @@
     ],
     "dateAdded": "2024-09-01",
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2024-09-01",
+    "platforms": [
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://docs.tabnine.com/main/welcome/readme/supported-ides",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Replit",
@@ -1276,7 +1564,15 @@
       "heavy": 100,
       "basis": "Free Starter; Core $20/mo; heavy assumes Pro $100/mo; agent overage extra",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "platformsSource": "https://replit.com/mobile",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Bolt",
@@ -1303,7 +1599,13 @@
       "heavy": 50,
       "basis": "Free tier; Pro $25/mo monthly ($18 annual); heavy assumes 26M-token tier ~$50/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://bolt.new",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "v0",
@@ -1329,7 +1631,15 @@
       "heavy": 30,
       "basis": "Free tier; Plus $30/user/mo (Premium $20 closed to new users); top-ups extra",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "iOS",
+      "API"
+    ],
+    "platformsSource": "https://v0.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Lovable",
@@ -1354,7 +1664,13 @@
       "heavy": 50,
       "basis": "Free tier; Pro $25/mo for 100 credits; heavy assumes 200-credit tier $50/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://lovable.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Claude",
@@ -1380,7 +1696,21 @@
       "heavy": 100,
       "basis": "Free tier; Pro $20/mo ($17 annual); heavy assumes Max from $100/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "CLI",
+      "VS Code",
+      "JetBrains",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://claude.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "ChatGPT",
@@ -1409,7 +1739,16 @@
     "commercialUse": "yes",
     "commercialUseNote": "OpenAI's Terms of Use say you own the output and OpenAI assigns you its rights in it.",
     "commercialUseSource": "https://openai.com/policies/row-terms-of-use/",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://chatgpt.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Devin",
@@ -1434,7 +1773,16 @@
       "heavy": null,
       "basis": "Teams plan from $80/mo plus $40 per developer seat; usage credits extra",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "macOS",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://devin.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Qodo",
@@ -1459,7 +1807,15 @@
       "heavy": 30,
       "basis": "Free for individuals; Pro Team $30/mo for 2,500 pooled credits",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://www.qodo.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Sourcegraph Cody",
@@ -1478,7 +1834,16 @@
     ],
     "dateAdded": "2024-08-15",
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2024-08-15",
+    "platforms": [
+      "Web",
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://sourcegraph.com/docs/cody",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "CodeRabbit",
@@ -1502,7 +1867,16 @@
       "heavy": 30,
       "basis": "Free for open source; Essentials $30/dev/mo monthly ($24 annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://docs.coderabbit.ai/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Greptile",
@@ -1527,7 +1901,13 @@
       "heavy": 30,
       "basis": "Free Starter for 1 dev; Pro $30/active seat/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://www.greptile.com/docs/introduction",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Midjourney",
@@ -1556,7 +1936,9 @@
     "commercialUse": "yes",
     "commercialUseNote": "Paid-only tool. You own the assets you create; companies earning over US$1M a year need a Pro or Mega plan to own their assets.",
     "commercialUseSource": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": []
   },
   {
     "name": "GPT Image 2.5 Sunburst",
@@ -1579,7 +1961,13 @@
     "commercialUse": "yes",
     "commercialUseNote": "Under the OpenAI Services Agreement (API), you own all output and OpenAI assigns you its rights in it.",
     "commercialUseSource": "https://openai.com/policies/business-terms/",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://developers.openai.com/api/docs/models/gpt-image-2.5-sunburst",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Leonardo AI",
@@ -1608,7 +1996,14 @@
     "commercialUse": "yes",
     "commercialUseNote": "Paid plans: you own your images and can use them commercially. Free plan: Leonardo owns the images but grants you a non-exclusive, royalty-free licence for commercial use.",
     "commercialUseSource": "https://leonardo.ai/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://leonardo.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Scenario",
@@ -1657,7 +2052,15 @@
       "VOX"
     ],
     "exportFormatsSource": "https://www.scenario.com/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "Blender"
+    ],
+    "platformsSource": "https://www.scenario.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Stable Diffusion",
@@ -1685,7 +2088,13 @@
     "commercialUse": "yes",
     "commercialUseNote": "Free under the Stability AI Community License, including commercial use, if your annual revenue is under US$1M; above that you need an Enterprise licence.",
     "commercialUseSource": "https://stability.ai/license",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://stability.ai/stable-image",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Pixel Lab",
@@ -1723,7 +2132,14 @@
       "ZIP"
     ],
     "exportFormatsSource": "https://www.pixellab.ai/llms.txt",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.pixellab.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Meshy",
@@ -1765,7 +2181,19 @@
       "BLEND"
     ],
     "exportFormatsSource": "https://www.meshy.ai/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "Unity",
+      "Unreal",
+      "Godot",
+      "Blender",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://www.meshy.ai/integrations",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Luma AI",
@@ -1794,7 +2222,14 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free and Lite plans are personal, non-commercial use only. Plus, Unlimited and Enterprise plans include commercial rights.",
     "commercialUseSource": "https://lumalabs.ai/learning-hub/licensing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://lumalabs.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Kaedim",
@@ -1830,7 +2265,13 @@
       "USD"
     ],
     "exportFormatsSource": "https://docs.kaedim3d.com/managing-assets/exporting-assets/download",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://www.kaedim3d.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Tripo AI",
@@ -1871,7 +2312,19 @@
       "3MF"
     ],
     "exportFormatsSource": "https://www.tripo3d.ai/product-doc/export-and-integration/export-dcc",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI",
+      "Unity",
+      "Unreal",
+      "Godot",
+      "Blender"
+    ],
+    "platformsSource": "https://www.tripo3d.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Spline AI",
@@ -1910,7 +2363,16 @@
       "WebM"
     ],
     "exportFormatsSource": "https://docs.spline.design/basics/faq",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "iOS"
+    ],
+    "platformsSource": "https://spline.design/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Suno",
@@ -1950,7 +2412,15 @@
       "Video"
     ],
     "exportFormatsSource": "https://help.suno.com/en/articles/13926081",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "platformsSource": "https://suno.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Udio",
@@ -1978,7 +2448,9 @@
     },
     "commercialUse": "unknown",
     "commercialUseNote": "Couldn't confirm current terms on udio.com (pages didn't load).",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": []
   },
   {
     "name": "Soundraw",
@@ -2013,7 +2485,14 @@
       "Stems"
     ],
     "exportFormatsSource": "https://soundraw.io/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://soundraw.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "ElevenLabs",
@@ -2052,7 +2531,16 @@
       "WAV"
     ],
     "exportFormatsSource": "https://elevenlabs.io/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "platformsSource": "https://elevenlabs.io/mobile",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Murf AI",
@@ -2082,7 +2570,14 @@
     "commercialUse": "paid",
     "commercialUseNote": "All paid plans include commercial rights; the free trial has no downloads. TV/radio broadcast rights are Enterprise only.",
     "commercialUseSource": "https://help.murf.ai/do-i-have-commercial-rights-over-the-voice-over-created",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://murf.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Inworld AI",
@@ -2108,7 +2603,14 @@
     "commercialUse": "yes",
     "commercialUseNote": "Commercial licence listed on its pay-as-you-go On-Demand plan and paid tiers.",
     "commercialUseSource": "https://inworld.ai/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.inworld.ai/introduction",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Resemble AI",
@@ -2141,26 +2643,14 @@
       "MP3"
     ],
     "exportFormatsSource": "https://docs.resemble.ai/api-reference/text-to-speech/synthesize.md",
-    "rightsChecked": "2026-11-11"
-  },
-  {
-    "name": "Charisma.ai",
-    "url": "https://charisma.ai",
-    "description": "Immersive conversational AI platform for interactive training scenarios and brand experiences.",
-    "categories": [
-      "Game Design & Narrative"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API",
+      "Chrome extension"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free tier available",
-    "tags": [
-      "interactive fiction",
-      "storytelling",
-      "characters",
-      "training"
-    ],
-    "dateAdded": "2024-09-20",
-    "affiliateUrl": "",
-    "spend": null
+    "platformsSource": "https://www.resemble.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "NovelAI",
@@ -2189,7 +2679,13 @@
     "commercialUse": "yes",
     "commercialUseNote": "NovelAI's FAQ says your content is yours to the fullest extent of the law; check it doesn't copy existing copyrighted material before commercialising.",
     "commercialUseSource": "https://docs.novelai.net/en/faq/",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://novelai.net",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Sudowrite",
@@ -2213,7 +2709,13 @@
       "heavy": 59,
       "basis": "Hobby $19, Professional $29, Max $59/mo monthly (cheaper annually)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://www.sudowrite.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Runway",
@@ -2245,7 +2747,16 @@
     "commercialUse": "yes",
     "commercialUseNote": "You own what you make on every plan, including Free, with no non-commercial restrictions. Free-plan videos carry a watermark.",
     "commercialUseSource": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "API"
+    ],
+    "platformsSource": "https://runway.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Pika",
@@ -2277,7 +2788,15 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free plan: no commercial licence. Starter and above include a commercial licence.",
     "commercialUseSource": "https://pika.art/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "iOS",
+      "API"
+    ],
+    "platformsSource": "https://pika.art/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "HeyGen",
@@ -2306,7 +2825,14 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free plan output is licensed for personal, non-commercial and internal evaluation use only. Paid plans and the API allow commercial use.",
     "commercialUseSource": "https://www.heygen.com/terms",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.heygen.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Synthesia",
@@ -2334,7 +2860,14 @@
     "commercialUse": "limited",
     "commercialUseNote": "You can use videos commercially (website, YouTube, social), but stock and synthetic avatars and voices can't be used in paid ads, paid promotion or TV broadcast without permission. Custom avatars follow your agreement with the person.",
     "commercialUseSource": "https://help.synthesia.io/en/articles/6341928-synthesia-video-licensing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.synthesia.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Descript",
@@ -2370,7 +2903,15 @@
       "M4A"
     ],
     "exportFormatsSource": "https://help.descript.com/export-and-share/audio",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "API"
+    ],
+    "platformsSource": "https://www.descript.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Jasper",
@@ -2395,7 +2936,15 @@
       "heavy": 69,
       "basis": "Pro $69/seat/mo monthly ($59 annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://www.jasper.ai/chrome-extension",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Copy.ai",
@@ -2420,7 +2969,13 @@
       "heavy": 29,
       "basis": "Free tier; Chat $29/mo monthly ($24 annual)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://www.copy.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Writesonic",
@@ -2444,7 +2999,14 @@
       "heavy": 249,
       "basis": "Starter $99/mo; heavy assumes Basic $249/mo (monthly billing)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://writesonic.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Hypotenuse AI",
@@ -2462,7 +3024,14 @@
     ],
     "dateAdded": "2024-09-05",
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2024-09-05",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.hypotenuse.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Anyword",
@@ -2486,7 +3055,15 @@
       "heavy": 99,
       "basis": "Starter $49/mo; heavy assumes Data-Driven $99/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API",
+      "Chrome extension"
+    ],
+    "platformsSource": "https://anyword.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "LangChain",
@@ -2513,7 +3090,14 @@
       "heavy": 39,
       "basis": "Open source; heavy assumes a LangSmith Plus seat $39/mo (LLM API costs extra)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.langchain.com/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "AutoGPT",
@@ -2538,7 +3122,14 @@
       "heavy": 50,
       "basis": "Free tier; Pro $50/mo monthly; workflow runs billed from a credit wallet",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://agpt.co/docs",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "CrewAI",
@@ -2562,7 +3153,14 @@
       "heavy": null,
       "basis": "Open source (LLM API costs extra); hosted pricing not listed",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.crewai.com/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Semantic Kernel",
@@ -2587,7 +3185,16 @@
       "heavy": 0,
       "basis": "Open source (LLM API costs extra)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "API"
+    ],
+    "platformsSource": "https://github.com/microsoft/semantic-kernel",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Haystack",
@@ -2612,7 +3219,13 @@
       "heavy": 0,
       "basis": "Open source (LLM API costs extra)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://haystack.deepset.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Vercel AI SDK",
@@ -2637,7 +3250,13 @@
       "heavy": 0,
       "basis": "Open source (LLM API costs extra)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://sdk.vercel.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "OpenCode",
@@ -2663,7 +3282,18 @@
       "heavy": 0,
       "basis": "Open source; free models included, or pay your own model provider",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://opencode.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Epherem",
@@ -2689,7 +3319,13 @@
       "heavy": 0,
       "basis": "Free during early access",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://epherem.com/docs",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Ludo.ai",
@@ -2727,7 +3363,16 @@
       "Sprite sheet"
     ],
     "exportFormatsSource": "https://ludo.ai/docs/game-asset-generation",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI",
+      "Unity"
+    ],
+    "platformsSource": "https://ludo.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Thrixel",
@@ -2751,7 +3396,17 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free plan assets come under a Creative Commons licence (the exact type isn't stated). Pro and above list commercial use.",
     "commercialUseSource": "https://thrixel.com/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI",
+      "Unity",
+      "Unreal"
+    ],
+    "platformsSource": "https://thrixel.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Fish Audio",
@@ -2788,7 +3443,14 @@
       "Opus"
     ],
     "exportFormatsSource": "https://docs.fish.audio/features/text-to-speech",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://fish.audio",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Mirelo",
@@ -2819,7 +3481,14 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free plan: commercial use only once you buy extra credits, and exports are watermarked. Commercial use included on paid plans.",
     "commercialUseSource": "https://mirelo.ai/pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://mirelo.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Framefields",
@@ -2854,7 +3523,16 @@
       "MP4"
     ],
     "exportFormatsSource": "https://framefields.dev",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "macOS",
+      "Linux",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://framefields.dev",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Effigy",
@@ -2898,23 +3576,32 @@
       "Unity"
     ],
     "exportFormatsSource": "https://github.com/SifuInTheShell/Effigy",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "platformsSource": "https://github.com/SifuInTheShell/Effigy",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Harness",
     "url": "https://www.autonomous.ai/harness",
-    "description": "Open-source command center that runs Claude Code, Codex, Cursor, OpenCode and other coding agents side by side across all your machines, each on its own git worktree.",
+    "description": "Command center for coding agents across all your machines: run Claude Code, Codex, Cursor, OpenCode, Hermes and more side by side, each on its own branch, and they keep working when you close the app. The open-source (MIT) Harness App runs on desktop, in the terminal and on mobile, with end-to-end encrypted machine-to-machine links. Optional desk hardware: the Harness Device, a round always-on display you tap and speak tasks into, and the Harness Pro, a USB-C display for Mac and Linux.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
     "pricing": "free",
-    "pricingNote": "Open source (MIT), free app on Mac and Linux",
+    "pricingNote": "Harness App free and open source (MIT); optional hardware: Harness Device $129 (Black Friday price, listed down from $149), Harness Pro $299",
     "tags": [
       "open source",
       "coding agents",
       "multi-agent",
-      "worktrees",
-      "desktop app"
+      "desktop app",
+      "mobile app",
+      "hardware",
+      "voice"
     ],
     "dateAdded": "2026-10-20",
     "newRelease": true,
@@ -2923,9 +3610,20 @@
       "light": 0,
       "medium": 0,
       "heavy": 0,
-      "basis": "Open source, free app",
-      "checked": "2026-10-28"
-    }
+      "basis": "Harness App is free and open source; the optional hardware is a one-off purchase, not monthly",
+      "checked": "2026-11-12"
+    },
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android",
+      "CLI"
+    ],
+    "platformsSource": "https://www.autonomous.ai/harness-app",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Hy Memory",
@@ -2952,7 +3650,16 @@
       "heavy": 0,
       "basis": "Open source",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "macOS",
+      "Linux",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/Tencent-Hunyuan/Hy-Memory",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "NitroStack",
@@ -2973,7 +3680,14 @@
     "dateAdded": "2026-10-20",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2026-10-20",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://docs.nitrostack.ai/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Vercel",
@@ -3000,7 +3714,15 @@
       "heavy": 20,
       "basis": "Free Hobby (non-commercial); Pro $20/seat/mo incl. $20 usage credit",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://vercel.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Netlify",
@@ -3027,7 +3749,15 @@
       "heavy": 20,
       "basis": "Free plan; Personal $9/mo; Pro from $20/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://www.netlify.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Cloudflare Pages",
@@ -3054,7 +3784,13 @@
       "heavy": 5,
       "basis": "Free plan covers most sites; heavy assumes Workers Paid $5/mo minimum",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://pages.cloudflare.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Railway",
@@ -3081,7 +3817,15 @@
       "heavy": 20,
       "basis": "Hobby $5/mo incl. $5 usage; Pro $20/mo incl. $20 usage",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "platformsSource": "https://railway.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Render",
@@ -3109,7 +3853,15 @@
       "heavy": 25,
       "basis": "Free tier; paid instances from ~$7/mo; Pro $25/workspace/mo plus compute",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-11-05",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://render.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Pando",
@@ -3136,7 +3888,14 @@
       "heavy": 0,
       "basis": "Open source, self-hosted (your own server costs)",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://trypando.ai/docs/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "itch.io",
@@ -3163,7 +3922,13 @@
       "heavy": 0,
       "basis": "Free; you choose the revenue share on sales",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://itch.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Summer Engine",
@@ -3195,7 +3960,16 @@
     "commercialUse": "yes",
     "commercialUseNote": "You can export your game and sell it anywhere lawful, including Steam, with no fee, revenue share or per-install charge for the runtime.",
     "commercialUseSource": "https://www.summerengine.com/legal/runtime-license",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://www.summerengine.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Kling AI",
@@ -3226,7 +4000,14 @@
     "commercialUse": "paid",
     "commercialUseNote": "Free plan outputs can't be used commercially without written permission; paid members can use outputs commercially.",
     "commercialUseSource": "https://kling.ai/docs/user-policy",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://klingai.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "3D AI Studio",
@@ -3266,7 +4047,17 @@
       "PLY"
     ],
     "exportFormatsSource": "https://www.3daistudio.com/Pricing",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "Unity",
+      "Godot",
+      "Blender"
+    ],
+    "platformsSource": "https://www.3daistudio.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "BAND",
@@ -3292,7 +4083,14 @@
       "heavy": 18,
       "basis": "Free for personal non-commercial; Pro $17.99/mo",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "API",
+      "VS Code"
+    ],
+    "platformsSource": "https://docs.band.ai/understand/overview",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "SuperPlane",
@@ -3320,7 +4118,13 @@
       "heavy": 50,
       "basis": "Self-host free or $0 + usage; Starter $20/org; Team $50/user",
       "checked": "2026-10-28"
-    }
+    },
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://docs.superplane.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Bito Governor",
@@ -3340,7 +4144,16 @@
     "dateAdded": "2026-10-28",
     "newRelease": true,
     "affiliateUrl": "",
-    "spend": null
+    "spend": null,
+    "lastChecked": "2026-10-28",
+    "platforms": [
+      "Web",
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://bito.ai/governor/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "2G",
@@ -3371,7 +4184,14 @@
     "commercialUse": "yes",
     "commercialUseNote": "Generated sounds are royalty-free for personal and commercial music; don't resell them as standalone samples or libraries.",
     "commercialUseSource": "https://scrapbrainaudio.com/2g",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "platformsSource": "https://scrapbrainaudio.com/2g",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "PulseDev",
@@ -3398,7 +4218,13 @@
       "heavy": 12,
       "basis": "Free for 1 project; Pro $12/mo (Lifetime $149 once)",
       "checked": "2026-10-29"
-    }
+    },
+    "lastChecked": "2026-10-29",
+    "platforms": [
+      "macOS"
+    ],
+    "platformsSource": "https://pulsedev.app/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Remix",
@@ -3426,7 +4252,19 @@
       "heavy": 15,
       "basis": "Free with your own AI tools; Starter $5/mo; heavy assumes Pro $15/mo (Max $100)",
       "checked": "2026-10-29"
-    }
+    },
+    "lastChecked": "2026-10-29",
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS",
+      "Android",
+      "CLI"
+    ],
+    "platformsSource": "https://remix.gg/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Higgsfield",
@@ -3458,7 +4296,15 @@
     "commercialUse": "yes",
     "commercialUseNote": "Higgsfield's help centre says it doesn't restrict commercial use of outputs, for all users. (A search summary claimed the Free plan excludes commercial use; the pricing page didn't load to confirm.)",
     "commercialUseSource": "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://higgsfield.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Clayzo",
@@ -3486,7 +4332,13 @@
       "heavy": 0,
       "basis": "Free for your own sites and apps; runs with the coding agent you already use",
       "checked": "2026-11-03"
-    }
+    },
+    "lastChecked": "2026-11-03",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://docs.clayzo.com/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Hera",
@@ -3524,7 +4376,14 @@
       "MOV"
     ],
     "exportFormatsSource": "https://hera.video/learn-more",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://hera.video",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "T3 Code",
@@ -3551,7 +4410,15 @@
       "heavy": 0,
       "basis": "Free, open source; agent subscriptions you already pay for are extra",
       "checked": "2026-11-03"
-    }
+    },
+    "lastChecked": "2026-11-03",
+    "platforms": [
+      "macOS",
+      "iOS",
+      "Android"
+    ],
+    "platformsSource": "https://t3.codes",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Open Duet",
@@ -3578,7 +4445,13 @@
       "heavy": null,
       "basis": "Free, open source; model or subscription costs extra",
       "checked": "2026-11-03"
-    }
+    },
+    "lastChecked": "2026-11-03",
+    "platforms": [
+      "Linux"
+    ],
+    "platformsSource": "https://github.com/Anil-matcha/open-duet",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Ziva",
@@ -3607,7 +4480,17 @@
       "heavy": 20,
       "basis": "Free Hobby; Basic $20/mo",
       "checked": "2026-11-09"
-    }
+    },
+    "lastChecked": "2026-11-09",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Unity",
+      "Godot"
+    ],
+    "platformsSource": "https://ziva.sh",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "AI CodeOps",
@@ -3635,7 +4518,14 @@
       "heavy": 0,
       "basis": "Free during open beta",
       "checked": "2026-11-09"
-    }
+    },
+    "lastChecked": "2026-11-09",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://aicodeops.dev/docs",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Screen Studio",
@@ -3662,7 +4552,13 @@
       "GIF"
     ],
     "exportFormatsSource": "https://screen.studio/guide/exporting-the-video",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "macOS"
+    ],
+    "platformsSource": "https://screen.studio",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Rogue",
@@ -3688,7 +4584,13 @@
       "Code"
     ],
     "exportFormatsSource": "https://rogueon.ai",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://rogueon.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "DSH Game Studio",
@@ -3725,7 +4627,13 @@
       "HTML"
     ],
     "exportFormatsSource": "https://github.com/zseven-w/dsh-game-studio",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/zseven-w/dsh-game-studio",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Nilo",
@@ -3764,7 +4672,13 @@
       "RBXMX"
     ],
     "exportFormatsSource": "https://help.nilo.io/articles/7170306-exporting-from-nilo",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://nilo.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "AgentMon Live",
@@ -3792,7 +4706,15 @@
       "heavy": 0,
       "basis": "Free, open source",
       "checked": "2026-11-10"
-    }
+    },
+    "lastChecked": "2026-11-10",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://github.com/codenotary/agentmon-live",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "FoliMesh",
@@ -3837,7 +4759,13 @@
       "Godot package"
     ],
     "exportFormatsSource": "https://folimesh.com",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://folimesh.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Paradev",
@@ -3865,7 +4793,16 @@
       "heavy": 60,
       "basis": "Free; Pro $20, Team $60, Ultra $200 per user/mo",
       "checked": "2026-11-10"
-    }
+    },
+    "lastChecked": "2026-11-10",
+    "platforms": [
+      "macOS",
+      "Linux",
+      "iOS",
+      "CLI"
+    ],
+    "platformsSource": "https://paradev.com",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Coderick AI",
@@ -3885,7 +4822,13 @@
     ],
     "dateAdded": "2026-11-10",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-10",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://world.siteground.com/coderick-ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Tryll Engine",
@@ -3910,7 +4853,15 @@
     "commercialUse": "yes",
     "commercialUseNote": "Free until your game earns US$200k in gross revenue, then 1% of the game's gross revenue.",
     "commercialUseSource": "https://tryllengine.com",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Windows",
+      "Unity",
+      "Unreal"
+    ],
+    "platformsSource": "https://tryllengine.com/download",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Lottie AI",
@@ -3941,7 +4892,13 @@
       "MP4"
     ],
     "exportFormatsSource": "https://lottie.ai",
-    "rightsChecked": "2026-11-11"
+    "rightsChecked": "2026-11-11",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://lottie.ai",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Seldon Wren",
@@ -3960,7 +4917,9 @@
     ],
     "dateAdded": "2026-11-11",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-11",
+    "platforms": []
   },
   {
     "name": "Runpod for Agents",
@@ -3981,7 +4940,14 @@
     ],
     "dateAdded": "2026-11-11",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://agents.runpod.io",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Gemini 4 Carbon",
@@ -4000,7 +4966,13 @@
     ],
     "dateAdded": "2026-11-11",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-11",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-4-carbon-developers/",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Qwen Code",
@@ -4020,7 +4992,18 @@
     ],
     "dateAdded": "2026-11-12",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI",
+      "VS Code",
+      "JetBrains"
+    ],
+    "platformsSource": "https://github.com/QwenLM/qwen-code",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "Skillbox",
@@ -4040,7 +5023,15 @@
     ],
     "dateAdded": "2026-11-12",
     "newRelease": true,
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "macOS",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://skillbox.so/downloads",
+    "platformsChecked": "2026-11-12"
   },
   {
     "name": "ACE Music",
@@ -4064,6 +5055,12 @@
     "commercialUse": "paid",
     "commercialUseNote": "ACE Music v1 songs made on a paid plan have commercial rights; free-plan v1 songs don't. ACE-Step v1.5 songs include commercial use on the free plan.",
     "commercialUseSource": "https://acemusic.ai/acemusic-v1/",
-    "rightsChecked": "2026-11-12"
+    "rightsChecked": "2026-11-12",
+    "lastChecked": "2026-11-12",
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://acemusic.ai",
+    "platformsChecked": "2026-11-12"
   }
 ]
