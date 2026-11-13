@@ -7,13 +7,21 @@ sponsored? (optional, renders a "Sponsored" label), commercialUse? (yes|paid|lim
 commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD), lastChecked (YYYY-MM-DD), platforms? [fixed vocabulary, see PLATFORMS],
 platformsSource?, platformsChecked?. See README.md. Scout and reviews must bump lastChecked whenever they touch a listing.
 """
-import json, os, re, shutil, html
+import json, os, re, shutil, html, hashlib
 from datetime import date
 SITE = os.environ.get("SITE_URL", "https://trytooldrop.com").rstrip("/")
 SUB = "https://tooldrophq.substack.com"
 XURL = "https://x.com/trytooldrop"
 OUT = "dist"
 TODAY = date.today().isoformat()
+
+def asset_version(path, length=8):
+    with open(path, "rb") as f:
+        return hashlib.sha256(f.read()).hexdigest()[:length]
+
+CSS_HREF = f"/css/style.css?v={asset_version('static/css/style.css')}"
+JS_SRC = f"/js/main.js?v={asset_version('static/js/main.js')}"
+
 tools = json.load(open(os.environ.get("TOOLS_JSON", "data/tools.json")))
 CATS = [("AI Coding Agents & IDEs","💻"),("App Builders","🚀"),("Code Review & Testing","🔍"),("Game Art & Sprites","🎨"),
         ("3D & Models","📦"),("Audio, Music & SFX","🎵"),("Voice","🎙️"),("Game Design & Narrative","📖"),
@@ -213,7 +221,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
   <link rel="canonical" href="{url}">
   <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="{CSS_HREF}">
   <script data-goatcounter="https://tooldrop.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 {jsonld}
 </head>
@@ -241,7 +249,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
     </div>
     <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p><p class="footer-disclosure">Some links are affiliate links; ToolDrop may earn a commission at no cost to you.</p></div>
   </div></footer>
-  <script src="/js/main.js"></script>
+  <script src="{JS_SRC}"></script>
 </body>
 </html>
 '''
