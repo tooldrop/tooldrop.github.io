@@ -1675,7 +1675,7 @@
   {
     "name": "Claude",
     "url": "https://claude.ai",
-    "description": "Advanced AI assistant by Anthropic with strong coding capabilities and long context windows.",
+    "description": "Advanced AI assistant by Anthropic with strong coding capabilities and long context windows. New Nov 9 2026: Claude Fable 5.2, Anthropic's model for the hardest long-running coding work, is available to all users in the Claude apps and Claude Code and on the API, faster and cheaper than Fable 5.1 (Anthropic suggests starting with Opus 5.5 for everyday coding).",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1697,7 +1697,7 @@
       "basis": "Free tier; Pro $20/mo ($17 annual); heavy assumes Max from $100/mo",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-16",
     "platforms": [
       "Web",
       "Windows",
@@ -1710,7 +1710,8 @@
       "Chrome extension"
     ],
     "platformsSource": "https://claude.com/download",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-12",
+    "newRelease": true
   },
   {
     "name": "ChatGPT",
@@ -2720,9 +2721,10 @@
   {
     "name": "Runway",
     "url": "https://runway.com",
-    "description": "AI-powered creative platform for video generation, editing, and real-world intelligence research. New in Oct 2026: App Studio lets you describe a custom image, video or audio app in plain words and Runway builds and hosts it for you or your team, no coding needed (paid plans).",
+    "description": "AI-powered creative platform for video generation, editing, and real-world intelligence research. New in Oct 2026: App Studio lets you describe a custom image, video or audio app in plain words and Runway builds and hosts it for you or your team, no coding needed (paid plans). New Nov 12 2026: native 3D generation with Tripo H3.1 in Tool mode turns a prompt or photos into a textured .glb you can download, or frame from any angle as a reference for an image or a video's first frame (10 to 50 credits per model).",
     "categories": [
-      "Video & Trailers"
+      "Video & Trailers",
+      "3D & Models"
     ],
     "pricing": "freemium",
     "pricingNote": "Free tier, from $15/mo",
@@ -2731,7 +2733,8 @@
       "text-to-video",
       "editing",
       "Gen-4",
-      "app builder"
+      "app builder",
+      "3D models"
     ],
     "dateAdded": "2026-10-27",
     "featured": true,
@@ -2748,7 +2751,7 @@
     "commercialUseNote": "You own what you make on every plan, including Free, with no non-commercial restrictions. Free-plan videos carry a watermark.",
     "commercialUseSource": "https://help.runwayml.com/hc/en-us/articles/18927776141715-Usage-rights",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-16",
     "platforms": [
       "Web",
       "iOS",
@@ -5205,5 +5208,181 @@
       "Web"
     ],
     "platformsSource": "https://stableaudio.com"
+  },
+  {
+    "dateAdded": "2026-11-16",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-16",
+    "platformsChecked": "2026-11-16",
+    "name": "JetBrains Air",
+    "url": "https://www.jetbrains.com/air/",
+    "description": "JetBrains' workspace for running and reviewing coding agents, shipped inside JetBrains IDEs with the 2026.3 release (Nov 2026). Run Junie, Codex, Claude Agent, GitHub Copilot, Gemini, OpenCode, Cursor and other ACP agents in parallel sessions, each in its own Git worktree, then review their diffs with the IDE's own inspections, tests and debugger and leave Code Notes on lines for the agent to fix. Agents can use the IDE's MCP server for builds, refactorings and database queries. Air Teams adds shared cloud environments and automations.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with Junie Lite or your own Claude, Codex or Copilot subscription or API key; JetBrains AI credits billed at provider API rates; Air Teams Business $20/seat/mo",
+    "tags": [
+      "parallel agents",
+      "code review",
+      "git worktrees",
+      "ACP",
+      "Junie",
+      "JetBrains"
+    ],
+    "platforms": [
+      "JetBrains"
+    ],
+    "platformsSource": "https://blog.jetbrains.com/ai/2026/11/air-in-jetbrains-ides-ga/",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 20,
+      "basis": "Free with Junie Lite or your own agent subscription (billed separately); heavy assumes Air Teams Business $20/seat/mo",
+      "checked": "2026-11-16"
+    }
+  },
+  {
+    "dateAdded": "2026-11-16",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-16",
+    "platformsChecked": "2026-11-16",
+    "name": "Talyn",
+    "url": "https://www.talyn.dev",
+    "description": "Runs Claude Code and Codex in parallel cloud sandboxes on the subscription you already pay for, one session and branch per task, so you can close your laptop and come back to a diff or a green pull request. It watches your GitHub PRs and fixes failing checks, merge conflicts and review comments, with a merge queue, automations (GitHub, Slack or a schedule) and code review. GitHub only; source is public. Launched on Product Hunt Nov 15 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with 10 box-hours/mo; Pro $40/mo (200 box-hours); Max $100/mo (1,000 box-hours); your Claude or ChatGPT subscription is billed separately",
+    "tags": [
+      "cloud sandboxes",
+      "Claude Code",
+      "Codex",
+      "pull requests",
+      "CI fixes",
+      "merge queue"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "platformsSource": "https://www.talyn.dev",
+    "spend": {
+      "light": 0,
+      "medium": 40,
+      "heavy": 100,
+      "basis": "Free 10 box-hours; Pro $40/mo; Max $100/mo (model subscription extra)",
+      "checked": "2026-11-16"
+    }
+  },
+  {
+    "dateAdded": "2026-11-16",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-16",
+    "platformsChecked": "2026-11-16",
+    "name": "Antelog",
+    "url": "https://antelog.dev",
+    "description": "A safety layer for AI coding agents. One install hooks into Claude Code, Codex, Cursor, Copilot CLI and VS Code agent, Gemini CLI, Qwen Code, Cline, OpenCode and Kilo Code, logs every command, and blocks the disasters before they run: dropping a production database, terraform destroy, force-pushing over main, printing your .env or sending secrets or customer data to an outside site. It quietly saves uncommitted work before a git reset, and the agent can't switch it off. Launched on Product Hunt Nov 14 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Code Review & Testing"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free for one person (50,000 AI checks a month per machine); Team plan priced on request",
+    "tags": [
+      "agent safety",
+      "guardrails",
+      "Claude Code",
+      "Cursor",
+      "secrets",
+      "audit log"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "CLI"
+    ],
+    "platformsSource": "https://antelog.dev",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free for individuals; Team custom",
+      "checked": "2026-11-16"
+    }
+  },
+  {
+    "dateAdded": "2026-11-16",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-16",
+    "platformsChecked": "2026-11-16",
+    "name": "RPG Studio",
+    "url": "https://rpgstudio.ai",
+    "description": "AI maker for 2D RPGs and MMORPGs from the team behind the open-source RPG.js engine. Version 2.0 (Nov 12 2026) adds an agent built for RPGs that creates your game data, map events and full gameplay plugins like crafting or a guild, plus Tactical RPG and turn-based combat alongside action RPG, and online battles you share by link. It also generates playable maps, sprite sheets, music and sound effects, and you can publish in the browser or export the source. Claude Code and Codex can connect through API keys.",
+    "categories": [
+      "Game Design & Narrative",
+      "Game Art & Sprites"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (1 project, limited agent use, no commercial use); Indie Dev $25/mo ($19/mo billed every 6 months, 500 credits); Studio $99/mo ($75/mo billed every 6 months, 2,500 credits)",
+    "tags": [
+      "RPG maker",
+      "MMORPG",
+      "map generator",
+      "sprite sheets",
+      "game agent",
+      "RPG.js"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://rpgstudio.ai",
+    "commercialUse": "paid",
+    "commercialUseNote": "The Free plan doesn't allow commercial use. Indie Dev and Studio allow commercial use and you own what you create.",
+    "commercialUseSource": "https://rpgstudio.ai",
+    "rightsChecked": "2026-11-16",
+    "spend": {
+      "light": 0,
+      "medium": 25,
+      "heavy": 99,
+      "basis": "Free plan; Indie Dev $25/mo; Studio $99/mo",
+      "checked": "2026-11-16"
+    }
+  },
+  {
+    "dateAdded": "2026-11-16",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-16",
+    "platformsChecked": "2026-11-16",
+    "name": "Google Flow",
+    "url": "https://flow.google.com",
+    "description": "Google's AI creative studio for video and images. Make clips and edits with Google's video models, keep characters consistent, and use small shareable Flow Tools apps. Five new artist-built tools arrived Nov 12 2026: Pocket Studio turns one phone take into several camera angles, Character Arc and Character Poster keep a character's look across ages and posters, Pixel Machine converts images to pixel art, ASCII, CRT and glitch styles, and Lucid Glass adds prism and lens effects. Handy for trailers, cutscenes and title cards.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Every account gets 50 Flow credits a day; Google AI Plus, Pro and Ultra plans add monthly credits and let you build your own tools",
+    "tags": [
+      "video generation",
+      "image generation",
+      "camera angles",
+      "pixel art",
+      "character consistency",
+      "trailers"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/"
   }
 ]
