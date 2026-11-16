@@ -1514,22 +1514,23 @@
   },
   {
     "name": "Tabnine",
-    "url": "https://www.tabnine.com",
-    "description": "AI code assistant now part of Tricentis, offering enterprise-grade code completion and security features.",
+    "url": "https://tricentis.com/products",
+    "description": "Tabnine was acquired by Tricentis in Jul 2026 and is now part of the Tricentis Agentic Quality Engineering platform. The tabnine.com domain redirects to tricentis.com/products.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
     "pricing": "paid",
-    "pricingNote": "No public price list; contact sales for a quote",
+    "pricingNote": "No public price list; contact Tricentis sales for a quote",
     "tags": [
       "autocomplete",
       "enterprise",
-      "privacy"
+      "privacy",
+      "acquired"
     ],
     "dateAdded": "2024-09-01",
     "affiliateUrl": "",
     "spend": null,
-    "lastChecked": "2024-09-01",
+    "lastChecked": "2026-11-17",
     "platforms": [
       "CLI",
       "VS Code",
@@ -1826,8 +1827,8 @@
       "AI Coding Agents & IDEs",
       "Code Review & Testing"
     ],
-    "pricing": "freemium",
-    "pricingNote": "Free tier available",
+    "pricing": "paid",
+    "pricingNote": "Enterprise only (Sourcegraph Enterprise); from $16K/year minimum annual contract",
     "tags": [
       "codebase search",
       "context",
@@ -1836,7 +1837,7 @@
     "dateAdded": "2024-08-15",
     "affiliateUrl": "",
     "spend": null,
-    "lastChecked": "2024-08-15",
+    "lastChecked": "2026-11-17",
     "platforms": [
       "Web",
       "CLI",
