@@ -3429,7 +3429,7 @@
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
-    "affiliateUrl": "",
+    "affiliateUrl": "https://fish.audio/?fpr=h9u08t",
     "spend": {
       "light": 0,
       "medium": 15,
@@ -3437,6 +3437,7 @@
       "basis": "Free tier; Plus $15/mo monthly ($11 annual)",
       "checked": "2026-10-28"
     },
+    "affiliate": true,
     "commercialUse": "paid",
     "commercialUseNote": "Free plan: personal, non-commercial use only. Premium plans: commercial use of voices you own.",
     "commercialUseSource": "https://fish.audio/plan/",
@@ -3448,7 +3449,7 @@
     ],
     "exportFormatsSource": "https://docs.fish.audio/features/text-to-speech",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-17",
     "platforms": [
       "Web",
       "API"
