@@ -1644,7 +1644,7 @@
   {
     "name": "Lovable",
     "url": "https://lovable.dev",
-    "description": "AI software engineer that builds full-stack web applications from natural language descriptions.",
+    "description": "AI software engineer that builds full-stack web applications from natural language descriptions. New Nov 16 2026: Drafts copy your whole app, design to database, so you or a teammate can try ideas in parallel with their own chat, preview and example data, then accept one and publish while the live app stays untouched. Also new in Nov 2026: Automations for recurring checks and summaries, and a security review prompt before publishing with critical findings.",
     "categories": [
       "App Builders"
     ],
@@ -1665,7 +1665,7 @@
       "basis": "Free tier; Pro $25/mo for 100 credits; heavy assumes 200-credit tier $50/mo",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-17",
     "platforms": [
       "Web"
     ],
@@ -2378,7 +2378,7 @@
   {
     "name": "Suno",
     "url": "https://suno.com",
-    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it.",
+    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it. New Nov 13 2026: Suno Bridge (beta), a free Mac app that works next to Ableton Live 12, makes instrument and vocal stems that fit your session's key, tempo and groove and drops them on the timeline in sync (needs Premier; each generation uses Suno credits).",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -2389,7 +2389,8 @@
       "vocals",
       "songs",
       "MCP",
-      "MIDI"
+      "MIDI",
+      "Ableton"
     ],
     "dateAdded": "2026-11-05",
     "featured": true,
@@ -2414,7 +2415,7 @@
     ],
     "exportFormatsSource": "https://help.suno.com/en/articles/13926081",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-17",
     "platforms": [
       "Web",
       "iOS",
@@ -5384,5 +5385,145 @@
       "Web"
     ],
     "platformsSource": "https://blog.google/innovation-and-ai/models-and-research/google-labs/new-google-flow-tools/"
+  },
+  {
+    "dateAdded": "2026-11-17",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-17",
+    "platformsChecked": "2026-11-17",
+    "name": "Unity CLI",
+    "url": "https://docs.unity.com/en-us/unity-cli",
+    "description": "Unity's command-line tool for coding agents and scripts, out of beta as 1.0 at Unite Tokyo on Nov 17 2026. It installs and manages Unity Editors, modules and projects, and with the Pipeline package lets an agent drive a running Editor: open a project, run commands, enter Play mode and read the result, build, set up cloud builds and summarise scene or prefab changes in a pull request. `unity setup` installs Unity's official plugin for Claude Code, Codex, Grok Build or Google Antigravity, with skills written by Unity's teams (UI, 2D, URP, audio, physics, in-app purchases, multiplayer, localization), and `unity skill install --all` adds them to other agents. The latest Unity Hub installs it for you.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "CLI comes with the Unity Hub; Unity Personal is free (under $200K revenue/funding), Unity Pro from $2,310/yr",
+    "tags": [
+      "Unity",
+      "game engine",
+      "CLI",
+      "agent skills",
+      "Claude Code",
+      "Codex"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI",
+      "Unity"
+    ],
+    "platformsSource": "https://unity.com/the-unity-cli-1.0-is-here",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "CLI and agent plugins included with Unity; free on Unity Personal (agent subscription billed separately). Unity Pro from $2,310/yr if you're over the $200K limit",
+      "checked": "2026-11-17"
+    }
+  },
+  {
+    "dateAdded": "2026-11-17",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-17",
+    "platformsChecked": "2026-11-17",
+    "name": "ByteVoice",
+    "url": "https://bytevoice.app",
+    "description": "Mac app for talking to your coding agents and hearing them back. Press Fn to dictate a prompt into Claude Code, Codex, Cursor, VS Code or any agent CLI (or any text box), get spoken status and summaries when an agent finishes or needs you, reply by voice, and route instructions to several agents running in parallel. A floating dock shows every agent's live status, and Slack messages can be read out and answered hands-free. Launched on Product Hunt Nov 16 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free (5,000 words/week voice input); Plus $12/mo and Pro $16/mo billed annually; Enterprise $25/user/mo",
+    "tags": [
+      "voice",
+      "dictation",
+      "Claude Code",
+      "Codex",
+      "multi-agent",
+      "notifications"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "platformsSource": "https://bytevoice.app",
+    "spend": {
+      "light": 0,
+      "medium": 12,
+      "heavy": 16,
+      "basis": "Free plan; Plus $12/mo billed annually; heavy assumes Pro $16/mo billed annually",
+      "checked": "2026-11-17"
+    }
+  },
+  {
+    "dateAdded": "2026-11-17",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-17",
+    "platformsChecked": "2026-11-17",
+    "name": "ngrok",
+    "url": "https://ngrok.com",
+    "description": "Puts a local app online with a public URL in one command, with traffic inspection, auth and rate-limit rules. New Nov 16 2026: the ngrok MCP server (on every plan, including Free) lets Claude Code, Codex, Cursor, Gemini CLI and other MCP clients list your endpoints, analyse traffic, write and validate Traffic Policy rules, check usage and search current ngrok docs; `npx skills add ngrok/skills` adds skills for sharing localhost, adding Google login, verifying webhooks and fixing ngrok errors.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with $5 one-time credit; Hobbyist $10/mo ($8/mo annual); Pay-as-you-go from $20/mo",
+    "tags": [
+      "tunnels",
+      "localhost",
+      "MCP",
+      "webhooks",
+      "traffic policy",
+      "agent skills"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux",
+      "CLI",
+      "API"
+    ],
+    "platformsSource": "https://ngrok.com/download",
+    "spend": {
+      "light": 0,
+      "medium": 10,
+      "heavy": 20,
+      "basis": "Free plan; Hobbyist $10/mo; heavy assumes Pay-as-you-go $20 base plus usage",
+      "checked": "2026-11-17"
+    }
+  },
+  {
+    "dateAdded": "2026-11-17",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-17",
+    "platformsChecked": "2026-11-17",
+    "name": "UI SDK by Vercel",
+    "url": "https://ui-sdk.dev",
+    "description": "Open-source (Apache-2.0) beta TypeScript library from Vercel Labs of 50+ UI behaviors, like focus, typeahead, popups, selection, drag and drop and the ARIA they need, that your coding agent combines into accessible components for React, Vue, Svelte, Solid or Web Components. A skill teaches the agent the behaviors, and an agent bridge (plus WebMCP) lets agents read the page and use the controls directly within the permissions you set. Launched on Product Hunt Nov 16 2026 (npm beta Nov 12).",
+    "categories": [
+      "Agent Frameworks",
+      "App Builders"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (Apache-2.0); beta",
+    "tags": [
+      "UI components",
+      "accessibility",
+      "React",
+      "agent skills",
+      "WebMCP",
+      "Vercel"
+    ],
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://github.com/vercel-labs/ui"
   }
 ]
