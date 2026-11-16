@@ -6,8 +6,16 @@
   var cards = Array.prototype.slice.call(grid.querySelectorAll('.tool-card'));
   var noRes = document.getElementById('no-results'), state = { category: 'all', pricing: 'all', q: '', usage: 'medium', budget: 'any', commercial: 'all', format: 'all', platform: 'all' };
   var countEl = document.getElementById('results-count'), total = cards.length;
-  var DEFAULTS = { category: 'all', pricing: 'all', budget: 'any', commercial: 'all', format: 'all', platform: 'all' };
+  var DEFAULTS = { category: 'all', pricing: 'all', usage: 'medium', budget: 'any', commercial: 'all', format: 'all', platform: 'all' };
   var browse = document.querySelectorAll('.section.browse');
+  var FILTER_PARAMS = ['cat', 'q', 'pricing', 'weight', 'price', 'licence', 'format', 'platform'];
+  var BUDGET_TO_PARAM = { '0': 'free', '10': 'under-10', '25': 'under-25', '50': 'under-50' };
+  var PARAM_TO_BUDGET = { 'free': '0', 'under-10': '10', 'under-25': '25', 'under-50': '50', '0': '0', '10': '10', '25': '25', '50': '50' };
+  var syncing = false;
+
+  function slugify(v) {
+    return String(v).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  }
   function withinBudget(c) {
     if (state.budget === 'any') return true;
     var raw = c.getAttribute('data-spend-' + state.usage);
@@ -32,6 +40,50 @@
     else if (shown === 0) countEl.textContent = 'No tools match (0 of ' + total + ')';
     else countEl.textContent = 'Showing ' + shown + ' of ' + total + ' ' + noun;
   }
+  function setPill(type, value) {
+    var pills = document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]');
+    if (!pills.length) return false;
+    var ok = false;
+    pills.forEach(function (o) {
+      var on = o.dataset.filterValue === value;
+      o.classList.toggle('active', on);
+      o.setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) ok = true;
+    });
+    if (ok) state[type] = value;
+    return ok;
+  }
+  function resolvePill(type, raw) {
+    if (raw == null || raw === '') return null;
+    if (type === 'budget') {
+      raw = PARAM_TO_BUDGET[String(raw).toLowerCase()] || raw;
+    }
+    var want = String(raw).toLowerCase();
+    var wantSlug = slugify(raw);
+    var pills = document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]');
+    for (var i = 0; i < pills.length; i++) {
+      var v = pills[i].dataset.filterValue;
+      if (v === raw || v.toLowerCase() === want || slugify(v) === wantSlug) return v;
+    }
+    return null;
+  }
+  function syncUrl() {
+    if (syncing) return;
+    var params = new URLSearchParams(location.search);
+    FILTER_PARAMS.forEach(function (k) { params.delete(k); });
+    if (state.category !== 'all') params.set('cat', slugify(state.category));
+    if (state.q) params.set('q', search ? search.value.trim() : state.q);
+    if (state.pricing !== 'all') params.set('pricing', state.pricing);
+    if (state.usage !== 'medium') params.set('weight', state.usage);
+    if (state.budget !== 'any') params.set('price', BUDGET_TO_PARAM[state.budget] || state.budget);
+    if (state.commercial !== 'all') params.set('licence', state.commercial);
+    if (state.format !== 'all') params.set('format', slugify(state.format));
+    if (state.platform !== 'all') params.set('platform', state.platform);
+    var qs = params.toString();
+    var next = location.pathname + (qs ? '?' + qs : '') + location.hash;
+    var cur = location.pathname + location.search + location.hash;
+    if (next !== cur) history.replaceState(null, '', next);
+  }
   function apply() {
     var shown = 0, filtering = !!state.q || state.category !== 'all' || state.pricing !== 'all' || state.budget !== 'any' || state.commercial !== 'all' || state.format !== 'all' || state.platform !== 'all';
     cards.forEach(function (c) {
@@ -47,6 +99,34 @@
     if (noRes) noRes.style.display = shown ? 'none' : 'block';
     updateCount(shown, filtering);
     browse.forEach(function (s) { s.style.display = filtering ? 'none' : ''; });
+    syncUrl();
+  }
+  function loadFromUrl() {
+    syncing = true;
+    Object.keys(DEFAULTS).forEach(function (type) { setPill(type, DEFAULTS[type]); });
+    state.q = '';
+    if (search) search.value = '';
+    var params = new URLSearchParams(location.search);
+    var pairs = [
+      ['cat', 'category'],
+      ['pricing', 'pricing'],
+      ['weight', 'usage'],
+      ['price', 'budget'],
+      ['licence', 'commercial'],
+      ['format', 'format'],
+      ['platform', 'platform']
+    ];
+    pairs.forEach(function (pair) {
+      var raw = params.get(pair[0]);
+      if (!raw) return;
+      var v = resolvePill(pair[1], raw);
+      if (v) setPill(pair[1], v);
+    });
+    var q = params.get('q');
+    if (q && search) { search.value = q; state.q = q.trim().toLowerCase(); }
+    else if (q) state.q = q.trim().toLowerCase();
+    syncing = false;
+    apply();
   }
   if (search) search.addEventListener('input', function () { state.q = search.value.trim().toLowerCase(); apply(); });
   document.querySelectorAll('.filter-pill').forEach(function (p) { p.setAttribute('aria-pressed', p.classList.contains('active') ? 'true' : 'false'); });
@@ -60,15 +140,46 @@
   });
   var clear = document.getElementById('clear-filters');
   if (clear) clear.addEventListener('click', function () {
-    Object.keys(DEFAULTS).forEach(function (type) {
-      state[type] = DEFAULTS[type];
-      document.querySelectorAll('.filter-pill[data-filter-type="' + type + '"]').forEach(function (o) {
-        var on = o.dataset.filterValue === DEFAULTS[type]; o.classList.toggle('active', on); o.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-    });
+    Object.keys(DEFAULTS).forEach(function (type) { setPill(type, DEFAULTS[type]); });
     state.q = ''; if (search) search.value = '';
     apply();
   });
-  var q = new URLSearchParams(location.search).get('q');
-  if (q && search) { search.value = q; state.q = q.toLowerCase(); apply(); }
+  if (countEl) {
+    var wrap = document.createElement('div');
+    wrap.className = 'results-bar';
+    countEl.parentNode.insertBefore(wrap, countEl);
+    wrap.appendChild(countEl);
+    var copyBtn = document.createElement('button');
+    copyBtn.type = 'button';
+    copyBtn.className = 'btn btn-secondary copy-link-btn';
+    copyBtn.textContent = 'Copy link';
+    copyBtn.setAttribute('aria-label', 'Copy a shareable link to these filters');
+    wrap.appendChild(copyBtn);
+    var copiedTimer;
+    function copied() {
+      copyBtn.textContent = 'Copied!';
+      clearTimeout(copiedTimer);
+      copiedTimer = setTimeout(function () { copyBtn.textContent = 'Copy link'; }, 2000);
+    }
+    function fallbackCopy(text, ok) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.left = '-9999px';
+      document.body.appendChild(ta);
+      ta.select();
+      try { if (document.execCommand('copy')) ok(); } catch (err) {}
+      document.body.removeChild(ta);
+    }
+    copyBtn.addEventListener('click', function () {
+      syncUrl();
+      var url = location.href;
+      if (navigator.clipboard && window.isSecureContext && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(copied, function () { fallbackCopy(url, copied); });
+      } else fallbackCopy(url, copied);
+    });
+  }
+  loadFromUrl();
+  window.addEventListener('popstate', loadFromUrl);
 })();

@@ -83,3 +83,7 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .results-count{font-size:.9rem;color:var(--muted);margin:0 0 12px}
 .platform-line{font-size:.85rem;opacity:.8;margin:.25rem 0 0}
 .last-checked{font-size:.75rem;color:var(--muted);margin:.25rem 0 0}
+.results-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:0 0 12px}
+.results-bar .results-count{margin:0}
+.copy-link-btn{font-size:.85rem;padding:6px 14px;border-radius:999px;cursor:pointer}
+.copy-link-btn:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
