@@ -49,6 +49,12 @@ def price_text(t):
     note = t.get("pricingNote", "")
     return f"{lab} ({note})" if note and note != lab else lab
 SPEND_CAVEAT = "Rough estimates from vendors' public pricing, checked 28 Oct 2026. Not exact — always check the vendor."
+def spend_caveat_for(t):
+    """Return SPEND_CAVEAT with tool-specific date if available."""
+    sp = t.get("spend")
+    if sp and sp.get("checked"):
+        return f"Rough estimates from vendors' public pricing, checked {sp['checked']}. Not exact — always check the vendor."
+    return SPEND_CAVEAT
 def money(v): return "Free" if v == 0 else f"${v:g}"
 def spend_text(t):
     sp = t.get("spend")
@@ -65,7 +71,7 @@ def spend_dd(t):
     sp = t.get("spend")
     if not sp: return "Unknown. Check the vendor's site for current pricing."
     f = lambda v: "not listed" if v is None else (money(v) if v == 0 else f"{money(v)}/mo")
-    return (f'Light {f(sp["light"])} · Medium {f(sp["medium"])} · Heavy {f(sp["heavy"])} (est.)<br><small>{e(sp["basis"])}. {e(SPEND_CAVEAT)}</small>')
+    return (f'Light {f(sp["light"])} · Medium {f(sp["medium"])} · Heavy {f(sp["heavy"])} (est.)<br><small>{e(sp["basis"])}. {e(spend_caveat_for(t))}</small>')
 def clip(s, n=155):
     s = " ".join(s.split())
     if len(s) <= n: return s
@@ -294,6 +300,15 @@ def sel_game_makers():
 def sel_code_review():
     return [t for t in tools if "Code Review & Testing" in t["categories"]]
 
+def sel_godot():
+    return [t for t in tools if "Godot" in t.get("platforms", []) or tagged(t, "godot")]
+
+def sel_unity():
+    return [t for t in tools if "Unity" in t.get("platforms", []) or tagged(t, "unity")]
+
+def sel_deploy():
+    return [t for t in tools if "Deploy & Hosting" in t["categories"]]
+
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
       title="Best AI Pixel Art & Sprite Tools for Game Devs | ToolDrop",
@@ -345,6 +360,21 @@ COMPARISONS = [
       desc="Compare AI code review and testing tools: CodeRabbit, Qodo, Greptile, Epherem, heal.dev, Testifly and more.",
       cats=["Code Review & Testing"], select=sel_code_review,
       intro="""Shipping code that agents wrote? These are the AI code review and testing tools in the ToolDrop directory. CodeRabbit (free for open source, Essentials from $24/dev/mo annual) reviews pull requests with contextual feedback. Greptile (free Starter, Pro $30/seat/mo) understands your entire codebase to catch bugs and security issues. Qodo (free for individuals) generates tests and enforces coding standards. Epherem is free during early access and runs 55 security checks for exposed keys, open database tables and unsafe input. heal.dev learns how to run your app in a sandbox, hunts for bugs your code review missed, and files only what it can reproduce with a failing test. Testifly (30-day free trial) discovers user flows, writes end-to-end tests and self-heals when the UI changes. Reticle (open-source SDK, hosted free to start) makes your coding agent verify its own work by driving the running app. QualityLayer (paid) adds a plan-first workflow around any coding agent with a separate review agent. Entire (free for small teams) is a Git host built for agent-written code with review agents that score every push. AI CodeOps (free) is a browser platform where agents plan, build, review and test code on your repo. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-tools-for-godot/", h1="AI tools for Godot developers",
+      title="Best AI Tools for Godot Developers | ToolDrop",
+      desc="Compare AI tools that work with Godot: code assistants, 3D model generators, sprite tools and game makers, with pricing and free tiers.",
+      cats=["Game Design & Narrative", "3D & Models", "Game Art & Sprites"], select=sel_godot,
+      intro="""Building a game in Godot? These are the AI tools in the ToolDrop directory that support Godot as a platform or are tagged with Godot integration. For game asset generation, Meshy and Tripo AI export 3D models to formats Godot can import, and both have free tiers. Effigy exports to Godot scene format directly. Xogot is a Godot-based game engine on iPad and Mac with a built-in AI coding agent. Aura Autopilot is an open-source MCP server that lets coding agents playtest Godot, Unreal and Unity games. OhMyGame is an open-source AI game studio that works with Godot, Unity, Unreal and Blender. Ziva is an AI assistant that connects to your Godot project, generates sprites and SFX, and can playtest the build. For 3D, 3D AI Studio exports to Unity, Godot and Blender. Spielerando is an MCP workbench for Claude Code and Cursor that checks game recipes and branching stories. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-tools-for-unity/", h1="AI tools for Unity developers",
+      title="Best AI Tools for Unity Developers | ToolDrop",
+      desc="Compare AI tools that work with Unity: code assistants, 3D model generators, audio tools and testing, with pricing and free tiers.",
+      cats=["3D & Models", "Game Art & Sprites", "Audio, Music & SFX"], select=sel_unity,
+      intro="""Building a game in Unity? These are the AI tools in the ToolDrop directory that support Unity as a platform or are tagged with Unity integration. For 3D assets, Meshy and Tripo AI generate textured models and export to formats Unity imports, with free tiers for both. Thrixel generates structured 3D assets with labelled parts that work in Unity and Unreal. Ludo.ai covers 3D, sprites and audio for game devs and has a Unity integration. Kimi 3D Make can export to Unity format. For playtesting, Aura Autopilot is an open-source MCP that lets coding agents playtest Unity, Unreal and Godot games. OhMyGame works with Unity, Unreal, Godot and Blender. Ziva connects to Unity and Godot projects and can playtest the build. Tryll Engine is free until $200K revenue and runs on-device NPC AI for Unity and Unreal. Effigy exports to Unity format. SimplyStream's Strata can build and play Unreal projects. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/where-to-deploy-vibe-coded-apps/", h1="Where to deploy vibe-coded apps",
+      title="Where to Deploy Vibe-Coded Apps | ToolDrop",
+      desc="Compare deployment and hosting platforms for apps built with AI: Vercel, Netlify, Cloudflare Pages, Railway, Render, itch.io and more.",
+      cats=["Deploy & Hosting"], select=sel_deploy,
+      intro="""Built something with an AI coding agent? These are the deployment and hosting platforms in the ToolDrop directory for shipping your vibe-coded app. Vercel (free Hobby plan, Pro $20/mo per seat) handles Next.js and web apps with preview deploys and a global CDN. Netlify (free, Pro from $20/mo) deploys sites from Git with unlimited previews and functions. Cloudflare Pages (free for unlimited sites and bandwidth) is fast static and full-stack hosting on Cloudflare's network. Railway (free $1/mo credit, Hobby $5/mo) deploys backends, databases and workers billed per second. Render (free Hobby workspace) hosts web services, Postgres and cron jobs with Sandboxes for AI agents. Spacefast (free Personal plan) is hosting made for what AI builds, from Automattic. For games, itch.io (free, open revenue share) hosts indie games including browser games. Floot (free tier) builds, hosts and deploys full-stack apps and can publish to iOS and Android. myPip (free) hosts browser games with multiplayer and leaderboards. Pando is open source and self-hosted. Runpod Agents lets coding agents deploy GPU workloads. Prices are as listed by each vendor and can change."""),
 ]
 
 def names_list(ts):
@@ -401,6 +431,12 @@ def generate_faqs(ts, cp):
         faqs.append(("Which tool is best for game soundtracks?", "Suno and Udio generate full tracks with vocals. Soundraw focuses on royalty-free background music with copyright-safe licensing."))
     elif "Game Design & Narrative" in cp["cats"] and "/ai-game-makers/" in cp["path"]:
         faqs.append(("Which AI game maker is best for beginners?", "myPip and Remix let you describe a game in plain English and publish it with free tiers. OhMyGame is more powerful but requires running locally with your own API keys."))
+    elif "/ai-tools-for-godot/" in cp["path"]:
+        faqs.append(("Which AI tools integrate directly with Godot?", "Xogot is a Godot-based game engine with a built-in AI agent. Effigy exports to Godot scene format. Ziva connects to your Godot project. Aura Autopilot lets coding agents playtest Godot games."))
+    elif "/ai-tools-for-unity/" in cp["path"]:
+        faqs.append(("Which AI tools integrate directly with Unity?", "Ludo.ai has a Unity integration. Tryll Engine runs on-device NPC AI for Unity. Effigy and Thrixel export to Unity format. Aura Autopilot and Ziva can playtest Unity games."))
+    elif "Deploy & Hosting" in cp["cats"]:
+        faqs.append(("Which hosting platform is best for AI-built apps?", "Vercel, Netlify and Cloudflare Pages all have free tiers and work with apps built by AI coding agents. Spacefast is specifically designed for AI-built projects. Railway and Render handle backends and databases."))
     elif "Code Review & Testing" in cp["cats"]:
         faqs.append(("Which code review tool works with AI-generated code?", "CodeRabbit and Greptile review pull requests, including AI-generated ones. Epherem specifically scans AI-built apps for security issues like exposed keys and open database tables."))
     
@@ -539,7 +575,7 @@ for t in tools:
     if t["pricing"] == "free": sw["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
     if t.get("spend"):
         sw["additionalProperty"] = {"@type": "PropertyValue", "name": "Estimated monthly spend (USD, rough estimate)", "value": spend_text(t),
-                                    "description": f'Light {t["spend"]["light"]}, medium {t["spend"]["medium"]}, heavy {t["spend"]["heavy"] if t["spend"]["heavy"] is not None else "not listed"} USD/mo. {t["spend"]["basis"]}. {SPEND_CAVEAT}'}
+                                    "description": f'Light {t["spend"]["light"]}, medium {t["spend"]["medium"]}, heavy {t["spend"]["heavy"] if t["spend"]["heavy"] is not None else "not listed"} USD/mo. {t["spend"]["basis"]}. {spend_caveat_for(t)}'}
     if t.get("tags"): sw["keywords"] = ", ".join(t["tags"])
     sponsored = ' <span class="sponsored-badge">Sponsored</span>' if t.get("sponsored") else ""
     body = f'''<section class="hero hero-small"><div class="container">{bc}
@@ -632,7 +668,7 @@ page("/advertise/", "Advertise on ToolDrop | Featured listings and sponsorships"
 </div></section>''', bcld)
 
 bc, bcld = crumbs([("Home", "/"), ("About", "/about/")])
-page("/about/", "About ToolDrop", "ToolDrop is a directory and weekly newsletter of AI tools for vibe coders and indie game devs.",
+page("/about/", "About ToolDrop – AI tools directory for vibe coders & game devs", "ToolDrop is a directory and weekly newsletter of AI tools for vibe coders and indie game devs.",
      f'''<section class="hero hero-small"><div class="container">{bc}<h1>About ToolDrop</h1><p class="subtitle">A directory of AI tools for vibe coders and indie game devs, sorted by the job you need done.</p></div></section>
 <section class="section"><div class="container prose"><p>A new AI tool seems to launch every hour. ToolDrop cuts through the noise with a curated list of {len(tools)} tools across coding agents, app builders, code review, game art, 3D, audio, voice, narrative, trailers, store-page copy and agent frameworks.</p>
 <p>Every week the <a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">ToolDrop newsletter</a> brings you the short version: the best new releases and practical tips. You can also follow <a href="{XURL}" target="_blank" rel="noopener">@trytooldrop on X</a>.</p>
@@ -646,7 +682,8 @@ L = ["# ToolDrop", "", "> ToolDrop is an AI tools directory for vibe coders and 
      f"The directory lists {len(tools)} tools. Pricing is as published by each vendor and can change. Tool pages link to each tool's official site.", "", f"Est. monthly spend figures are {SPEND_CAVEAT[0].lower()+SPEND_CAVEAT[1:]}", ""]
 for c,_ in CATS:
     L += [f"## {c}", ""] + [f"- [{t['name']}]({SITE}{tool_path(t)}): {t['description']} Pricing: {price_text(t)}. Est. monthly spend: {spend_text(t).replace(" · est.", " (est.)")}" for t in in_cat(c)] + [""]
-L += ["## Comparisons", ""] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
+L += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
+L += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
 L += ["## More", "", f"- [New releases]({SITE}/new-releases/): the newest tools added to the directory.",
       f"- [Newsletter]({SUB}): weekly ToolDrop newsletter on Substack.", f"- [Affiliate disclosure]({SITE}/disclosure/): how affiliate links and sponsorships are handled.",
       f"- [Full tool data]({SITE}/llms-full.txt): every tool with all fields.", ""]
@@ -665,6 +702,8 @@ for c,_ in CATS:
               f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}", f"- Last checked: {t['lastChecked']}"]
         if t.get("newRelease"): F.append("- New release: yes")
         F.append("")
+F += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
+F += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
 open(f"{OUT}/llms-full.txt", "w").write("\n".join(F))
 
 # sitemap, robots, headers

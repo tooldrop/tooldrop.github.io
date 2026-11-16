@@ -78,7 +78,7 @@
     if (state.budget !== 'any') params.set('price', BUDGET_TO_PARAM[state.budget] || state.budget);
     if (state.commercial !== 'all') params.set('licence', state.commercial);
     if (state.format !== 'all') params.set('format', slugify(state.format));
-    if (state.platform !== 'all') params.set('platform', state.platform);
+    if (state.platform !== 'all') params.set('platform', slugify(state.platform));
     var qs = params.toString();
     var next = location.pathname + (qs ? '?' + qs : '') + location.hash;
     var cur = location.pathname + location.search + location.hash;
