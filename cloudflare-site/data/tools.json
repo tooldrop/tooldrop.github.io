@@ -5600,7 +5600,11 @@
       "heavy": 0,
       "basis": "Free and open source; runs on your own hardware",
       "checked": "2026-11-18"
-    }
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Audio Studio MCP's own code is MIT-licensed, but the Stable Audio 3 weights it runs locally are under the Stability AI Community License. Commercial use of those weights and their outputs is allowed without a fee if you and your affiliates have under US$1 million in annual revenue and you register with Stability AI; above that, you need a separate Enterprise licence.",
+    "commercialUseSource": "https://stability.ai/license",
+    "rightsChecked": "2026-11-18"
   },
   {
     "dateAdded": "2026-11-18",
