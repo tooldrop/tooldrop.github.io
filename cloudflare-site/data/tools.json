@@ -1445,7 +1445,7 @@
   {
     "name": "GitHub Copilot",
     "url": "https://github.com/features/copilot",
-    "description": "AI pair programmer that offers code suggestions directly in your editor, powered by OpenAI. New in Oct 2026: Copilot Fusion picks and combines models for each task (Standard, High or Max effort) to balance quality, speed and cost, on all Copilot plans in VS Code, JetBrains, the Copilot app and CLI.",
+    "description": "AI pair programmer that offers code suggestions directly in your editor, powered by OpenAI. New in Oct 2026: Copilot Fusion picks and combines models for each task (Standard, High or Max effort) to balance quality, speed and cost, on all Copilot plans in VS Code, JetBrains, the Copilot app and CLI. New Nov 17 2026: Microsoft's MAI Code 2 (Pro, Pro+, Max, Business and Enterprise) for deep debugging, multi-file work and UI, and the cheaper MAI Code 2 Flash (also on Free and Student) are in the model picker in VS Code, JetBrains, Xcode, the Copilot app, CLI and cloud agent, billed under usage-based billing.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1468,7 +1468,7 @@
       "checked": "2026-10-28"
     },
     "newRelease": true,
-    "lastChecked": "2026-10-29",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "macOS",
       "CLI",
@@ -1717,7 +1717,7 @@
   {
     "name": "ChatGPT",
     "url": "https://chat.openai.com",
-    "description": "OpenAI's conversational AI with code interpreter, image generation, and plugin ecosystem.",
+    "description": "OpenAI's conversational AI with code interpreter, image generation, and plugin ecosystem. New Nov 17 2026: GPT-6.2 Astra, OpenAI's frontier model for the hardest projects (OpenAI says it writes cleaner code and better frontends, especially for websites, games and 3D), and GPT-6.2 Sol, its efficient everyday model, are available to Plus, Pro, Enterprise and Edu users in ChatGPT and Codex, and in the API.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1742,7 +1742,7 @@
     "commercialUseNote": "OpenAI's Terms of Use say you own the output and OpenAI assigns you its rights in it.",
     "commercialUseSource": "https://openai.com/policies/row-terms-of-use/",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "Web",
       "iOS",
@@ -2379,7 +2379,7 @@
   {
     "name": "Suno",
     "url": "https://suno.com",
-    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it. New Nov 13 2026: Suno Bridge (beta), a free Mac app that works next to Ableton Live 12, makes instrument and vocal stems that fit your session's key, tempo and groove and drops them on the timeline in sync (needs Premier; each generation uses Suno credits).",
+    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it. New Nov 13 2026: Suno Bridge (beta), a free Mac app that works next to Ableton Live 12, makes instrument and vocal stems that fit your session's key, tempo and groove and drops them on the timeline in sync (needs Premier; each generation uses Suno credits). New Nov 17 2026: Visuals turns your songs into lyric videos, album art and clips up to 15 seconds that follow the song's structure and lip-sync to the lyrics, on web, iOS and Android.",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -2391,7 +2391,8 @@
       "songs",
       "MCP",
       "MIDI",
-      "Ableton"
+      "Ableton",
+      "lyric videos"
     ],
     "dateAdded": "2026-11-05",
     "featured": true,
@@ -2416,7 +2417,7 @@
     ],
     "exportFormatsSource": "https://help.suno.com/en/articles/13926081",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-17",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "Web",
       "iOS",
@@ -2806,7 +2807,7 @@
   {
     "name": "HeyGen",
     "url": "https://www.heygen.com",
-    "description": "Create AI avatar videos with lifelike digital twins for marketing and training content.",
+    "description": "Create AI avatar videos with lifelike digital twins for marketing and training content. New Nov 17 2026: Avatar 6, an audio-driven avatar model that matches gestures to what's being said, with native 2K output and better lip sync; existing personal avatars upgrade automatically, on the web app and API.",
     "categories": [
       "Video & Trailers"
     ],
@@ -2831,7 +2832,7 @@
     "commercialUseNote": "Free plan output is licensed for personal, non-commercial and internal evaluation use only. Paid plans and the API allow commercial use.",
     "commercialUseSource": "https://www.heygen.com/terms",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "Web",
       "API"
@@ -3266,7 +3267,7 @@
   {
     "name": "OpenCode",
     "url": "https://opencode.ai",
-    "description": "Open-source AI coding agent that works in your terminal, desktop app or IDE, with free models included or any provider's models.",
+    "description": "Open-source AI coding agent that works in your terminal, desktop app or IDE, with free models included or any provider's models. New Nov 16 2026: OpenCode Browse (free, MIT), an MCP server plus Chromium extension that lets OpenCode, Claude Code, Cursor, Codex and other MCP clients use your real browser with your tabs and logins. Agent tabs open in the background, and it hands the tab back to you for a login, 2FA or payment.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -3276,7 +3277,8 @@
       "open source",
       "terminal",
       "coding agent",
-      "multi-session"
+      "multi-session",
+      "browser automation"
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
@@ -3288,7 +3290,7 @@
       "basis": "Open source; free models included, or pay your own model provider",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "Windows",
       "macOS",
@@ -3461,7 +3463,7 @@
   {
     "name": "Mirelo",
     "url": "https://mirelo.ai",
-    "description": "Video-to-sound AI that generates footsteps, impacts, foley and ambience synced to your video while keeping dialogue. SFX 2.0 (Oct 2026) designs a full, consistent soundtrack across clips of any length and is also on Runway and fal.",
+    "description": "Video-to-sound AI that generates footsteps, impacts, foley and ambience synced to your video while keeping dialogue. SFX 2.0 (Oct 2026) designs a full, consistent soundtrack across clips of any length and is also on Runway and fal. New Nov 17 2026: the Sound Agent in Mirelo Editor sound-designs a video from plain-language prompts. It adds SFX and music, separates dialogue, removes baked-in music, dubs into other languages and edits the audio timeline, showing the cost before each paid step (uses your existing credits).",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -3488,7 +3490,7 @@
     "commercialUseNote": "Free plan: commercial use only once you buy extra credits, and exports are watermarked. Commercial use included on paid plans.",
     "commercialUseSource": "https://mirelo.ai/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-18",
     "platforms": [
       "Web",
       "API"
@@ -5527,5 +5529,214 @@
       "API"
     ],
     "platformsSource": "https://github.com/vercel-labs/ui"
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Blyth AI",
+    "url": "https://blyth.ai/mcp",
+    "description": "Multi-model creative suite for game and app makers, now usable from your AI assistant. New Nov 17 2026: Blyth MCP connects Claude, ChatGPT, Claude Code, Codex and other remote-MCP clients so you can ask in chat for playable 2D and 3D mobile games and playable ads (published to Blyth Arcade or downloaded as one HTML5 file), sprites, cut-outs and character turnarounds, game-ready GLB 3D models rigged for Mixamo, Unreal or Unity, trailers and store-page preview clips from a screenshot, level music loops and matching sound-effect packs. Each generation uses your Blyth credits, with the cost shown before paid steps and a daily spending cap.",
+    "categories": [
+      "Game Art & Sprites",
+      "3D & Models",
+      "Audio, Music & SFX"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Starter $19.99/mo ($14.99/mo billed annually), Pro $59.99/mo, Studio $169.99/mo; the MCP connector is included with Starter, Pro and Studio (not Free)",
+    "tags": [
+      "MCP",
+      "game assets",
+      "3D models",
+      "rigging",
+      "playable ads",
+      "sound effects"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://blyth.ai/mcp",
+    "spend": {
+      "light": 20,
+      "medium": 60,
+      "heavy": 170,
+      "basis": "Starter $19.99/mo; Pro $59.99/mo; heavy assumes Studio $169.99/mo (about 25% less billed annually)",
+      "checked": "2026-11-18"
+    }
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Audio Studio MCP",
+    "url": "https://github.com/kanaworksai-hue/audio-studio-mcp",
+    "description": "Open-source (MIT) MCP server that gives Claude Code, Claude Desktop, Cursor, Codex and other MCP clients a local sound studio: ask in plain language for background music, instrument loops or sound effects and Stable Audio 3 generates them on your own computer, then it can re-style or extend a clip, make seamless loops, set loudness and export 48 kHz WAV, OGG or FLAC for your game engine or video editor. No cloud and no API key. New Nov 17 2026 (v1.2): results play in the chat in clients with MCP Apps, so you can compare versions, loop them and export without opening a file.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); runs locally on an Apple Silicon Mac or a Windows PC with an NVIDIA GPU (8 GB+ VRAM). Check Stability AI's Stable Audio 3 model licence before commercial use",
+    "tags": [
+      "MCP",
+      "sound effects",
+      "music generation",
+      "local",
+      "open source",
+      "Claude Code"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/kanaworksai-hue/audio-studio-mcp",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free and open source; runs on your own hardware",
+      "checked": "2026-11-18"
+    }
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Appxiom",
+    "url": "https://www.appxiom.com",
+    "description": "Bug detection for mobile and web apps that hands production context to your coding agent. Its SDKs catch crashes, freezes, memory leaks, failed network calls and broken user journeys on iOS, Android, Flutter, Kotlin Multiplatform and the web (any JavaScript or TypeScript framework, with extra React support), and Goal Friction Impact links failed goals like signup or checkout to the bug behind them. An MCP connector and skills let Claude Code, Codex, Cursor and other agents read the issues, wire up the SDK and prioritise fixes. Launched on Product Hunt Nov 17 2026.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "paid",
+    "pricingNote": "30-day free trial, no card; Starter $10/mo per app (10,000 monthly active devices), Professional $99/mo per app (100,000 devices); Enterprise custom",
+    "tags": [
+      "crash reporting",
+      "bug detection",
+      "MCP",
+      "agent skills",
+      "mobile",
+      "web"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://www.appxiom.com/pricing",
+    "spend": {
+      "light": 10,
+      "medium": 10,
+      "heavy": 99,
+      "basis": "30-day free trial; Starter $10/mo per app; heavy assumes Professional $99/mo per app",
+      "checked": "2026-11-18"
+    }
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Ava Studio",
+    "url": "https://avastudio.com/tools/launch-videos",
+    "description": "AI ad studio that researches what's breaking out on TikTok and produces video ads, carousels and static ads you can edit scene by scene. New Nov 17 2026: launch videos for Claude Code and Codex. Install the Ava Studio plugin, give it your site and pick from 2,000+ product launch videos that went viral on X; the agent rebuilds the original's cuts and camera moves around your real product page and brand kit, renders it on your Mac or Linux computer and shows it next to the original. Searching the library is free; only the scored music uses Ava credits.",
+    "categories": [
+      "Video & Trailers",
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (watermarked 720p); Launch $59/mo billed annually ($69 monthly), Pro $149/mo billed annually ($189 monthly), Growth $349/mo billed annually",
+    "tags": [
+      "launch videos",
+      "video ads",
+      "MCP",
+      "Claude Code",
+      "Codex",
+      "TikTok"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://avastudio.com/tools/launch-videos",
+    "spend": {
+      "light": 0,
+      "medium": 69,
+      "heavy": 189,
+      "basis": "Free plan; Launch $69/mo monthly ($59 annual); heavy assumes Pro $189/mo monthly ($149 annual)",
+      "checked": "2026-11-18"
+    }
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Google AI Studio",
+    "url": "https://aistudio.google.com",
+    "description": "Google's free workspace for building with Gemini, including a Build agent that turns a prompt into a working web or Android app. New Nov 17 2026: full-stack Android apps in Kotlin, with the agent provisioning a Cloud Firestore database, Google Sign-In and server-side Gemini calls through Firebase AI Logic, a faster HD in-browser emulator with live audio, one-click emulator screenshots sent to the agent for UI fixes, custom fonts, and one-click publishing to your personal Google Play library.",
+    "categories": [
+      "App Builders"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free to use (the Gemini API free tier includes Google AI Studio access); paid Gemini API tier billed per token",
+    "tags": [
+      "Gemini",
+      "Android",
+      "Firebase",
+      "app builder",
+      "Kotlin",
+      "Google Play"
+    ],
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://developers.googleblog.com/build-full-stack-android-apps-with-gemini-in-google-ai-studio/"
+  },
+  {
+    "dateAdded": "2026-11-18",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-18",
+    "platformsChecked": "2026-11-18",
+    "name": "Stoneleap",
+    "url": "https://stoneleap.com",
+    "description": "Free AI game editor in public beta: download Stoneleap Studio, start a 3D game or world from a prompt or a template, have the built-in AI agent (Claude) add characters, cameras, pickups and game logic, shape it yourself in the editor, press Play to test, then publish in one click to its own page on stoneleap.com, where anyone can play it in the browser. Public beta launched Nov 16 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "3D & Models"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free for everyone (public beta)",
+    "tags": [
+      "game maker",
+      "3D",
+      "browser games",
+      "publishing",
+      "AI agent"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "platformsSource": "https://stoneleap.com/download",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Free during public beta",
+      "checked": "2026-11-18"
+    }
   }
 ]
