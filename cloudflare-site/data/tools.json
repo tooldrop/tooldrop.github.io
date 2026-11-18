@@ -1542,7 +1542,7 @@
   {
     "name": "Replit",
     "url": "https://replit.com",
-    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly. New in Oct 2026: Cloud Agents let anyone on a team describe a change in plain words; the agent tests it in the running app and opens a reviewed GitHub PR or GitLab MR (Pro and Enterprise).",
+    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly. New in Oct 2026: Cloud Agents let anyone on a team describe a change in plain words; the agent tests it in the running app and opens a reviewed GitHub PR or GitLab MR (Pro and Enterprise). New Nov 18 2026: local work is generally available in the Replit Desktop app for Windows, Mac and Linux. You choose which folders Agent can use, and it builds and runs apps on your own computer, in local sandboxes on supported Windows and macOS devices.",
     "categories": [
       "AI Coding Agents & IDEs",
       "App Builders"
@@ -1566,7 +1566,7 @@
       "basis": "Free Starter; Core $20/mo; heavy assumes Pro $100/mo; agent overage extra",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-19",
     "platforms": [
       "Web",
       "iOS",
@@ -1755,28 +1755,29 @@
   {
     "name": "Devin",
     "url": "https://devin.ai",
-    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects.",
+    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects. New Nov 17 2026: Devin Bots, persistent agents with their own memory that you give a goal (such as keeping Android at parity with iOS) and that lead several Devin sessions in parallel, bringing you only the decisions that need you, via Slack, iMessage or the Devin app. Included with the Max and Teams plans.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
-    "pricing": "paid",
-    "pricingNote": "Teams plan from $80/mo plus $40 per developer seat; usage credits extra",
+    "pricing": "freemium",
+    "pricingNote": "Free plan; Pro $20/mo; Max $200/mo (includes Devin Bots); Teams $80/mo (includes Devin Bots)",
     "tags": [
       "autonomous",
       "agent",
-      "full-stack"
+      "full-stack",
+      "persistent agents"
     ],
     "dateAdded": "2024-10-12",
     "newRelease": true,
     "affiliateUrl": "",
     "spend": {
-      "light": 120,
-      "medium": 120,
-      "heavy": null,
-      "basis": "Teams plan from $80/mo plus $40 per developer seat; usage credits extra",
-      "checked": "2026-10-28"
+      "light": 0,
+      "medium": 20,
+      "heavy": 200,
+      "basis": "Free plan; Pro $20/mo; heavy assumes Max $200/mo (Teams $80/mo)",
+      "checked": "2026-11-19"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-19",
     "platforms": [
       "Web",
       "macOS",
@@ -1850,7 +1851,7 @@
   {
     "name": "CodeRabbit",
     "url": "https://coderabbit.ai",
-    "description": "AI code reviewer that provides contextual feedback on pull requests with actionable suggestions.",
+    "description": "AI code reviewer that provides contextual feedback on pull requests with actionable suggestions. New Nov 18 2026: CodeRabbit Verify (public beta, free during the beta) tests your running app in a sandbox. Comment @coderabbitai verify on a PR and it tries the changed behaviour and posts results with screenshots and recordings; it can also draft user journeys for regression tests to run on demand or on a schedule, and hand failures to CodeRabbit Agent or your own coding agent to fix.",
     "categories": [
       "Code Review & Testing"
     ],
@@ -1859,7 +1860,8 @@
     "tags": [
       "code review",
       "pull requests",
-      "GitHub"
+      "GitHub",
+      "app testing"
     ],
     "dateAdded": "2024-08-28",
     "affiliateUrl": "",
@@ -1870,7 +1872,7 @@
       "basis": "Free for open source; Essentials $30/dev/mo monthly ($24 annual)",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-19",
     "platforms": [
       "Web",
       "CLI",
@@ -1878,7 +1880,8 @@
       "JetBrains"
     ],
     "platformsSource": "https://docs.coderabbit.ai/",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-12",
+    "newRelease": true
   },
   {
     "name": "Greptile",
@@ -2379,7 +2382,7 @@
   {
     "name": "Suno",
     "url": "https://suno.com",
-    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it. New Nov 13 2026: Suno Bridge (beta), a free Mac app that works next to Ableton Live 12, makes instrument and vocal stems that fit your session's key, tempo and groove and drops them on the timeline in sync (needs Premier; each generation uses Suno credits). New Nov 17 2026: Visuals turns your songs into lyric videos, album art and clips up to 15 seconds that follow the song's structure and lip-sync to the lyrics, on web, iOS and Android.",
+    "description": "AI music generator that creates full songs with vocals from text prompts. New in Oct 2026: Suno MCP (beta, early-access sign-up) lets you make, remix and cover songs from Claude, ChatGPT, Claude Code and other MCP clients, using your Suno credits. New Nov 4 2026: Pro and Premier users can start a song from a MIDI file on the Create page and prompt Suno to play the notes exactly, develop the motif or re-instrument it. New Nov 13 2026: Suno Bridge (beta), a free Mac app that works next to Ableton Live 12, makes instrument and vocal stems that fit your session's key, tempo and groove and drops them on the timeline in sync (needs Premier; each generation uses Suno credits). New Nov 17 2026: Visuals turns your songs into lyric videos, album art and clips up to 15 seconds that follow the song's structure and lip-sync to the lyrics, on web, iOS and Android. New Nov 18 2026: Suno MCP is out of beta and open to everyone on every plan, including Free, in Claude, ChatGPT, Gemini, Claude Code, Cursor and other MCP clients (no API key; songs use your plan's credits, and making Visuals from the chat needs a paid plan).",
     "categories": [
       "Audio, Music & SFX"
     ],
@@ -2417,7 +2420,7 @@
     ],
     "exportFormatsSource": "https://help.suno.com/en/articles/13926081",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-19",
     "platforms": [
       "Web",
       "iOS",
@@ -3982,7 +3985,7 @@
   {
     "name": "Kling AI",
     "url": "https://klingai.com",
-    "description": "AI video generator whose Kling 4.0 model makes native 30-second clips with up to 10 keyframes, multimodal references, stereo sound effects and multilingual lip sync. The 4.0 API opened to developers on Oct 21 2026. Good for trailers and cutscenes.",
+    "description": "AI video generator whose Kling 4.0 model makes native 30-second clips with up to 10 keyframes, multimodal references, stereo sound effects and multilingual lip sync. The 4.0 API opened to developers on Oct 21 2026. Good for trailers and cutscenes. New Nov 18 2026: Kling Image 4.0, its new image model, is live for all users in Kling's creative studio and via API, with native 8K output, sharper realism, text rendering of up to 2,000 characters in an image, and consistent sets of up to 10 images from one prompt (handy for storyboards and key art).",
     "categories": [
       "Video & Trailers"
     ],
@@ -3993,7 +3996,8 @@
       "text to video",
       "lip sync",
       "API",
-      "trailers"
+      "trailers",
+      "image generation"
     ],
     "dateAdded": "2026-10-22",
     "newRelease": true,
@@ -4009,7 +4013,7 @@
     "commercialUseNote": "Free plan outputs can't be used commercially without written permission; paid members can use outputs commercially.",
     "commercialUseSource": "https://kling.ai/docs/user-policy",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-19",
     "platforms": [
       "Web",
       "API"
@@ -5600,11 +5604,7 @@
       "heavy": 0,
       "basis": "Free and open source; runs on your own hardware",
       "checked": "2026-11-18"
-    },
-    "commercialUse": "yes",
-    "commercialUseNote": "Audio Studio MCP's own code is MIT-licensed, but the Stable Audio 3 weights it runs locally are under the Stability AI Community License. Commercial use of those weights and their outputs is allowed without a fee if you and your affiliates have under US$1 million in annual revenue and you register with Stability AI; above that, you need a separate Enterprise licence.",
-    "commercialUseSource": "https://stability.ai/license",
-    "rightsChecked": "2026-11-18"
+    }
   },
   {
     "dateAdded": "2026-11-18",
@@ -5682,11 +5682,11 @@
     "dateAdded": "2026-11-18",
     "newRelease": true,
     "affiliateUrl": "",
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-19",
     "platformsChecked": "2026-11-18",
     "name": "Google AI Studio",
     "url": "https://aistudio.google.com",
-    "description": "Google's free workspace for building with Gemini, including a Build agent that turns a prompt into a working web or Android app. New Nov 17 2026: full-stack Android apps in Kotlin, with the agent provisioning a Cloud Firestore database, Google Sign-In and server-side Gemini calls through Firebase AI Logic, a faster HD in-browser emulator with live audio, one-click emulator screenshots sent to the agent for UI fixes, custom fonts, and one-click publishing to your personal Google Play library.",
+    "description": "Google's free workspace for building with Gemini, including a Build agent that turns a prompt into a working web or Android app. New Nov 17 2026: full-stack Android apps in Kotlin, with the agent provisioning a Cloud Firestore database, Google Sign-In and server-side Gemini calls through Firebase AI Logic, a faster HD in-browser emulator with live audio, one-click emulator screenshots sent to the agent for UI fixes, custom fonts, and one-click publishing to your personal Google Play library. New Nov 17 2026: custom domains for web apps published from Build, bought and connected in the Publish panel with DNS and SSL set up for you (needs a paid Google Cloud project; free ai.studio subdomains remain available).",
     "categories": [
       "App Builders"
     ],
@@ -5741,6 +5741,75 @@
       "heavy": 0,
       "basis": "Free during public beta",
       "checked": "2026-11-18"
+    }
+  },
+  {
+    "name": "Review Box",
+    "url": "https://review-box.rstankov.com/",
+    "description": "Desktop app for reviewing GitHub pull requests, built for the big PRs coding agents produce. A dashboard of PRs waiting on you, files split into reviewed and unreviewed (mark a whole folder at once), definitions and uses of any function right in the diff, instant search across every changed file, and a 'result' view that shows the code as it will look after merging. It can use Claude Code, Codex or a local model (Ollama, LM Studio, OpenRouter) to answer questions about the change, draw diagrams and draft comments for you to check. Talks to GitHub directly from your computer (GitHub.com only for now). Launched on Product Hunt Nov 18 2026.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "paid",
+    "pricingNote": "$45/year, one plan with all features; 30-day free trial, no account or card needed; if you stop paying you keep the version you have",
+    "tags": [
+      "code review",
+      "pull requests",
+      "GitHub",
+      "desktop app",
+      "Claude Code",
+      "Codex"
+    ],
+    "dateAdded": "2026-11-19",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-19",
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "platformsSource": "https://review-box.rstankov.com/download",
+    "platformsChecked": "2026-11-19",
+    "spend": {
+      "light": 4,
+      "medium": 4,
+      "heavy": 4,
+      "basis": "One plan, $45/year (about $3.75/mo); 30-day free trial",
+      "checked": "2026-11-19"
+    }
+  },
+  {
+    "name": "Klistra",
+    "url": "https://klistra.ai/",
+    "description": "AI motion-design studio for short launch videos, explainers, social ads, posters and music videos. Describe what you want and add your logo, screenshots, footage or a voice; it writes a scene-by-scene plan with you, then designs and animates every frame from parts rather than generating pixels, so your text and files stay exact and a re-render only changes what you asked for. Click a moment to change it, sync cuts to music or voiceover, and export the same design in 9:16, 1:1, 4:5 and 16:9. Paid plans can drive it from Claude Code. Launched on Show HN Nov 18 2026.",
+    "categories": [
+      "Video & Trailers",
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Free start of 350 credits for the first 200 accounts (use within 60 days); Pro $25/mo ($20/mo billed yearly); Team $79/mo for 5 people ($63/mo billed yearly); Enterprise custom",
+    "tags": [
+      "launch videos",
+      "motion design",
+      "explainers",
+      "social ads",
+      "Claude Code"
+    ],
+    "dateAdded": "2026-11-19",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-19",
+    "commercialUse": "yes",
+    "commercialUseNote": "Klistra's terms say what it makes for you is yours to use, including commercially, once rendered. You need the rights to anything you upload.",
+    "commercialUseSource": "https://klistra.ai/terms",
+    "rightsChecked": "2026-11-19",
+    "spend": {
+      "light": 25,
+      "medium": 25,
+      "heavy": 79,
+      "basis": "Pro $25/mo monthly ($20 billed yearly); heavy assumes Team $79/mo for 5 people",
+      "checked": "2026-11-19"
     }
   }
 ]
