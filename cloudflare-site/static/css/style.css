@@ -87,3 +87,8 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .results-bar .results-count{margin:0}
 .copy-link-btn{font-size:.85rem;padding:6px 14px;border-radius:999px;cursor:pointer}
 .copy-link-btn:focus-visible{outline:2px solid var(--accent2);outline-offset:2px}
+
+/* 19 Nov 2026: compact newsletter signup on tool pages */
+.newsletter-inline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.12));border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px}
+.newsletter-inline p{color:var(--muted);margin:0;flex:1;min-width:220px}
+@media(max-width:800px){.newsletter-inline{padding:14px 16px}.newsletter-inline .btn{width:100%;text-align:center}}

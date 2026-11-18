@@ -174,6 +174,10 @@ SUBSCRIBE = f'''<section class="section"><div class="container"><div class="news
   <div class="substack-embed-container"><iframe src="{SUB}/embed" width="100%" height="150" style="border:none; background:transparent;" frameborder="0" scrolling="no" title="Subscribe to the ToolDrop newsletter"></iframe></div>
   <p class="subscribe-fallback"><a href="{SUB}/subscribe" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="subscribe-click" data-goatcounter-title="Subscribe on Substack" data-goatcounter-referrer="__GC_PAGE__">Subscribe on Substack →</a></p>
 </div></div></section>'''
+TOOL_SUBSCRIBE = f'''<section class="section" aria-label="Newsletter signup"><div class="container"><div class="newsletter-inline">
+  <p>Get new AI tools for game devs and vibe coders every week.</p>
+  <a href="{SUB}/subscribe" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="newsletter-toolpage" data-goatcounter-title="Subscribe on Substack" data-goatcounter-referrer="__GC_PAGE__">Subscribe on Substack →</a>
+</div></div></section>'''
 
 # ---- JSON-LD helpers ----
 def ld(obj):
@@ -238,7 +242,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
       <a href="/">Home</a>
       <a href="/new-releases/">New Releases</a>
       <a href="/compare/">Compare</a>
-      <a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a>
+      <a href="{SUB}/subscribe" target="_blank" rel="noopener" data-goatcounter-click="newsletter-header" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a>
       <a href="/about/">About</a>
     </div>
     <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
@@ -585,7 +589,7 @@ for t in tools:
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
-<section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{SUBSCRIBE}'''
+<section class="section"><div class="container"><div class="section-header"><h2 class="section-title">Similar tools</h2></div>{grid(sim)}</div></section>{TOOL_SUBSCRIBE}'''
     title = f"{t['name']}: pricing, features & alternatives | ToolDrop"
     if len(title) > 65: title = f"{t['name']}: pricing & alternatives | ToolDrop"
     if len(title) > 65: title = f"{t['name']} | ToolDrop"
