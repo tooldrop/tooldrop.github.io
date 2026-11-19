@@ -3,7 +3,7 @@
 
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
-sponsored? (optional, renders a "Sponsored" label), deal? (optional; label, brand?, items[] with title, detail, code?, starts?, ends; hidden after ends at build time), commercialUse? (yes|paid|limited|no|unknown),
+sponsored? (optional, renders a "Sponsored" label), deal? (optional; label, brand?, items[] with title, detail, code?, starts?, ends; hidden after ends at build time), planNote? (optional; Which plan? box: label, cta?, items[] with title, detail, offer? {text, ends?}), commercialUse? (yes|paid|limited|no|unknown),
 commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD), lastChecked (YYYY-MM-DD), platforms? [fixed vocabulary, see PLATFORMS],
 platformsSource?, platformsChecked?. See README.md. Scout and reviews must bump lastChecked whenever they touch a listing.
 """
@@ -204,6 +204,59 @@ def deal_box(t):
             'It never affects which tools we list or how we rank them. '
             '<a href="/disclosure/">Read our disclosure</a>.')
     return f"""<section class="section" aria-label="{label}"><div class="container"><aside class="deal-box">
+<h2>{label}</h2>
+<ul>
+{chr(10).join(lis)}
+</ul>
+<p class="deal-cta">{cta}</p>
+<p class="deal-disclosure">{disc}</p>
+</aside></div></section>
+"""
+
+
+def offer_line(offer):
+    """Return current offer text, or '' if missing or past offer.ends (build-time)."""
+    if not offer:
+        return ""
+    if isinstance(offer, str):
+        text, ends = offer, None
+    else:
+        text, ends = (offer.get("text") or "").strip(), offer.get("ends")
+    if not text:
+        return ""
+    if ends and TODAY > ends:
+        return ""
+    if ends:
+        return text.rstrip(".") + f" Until {nicedate(ends)}."
+    return text
+
+def plan_note_box(t):
+    note = t.get("planNote") or {}
+    items = note.get("items") or []
+    if not items:
+        return ""
+    label = e(note.get("label") or "Which plan?")
+    lis = []
+    for it in items:
+        title = it.get("title") or ""
+        detail = it.get("detail") or ""
+        offer = offer_line(it.get("offer"))
+        parts = []
+        if title:
+            titled = title if (not detail or title[-1] in ".!?") else title + "."
+            parts.append(f"<strong>{e(titled)}</strong>")
+        if detail:
+            parts.append(e(detail))
+        bit = " ".join(parts)
+        if offer:
+            bit += f' <span class="plan-offer">{e(offer)}</span>'
+        lis.append(f"<li>{bit}</li>")
+    cta_label = note.get("cta") or f"See plans on {t['name']} →"
+    cta = visit_link(t, e(cta_label), "plan note")
+    disc = ('If you sign up through this link, we may earn a commission at no extra cost to you. '
+            'It never affects which tools we list or how we rank them. '
+            '<a href="/disclosure/">Read our disclosure</a>.')
+    return f"""<section class="section" aria-label="{label}"><div class="container"><aside class="plan-note">
 <h2>{label}</h2>
 <ul>
 {chr(10).join(lis)}
@@ -658,7 +711,7 @@ for t in tools:
     body = f'''<section class="hero hero-small"><div class="container">{bc}
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}{deal_b}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
-{deal_box(t)}<section class="section"><div class="container"><div class="tool-details">
+{deal_box(t)}{plan_note_box(t)}<section class="section"><div class="container"><div class="tool-details">
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>

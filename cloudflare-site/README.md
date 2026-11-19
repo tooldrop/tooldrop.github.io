@@ -5,7 +5,7 @@
 `SITE_URL=https://trytooldrop.com python3 build.py` reads `data/tools.json` and writes `dist/`.
 
 ## Tool fields
-`name, url, description, categories[], pricing (free|freemium|paid|unknown), pricingNote?, tags[], dateAdded, lastChecked, platforms[]?, featured?, newRelease?, affiliateUrl?, sponsored?, deal?`
+`name, url, description, categories[], pricing (free|freemium|paid|unknown), pricingNote?, tags[], dateAdded, lastChecked, platforms[]?, featured?, newRelease?, affiliateUrl?, sponsored?, deal?, planNote?`
 
 - `affiliateUrl` (optional, empty by default): if set, every Visit link for that tool uses it instead of `url`, gets
   `rel="sponsored nofollow noopener"` and a small "Affiliate link" note, and any page showing that link gets a one-line
@@ -18,6 +18,11 @@
   `brand` is the name used in the offer button if it should differ from the listing name. Items with `ends` before the
   build date are omitted; the box and badge are hidden once every item has ended. Upcoming `starts` dates stay visible,
   phrased as "From 23 Nov to 2 Dec 2026".
+
+- `planNote` (optional): a short "Which plan?" guide on the tool page (not a deal, and no card badge).
+  Shape: `{ "label": "Which plan?", "cta": "See plans on ElevenLabs →", "items": [ { "title", "detail", "offer?": { "text", "ends?" } } ] }`.
+  An `offer` line is omitted at build time once `ends` has passed, so a current first-month price can be removed easily.
+
 
 
 ## Generated extras
