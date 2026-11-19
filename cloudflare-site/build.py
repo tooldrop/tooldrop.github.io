@@ -3,7 +3,7 @@
 
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
-sponsored? (optional, renders a "Sponsored" label), commercialUse? (yes|paid|limited|no|unknown),
+sponsored? (optional, renders a "Sponsored" label), deal? (optional; label, brand?, items[] with title, detail, code?, starts?, ends; hidden after ends at build time), commercialUse? (yes|paid|limited|no|unknown),
 commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD), lastChecked (YYYY-MM-DD), platforms? [fixed vocabulary, see PLATFORMS],
 platformsSource?, platformsChecked?. See README.md. Scout and reviews must bump lastChecked whenever they touch a listing.
 """
@@ -144,11 +144,83 @@ def visit_link(t, label, where, cls="btn btn-primary"):
     if aff: a += ' <small class="affiliate-note" data-affiliate="1">Affiliate link</small>'
     return a
 
+
+def parse_ymd(s):
+    y, m, d = map(int, s.split("-"))
+    return date(y, m, d)
+
+def date_range_text(starts, ends):
+    """'From 23 Nov to 2 Dec 2026' or 'Until 31 Dec 2026' if there is no start date."""
+    e_dt = parse_ymd(ends)
+    if starts:
+        s_dt = parse_ymd(starts)
+        if s_dt.year == e_dt.year:
+            return f"From {s_dt.strftime('%-d %b')} to {e_dt.strftime('%-d %b %Y')}"
+        return f"From {s_dt.strftime('%-d %b %Y')} to {e_dt.strftime('%-d %b %Y')}"
+    return f"Until {e_dt.strftime('%-d %b %Y')}"
+
+def active_deal_items(t):
+    """Return deal items that have not ended as of TODAY (build-time). Upcoming start dates stay visible."""
+    d = t.get("deal") or {}
+    items = []
+    for it in d.get("items") or []:
+        ends = it.get("ends") or d.get("ends")
+        if ends and TODAY > ends:
+            continue
+        items.append(it)
+    return items
+
+def deal_badge(t):
+    return ' <span class="deal-badge">Deal</span>' if active_deal_items(t) else ""
+
+def deal_box(t):
+    items = active_deal_items(t)
+    if not items:
+        return ""
+    d = t["deal"]
+    label = e(d.get("label") or "Black Friday deal")
+    lis = []
+    for it in items:
+        title = it.get("title") or ""
+        detail = it.get("detail") or ""
+        code = (it.get("code") or "").strip()
+        starts = it.get("starts")
+        ends = it.get("ends") or d.get("ends")
+        parts = []
+        if title:
+            titled = title if (not detail or title[-1] in ".!?") else title + "."
+            parts.append(f"<strong>{e(titled)}</strong>")
+        if detail:
+            parts.append(e(detail))
+        bit = " ".join(parts)
+        if code:
+            bit += f' Use code <code>{e(code)}</code>.'
+        if ends:
+            bit += f' <span class="deal-dates">{e(date_range_text(starts, ends))}.</span>'
+        lis.append(f"<li>{bit}</li>")
+    brand = d.get("brand") or t["name"]
+    cta = visit_link(t, f"See the offer on {e(brand)} →", "deal box")
+    disc = ('If you sign up through this link, we may earn a commission at no extra cost to you. '
+            'It never affects which tools we list or how we rank them. '
+            '<a href="/disclosure/">Read our disclosure</a>.')
+    return f"""<section class="section" aria-label="{label}"><div class="container"><aside class="deal-box">
+<h2>{label}</h2>
+<ul>
+{chr(10).join(lis)}
+</ul>
+<p class="deal-cta">{cta}</p>
+<p class="deal-disclosure">{disc}</p>
+</aside></div></section>
+"""
+
 def card(t, show_date=False):
     cats = "|".join(c.lower() for c in t["categories"])
     pc = "paid" if t["pricing"]=="paid" else ("free" if t["pricing"]=="free" else "")
     badge = '\n    <span class="new-badge">New</span>' if t.get("newRelease") else ""
     if t.get("sponsored"): badge += '\n    <span class="sponsored-badge">Sponsored</span>'
+    if active_deal_items(t): badge += '\n    <span class="deal-badge">Deal</span>'
+    if badge:
+        badge = f'\n    <span class="card-badges">{badge}\n    </span>'
     dt = f'\n  <p class="date-added">Added {nicedate(t["dateAdded"])}</p>' if show_date else ""
     tags = "".join(f'\n    <span class="tag category">{e(c)}</span>' for c in t["categories"])
     return f'''<div class="tool-card" data-tool="{t["slug"]}" data-name="{e(t["name"])}" data-description="{e(t["description"])}" data-categories="{e(cats)}" data-pricing="{e(t["pricing"])}" data-tags="{e(",".join(t.get("tags",[])))}" data-spend-light="{spend_attr(t,"light")}" data-spend-medium="{spend_attr(t,"medium")}" data-spend-heavy="{spend_attr(t,"heavy")}" data-commercial="{cu(t)}" data-formats="{e(fmt_attr(t))}" data-platforms="{e(plat_attr(t))}">
@@ -582,10 +654,11 @@ for t in tools:
                                     "description": f'Light {t["spend"]["light"]}, medium {t["spend"]["medium"]}, heavy {t["spend"]["heavy"] if t["spend"]["heavy"] is not None else "not listed"} USD/mo. {t["spend"]["basis"]}. {spend_caveat_for(t)}'}
     if t.get("tags"): sw["keywords"] = ", ".join(t["tags"])
     sponsored = ' <span class="sponsored-badge">Sponsored</span>' if t.get("sponsored") else ""
+    deal_b = deal_badge(t)
     body = f'''<section class="hero hero-small"><div class="container">{bc}
-<h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}</h1><p class="subtitle">{e(t["description"])}</p>
+<h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}{deal_b}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
-<section class="section"><div class="container"><div class="tool-details">
+{deal_box(t)}<section class="section"><div class="container"><div class="tool-details">
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>

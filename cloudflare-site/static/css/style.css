@@ -92,3 +92,19 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .newsletter-inline{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;background:linear-gradient(135deg,rgba(124,92,255,.18),rgba(34,211,238,.12));border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px}
 .newsletter-inline p{color:var(--muted);margin:0;flex:1;min-width:220px}
 @media(max-width:800px){.newsletter-inline{padding:14px 16px}.newsletter-inline .btn{width:100%;text-align:center}}
+
+/* 20 Nov 2026: Black Friday deal box and card badge */
+.deal-badge{background:var(--amber);color:#0b0d17;font-size:.7rem;font-weight:700;padding:3px 9px;border-radius:999px;text-transform:uppercase;letter-spacing:.04em;vertical-align:middle;margin-left:6px}
+.deal-box{background:linear-gradient(135deg,rgba(251,191,36,.14),rgba(52,211,153,.08));border:1px solid rgba(251,191,36,.45);border-radius:var(--radius);padding:20px 22px;text-align:left}
+.deal-box h2{font-size:1.15rem;margin:0 0 12px;color:var(--text)}
+.deal-box ul{margin:0 0 14px 18px}
+.deal-box li{margin-bottom:10px;color:var(--text)}
+.deal-box li:last-child{margin-bottom:0}
+.deal-dates{color:var(--muted);font-size:.95rem}
+.deal-box code{background:var(--bg2);border:1px solid var(--border);border-radius:6px;padding:1px 6px;font-size:.9em;color:var(--amber)}
+.deal-cta{margin:0}
+.deal-disclosure{font-size:.8rem;color:var(--muted);margin-top:10px}
+@media(max-width:800px){.deal-box{padding:16px}}
+
+.card-badges{display:flex;align-items:center;gap:6px;flex-shrink:0;margin-left:auto}
+.card-badges .deal-badge{margin-left:0}

@@ -2188,7 +2188,7 @@
     ],
     "exportFormatsSource": "https://www.meshy.ai/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "API",
@@ -2199,7 +2199,25 @@
       "Chrome extension"
     ],
     "platformsSource": "https://www.meshy.ai/integrations",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-12",
+    "deal": {
+      "label": "Black Friday deal",
+      "items": [
+        {
+          "title": "70% off the first month",
+          "detail": "For new customers on Pro, Premium or Ultra monthly plans.",
+          "code": "MESHYBF70",
+          "starts": "2026-11-20",
+          "ends": "2026-12-12"
+        },
+        {
+          "title": "Up to 50% off annual plans, plus 2 bonus months",
+          "detail": "For eligible Pro and Premium annual plans. Sitewide offer; discounts vary by plan and region.",
+          "starts": "2026-11-23",
+          "ends": "2026-12-02"
+        }
+      ]
+    }
   },
   {
     "name": "Luma AI",
@@ -2319,7 +2337,7 @@
     ],
     "exportFormatsSource": "https://www.tripo3d.ai/product-doc/export-and-integration/export-dcc",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "API",
@@ -2330,7 +2348,25 @@
       "Blender"
     ],
     "platformsSource": "https://www.tripo3d.ai",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-12",
+    "deal": {
+      "label": "Black Friday deal",
+      "brand": "Tripo",
+      "items": [
+        {
+          "title": "Annual and two-year plans",
+          "detail": "Annual plans: 50% off Pro and 60% off Max, each with 1 extra month of credits. Two-year plans: 55% off Pro and 65% off Max, each with 2 extra months of credits.",
+          "starts": "2026-11-23",
+          "ends": "2026-12-04"
+        },
+        {
+          "title": "60% off Pro and Max",
+          "detail": "For new users, on monthly or annual plans. Global offer.",
+          "code": "TRIPOSPARK",
+          "ends": "2026-12-31"
+        }
+      ]
+    }
   },
   {
     "name": "Spline AI",
