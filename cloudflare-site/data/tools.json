@@ -2013,7 +2013,7 @@
   {
     "name": "Scenario",
     "url": "https://www.scenario.com",
-    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio. New Nov 2026: text-to-motion (NVIDIA Kimodo Text to Motion) turns a prompt into a 3D skeleton animation, up to 10 seconds at 30fps, with BVH export.",
+    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio. New Nov 2026: text-to-motion (NVIDIA Kimodo Text to Motion) turns a prompt into a 3D skeleton animation, up to 10 seconds at 30fps, with BVH export. New Nov 19 2026: Scenario for Photoshop, a free, open-source (MIT) Photoshop plug-in that runs Scenario generations from a panel and lands results as editable layers, or lets Claude Code, Codex, Cursor or Claude Desktop drive it through a local MCP server, asking you to approve each credit spend. Version 0.8.0: installed from a .ccx download (not on the Adobe marketplace yet) and tested on macOS.",
     "categories": [
       "Game Art & Sprites"
     ],
@@ -2024,7 +2024,8 @@
       "custom models",
       "style consistency",
       "workflows",
-      "text-to-motion"
+      "text-to-motion",
+      "Photoshop"
     ],
     "dateAdded": "2026-11-09",
     "affiliateUrl": "",
@@ -2058,7 +2059,7 @@
     ],
     "exportFormatsSource": "https://www.scenario.com/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "API",
@@ -3738,7 +3739,7 @@
   {
     "name": "Netlify",
     "url": "https://www.netlify.com",
-    "description": "Deploy sites and web apps from Git, an AI agent or the API, with unlimited deploy previews, functions and custom domains with SSL.",
+    "description": "Deploy sites and web apps from Git, an AI agent or the API, with unlimited deploy previews, functions and custom domains with SSL. New in Nov 2026: Netlify Server (early access on credit-based plans, launched on Product Hunt Nov 19) runs your backend as a long-lived Node.js server, for WebSockets, multiplayer and realtime features and AI agents that run for minutes, deployed like the rest of your project; it scales to zero when idle. A redesigned Netlify, where you can start an app from a prompt with your choice of agent and model, began rolling out to new users on Nov 18.",
     "categories": [
       "Deploy & Hosting"
     ],
@@ -3752,7 +3753,7 @@
       "previews"
     ],
     "dateAdded": "2026-10-21",
-    "newRelease": false,
+    "newRelease": true,
     "affiliateUrl": "",
     "spend": {
       "light": 0,
@@ -3761,7 +3762,7 @@
       "basis": "Free plan; Personal $9/mo; Pro from $20/mo",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-10-28",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "API",
@@ -3985,7 +3986,7 @@
   {
     "name": "Kling AI",
     "url": "https://klingai.com",
-    "description": "AI video generator whose Kling 4.0 model makes native 30-second clips with up to 10 keyframes, multimodal references, stereo sound effects and multilingual lip sync. The 4.0 API opened to developers on Oct 21 2026. Good for trailers and cutscenes. New Nov 18 2026: Kling Image 4.0, its new image model, is live for all users in Kling's creative studio and via API, with native 8K output, sharper realism, text rendering of up to 2,000 characters in an image, and consistent sets of up to 10 images from one prompt (handy for storyboards and key art).",
+    "description": "AI video generator whose Kling 4.0 model makes native 30-second clips with up to 10 keyframes, multimodal references, stereo sound effects and multilingual lip sync. The 4.0 API opened to developers on Oct 21 2026. Good for trailers and cutscenes. New Nov 18 2026: Kling Image 4.0, its new image model, is live for all users in Kling's creative studio and via API, with native 8K output, sharper realism, text rendering of up to 2,000 characters in an image, and consistent sets of up to 10 images from one prompt (handy for storyboards and key art). New Nov 19 2026: Kling 4.0 now outputs native 4K, plus 10-bit HDR at 1080p and 4K, for richer colour in backlit, night and neon scenes; in the API HDR adds a per-second fee.",
     "categories": [
       "Video & Trailers"
     ],
@@ -4013,7 +4014,7 @@
     "commercialUseNote": "Free plan outputs can't be used commercially without written permission; paid members can use outputs commercially.",
     "commercialUseSource": "https://kling.ai/docs/user-policy",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-19",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "API"
@@ -5810,6 +5811,134 @@
       "heavy": 79,
       "basis": "Pro $25/mo monthly ($20 billed yearly); heavy assumes Team $79/mo for 5 people",
       "checked": "2026-11-19"
+    }
+  },
+  {
+    "name": "Gemini 4 Neon",
+    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+    "description": "Google's middle Gemini 4 model, sitting between Carbon (hardest long-running work) and Hydrogen (fast everyday tasks). Built for complex coding, multi-file debugging and long tool-heavy agent sessions, with a 1M-token context window and four thinking levels (low, medium, high, xhigh). Released Nov 18 2026 in the Gemini API and Google AI Studio (paid tier), in Google Antigravity for paid Google AI Pro and Ultra subscribers, and in the Gemini app for Pro and Ultra. Cursor and GitHub Copilot added it the same day.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Paid tier of the Gemini API only (no free tier): $3 per 1M input tokens, $15 per 1M output tokens including thinking, $0.15 per 1M cached input tokens; Batch is half price. Google AI Pro and Ultra subscribers can pick it in the Gemini app",
+    "tags": [
+      "LLM",
+      "coding model",
+      "agents",
+      "Gemini API",
+      "1M context"
+    ],
+    "dateAdded": "2026-11-20",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-20",
+    "platforms": [
+      "API"
+    ],
+    "platformsSource": "https://aistudio.google.com/docs/pricing",
+    "platformsChecked": "2026-11-20"
+  },
+  {
+    "name": "Genie 4",
+    "url": "https://aistudio.google.com/docs/genie",
+    "description": "Google DeepMind's interactive world model, now open to developers. Start from a text prompt, a 16:9 reference image or both, and it streams a 720p, 24fps world with synced stereo audio (ambience, sound effects, character dialogue) that you walk through with WASD or arrow keys and change mid-session with text, such as new weather, lighting, objects or characters. Sessions cap at 120 seconds and scenes can drift after 60 to 90, so it suits quick prototypes of a game idea or mood rather than real gameplay. Generally available in the Gemini API (Interactions API) and Google AI Studio from Nov 19 2026; Google AI Ultra subscribers also get it in Project Genie.",
+    "categories": [
+      "Game Design & Narrative",
+      "Video & Trailers"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Paid tier of the Gemini API only (no free tier): $1.50 per 1M input tokens, $9 per 1M text output tokens, $17.50 per 1M video output tokens (about $0.10 per second, audio included)",
+    "tags": [
+      "world model",
+      "interactive worlds",
+      "prototyping",
+      "Gemini API",
+      "native audio"
+    ],
+    "dateAdded": "2026-11-20",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-20",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/",
+    "platformsChecked": "2026-11-20"
+  },
+  {
+    "name": "TestSprite",
+    "url": "https://www.testsprite.com/",
+    "description": "AI testing agent that checks your running web app end to end, built for apps made with coding agents. Tell it in plain words what the app should do (or give it a PRD, ticket or repo); it explores the app, writes and runs UI and API tests in real browsers, sorts each failure into a real bug, a test problem or an environment problem with a recording, and keeps approved tests as a regression suite it maintains as the UI changes. Run it from the web app, its open-source CLI (which Claude Code, Codex or Cursor can drive), through MCP in your IDE, or on every GitHub pull request. TestSprite 4.0, a rebuilt testing agent, launched on Product Hunt Nov 19 2026.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (150 credits/mo, 1 repo); Starter $19/mo after a free first month (400 credits); Standard $39/mo (800 credits); Pro $69/mo (1,600 credits); Enterprise from $199/mo",
+    "tags": [
+      "testing agent",
+      "end-to-end tests",
+      "QA",
+      "pull requests",
+      "MCP",
+      "CLI"
+    ],
+    "dateAdded": "2026-11-20",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-20",
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "platformsSource": "https://www.testsprite.com/",
+    "platformsChecked": "2026-11-20",
+    "spend": {
+      "light": 0,
+      "medium": 19,
+      "heavy": 69,
+      "basis": "Free plan; Starter $19/mo (first month free); heavy assumes Pro $69/mo",
+      "checked": "2026-11-20"
+    }
+  },
+  {
+    "name": "Verse Engine",
+    "url": "https://verse.ctruh.com/",
+    "description": "Browser 3D engine from Ctruh that turns a 3D scene into one link anyone can open on a phone or laptop with no app or download, streaming only what the viewer sees so very large scenes load fast. Publish with one button from its Blender, Unity and Unreal plug-ins or upload a file (20+ formats), then share, embed or make private links. Verse Play hosts Blender, Unity or Unreal worlds and web games in a browser tab, and an MCP server lets Claude, ChatGPT, Cursor or VS Code publish a scene for you. Launched on Product Hunt Nov 19 2026.",
+    "categories": [
+      "3D & Models",
+      "Deploy & Hosting"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (3 GB storage, 2 GB bandwidth/mo, uploads up to 1 GB, up to 3 games, Verse badge); Starter $29/mo; Pro $99/mo; Scale $499/mo; Enterprise from $2,000/mo; 14-day Pro trial",
+    "tags": [
+      "3D streaming",
+      "web games",
+      "Unity",
+      "Unreal",
+      "Blender",
+      "MCP"
+    ],
+    "dateAdded": "2026-11-20",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-20",
+    "platforms": [
+      "Web",
+      "API",
+      "Unity",
+      "Unreal",
+      "Blender"
+    ],
+    "platformsSource": "https://verse.ctruh.com/",
+    "platformsChecked": "2026-11-20",
+    "spend": {
+      "light": 0,
+      "medium": 29,
+      "heavy": 99,
+      "basis": "Free plan; Starter $29/mo; heavy assumes Pro $99/mo",
+      "checked": "2026-11-20"
     }
   }
 ]
