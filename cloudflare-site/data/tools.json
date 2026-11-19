@@ -2576,7 +2576,7 @@
     ],
     "exportFormatsSource": "https://elevenlabs.io/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-12",
+    "lastChecked": "2026-11-20",
     "platforms": [
       "Web",
       "iOS",
@@ -2584,7 +2584,27 @@
       "API"
     ],
     "platformsSource": "https://elevenlabs.io/mobile",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-12",
+    "planNote": {
+      "label": "Which plan?",
+      "cta": "See plans on ElevenLabs →",
+      "items": [
+        {
+          "title": "Starter — $6/month",
+          "detail": "Includes a commercial licence, Instant Voice Cloning and Dubbing Studio. A good starting point if you need character voices or narration.",
+          "offer": {
+            "text": "The first month is currently $1."
+          }
+        },
+        {
+          "title": "Creator — $22/month",
+          "detail": "Adds Professional Voice Cloning and more credits (121,000 a month).",
+          "offer": {
+            "text": "The first month is currently 50% off, at $11."
+          }
+        }
+      ]
+    }
   },
   {
     "name": "Murf AI",

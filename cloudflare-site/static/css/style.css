@@ -108,3 +108,12 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 
 .card-badges{display:flex;align-items:center;gap:6px;flex-shrink:0;margin-left:auto}
 .card-badges .deal-badge{margin-left:0}
+
+/* 20 Nov 2026: Which plan? note on tool pages (same shape as the deal box, not a sale) */
+.plan-note{background:linear-gradient(135deg,rgba(124,92,255,.14),rgba(34,211,238,.08));border:1px solid var(--border);border-radius:var(--radius);padding:20px 22px;text-align:left}
+.plan-note h2{font-size:1.15rem;margin:0 0 12px;color:var(--text)}
+.plan-note ul{margin:0 0 14px 18px}
+.plan-note li{margin-bottom:10px;color:var(--text)}
+.plan-note li:last-child{margin-bottom:0}
+.plan-offer{color:var(--muted);font-size:.95rem}
+@media(max-width:800px){.plan-note{padding:16px}}
