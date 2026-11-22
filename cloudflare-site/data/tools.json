@@ -4338,7 +4338,7 @@
   {
     "name": "Higgsfield",
     "url": "https://higgsfield.ai",
-    "description": "AI image and video platform whose new Playable (Oct 26 2026) builds a small 2D or 3D browser game from one prompt, a gameplay idea or your assets, with style, genre and multiplayer options. You can also build from Claude through the Higgsfield MCP. Handy for testing a game idea or making trailer clips.",
+    "description": "AI image and video platform whose new Playable (Oct 26 2026) builds a small 2D or 3D browser game from one prompt, a gameplay idea or your assets, with style, genre and multiplayer options. You can also build from Claude through the Higgsfield MCP. Handy for testing a game idea or making trailer clips. New Nov 2026: GPU Harness rents a cloud computer with the GPU you pick and software such as Blender or Unreal Engine preinstalled, which Claude or ChatGPT can drive through the Higgsfield MCP (type /gpu in Claude) to model, render, run open-weight models or train LoRAs; billed by time while it runs, and the workspace is saved when you stop it.",
     "categories": [
       "Game Design & Narrative",
       "Video & Trailers"
@@ -4350,7 +4350,8 @@
       "video generation",
       "MCP",
       "playable ads",
-      "trailers"
+      "trailers",
+      "cloud GPU"
     ],
     "dateAdded": "2026-10-29",
     "newRelease": true,
@@ -4366,7 +4367,7 @@
     "commercialUseNote": "Higgsfield's help centre says it doesn't restrict commercial use of outputs, for all users. (A search summary claimed the Free plan excludes commercial use; the pricing page didn't load to confirm.)",
     "commercialUseSource": "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-23",
     "platforms": [
       "Web",
       "API",
@@ -5996,5 +5997,132 @@
       "basis": "Free plan; Starter $29/mo; heavy assumes Pro $99/mo",
       "checked": "2026-11-20"
     }
+  },
+  {
+    "name": "Yoroll",
+    "url": "https://yoroll.ai/",
+    "description": "Turns a premise, script, images or video clips into a playable, cinematic story game with player choices and branching endings, without coding or a game engine. Yoroll Agent drafts the plot, script, characters and scenes on a canvas where you map each branch, then generates the video shots and lets you play it through and share it; Yoroll Code builds browser HTML5 mini-games and playable moments (such as a lockpicking scene) with Tripo 3D, Seedance video and sound effects in the same workspace. From LinearGame; launched on Product Hunt Nov 22 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "Video & Trailers"
+    ],
+    "pricing": "unknown",
+    "pricingNote": "No plan prices published on yoroll.ai; the pricing page points to in-app purchases in the mobile app and to the Yoroll team for creator billing",
+    "tags": [
+      "interactive stories",
+      "branching narrative",
+      "AI video",
+      "no-code games",
+      "HTML5 games"
+    ],
+    "dateAdded": "2026-11-23",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-23",
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android"
+    ],
+    "platformsSource": "https://yoroll.ai/",
+    "platformsChecked": "2026-11-23"
+  },
+  {
+    "name": "Volcano",
+    "url": "https://volcano.dev/",
+    "description": "Kong's cloud for apps and agents, built for coding agents to drive: your agent (Claude Code, Codex, Cursor, OpenCode or Pi) uses its CLI and skills to deploy, or you start from a prompt in its AI builder. One place for Next.js and backend hosting, Postgres with pgvector and branching, auth, file storage, realtime, sandboxes, and durable functions that can wait for a human approval and resume for up to a year. LavaFlow watches running apps and agents and proposes fixes for bugs on its own. Released Nov 19 2026; launched on Product Hunt Nov 20.",
+    "categories": [
+      "Deploy & Hosting",
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free Hobby plan (no card; 100K function and frontend views, 1 GB database, 512 MB storage per month); Superagent $20/mo, or $17/mo billed annually, with 1,000 credits a month (extra 1,000 credits $25); Enterprise custom",
+    "tags": [
+      "hosting",
+      "agents",
+      "Postgres",
+      "durable functions",
+      "sandboxes",
+      "CLI"
+    ],
+    "dateAdded": "2026-11-23",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-23",
+    "platforms": [
+      "Web",
+      "CLI"
+    ],
+    "platformsSource": "https://volcano.dev/",
+    "platformsChecked": "2026-11-23",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 20,
+      "basis": "Free Hobby plan; Superagent $20/mo (or $17/mo billed annually); heavier use buys extra credits at $25 per 1,000",
+      "checked": "2026-11-23"
+    }
+  },
+  {
+    "name": "Omi CLI",
+    "url": "https://cli.builditomi.com/",
+    "description": "Terminal coding agent from BuildItOmi that works inside your repo: it plans, shows each edit as a diff you approve, runs your commands and tests, and keeps fixing until they pass, and can check your app in a real browser. Parallel subagents work in separate git worktrees, background agents keep going after you close the terminal, and cloud agents can open pull requests. Auto picks a model per turn from 13 mostly low-cost models (DeepSeek, Gemini, GLM, gpt-oss, Gemma) or you bring your own. macOS and Linux (Windows via WSL), Node.js 18.17+. Launched on Product Hunt Nov 22 2026.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (no card; limited use that refills every 5 hours and every week); Pro $20/mo; Pro+ $60/mo (4x Pro); Max $200/mo (15x Pro); yearly billing gives 2 months free",
+    "tags": [
+      "coding agent",
+      "terminal",
+      "subagents",
+      "worktrees",
+      "open models"
+    ],
+    "dateAdded": "2026-11-23",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-23",
+    "platforms": [
+      "CLI",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://cli.builditomi.com/",
+    "platformsChecked": "2026-11-23",
+    "spend": {
+      "light": 0,
+      "medium": 20,
+      "heavy": 60,
+      "basis": "Free plan; Pro $20/mo; heavy assumes Pro+ $60/mo",
+      "checked": "2026-11-23"
+    }
+  },
+  {
+    "name": "Shipyard",
+    "url": "https://www.shipyardmcp.com/",
+    "description": "Local CLI and MCP server that sets up everything around a vibe-coded app so Claude Code, Cursor or Codex can launch it: from a name, a domain and one paragraph it registers the domain, sets DNS, creates the GitHub repo, hosting and Postgres, email records, Stripe products and webhook, analytics and error tracking, puts the keys in your host and checks the live site, then writes the build prompt for your coding agent. It shows a plan with each provider's price and asks before buying anything; it runs on your computer with your own provider accounts (Railway, Vercel, Cloudflare, Supabase, Resend, Stripe and more). Launched on Product Hunt Nov 21 2026.",
+    "categories": [
+      "Deploy & Hosting"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Launch prices: one launch $50 once; unlimited launches $299/mo after a 7-day free trial (card needed); lifetime $2,500 once. Provider costs such as domain and hosting are extra",
+    "tags": [
+      "MCP",
+      "CLI",
+      "launch setup",
+      "domains",
+      "Stripe",
+      "vibe coding"
+    ],
+    "dateAdded": "2026-11-23",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-23",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://www.shipyardmcp.com/docs",
+    "platformsChecked": "2026-11-23"
   }
 ]
