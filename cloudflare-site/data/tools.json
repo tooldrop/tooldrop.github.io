@@ -6124,5 +6124,50 @@
     ],
     "platformsSource": "https://www.shipyardmcp.com/docs",
     "platformsChecked": "2026-11-23"
+  },
+  {
+    "name": "Happy",
+    "url": "https://happy.engineering/",
+    "description": "Open-source (MIT) desktop app from Happy Engineering for running Claude Code, Codex and Grok in one window, on the subscriptions already signed in on your machine. There is no Happy plan for model access; the vendor says requests go to each provider with your own credentials and are not proxied. By default each model uses that vendor's prompts and tools. You can also hand the agent loop to a vendor's own agent (currently in beta), including Google Antigravity for Gemini, OpenCode, or any Agent Client Protocol (ACP) agent. When two tasks work in the same repository at once, each gets its own Git worktree and branch. Subagents can use any signed-in model, and agents can message each other. Sessions are stored on your machine: they keep running after you close the app and resume after a restart. A free iOS and Android app lets you steer the same sessions from your phone, including by voice. Phone voice has 20 free minutes every 30 days, then an in-app subscription (up to 5 hours per 30 days), or you can use your own ElevenLabs agent. Team mode lets teammates share projects, tasks and sessions. You can self-host the relay server and a team server. The original Happy CLI is still available, in maintenance mode.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Agent Frameworks"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "The app is free and MIT licensed; model access uses the subscriptions or API keys you already pay for. Phone voice is the only Happy-billed feature: 20 free minutes every 30 days, then an in-app subscription (up to 5 hours per 30 days; the subscription price is not published on happy.engineering/voice/). You can also use your own ElevenLabs agent, which Happy does not meter",
+    "tags": [
+      "open source",
+      "coding agent",
+      "harness",
+      "ACP",
+      "worktrees",
+      "mobile",
+      "team"
+    ],
+    "dateAdded": "2026-11-23",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "App is free; model providers are billed separately. Optional phone voice has a free 20-minute allowance every 30 days; the in-app voice subscription price is not published on the vendor's site",
+      "checked": "2026-11-23"
+    },
+    "commercialUse": "yes",
+    "commercialUseNote": "Open source under the MIT licence, which allows commercial use. Check the terms of the model subscriptions or API keys you connect, and of any voice provider you use.",
+    "commercialUseSource": "https://github.com/slopus/happy/blob/main/LICENSE",
+    "rightsChecked": "2026-11-23",
+    "lastChecked": "2026-11-23",
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "iOS",
+      "Android",
+      "CLI"
+    ],
+    "platformsSource": "https://happy.engineering/desktop-app/",
+    "platformsChecked": "2026-11-23"
   }
 ]
