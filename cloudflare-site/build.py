@@ -438,6 +438,24 @@ def sel_unity():
 def sel_deploy():
     return [t for t in tools if "Deploy & Hosting" in t["categories"]]
 
+def sel_unreal():
+    return [t for t in tools if "Unreal" in t.get("platforms", []) or tagged(t, "unreal")]
+
+def sel_store_page():
+    return [t for t in tools if "Marketing & Store Page Copy" in t["categories"]]
+
+def sel_blender():
+    return [t for t in tools if "Blender" in t.get("platforms", []) or tagged(t, "blender")]
+
+def sel_mcp():
+    return [t for t in tools if tagged(t, "MCP")]
+
+def sel_prototypes():
+    """Game-idea prototypes: existing game makers, plus interactive-story and world-model tools."""
+    extra_tags = ("world model", "interactive worlds", "prototyping", "interactive stories", "branching narrative", "no-code games")
+    names = {t["name"] for t in sel_game_makers()}
+    return [t for t in tools if t["name"] in names or tagged(t, *extra_tags)]
+
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
       title="Best AI Pixel Art & Sprite Tools for Game Devs | ToolDrop",
@@ -504,6 +522,37 @@ COMPARISONS = [
       desc="Compare deployment and hosting platforms for apps built with AI: Vercel, Netlify, Cloudflare Pages, Railway, Render, itch.io and more.",
       cats=["Deploy & Hosting"], select=sel_deploy,
       intro="""Built something with an AI coding agent? These are the deployment and hosting platforms in the ToolDrop directory for shipping your vibe-coded app. Vercel (free Hobby plan, Pro $20/mo per seat) handles Next.js and web apps with preview deploys and a global CDN. Netlify (free, Pro from $20/mo) deploys sites from Git with unlimited previews and functions. Cloudflare Pages (free for unlimited sites and bandwidth) is fast static and full-stack hosting on Cloudflare's network. Railway (free $1/mo credit, Hobby $5/mo) deploys backends, databases and workers billed per second. Render (free Hobby workspace) hosts web services, Postgres and cron jobs with Sandboxes for AI agents. Spacefast (free Personal plan) is hosting made for what AI builds, from Automattic. For games, itch.io (free, open revenue share) hosts indie games including browser games. Floot (free tier) builds, hosts and deploys full-stack apps and can publish to iOS and Android. myPip (free) hosts browser games with multiplayer and leaderboards. Pando is open source and self-hosted. Runpod Agents lets coding agents deploy GPU workloads. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-tools-for-unreal/", h1="AI tools for Unreal Engine developers",
+      title="Best AI Tools for Unreal Engine Developers | ToolDrop",
+      desc="Compare AI tools that work with Unreal Engine: 3D assets, playtesting, publishing and game makers, with pricing and free tiers.",
+      cats=["3D & Models", "Game Design & Narrative", "Deploy & Hosting"], select=sel_unreal,
+      faq_topic="Unreal Engine",
+      intro="""Building a game in Unreal Engine? These are the AI tools in the ToolDrop directory that list Unreal as a platform or are tagged with Unreal integration. For 3D assets, Meshy (free tier, Pro $20/mo, Premium $40/mo) and Tripo AI (free tier with 200 credits/mo, Professional $20/mo or $13/mo yearly) generate models you can use in Unreal. Thrixel outputs structured 3D assets with labelled parts and lists Unity and Unreal as platforms; its pricing is not published. Aura Autopilot is an open-source MCP server (Apache-2.0) that lets coding agents playtest Unreal, Unity and Godot games. OhMyGame is an open-source AI game studio that works with Unreal, Unity, Godot and Blender. Tryll Engine is free to develop with and ship until a game passes $200,000 gross revenue, then a 1% royalty, and runs on-device NPC AI for Unity and Unreal. SimplyStream Strata builds an Unreal Engine 5.8 or 6.0 project for the browser, puts it online and plays it to check it works (free with 2 Strata runs a day and $10 trial credits; Indie $25/mo, Studio $250/mo). Verse Engine has an Unreal plug-in that publishes a scene to a browser link (free plan with 3 GB storage and up to 3 games, then Starter $29/mo). Higgsfield's GPU Harness can rent a cloud computer with Unreal Engine preinstalled for Claude or ChatGPT to drive, but Higgsfield is not in the table below because its listing does not yet include Unreal as a platform or tag. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-store-page-tools-for-games/", h1="Best AI tools for game store pages, launch videos and marketing",
+      title="Best AI Tools for Game Store Pages & Marketing | ToolDrop",
+      desc="Compare AI tools for game store pages, launch videos and marketing copy: screenshots, motion, ads and landing pages, with pricing.",
+      cats=["Marketing & Store Page Copy"], select=sel_store_page,
+      faq_topic="store page and marketing",
+      intro="""Need store-page art, launch videos or marketing copy for a game? These are the tools in the ToolDrop directory in the Marketing & Store Page Copy category. For screenshots and product UI, App Store Screenshots is a free, open-source (MIT) skill that scaffolds an editor for App Store and Google Play marketing screenshots, and Stageshow is a free, open-source (MIT) agent skill for polished product UI and animated cursor demos. Clayzo is free to create, embed and export launch videos and motion for your own sites and apps. Hera (free tier, paid plans from $20/mo) is a creative canvas for ads, launch videos and social posts. Ava Studio has a free plan (watermarked 720p) and a Launch plan at $59/mo billed annually ($69 monthly), and makes video ads and launch videos. Klistra is an AI motion-design studio for short launch videos and explainers, with a free start of 350 credits for the first 200 accounts, then Pro at $25/mo ($20/mo billed yearly). SurgePix includes 25 free credits a day, then Basic $9.90/mo. For more general marketing copy, Copy.ai has a free tier (Chat $29/mo), Anyword starts from $49/mo, Jasper's Pro plan is $69/seat/mo ($59 billed annually), and Writesonic starts at $99/mo. Hypotenuse AI does not publish a public price list. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-tools-for-blender/", h1="AI tools for Blender",
+      title="Best AI Tools for Blender | ToolDrop",
+      desc="Compare AI tools that work with Blender: 3D models, animation, publishing and game asset generators, with pricing and free tiers.",
+      cats=["3D & Models", "Game Art & Sprites", "Game Design & Narrative"], select=sel_blender,
+      faq_topic="Blender",
+      intro="""Working in Blender? These are the AI tools in the ToolDrop directory that list Blender as a platform or are tagged with Blender integration. For 3D assets, Meshy (free tier, Pro $20/mo, Premium $40/mo) and Tripo AI (free tier with 200 credits/mo, Professional $20/mo or $13/mo yearly) both list a Blender integration, and 3D AI Studio (Basic $19, Studio $29, Pro $149/mo) also lists Blender as a platform. Scenario has a Blender platform listing and a free 50 credits a day, then Starter $15/mo and Pro $45/mo. Animatica is a Blender-focused animation tool: Choreographer is free (10 cloud generations/mo) and Marionette is $59 once. In the Kimi Work desktop app, Kimi 3D Make can drive Blender, Unity, Godot and Unreal through local plugins; it uses Kimi's shared membership quota (Plus $19/mo, Pro $39, Max $99, Ultra $199 internationally), and free-plan access to 3D Make is not confirmed. Verse Engine has a Blender plug-in that publishes a scene to a browser link (free plan, then Starter $29/mo). OhMyGame is an open-source AI game studio that works with Blender, Unity, Unreal and Godot. Higgsfield's GPU Harness can rent a cloud computer with Blender preinstalled for Claude or ChatGPT to drive, but Higgsfield is not in the table below because its listing does not yet include Blender as a platform or tag. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/mcp-tools-for-vibe-coding/", h1="Best MCP tools for vibe coding and indie game devs",
+      title="Best MCP Tools for Vibe Coding & Game Devs | ToolDrop",
+      desc="Compare MCP tools for vibe coding and indie game devs: agents, game assets, audio, testing and launch setup, grouped by category.",
+      cats=["Agent Frameworks", "AI Coding Agents & IDEs", "Deploy & Hosting", "Game Design & Narrative", "3D & Models", "Code Review & Testing", "Audio, Music & SFX", "Game Art & Sprites", "Video & Trailers", "App Builders"],
+      select=sel_mcp, group_by="category", faq_topic="MCP",
+      intro="""These are the tools in the ToolDrop directory tagged MCP, so a coding agent can drive them through the Model Context Protocol. The table below groups them by category. For launching or hosting, Shipyard sets up a domain, DNS, hosting, Postgres, email and Stripe for a vibe-coded app (one launch $50, or $299/mo after a 7-day trial, plus provider costs), and Verse Engine publishes a 3D scene or web game to a browser link (free plan, Starter $29/mo). AgentKit by Scalekit has a free $0/mo plan with 10,000 tool calls and 10,000 trigger events a month (Growth $99/mo), and Composio has a free Hobby plan with 100,000 tool calls a month (Pro $29/mo). TestSprite writes end-to-end tests (free plan with 150 credits/mo; Starter $19/mo after a free first month). Effigy is an open-source (MIT) local 3D tool with MCP access. Higgsfield, Ludo.ai, Suno, Audio Studio MCP and others in the table cover game assets, audio and video. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-game-idea-prototyping-tools/", h1="Best AI tools for prototyping a game idea",
+      title="Best AI Tools for Prototyping a Game Idea | ToolDrop",
+      desc="Compare AI tools for prototyping a game idea: playable story games, world models and prompt-to-game makers, with pricing and limits.",
+      cats=["Game Design & Narrative", "App Builders", "Video & Trailers"], select=sel_prototypes,
+      faq_topic="game-idea prototyping",
+      intro="""Want to try a game idea quickly? These are the AI tools in the ToolDrop directory for prototyping a playable idea, including prompt-to-game makers plus two newer prototype tools. Genie 4 is Google DeepMind's interactive world model: it streams a 720p, 24fps world with synced audio from a text prompt or a 16:9 image. Sessions cap at 120 seconds, and scenes can drift after 60 to 90 seconds, so it suits a quick prototype of a mood or idea rather than a game you can ship. It is on the paid tier of the Gemini API only (no free tier): $1.50 per 1M input tokens, $9 per 1M text output tokens, and $17.50 per 1M video output tokens (about $0.10 per second, audio included). Yoroll turns a premise, script, images or clips into a playable branching story game without a game engine; plan prices are not published on yoroll.ai (in-app purchases in the mobile app, or the Yoroll team for creator billing). Higgsfield Playable (free plan with no credits and no commercial use; Starter $15/mo) builds a small 2D or 3D browser game from a prompt or your assets. Among the game makers, OhMyGame and DSH Game Studio are free and open source, myPip is a free AI game maker (new accounts get 40 free builds), Stoneleap is free during its public beta, Remix has a free plan then Starter $5/mo, Nilo has a free Starter plan then Builder $29.99/mo, and Wanaka Studio is free to start (see the site for paid plans). Rogue's pricing is not listed in our data. Prices are as listed by each vendor and can change."""),
+
 ]
 
 def names_list(ts):
@@ -513,7 +562,7 @@ def names_list(ts):
 def generate_faqs(ts, cp):
     """Generate 2-3 FAQ Q&A pairs from tools data for a compare page."""
     faqs = []
-    category_name = cp["cats"][0].lower() if cp["cats"] else "tools"
+    category_name = cp.get("faq_topic") or (cp["cats"][0].lower() if cp["cats"] else "tools")
     
     # Q1: What is the best free X tool?
     free_tools = [t for t in ts if t["pricing"] == "free"]
@@ -542,8 +591,24 @@ def generate_faqs(ts, cp):
             answer = f"For typical use, {t['name']} has an estimated monthly cost around ${int(cheapest[0][1])}/mo. {t.get('pricingNote', '').split(';')[0]}."
         faqs.append((f"Which {category_name} tool is cheapest?", answer))
     
-    # Q3: Which tool has the best features for [specific use]?
-    if "App Builders" in cp["cats"]:
+    # Q3: path-specific first, then category fallbacks
+    if "/ai-tools-for-unreal/" in cp["path"]:
+        faqs.append(("Which AI tools work directly with Unreal Engine?", "Aura Autopilot lets coding agents playtest Unreal, Unity and Godot games. OhMyGame works with Unreal, Unity, Godot and Blender. Tryll Engine runs on-device NPC AI for Unity and Unreal. SimplyStream Strata builds an Unreal Engine 5.8 or 6.0 project for the browser. Verse Engine has an Unreal plug-in for publishing a scene to a browser link. Meshy, Tripo AI and Thrixel list Unreal as a platform for 3D assets."))
+    elif "/ai-store-page-tools-for-games/" in cp["path"]:
+        faqs.append(("Which tools are for launch videos and store screenshots?", "App Store Screenshots is a free, open-source skill for App Store and Google Play marketing screenshots. Stageshow is a free, open-source skill for product UI and animated cursor demos. Clayzo, Hera, Ava Studio and Klistra are listed for launch videos, ads or motion design. Check each tool's licence before you use the output commercially."))
+    elif "/ai-tools-for-blender/" in cp["path"]:
+        faqs.append(("Which AI tools work directly with Blender?", "Animatica and Scenario list Blender as a platform. Verse Engine has a Blender plug-in for publishing a scene to a browser link. OhMyGame works with Blender, Unity, Unreal and Godot. Meshy, Tripo AI and 3D AI Studio also list Blender. In the Kimi Work desktop app, Kimi 3D Make can drive Blender through local plugins."))
+    elif "/mcp-tools-for-vibe-coding/" in cp["path"]:
+        faqs.append(("What does the MCP tag mean on these tools?", "Every tool on this page is tagged MCP in the ToolDrop directory, which means it can be driven through the Model Context Protocol by a coding agent such as Claude, Cursor or Codex. The table is grouped by category, and each listing has its own notes on pricing and what the tool does."))
+    elif "/ai-game-idea-prototyping-tools/" in cp["path"]:
+        faqs.append(("Can I ship a finished game with these tools?", "Some of these tools are game makers that can publish a playable game, including myPip, Remix, OhMyGame, Nilo, Stoneleap, Wanaka Studio, Rogue and DSH Game Studio. Genie 4 is not a way to ship a game: sessions cap at 120 seconds, and scenes can drift after 60 to 90 seconds, so it is for a quick prototype of a mood or idea. Yoroll makes a playable branching story game you can share; it is not a traditional game engine."))
+    elif "/ai-game-makers/" in cp["path"]:
+        faqs.append(("Which AI game maker is best for beginners?", "myPip and Remix let you describe a game in plain English and publish it with free tiers. OhMyGame is more powerful but requires running locally with your own API keys."))
+    elif "/ai-tools-for-godot/" in cp["path"]:
+        faqs.append(("Which AI tools integrate directly with Godot?", "Xogot is a Godot-based game engine with a built-in AI agent. Summer Engine is an AI-native game engine built on Godot. Ziva connects to your Godot project. Aura Autopilot lets coding agents playtest Godot games."))
+    elif "/ai-tools-for-unity/" in cp["path"]:
+        faqs.append(("Which AI tools integrate directly with Unity?", "Ludo.ai has a Unity integration. Tryll Engine runs on-device NPC AI for Unity. Effigy and Thrixel export to Unity format. Aura Autopilot and Ziva can playtest Unity games."))
+    elif "App Builders" in cp["cats"]:
         faqs.append(("Which app builder is best for beginners?", "For beginners, Bolt and Lovable let you describe what you want in plain English and handle the code, deployment and hosting. Both have free tiers to try before you pay."))
     elif "Game Art & Sprites" in cp["cats"]:
         pixel_tools = [t for t in ts if tagged(t, "pixel art")]
@@ -558,17 +623,11 @@ def generate_faqs(ts, cp):
         faqs.append(("Which video tool is best for game trailers?", "Runway, Pika and Kling AI generate video from text and images, good for trailer clips. Descript is better for editing devlogs with its transcript-based editing."))
     elif "Audio, Music & SFX" in cp["cats"]:
         faqs.append(("Which tool is best for game soundtracks?", "Suno and Udio generate full tracks with vocals. Soundraw focuses on royalty-free background music with copyright-safe licensing."))
-    elif "Game Design & Narrative" in cp["cats"] and "/ai-game-makers/" in cp["path"]:
-        faqs.append(("Which AI game maker is best for beginners?", "myPip and Remix let you describe a game in plain English and publish it with free tiers. OhMyGame is more powerful but requires running locally with your own API keys."))
-    elif "/ai-tools-for-godot/" in cp["path"]:
-        faqs.append(("Which AI tools integrate directly with Godot?", "Xogot is a Godot-based game engine with a built-in AI agent. Summer Engine is an AI-native game engine built on Godot. Ziva connects to your Godot project. Aura Autopilot lets coding agents playtest Godot games."))
-    elif "/ai-tools-for-unity/" in cp["path"]:
-        faqs.append(("Which AI tools integrate directly with Unity?", "Ludo.ai has a Unity integration. Tryll Engine runs on-device NPC AI for Unity. Effigy and Thrixel export to Unity format. Aura Autopilot and Ziva can playtest Unity games."))
     elif "Deploy & Hosting" in cp["cats"]:
         faqs.append(("Which hosting platform is best for AI-built apps?", "Vercel, Netlify and Cloudflare Pages all have free tiers and work with apps built by AI coding agents. Spacefast is specifically designed for AI-built projects. Railway and Render handle backends and databases."))
     elif "Code Review & Testing" in cp["cats"]:
         faqs.append(("Which code review tool works with AI-generated code?", "CodeRabbit and Greptile review pull requests, including AI-generated ones. Epherem specifically scans AI-built apps for security issues like exposed keys and open database tables."))
-    
+
     return faqs[:3]  # Return at most 3 FAQs
 
 def faq_html(faqs):
@@ -734,8 +793,22 @@ for cp in COMPARISONS:
                 g = [t for t in sub if t["categories"][0] == c]
                 if g: sections.append(f'<h3>{lab}: {i} {e(c)}</h3>\n{compare_table(g)}')
         tables = "\n".join(sections)
+    elif cp.get("group_by") == "category":
+        sections = []
+        used = set()
+        for c,i in CATS:
+            g = [t for t in ts if t["categories"][0] == c]
+            if g:
+                used.update(id(t) for t in g)
+                sections.append(f'<h3>{i} {e(c)}</h3>\n{compare_table(g)}')
+        leftover = [t for t in ts if id(t) not in used]
+        if leftover:
+            sections.append(f'<h3>Other</h3>\n{compare_table(leftover)}')
+        tables = "\n".join(sections)
+        assert tables, cp["path"]
     else:
         tables = compare_table(ts)
+
     rel_cats = " · ".join(f'<a href="/category/{slug(c)}/">{e(c)}</a>' for c in cp["cats"])
     faqs = generate_faqs(ts, cp)
     faq_section = faq_html(faqs) if faqs else ""
