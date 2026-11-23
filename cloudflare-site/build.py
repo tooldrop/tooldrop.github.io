@@ -456,6 +456,28 @@ def sel_prototypes():
     names = {t["name"] for t in sel_game_makers()}
     return [t for t in tools if t["name"] in names or tagged(t, *extra_tags)]
 
+def sel_animation():
+    """Animation tools for games: sprite animation, character animation, motion capture, rigging."""
+    keywords = ["animation", "animate", "rigging", "rig", "mocap", "motion capture", "motion", "skeletal"]
+    game_cats = {"3D & Models", "Game Art & Sprites", "Game Design & Narrative"}
+    def is_animation(t):
+        text = (t["description"] + " " + " ".join(t.get("tags", []))).lower()
+        if not (set(t["categories"]) & game_cats):
+            return False
+        return any(kw in text for kw in keywords)
+    return sorted([t for t in tools if is_animation(t)], key=lambda t: (t["pricing"] != "free", t["pricing"] != "freemium"))
+
+def sel_npc_dialogue():
+    """NPC dialogue, game writing and narrative design tools."""
+    keywords = ["story", "narrative", "dialogue", "npc", "writing", "fiction", "world-building", "quest", "branching"]
+    def is_narrative(t):
+        text = (t["description"] + " " + " ".join(t.get("tags", []))).lower()
+        if any(kw in text for kw in keywords):
+            return True
+        return "Game Design & Narrative" in t["categories"]
+    ts = [t for t in tools if is_narrative(t)]
+    return sorted(ts, key=lambda t: (t["pricing"] != "free", t["pricing"] != "freemium"))
+
 COMPARISONS = [
  dict(path="/compare/ai-pixel-art-tools/", h1="Best AI pixel art and sprite tools for indie game devs",
       title="Best AI Pixel Art & Sprite Tools for Game Devs | ToolDrop",
@@ -552,6 +574,18 @@ COMPARISONS = [
       cats=["Game Design & Narrative", "App Builders", "Video & Trailers"], select=sel_prototypes,
       faq_topic="game-idea prototyping",
       intro="""Want to try a game idea quickly? These are the AI tools in the ToolDrop directory for prototyping a playable idea, including prompt-to-game makers plus two newer prototype tools. Genie 4 is Google DeepMind's interactive world model: it streams a 720p, 24fps world with synced audio from a text prompt or a 16:9 image. Sessions cap at 120 seconds, and scenes can drift after 60 to 90 seconds, so it suits a quick prototype of a mood or idea rather than a game you can ship. It is on the paid tier of the Gemini API only (no free tier): $1.50 per 1M input tokens, $9 per 1M text output tokens, and $17.50 per 1M video output tokens (about $0.10 per second, audio included). Yoroll turns a premise, script, images or clips into a playable branching story game without a game engine; plan prices are not published on yoroll.ai (in-app purchases in the mobile app, or the Yoroll team for creator billing). Higgsfield Playable (free plan with no credits and no commercial use; Starter $15/mo) builds a small 2D or 3D browser game from a prompt or your assets. Among the game makers, OhMyGame and DSH Game Studio are free and open source, myPip is a free AI game maker (new accounts get 40 free builds), Stoneleap is free during its public beta, Remix has a free plan then Starter $5/mo, Nilo has a free Starter plan then Builder $29.99/mo, and Wanaka Studio is free to start (see the site for paid plans). Rogue's pricing is not listed in our data. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-animation-tools-for-games/", h1="AI animation tools for games",
+      title="AI Animation Tools for Games | ToolDrop",
+      desc="Compare AI animation tools for games: sprite animation, character animation, motion capture, rigging and text-to-motion, with pricing.",
+      cats=["3D & Models", "Game Art & Sprites", "Game Design & Narrative"], select=sel_animation,
+      faq_topic="game animation",
+      intro="""Need animations for your game without hand-keying every frame? These are the AI animation tools in the ToolDrop directory for sprite animation, character animation, motion capture and rigging. Animatica is a Blender add-on for character animation: Marionette ($59 one-time) lets you pose a humanoid by dragging a hand or foot while an offline pose model moves the rest, and Choreographer (free, 10 cloud generations/mo) generates motion from prompts. Viggle JST-2 (free to try, API from $0.01/credit) makes animation-ready 3D characters from a single image with no separate rigging, plus full-body motion from text or video exported as GLB or FBX. Scenario (free 50 credits/day, Starter $15/mo) includes text-to-motion with BVH export. Pixel Lab (free trial, Apprentice $12/mo) generates pixel art sprites and animations. Ludo.ai (free credits to start, Indie $15/mo) covers sprites and 3D with animation support. Tripo AI (free tier) and Meshy (free tier) generate textured 3D models, and Tripo AI's Agentic Canvas chains rigging into workflows. Effigy (free, open source MIT) runs locally and outputs rigged and animated 3D models. Spline AI (free tier) has web 3D animations. Lottie AI (free Starter, 10 generations) makes vector Lottie animations for UI motion. Prices are as listed by each vendor and can change."""),
+ dict(path="/compare/ai-npc-dialogue-and-game-writing-tools/", h1="AI tools for game writing, NPC dialogue and narrative design",
+      title="AI Tools for Game Writing & NPC Dialogue | ToolDrop",
+      desc="Compare AI tools for game writing, NPC dialogue and narrative design: story generators, dialogue engines, voice and fiction assistants.",
+      cats=["Game Design & Narrative", "Voice"], select=sel_npc_dialogue,
+      faq_topic="game writing and NPC dialogue",
+      intro="""Need dialogue for NPCs, branching stories or game scripts? These are the AI tools in the ToolDrop directory for game writing and narrative design. For NPC dialogue and in-game AI characters, Tryll Engine (free until $200K revenue, then 1% royalty) runs on-device NPC AI for Unity and Unreal with text-to-speech, so characters understand plain language and respond within your rules. Inworld AI (pay-as-you-go) offers realtime TTS, STT and speech-to-speech for apps that need live voice. For writing fiction and game scripts, Sudowrite (Hobby $19/mo, Professional $29/mo, Max $59/mo) is an AI writing assistant for story generation and editing. NovelAI (from $10/mo) covers storytelling, narrative content and world-building. Spielerando (free to start) is an MCP workbench that checks branching stories and game logic before your coding agent builds. OhMyGame (free, open source Apache-2.0) drafts design docs and interactive stories. For voice acting on those scripts, Gemini 3.8 Flash TTS (free tier) has 2,000+ voices with per-line acting direction, handy for NPC voices. Mistral Voxtral 3 ($13 per 1M characters) has voice cloning with emotion and pace tags. The game makers on this page, like myPip, Remix, Nilo and Rogue, also handle game logic and dialogue as part of building the game. Prices are as listed by each vendor and can change."""),
 
 ]
 
@@ -760,7 +794,8 @@ for t in tools:
     os_list = [p for p in plats(t) if p in ("Web", "Windows", "macOS", "Linux", "iOS", "Android")]
     if os_list: sw["operatingSystem"] = ", ".join(os_list)
     elif any("browser" in g for g in tags_lc(t)): sw["operatingSystem"] = "Web"
-    if t["pricing"] == "free": sw["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+    if t["pricing"] in ("free", "freemium"):
+        sw["offers"] = {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
     if t.get("spend"):
         sw["additionalProperty"] = {"@type": "PropertyValue", "name": "Estimated monthly spend (USD, rough estimate)", "value": spend_text(t),
                                     "description": f'Light {t["spend"]["light"]}, medium {t["spend"]["medium"]}, heavy {t["spend"]["heavy"] if t["spend"]["heavy"] is not None else "not listed"} USD/mo. {t["spend"]["basis"]}. {spend_caveat_for(t)}'}
@@ -887,8 +922,10 @@ for c,_ in CATS:
     L += [f"## {c}", ""] + [f"- [{t['name']}]({SITE}{tool_path(t)}): {t['description']} Pricing: {price_text(t)}. Est. monthly spend: {spend_text(t).replace(" · est.", " (est.)")}" for t in in_cat(c)] + [""]
 L += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
 L += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
+L += ["## About", "", f"- [About ToolDrop]({SITE}/about/): who runs the site and what it covers.",
+      f"- [Affiliate disclosure]({SITE}/disclosure/): how ToolDrop handles affiliate links, paid placements and sponsored newsletter issues. Some links on the site are affiliate links; ToolDrop may earn a commission at no cost to you, but it never affects which tools are listed or how they are ranked.", ""]
 L += ["## More", "", f"- [New releases]({SITE}/new-releases/): the newest tools added to the directory.",
-      f"- [Newsletter]({SUB}): weekly ToolDrop newsletter on Substack.", f"- [Affiliate disclosure]({SITE}/disclosure/): how affiliate links and sponsorships are handled.",
+      f"- [Newsletter]({SUB}): weekly ToolDrop newsletter on Substack.",
       f"- [Full tool data]({SITE}/llms-full.txt): every tool with all fields.", ""]
 open(f"{OUT}/llms.txt", "w").write("\n".join(L))
 F = ["# ToolDrop: full tool list", "", f"> Every tool in the ToolDrop directory ({len(tools)} tools), with all fields, grouped by category. Generated {TODAY} from tools.json. Tools in more than one category appear under each.", "",
@@ -907,6 +944,8 @@ for c,_ in CATS:
         F.append("")
 F += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
 F += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
+F += ["## About", "", f"- [About ToolDrop]({SITE}/about/): who runs the site and what it covers.",
+      f"- [Affiliate disclosure]({SITE}/disclosure/): how ToolDrop handles affiliate links, paid placements and sponsored newsletter issues. Some links on the site are affiliate links; ToolDrop may earn a commission at no cost to you, but it never affects which tools are listed or how they are ranked.", ""]
 open(f"{OUT}/llms-full.txt", "w").write("\n".join(F))
 
 # sitemap, robots, headers
