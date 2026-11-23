@@ -1542,7 +1542,7 @@
   {
     "name": "Replit",
     "url": "https://replit.com",
-    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly. New in Oct 2026: Cloud Agents let anyone on a team describe a change in plain words; the agent tests it in the running app and opens a reviewed GitHub PR or GitLab MR (Pro and Enterprise). New Nov 18 2026: local work is generally available in the Replit Desktop app for Windows, Mac and Linux. You choose which folders Agent can use, and it builds and runs apps on your own computer, in local sandboxes on supported Windows and macOS devices.",
+    "description": "Browser-based IDE with AI assistant for coding, debugging, and deploying apps instantly. New in Oct 2026: Cloud Agents let anyone on a team describe a change in plain words; the agent tests it in the running app and opens a reviewed GitHub PR or GitLab MR (Pro and Enterprise). New Nov 18 2026: local work is generally available in the Replit Desktop app for Windows, Mac and Linux. You choose which folders Agent can use, and it builds and runs apps on your own computer, in local sandboxes on supported Windows and macOS devices. New Nov 20 2026: Missions. Give Replit a bigger goal and first agree on the approach, success criteria, a maximum AI spend in USD, the model, and actions that need your approval or are off-limits; Replit then coordinates agents to plan, build, test and iterate, and reviews the result against the agreed criteria (start with /mission).",
     "categories": [
       "AI Coding Agents & IDEs",
       "App Builders"
@@ -1566,7 +1566,7 @@
       "basis": "Free Starter; Core $20/mo; heavy assumes Pro $100/mo; agent overage extra",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-11-19",
+    "lastChecked": "2026-11-24",
     "platforms": [
       "Web",
       "iOS",
@@ -3327,7 +3327,7 @@
   {
     "name": "OpenCode",
     "url": "https://opencode.ai",
-    "description": "Open-source AI coding agent that works in your terminal, desktop app or IDE, with free models included or any provider's models. New Nov 16 2026: OpenCode Browse (free, MIT), an MCP server plus Chromium extension that lets OpenCode, Claude Code, Cursor, Codex and other MCP clients use your real browser with your tabs and logins. Agent tabs open in the background, and it hands the tab back to you for a login, 2FA or payment.",
+    "description": "Open-source AI coding agent that works in your terminal, desktop app or IDE, with free models included or any provider's models. New Nov 16 2026: OpenCode Browse (free, MIT), an MCP server plus Chromium extension that lets OpenCode, Claude Code, Cursor, Codex and other MCP clients use your real browser with your tabs and logins. Agent tabs open in the background, and it hands the tab back to you for a login, 2FA or payment. New Nov 23 2026 (v2.4.0): a built-in desktop browser that imports your sign-ins, history and Chrome or Edge extensions so the agent can read and drive the same signed-in pages; Automations, where the agent runs a prompt, script or shell command on a timer, cron schedule or MCP event (manage with /automation); and a generate_video tool when a connected provider has a video model.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -3338,7 +3338,8 @@
       "terminal",
       "coding agent",
       "multi-session",
-      "browser automation"
+      "browser automation",
+      "automation"
     ],
     "dateAdded": "2026-10-16",
     "newRelease": true,
@@ -3350,7 +3351,7 @@
       "basis": "Open source; free models included, or pay your own model provider",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-11-18",
+    "lastChecked": "2026-11-24",
     "platforms": [
       "Windows",
       "macOS",
@@ -6169,5 +6170,182 @@
     ],
     "platformsSource": "https://happy.engineering/desktop-app/",
     "platformsChecked": "2026-11-23"
+  },
+  {
+    "name": "Miso Editor",
+    "url": "https://miso-editor.com/",
+    "description": "Windows desktop tool from Robe of Fire that turns a 3D character into 2D game sprite sheets in 1 to 64 directions. Import your own GLB, FBX, OBJ or ZIP model (or the sample character), and Auto Build rigs it on your PC, applies motions you drag in (for example from Mixamo), fits a one-handed weapon, greatsword or shield with baked slash trails, and renders sheets with camera presets for isometric, top-down, side view or first-person, including limited-palette pixel-art output. Exports packed PNG sheets, Aseprite JSON, grid PNG + JSON, RPG Maker MZ walking sheets and rigged FBX/GLB. The itch.io full version can also start from a picture (draw with your own OpenAI key, convert to 3D with your own Tripo key, about $0.30 a model) and has BLOCKIFY, which uses your signed-in Claude Code or Codex to make a blocky version; the Steam version starts from a 3D model. An optional MCP mode lets Claude Code or Codex run the rigging, motion and baking steps. Released Nov 23 2026 (Early Access on Steam).",
+    "categories": [
+      "Game Art & Sprites",
+      "3D & Models"
+    ],
+    "pricing": "paid",
+    "pricingNote": "$18.99 one-time (no subscription), on itch.io (full version) or Steam (limited version: no picture or picture-to-3D steps). Launch price until Dec 6-7 2026: itch.io $14.81, Steam $13.29. Price will rise as features are added, up to $24.99 at full release. Optional picture steps are paid directly to OpenAI or Tripo with your own key",
+    "tags": [
+      "sprites",
+      "sprite sheets",
+      "pixel art",
+      "rigging",
+      "animation",
+      "RPG Maker",
+      "MCP"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "platformsSource": "https://miso-editor.com/",
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24",
+    "platformsChecked": "2026-11-24"
+  },
+  {
+    "name": "Hydrilla",
+    "url": "https://www.hydrilla.ai/",
+    "description": "AI 3D asset generator for game, film and XR teams. Its BlueFox 1 model turns a text prompt or one reference image into a segmented mesh with PBR maps (base color, metalness, roughness, normals) that you inspect in the browser and export as GLB, FBX, OBJ or USDZ. Includes the Hydrilla Agent chat assistant, editor plug-ins for Blender, Maya, 3ds Max, Unity, Unreal Engine and Godot 4 (generate in the editor or send models from Studio over a local Bridge), a local MCP server for Claude Code, Cursor or Codex, and a REST API. Launched on Product Hunt Nov 23 2026.",
+    "categories": [
+      "3D & Models"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free plan (100 credits a month); Starter $5/mo (900 credits); Pro $12/mo (3,000 credits, REST API access); cheaper Hourly plans ($3 and $8/mo) if you generate in a chosen daily window. A text-to-3D model costs 45 credits and image-to-3D 30 at default quality. Paid plans have a 14-day trial (card needed)",
+    "tags": [
+      "text-to-3D",
+      "image-to-3D",
+      "PBR",
+      "game assets",
+      "MCP",
+      "API"
+    ],
+    "exportFormats": [
+      "GLB",
+      "FBX",
+      "OBJ",
+      "USDZ"
+    ],
+    "exportFormatsSource": "https://www.hydrilla.ai/",
+    "platforms": [
+      "Web",
+      "API",
+      "Blender",
+      "Unity",
+      "Unreal",
+      "Godot"
+    ],
+    "platformsSource": "https://www.hydrilla.ai/integrations",
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24",
+    "platformsChecked": "2026-11-24",
+    "rightsChecked": "2026-11-24"
+  },
+  {
+    "name": "Relu Spatial",
+    "url": "https://reluspatial.com/editor",
+    "description": "Free desktop editor for 3D, AR and VR games with a built-in AI agent: describe a game and it asks a few questions, writes a design doc you approve, then builds the scene, scripts, UI, sound and lighting in the editor, finds free Sketchfab models or generates, rigs and animates new 3D assets from text or a picture, and playtests at phone, tablet and desktop sizes to fix what it finds. You can also edit everything by hand (outliner, inspector, audio and animation tools, profiler). Publish to a shareable web link that opens on phones, laptops and headsets, build Android and iPhone apps, and add multiplayer with one switch. macOS and Windows, needs Node.js 20+. Agent editor introduced Nov 23 2026.",
+    "categories": [
+      "App Builders",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Editor is free to download. Hosting for published projects: Free (1 live project, Relu branding), Starter $5/mo, Pro $10/mo, Studio $20/mo (about 17% off annually). AI credits are pay as you go ($0.055 each, about 33 credits per textured 3D model) or bring your own Meshy key. Self-hosted multiplayer is free",
+    "tags": [
+      "game engine",
+      "vibe coding",
+      "WebXR",
+      "3D",
+      "multiplayer",
+      "playtesting",
+      "browser games"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows"
+    ],
+    "platformsSource": "https://reluspatial.com/editor",
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24",
+    "platformsChecked": "2026-11-24"
+  },
+  {
+    "name": "Lumina SFX",
+    "url": "https://github.com/LuminaBench/lumina-sfx",
+    "description": "Free agent skill from LuminaBench that gives your coding agent an offline sound studio: it searches 2,844 editable sound effects, layers and tunes them for a scene (menu clicks, footsteps, engines, a storm around a campfire) and exports WAVs, or Ogg/Opus with a local FFmpeg. It can install playback helpers for Web Audio / Three.js, Godot 4, Unity, Unreal Engine 5 and Pygame, and runs a QA check on loudness, peaks and loop points. Install with `npx skills add LuminaBench/lumina-sfx -g` (Git and Node.js 22.20+). Released Nov 23 2026.",
+    "categories": [
+      "Audio, Music & SFX"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free. Engine and tools are MIT; sounds can be used in personal or commercial games, apps and videos with no royalties or credit, but the sound bank can't be redistributed or resold as a competing SFX pack, sample library, dataset or agent skill",
+    "tags": [
+      "sound effects",
+      "agent skill",
+      "game audio",
+      "offline",
+      "Godot",
+      "Unity"
+    ],
+    "commercialUse": "yes",
+    "commercialUseNote": "The README says you can render, modify and ship the sounds in personal or commercial games, apps, videos and demos for free, with no royalties or audio credit. You may not redistribute or resell the sound bank or rendered collections as a competing SFX pack, sample library, training dataset or agent skill.",
+    "commercialUseSource": "https://github.com/LuminaBench/lumina-sfx",
+    "rightsChecked": "2026-11-24",
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/LuminaBench/lumina-sfx",
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24",
+    "platformsChecked": "2026-11-24"
+  },
+  {
+    "name": "GLM Coding Plan",
+    "url": "https://z.ai/subscribe",
+    "description": "Z.ai's subscription for using its GLM models inside coding agents such as Claude Code, Codex, OpenCode, Cline and its own ZCode, with usage limits that reset every 5 hours and weekly. New Nov 23 2026: GLM-5.4, Z.ai's first Loop Transformer model (it runs part of its layers twice for deeper reasoning, 1M context), is live for all plan subscribers. Z.ai pitches it at 'generalized coding': writing code that builds complete games, 3D scenes with custom shaders, videos and CAD models, with new vision input for visual coding. The public API and open weights are announced as coming later. All plans also include GLM-5.3, GLM-5.3-Flash and web search, web reader and Zread MCP tools.",
+    "categories": [
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Lite, Pro and Max plans, starting at $18/mo (Lite) according to Z.ai's plan docs; see z.ai/subscribe for current Pro and Max prices",
+    "tags": [
+      "LLM",
+      "coding agents",
+      "Claude Code",
+      "MCP",
+      "open models"
+    ],
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24"
+  },
+  {
+    "name": "Motionflare",
+    "url": "https://motionflare.ai/",
+    "description": "Turns a website URL or a one-sentence description into an on-brand launch or marketing video in about ten minutes. It reads your site and uses your real logo, colours, copy and screenshots to make motion-graphics videos (up to 90s) with music and optional narration, or switch to Film mode for a live-action commercial (up to 45s) made with video models such as Seedance and HeyGen. Edit by chatting and only the part you mention changes; export up to 4K, in 21 languages. Launched on Product Hunt Nov 23 2026.",
+    "categories": [
+      "Video & Trailers",
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free: 6 one-time credits to create and preview watermarked 10s videos. Credit packs from $15 (40 credits, never expire); Pro $29/mo (100 credits); Max $99/mo (500 credits); Ultra $950/mo. Videos are billed per finished second at a rate that depends on the model",
+    "tags": [
+      "launch videos",
+      "video ads",
+      "motion graphics",
+      "trailers"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://motionflare.ai/pricing",
+    "dateAdded": "2026-11-24",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-24",
+    "platformsChecked": "2026-11-24"
   }
 ]
