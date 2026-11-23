@@ -468,14 +468,13 @@ def sel_animation():
     return sorted([t for t in tools if is_animation(t)], key=lambda t: (t["pricing"] != "free", t["pricing"] != "freemium"))
 
 def sel_npc_dialogue():
-    """NPC dialogue, game writing and narrative design tools."""
-    keywords = ["story", "narrative", "dialogue", "npc", "writing", "fiction", "world-building", "quest", "branching"]
-    def is_narrative(t):
-        text = (t["description"] + " " + " ".join(t.get("tags", []))).lower()
-        if any(kw in text for kw in keywords):
-            return True
-        return "Game Design & Narrative" in t["categories"]
-    ts = [t for t in tools if is_narrative(t)]
+    """NPC dialogue, game writing and narrative design tools (explicit allow-list)."""
+    allow_list = {
+        "Tryll Engine", "Inworld AI", "Sudowrite", "NovelAI", "Spielerando", "OhMyGame",
+        "Gemini 3.8 Flash TTS", "Mistral Voxtral 3", "Yoroll", "RPG Studio", "DSH Game Studio",
+        "myPip", "Remix", "Nilo", "Rogue",
+    }
+    ts = [t for t in tools if t["name"] in allow_list]
     return sorted(ts, key=lambda t: (t["pricing"] != "free", t["pricing"] != "freemium"))
 
 COMPARISONS = [
@@ -585,7 +584,7 @@ COMPARISONS = [
       desc="Compare AI tools for game writing, NPC dialogue and narrative design: story generators, dialogue engines, voice and fiction assistants.",
       cats=["Game Design & Narrative", "Voice"], select=sel_npc_dialogue,
       faq_topic="game writing and NPC dialogue",
-      intro="""Need dialogue for NPCs, branching stories or game scripts? These are the AI tools in the ToolDrop directory for game writing and narrative design. For NPC dialogue and in-game AI characters, Tryll Engine (free until $200K revenue, then 1% royalty) runs on-device NPC AI for Unity and Unreal with text-to-speech, so characters understand plain language and respond within your rules. Inworld AI (pay-as-you-go) offers realtime TTS, STT and speech-to-speech for apps that need live voice. For writing fiction and game scripts, Sudowrite (Hobby $19/mo, Professional $29/mo, Max $59/mo) is an AI writing assistant for story generation and editing. NovelAI (from $10/mo) covers storytelling, narrative content and world-building. Spielerando (free to start) is an MCP workbench that checks branching stories and game logic before your coding agent builds. OhMyGame (free, open source Apache-2.0) drafts design docs and interactive stories. For voice acting on those scripts, Gemini 3.8 Flash TTS (free tier) has 2,000+ voices with per-line acting direction, handy for NPC voices. Mistral Voxtral 3 ($13 per 1M characters) has voice cloning with emotion and pace tags. The game makers on this page, like myPip, Remix, Nilo and Rogue, also handle game logic and dialogue as part of building the game. Prices are as listed by each vendor and can change."""),
+      intro="""Need dialogue for NPCs, branching stories or game scripts? These are the AI tools in the ToolDrop directory for game writing and narrative design. For NPC dialogue and in-game AI characters, Tryll Engine (free until $200K revenue, then 1% royalty) runs on-device NPC AI for Unity and Unreal with text-to-speech, so characters understand plain language and respond within your rules. Inworld AI (pay-as-you-go) offers realtime TTS, STT and speech-to-speech for apps that need live voice. For writing fiction and game scripts, Sudowrite (Hobby $19/mo, Professional $29/mo, Max $59/mo) is an AI writing assistant for story generation and editing. NovelAI (from $10/mo) covers storytelling, narrative content and world-building. Spielerando (free to start) is an MCP workbench that checks branching stories and game logic before your coding agent builds. OhMyGame (free, open source Apache-2.0) drafts design docs and interactive stories. For voice acting on those scripts, Gemini 3.8 Flash TTS (free tier) has 2,000+ voices with per-line acting direction, handy for NPC voices. Mistral Voxtral 3 ($13 per 1M characters) has voice cloning with emotion and pace tags. For interactive stories and game makers that handle narrative, Yoroll turns premises into playable branching story games, RPG Studio (Indie Dev $25/mo) makes 2D RPGs with an AI agent for maps and events, and DSH Game Studio (free, open source) exports browser games as a single HTML file. myPip (free), Remix (free plan, Starter $5/mo), Nilo (Starter free, Builder $29.99/mo) and Rogue also handle game logic and dialogue as part of building the game. Prices are as listed by each vendor and can change."""),
 
 ]
 
