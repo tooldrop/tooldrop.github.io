@@ -3077,27 +3077,29 @@
   {
     "name": "Hypotenuse AI",
     "url": "https://www.hypotenuse.ai",
-    "description": "AI content platform for e-commerce product descriptions and marketing copy.",
+    "description": "AI-first PXM platform for e-commerce: product data enrichment, SEO-optimized descriptions in your brand voice, AI image editing, and performance tracking across your catalog.",
     "categories": [
       "Marketing & Store Page Copy"
     ],
     "pricing": "paid",
-    "pricingNote": "No public price list; contact sales for a quote",
+    "pricingNote": "Basic plan (1 seat, limited features); Ecommerce Enterprise (custom pricing, contact sales)",
     "tags": [
       "e-commerce",
       "product descriptions",
-      "batch content"
+      "batch content",
+      "PIM",
+      "SEO"
     ],
     "dateAdded": "2024-09-05",
     "affiliateUrl": "",
     "spend": null,
-    "lastChecked": "2024-09-05",
+    "lastChecked": "2026-11-24",
     "platforms": [
       "Web",
       "API"
     ],
     "platformsSource": "https://www.hypotenuse.ai",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-24"
   },
   {
     "name": "Anyword",
