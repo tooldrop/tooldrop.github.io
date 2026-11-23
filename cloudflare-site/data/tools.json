@@ -2576,7 +2576,18 @@
     ],
     "exportFormatsSource": "https://elevenlabs.io/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-20",
+    "deal": {
+      "label": "Black Friday deal",
+      "items": [
+        {
+          "title": "Up to 55% off Creator and Pro annual plans",
+          "detail": "Creator annual is $99 for the first year (55% off the regular $220). Pro annual is $445.50 for the first year (55% off the regular $990) for new and upgrading subscribers, or $495 (50% off) if you already pay Pro monthly and switch to annual. The discount applies at checkout; there is no promo code. The offer ends at 11:59pm ET on 1 Dec 2026. After the first year, the plan renews at the regular annual price.",
+          "starts": "2026-11-16",
+          "ends": "2026-12-01"
+        }
+      ]
+    },
+    "lastChecked": "2026-11-24",
     "platforms": [
       "Web",
       "iOS",
@@ -3077,27 +3088,29 @@
   {
     "name": "Hypotenuse AI",
     "url": "https://www.hypotenuse.ai",
-    "description": "AI content platform for e-commerce product descriptions and marketing copy.",
+    "description": "AI-first PXM platform for e-commerce: product data enrichment, SEO-optimized descriptions in your brand voice, AI image editing, and performance tracking across your catalog.",
     "categories": [
       "Marketing & Store Page Copy"
     ],
     "pricing": "paid",
-    "pricingNote": "No public price list; contact sales for a quote",
+    "pricingNote": "Basic plan (1 seat, limited features); Ecommerce Enterprise (custom pricing, contact sales)",
     "tags": [
       "e-commerce",
       "product descriptions",
-      "batch content"
+      "batch content",
+      "PIM",
+      "SEO"
     ],
     "dateAdded": "2024-09-05",
     "affiliateUrl": "",
     "spend": null,
-    "lastChecked": "2024-09-05",
+    "lastChecked": "2026-11-24",
     "platforms": [
       "Web",
       "API"
     ],
     "platformsSource": "https://www.hypotenuse.ai",
-    "platformsChecked": "2026-11-12"
+    "platformsChecked": "2026-11-24"
   },
   {
     "name": "Anyword",
