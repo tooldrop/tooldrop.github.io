@@ -1676,7 +1676,7 @@
   {
     "name": "Claude",
     "url": "https://claude.ai",
-    "description": "Advanced AI assistant by Anthropic with strong coding capabilities and long context windows. New Nov 9 2026: Claude Fable 5.2, Anthropic's model for the hardest long-running coding work, is available to all users in the Claude apps and Claude Code and on the API, faster and cheaper than Fable 5.1 (Anthropic suggests starting with Opus 5.5 for everyday coding).",
+    "description": "Advanced AI assistant by Anthropic with strong coding capabilities and long context windows. New Nov 9 2026: Claude Fable 5.2, Anthropic's model for the hardest long-running coding work, is available to all users in the Claude apps and Claude Code and on the API, faster and cheaper than Fable 5.1 (Anthropic suggests starting with Opus 5.5 for everyday coding). New Nov 23 2026: Claude Ship (beta, Team and Enterprise plans, GitHub repos) takes a pull request through Code Review, PR Steward (fixes failing CI, merge conflicts and review comments, but doesn't merge) and Claude Approvals (approves routine changes allowed by a policy file in your repo); developers can run /ship in Claude Code.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1686,7 +1686,8 @@
       "chat",
       "coding",
       "long context",
-      "Anthropic"
+      "Anthropic",
+      "code review"
     ],
     "dateAdded": "2024-08-01",
     "featured": true,
@@ -1698,7 +1699,7 @@
       "basis": "Free tier; Pro $20/mo ($17 annual); heavy assumes Max from $100/mo",
       "checked": "2026-10-28"
     },
-    "lastChecked": "2026-11-16",
+    "lastChecked": "2026-11-25",
     "platforms": [
       "Web",
       "Windows",
@@ -2013,7 +2014,7 @@
   {
     "name": "Scenario",
     "url": "https://www.scenario.com",
-    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio. New Nov 2026: text-to-motion (NVIDIA Kimodo Text to Motion) turns a prompt into a 3D skeleton animation, up to 10 seconds at 30fps, with BVH export. New Nov 19 2026: Scenario for Photoshop, a free, open-source (MIT) Photoshop plug-in that runs Scenario generations from a panel and lands results as editable layers, or lets Claude Code, Codex, Cursor or Claude Desktop drive it through a local MCP server, asking you to approve each credit spend. Version 0.8.0: installed from a .ccx download (not on the Adobe marketplace yet) and tested on macOS.",
+    "description": "AI-powered creative production platform with 650+ models for game art, video, 3D, and audio. New Nov 2026: text-to-motion (NVIDIA Kimodo Text to Motion) turns a prompt into a 3D skeleton animation, up to 10 seconds at 30fps, with BVH export. New Nov 19 2026: Scenario for Photoshop, a free, open-source (MIT) Photoshop plug-in that runs Scenario generations from a panel and lands results as editable layers, or lets Claude Code, Codex, Cursor or Claude Desktop drive it through a local MCP server, asking you to approve each credit spend. Version 0.8.0: installed from a .ccx download (not on the Adobe marketplace yet) and tested on macOS. New Nov 24 2026: Scenario Claude Fable 5.2 3D builds editable 3D objects from text or up to 8 reference images (named parts, per-part materials, often rigged, up to 2M triangles, Blender file included); best for props and hard-surface subjects, not characters.",
     "categories": [
       "Game Art & Sprites"
     ],
@@ -2059,7 +2060,7 @@
     ],
     "exportFormatsSource": "https://www.scenario.com/pricing",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-20",
+    "lastChecked": "2026-11-25",
     "platforms": [
       "Web",
       "API",
@@ -6360,5 +6361,178 @@
     "affiliateUrl": "",
     "lastChecked": "2026-11-24",
     "platformsChecked": "2026-11-24"
+  },
+  {
+    "name": "GraphCode",
+    "url": "https://graphcode.dev/",
+    "description": "A text language for Unreal Engine games that both you and your AI can read and edit: describe what you want in plain words to Claude, ChatGPT or another model, it writes GraphCode, and Unreal builds native assets from it (meshes, rigs, hair, animation, VFX, materials, worlds, Blueprints and gameplay AI), checked after every build. Because the whole game is readable text, changes can be reviewed, diffed and merged in Git, and a Play module lets the AI start the game, play it like a tester and compare snapshots. Launched Nov 23 2026 (US time).",
+    "categories": [
+      "3D & Models",
+      "Game Design & Narrative"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "14-day free trial, no card. Core and Shape (3D models from text) modules are free; other modules are one-time lifetime licences: Individual $100 per module ($400 for all), Studio $200 per module per user ($900 for all). Prices in USD",
+    "tags": [
+      "Unreal Engine",
+      "procedural",
+      "text to 3D",
+      "animation",
+      "Blueprints",
+      "version control"
+    ],
+    "platforms": [
+      "Unreal"
+    ],
+    "platformsSource": "https://graphcode.dev/",
+    "platformsChecked": "2026-11-25",
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "Taan",
+    "url": "https://taan.ai/",
+    "description": "Music generator from a small Y Combinator-backed team, built for direction rather than one-shot songs: tell it exactly what plays and when (a beat drop at 0:12, when an instrument comes in), start from text, a hum, MIDI, an image, a video or a script, and change one part or instrument without regenerating the whole track. Handy for scoring trailers and cut-scenes to the second. Web studio plus an API and an MCP server so coding agents can create music; WAV or MP3 with separate stems. Taan V1 launched Nov 24 2026.",
+    "categories": [
+      "Audio, Music & SFX",
+      "Video & Trailers"
+    ],
+    "pricing": "paid",
+    "pricingNote": "Creator $15/mo (25 minutes of music, 15,000 credits); Agency $45/mo (60 minutes, 36,000 credits); Enterprise custom. Add-on credits available",
+    "tags": [
+      "music generation",
+      "soundtrack",
+      "stems",
+      "MIDI",
+      "MCP",
+      "API"
+    ],
+    "commercialUse": "yes",
+    "commercialUseNote": "The pricing page lists commercial rights as included on the Creator and Agency plans. Taan says its model is trained on 100% licensed data.",
+    "commercialUseSource": "https://taan.ai/pricing",
+    "exportFormats": [
+      "WAV",
+      "MP3"
+    ],
+    "exportFormatsSource": "https://taan.ai/docs/",
+    "rightsChecked": "2026-11-25",
+    "platforms": [
+      "Web",
+      "API"
+    ],
+    "platformsSource": "https://taan.ai/",
+    "platformsChecked": "2026-11-25",
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "tday.com",
+    "url": "https://tday.com/",
+    "description": "Paste one prompt into Claude Code, Cursor or Codex and your coding agent records a demo of your real app on your machine through tday.com's local MCP server; tday.com then adds voiceover, cursor, zooms, captions and your branding and renders a narrated demo you can edit line by line. Records web, desktop, terminal, iPhone and Android apps, and paid plans flag demos that a merged PR has put out of date. Useful for launch videos, store pages and docs without filming anything. Launched on Product Hunt Nov 24 2026.",
+    "categories": [
+      "Video & Trailers",
+      "Marketing & Store Page Copy"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free: 5 saved demos, 100 credits/mo (about 10 min of voiceover), tday.com badge and watermarked downloads. Pro $39/mo (25 demos, no badge or watermark); Growth $149/mo (150 demos, auto docs updates, 14-day trial on approval); Enterprise custom",
+    "tags": [
+      "demo videos",
+      "launch videos",
+      "MCP",
+      "Claude Code",
+      "docs"
+    ],
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "FireVoice",
+    "url": "https://firevoice.fabwaseem.com/",
+    "description": "Free, open-source (MIT) voice app that runs entirely on your own computer: text to speech with a library of voices, voice cloning from a short sample, voices designed from a description, multi-speaker dialogue, dubbing into other languages, a voice changer, sound effects and transcription with SRT captions, plus system-wide dictation. Works offline, so it's a private way to make placeholder or final character dialogue. A recent NVIDIA GPU makes the voice studio fastest. Shown on Hacker News Nov 24 2026 (v2.0.2).",
+    "categories": [
+      "Voice"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free for everyone, no account needed; MIT-licensed source on GitHub",
+    "tags": [
+      "text-to-speech",
+      "voice cloning",
+      "dubbing",
+      "offline",
+      "open source",
+      "dictation"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "platformsSource": "https://firevoice.fabwaseem.com/",
+    "platformsChecked": "2026-11-25",
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "Granular",
+    "url": "https://granular.build/",
+    "description": "Desktop AI workspace that plugs into the Claude, Codex or Gemini subscription you already have: give a 'boss' agent your goal and it coordinates worker agents in parallel, with real terminals, files, live previews, plugins and a per-project memory in one visual canvas, so non-coders can build apps, designs or videos and push to GitHub. Optional hosted models if you don't have a subscription. Mac (Apple Silicon or Intel) and Windows (beta). Launched on Product Hunt Nov 24 2026.",
+    "categories": [
+      "App Builders",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free with your own AI login (1 boss + 2 worker agents, 2 projects, 4 sessions per project). Pro $12.99/mo, $129/yr or $259 lifetime. Optional hosted-model add-on $20/$50/$100 per month",
+    "tags": [
+      "vibe coding",
+      "multi-agent",
+      "Claude Code",
+      "Codex",
+      "workspace"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows"
+    ],
+    "platformsSource": "https://granular.build/",
+    "platformsChecked": "2026-11-25",
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "PlayCraft",
+    "url": "https://github.com/xt4d/PlayCraft",
+    "description": "Free, open-source (MIT) research framework that makes browser games (index.html, tested on Three.js) more engaging: a vision-based player agent plays your game over repeated episodes, writing reports on its decisions and progress, then a crafter agent uses those reports to retune mechanics and challenge so players get a path from beginner to mastery. It can also generate a starting game from a prompt. Python + Playwright scripts; uses OpenAI models via Codex. Announced Nov 24 2026 with a paper and playable before/after examples.",
+    "categories": [
+      "Game Design & Narrative",
+      "Code Review & Testing"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); you pay for the AI model usage",
+    "tags": [
+      "playtesting",
+      "game balance",
+      "Three.js",
+      "browser games",
+      "open source",
+      "research"
+    ],
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://github.com/xt4d/PlayCraft",
+    "platformsChecked": "2026-11-25",
+    "dateAdded": "2026-11-25",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-25"
   }
 ]
