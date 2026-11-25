@@ -3,7 +3,7 @@
 
 Tool fields (data/tools.json): name, url, description, categories[], pricing (free|freemium|paid|unknown),
 pricingNote?, tags[], dateAdded, featured?, newRelease?, affiliateUrl? (optional, empty = not used),
-sponsored? (optional, renders a "Sponsored" label), deal? (optional; label, brand?, items[] with title, detail, code?, starts?, ends; hidden after ends at build time), planNote? (optional; Which plan? box: label, cta?, items[] with title, detail, offer? {text, ends?}), commercialUse? (yes|paid|limited|no|unknown),
+sponsored? (optional, renders a "Sponsored" label), deal? (optional; label, brand?, items[] with title, detail, code?, starts?, ends; hidden after ends at build time), planNote? (optional; Which plan? box: label, cta?, items[] with title, detail, offer? {text, ends?}), editorsNote? (optional string; a short factual Why we like it box on the tool page), commercialUse? (yes|paid|limited|no|unknown),
 commercialUseNote?, commercialUseSource?, exportFormats? [list], exportFormatsSource?, rightsChecked? (YYYY-MM-DD), lastChecked (YYYY-MM-DD), platforms? [fixed vocabulary, see PLATFORMS],
 platformsSource?, platformsChecked?. See README.md. Scout and reviews must bump lastChecked whenever they touch a listing.
 """
@@ -266,6 +266,17 @@ def plan_note_box(t):
 </aside></div></section>
 """
 
+
+def editors_note_box(t):
+    note = (t.get("editorsNote") or "").strip()
+    if not note:
+        return ""
+    return f"""<section class="section" aria-label="Why we like it"><div class="container"><aside class="editors-note">
+<h2>Why we like it</h2>
+<p>{e(note)}</p>
+</aside></div></section>
+"""
+
 def card(t, show_date=False):
     cats = "|".join(c.lower() for c in t["categories"])
     pc = "paid" if t["pricing"]=="paid" else ("free" if t["pricing"]=="free" else "")
@@ -413,7 +424,24 @@ def sel_free():
     return sorted(ts, key=lambda t: (t["pricing"] != "free", order.index(t["categories"][0])))
 
 def sel_3d():
-    return [t for t in tools if "3D & Models" in t["categories"]]
+    """3D category tools, with dedicated text/image-to-3D generators first.
+
+    Sort is editorial, not paid: generators that export game-ready formats and
+    work with Unity, Unreal or Godot come first; game engines, no-code makers
+    and tools whose primary category is video come later. Ties keep tools.json order.
+    """
+    gen_tags = {"text-to-3d", "image-to-3d", "3d generation", "3d models", "text to 3d", "image to 3d"}
+    engine_plats = {"Unity", "Unreal", "Godot"}
+    export_fmts = {"GLB", "FBX"}
+    deprioritize_tags = {"game engine", "game maker", "no-code", "browser games", "no-code games"}
+    def score(t):
+        tags = tags_lc(t)
+        deprioritize = bool(tags & deprioritize_tags) or t["categories"][0] == "Video & Trailers"
+        is_gen = bool(tags & gen_tags)
+        engines = bool(engine_plats & set(t.get("platforms", [])))
+        exports = bool(export_fmts & set(t.get("exportFormats", [])))
+        return (deprioritize, not is_gen, not engines, not exports)
+    return sorted((t for t in tools if "3D & Models" in t["categories"]), key=score)
 def sel_voice():
     return [t for t in tools if "Voice" in t["categories"]]
 def sel_video():
@@ -502,7 +530,7 @@ COMPARISONS = [
       title="Best AI 3D Model Generators for Indie Game Devs | ToolDrop",
       desc="Compare AI 3D model generators for games: text-to-3D and image-to-3D tools, what each does, pricing and free tiers, side by side.",
       cats=["3D & Models"], select=sel_3d,
-      intro="""Need props, characters or environments for your game without modelling every one by hand? These are the AI 3D tools in the ToolDrop directory. Meshy (free tier, Pro from $20/mo) and Tripo AI (free tier) turn text prompts or images into 3D models. Meshy outputs textured, print-ready models, and Tripo AI offers an API. Kaedim (from $15/mo) converts 2D images into production-ready 3D models for games. Thrixel generates structured assets with labelled parts and works from coding agents like Claude Code, Codex and Cursor as well as the browser, though its pricing isn't published. Ludo.ai (free credits to start, Indie from $15/mo billed annually) covers 3D models alongside sprites, audio and video. Spline AI (free tier, Pro from $7/mo) is a 3D design tool aimed at interactive web experiences, and Luma AI (free tier) does photorealistic video, image and 3D generation. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
+      intro="""Need props, characters or environments for your game without modelling every one by hand? These are the AI 3D tools in the ToolDrop directory, with dedicated text-to-3D and image-to-3D generators listed first. Meshy (free tier, Pro from $20/mo) and Tripo AI (free tier, Professional from $20/mo) turn text prompts or images into 3D models. Meshy outputs textured, print-ready models. Tripo AI exports GLB, FBX and OBJ for Unity, Unreal, Godot and Blender, and has an API. Kaedim (from $15/mo) converts 2D images into production-ready 3D models for games. Thrixel generates structured assets with labelled parts and works from coding agents like Claude Code, Codex and Cursor as well as the browser, though its pricing isn't published. Ludo.ai (free credits to start, Indie from $15/mo billed annually) covers 3D models alongside sprites, audio and video. Spline AI (free tier, Pro from $7/mo) is a 3D design tool aimed at interactive web experiences, and Luma AI (free tier) does photorealistic video, image and 3D generation. Prices are as listed by each vendor, in USD, and can change, so check before you commit."""),
  dict(path="/compare/ai-voice-generators-for-games/", h1="Best AI voice generators for game characters and voiceover",
       title="Best AI Voice Generators for Games & Voiceover | ToolDrop",
       desc="Compare AI voice generators for game characters, narration and trailers: text-to-speech, voice cloning, pricing and free tiers.",
@@ -804,7 +832,7 @@ for t in tools:
     body = f'''<section class="hero hero-small"><div class="container">{bc}
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}{deal_b}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
-{deal_box(t)}{plan_note_box(t)}<section class="section"><div class="container"><div class="tool-details">
+{deal_box(t)}{plan_note_box(t)}{editors_note_box(t)}<section class="section"><div class="container"><div class="tool-details">
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
@@ -940,6 +968,7 @@ for c,_ in CATS:
               f"- Platforms: " + (", ".join(plat_label(p) for p in plats(t)) + (f" (source: {t['platformsSource']})" if t.get('platformsSource') else "") if plats(t) else "not verified"),
               f"- Tags: {', '.join(t.get('tags', []))}", f"- Date added: {t['dateAdded']}", f"- Last checked: {t['lastChecked']}"]
         if t.get("newRelease"): F.append("- New release: yes")
+        if t.get("editorsNote"): F.append(f"- Why we like it: {t['editorsNote']}")
         F.append("")
 F += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
 F += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
