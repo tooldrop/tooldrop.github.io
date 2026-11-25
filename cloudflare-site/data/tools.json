@@ -2338,7 +2338,7 @@
     ],
     "exportFormatsSource": "https://www.tripo3d.ai/product-doc/export-and-integration/export-dcc",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-20",
+    "lastChecked": "2026-11-25",
     "platforms": [
       "Web",
       "API",
@@ -2367,7 +2367,8 @@
           "ends": "2026-12-31"
         }
       ]
-    }
+    },
+    "editorsNote": "Tripo turns text or images into 3D models you can export as GLB, FBX or OBJ and drop into Unity, Unreal, Godot or Blender. Pro and above include commercial use and private models, and the Agentic Canvas (beta) can chain generation, texturing, retopology, rigging and export. There is a free tier (200 credits a month)."
   },
   {
     "name": "Spline AI",
