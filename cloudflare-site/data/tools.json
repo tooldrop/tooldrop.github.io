@@ -1756,7 +1756,7 @@
   {
     "name": "Devin",
     "url": "https://devin.ai",
-    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects. New Nov 17 2026: Devin Bots, persistent agents with their own memory that you give a goal (such as keeping Android at parity with iOS) and that lead several Devin sessions in parallel, bringing you only the decisions that need you, via Slack, iMessage or the Devin app. Included with the Max and Teams plans.",
+    "description": "Autonomous AI software engineer that can plan, code, debug, and deploy entire projects. New Nov 17 2026: Devin Bots, persistent agents with their own memory that you give a goal (such as keeping Android at parity with iOS) and that lead several Devin sessions in parallel, bringing you only the decisions that need you, via Slack, iMessage or the Devin app. Included with the Max and Teams plans. New Nov 24 2026: SWE-2.1, Cognition's own coding model (a big jump over SWE-2 on its coding benchmarks), in Devin Desktop, Devin CLI and Devin cloud sessions (preview), with a faster Ultrafast option. Free for self-serve plans in Devin Desktop and CLI until Dec 8 2026 (Pacific time), then discounted per-token pricing until Jan 30 2027.",
     "categories": [
       "AI Coding Agents & IDEs"
     ],
@@ -1778,7 +1778,7 @@
       "basis": "Free plan; Pro $20/mo; heavy assumes Max $200/mo (Teams $80/mo)",
       "checked": "2026-11-19"
     },
-    "lastChecked": "2026-11-19",
+    "lastChecked": "2026-11-26",
     "platforms": [
       "Web",
       "macOS",
@@ -1918,7 +1918,7 @@
   {
     "name": "Midjourney",
     "url": "https://www.midjourney.com",
-    "description": "Leading AI image generator known for artistic, high-quality visuals through Discord.",
+    "description": "Leading AI image generator known for artistic, high-quality visuals through Discord. New Nov 24 2026: Niji 8, the anime model made with Spellbrush, is faster and follows prompts more closely, can draw simple comic pages, and adds an edit feature that puts a character from a reference sheet into a new scene or pose while keeping them consistent (useful for character art and portraits). Use --niji 8 in Discord or pick Niji 8 in the web version menu.",
     "categories": [
       "Game Art & Sprites"
     ],
@@ -1927,7 +1927,9 @@
     "tags": [
       "image generation",
       "art",
-      "Discord"
+      "Discord",
+      "anime",
+      "character consistency"
     ],
     "dateAdded": "2024-07-01",
     "featured": true,
@@ -1943,7 +1945,7 @@
     "commercialUseNote": "Paid-only tool. You own the assets you create; companies earning over US$1M a year need a Pro or Mega plan to own their assets.",
     "commercialUseSource": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-26",
     "platforms": []
   },
   {
@@ -4354,7 +4356,7 @@
   {
     "name": "Higgsfield",
     "url": "https://higgsfield.ai",
-    "description": "AI image and video platform whose new Playable (Oct 26 2026) builds a small 2D or 3D browser game from one prompt, a gameplay idea or your assets, with style, genre and multiplayer options. You can also build from Claude through the Higgsfield MCP. Handy for testing a game idea or making trailer clips. New Nov 2026: GPU Harness rents a cloud computer with the GPU you pick and software such as Blender or Unreal Engine preinstalled, which Claude or ChatGPT can drive through the Higgsfield MCP (type /gpu in Claude) to model, render, run open-weight models or train LoRAs; billed by time while it runs, and the workspace is saved when you stop it.",
+    "description": "AI image and video platform whose new Playable (Oct 26 2026) builds a small 2D or 3D browser game from one prompt, a gameplay idea or your assets, with style, genre and multiplayer options. You can also build from Claude through the Higgsfield MCP. Handy for testing a game idea or making trailer clips. New Nov 2026: GPU Harness rents a cloud computer with the GPU you pick and software such as Blender or Unreal Engine preinstalled, which Claude or ChatGPT can drive through the Higgsfield MCP (type /gpu in Claude) to model, render, run open-weight models or train LoRAs; billed by time while it runs, and the workspace is saved when you stop it. New Nov 24 2026: MAGI-2, Sand.ai's video model, exclusive to Higgsfield and its API, makes up to 30 seconds of 1080p video with sound from text, images, video or audio; Higgsfield shows it turning Blender grey-box camera previs into finished shots, handy for trailers. Higgsfield quotes $0.08 per second of generation and says open weights are coming.",
     "categories": [
       "Game Design & Narrative",
       "Video & Trailers"
@@ -4383,7 +4385,7 @@
     "commercialUseNote": "Higgsfield's help centre says it doesn't restrict commercial use of outputs, for all users. (A search summary claimed the Free plan excludes commercial use; the pricing page didn't load to confirm.)",
     "commercialUseSource": "https://higgsfield.ai/creator-hub/help-center/account/who-owns-my-generations-and-can-i-use-them-commercially",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-23",
+    "lastChecked": "2026-11-26",
     "platforms": [
       "Web",
       "API",
@@ -6535,5 +6537,88 @@
     "newRelease": true,
     "affiliateUrl": "",
     "lastChecked": "2026-11-25"
+  },
+  {
+    "name": "Editroom",
+    "url": "https://robbietilton.com/editroom",
+    "description": "Free, open-source (MIT) video editor for Mac, a 23 MB download per its maker, with 4K realtime playback, LUT colour grading, speed ramps, transitions, word-by-word auto captions, cut-to-the-beat, loudness targets for YouTube and exports in vertical, square or portrait. Search footage by what's in a shot or what was said, then cut by hand or type the edit you want and let Claude or ChatGPT (on your existing plan, no API key) or Apple's on-device model do it; Claude and ChatGPT can also edit the open project over its built-in MCP server, and every AI edit can be undone. A light option for cutting game trailers and devlog clips. Launched Nov 24 2026 by designer Robbie Tilton.",
+    "categories": [
+      "Video & Trailers"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); AI edits use your own Claude or ChatGPT plan, or run on-device",
+    "tags": [
+      "video editing",
+      "trailers",
+      "captions",
+      "MCP",
+      "open source",
+      "Mac"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "platformsSource": "https://github.com/robbietilton/Editroom",
+    "platformsChecked": "2026-11-26",
+    "dateAdded": "2026-11-26",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-26"
+  },
+  {
+    "name": "Game DNA",
+    "url": "https://game-dna.pages.dev/",
+    "description": "Free, open-source (MIT) library of 101 playable browser-game elements (damage numbers, hit sparks, bullet patterns, grappling hooks, dialogue boxes, loot beams, fog of war, a 3D kart racer and more) that you hand to your coding agent. Each one comes as a demo you can play and tweak, a small JavaScript module and a prompt; paste the prompt into Claude Code, Codex or Cursor and the agent wires the element into your own game, and a basket combines several into one prompt. Every prompt is tested by a fresh agent on a game it had never seen. A quick way to add game feel to vibe-coded browser games. Shown on Hacker News Nov 25 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); you pay for your own coding agent",
+    "tags": [
+      "game feel",
+      "browser games",
+      "prompts",
+      "coding agents",
+      "open source",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://game-dna.pages.dev/site/preview/start/",
+    "platformsChecked": "2026-11-26",
+    "dateAdded": "2026-11-26",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-26"
+  },
+  {
+    "name": "Rocketcrab Nova",
+    "url": "https://rocketcrab.com/nova",
+    "description": "Free, open-source (MIT) way to make and play little multiplayer party games with friends on any device. Copy Nova's master prompt into any AI chat, describe a game, paste back the single HTML file it gives you, test it with simulated players, then start a private party that friends join from a link or QR code, with no accounts or room codes. Games run peer to peer and stay saved in your browser. Part of Rocketcrab, a party-game launcher running since 2020; Nova was shown on Hacker News Nov 25 2026.",
+    "categories": [
+      "Game Design & Narrative",
+      "App Builders"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (MIT); no login needed",
+    "tags": [
+      "party games",
+      "multiplayer",
+      "browser games",
+      "peer to peer",
+      "open source",
+      "prompt to game"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "platformsSource": "https://github.com/tannerkrewson/rocketcrab",
+    "platformsChecked": "2026-11-26",
+    "dateAdded": "2026-11-26",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "lastChecked": "2026-11-26"
   }
 ]
