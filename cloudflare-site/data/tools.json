@@ -2303,7 +2303,7 @@
   {
     "name": "Tripo AI",
     "url": "https://www.tripo3d.ai",
-    "description": "Fast AI-powered text-to-3D and image-to-3D model generation with high quality output. New Nov 2 2026: Tripo Agentic Canvas (beta), an AI agent that builds node-based 3D workflows you can inspect and edit, chaining generation, texturing, retopology, Smart UV, PBR, segmentation, rigging and export, with reusable workflows and batch processing for game assets.",
+    "description": "Fast AI-powered text-to-3D and image-to-3D model generation with high quality output. New Nov 2 2026: Tripo Agentic Canvas (beta), an AI agent that builds node-based 3D workflows you can inspect and edit, chaining generation, texturing, retopology, Smart UV, PBR, segmentation, rigging and export, with reusable workflows and batch processing for game assets. New Nov 25 2026: H3.5 Preview, the new flagship H Series model, now the default in Tripo Studio. It turns text or images into high-fidelity triangle meshes of up to 5 million faces for 3D printing, visual art and game hero assets, and Studio adds a free Check Printability tool and Auto Fix (10 credits). Generation is open on all plans including free (30 credits during Preview); exporting needs a paid plan.",
     "categories": [
       "3D & Models"
     ],
@@ -2340,7 +2340,7 @@
     ],
     "exportFormatsSource": "https://www.tripo3d.ai/product-doc/export-and-integration/export-dcc",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-25",
+    "lastChecked": "2026-11-27",
     "platforms": [
       "Web",
       "API",
@@ -3415,7 +3415,7 @@
   {
     "name": "Ludo.ai",
     "url": "https://ludo.ai",
-    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video. The Ludo CLI lets you or coding agents like Claude Code generate assets straight into your project from the terminal, alongside its API and MCP on Pro plans. New Oct 27 2026: the free Asset Toolbox adds 32 offline tools (no account or credits) that agents use to slice spritesheets, set pivots and colliders, and write Godot, Unity and Phaser import files.",
+    "description": "AI game asset suite for sprites, 2D assets, 3D models, audio and video. The Ludo CLI lets you or coding agents like Claude Code generate assets straight into your project from the terminal, alongside its API and MCP on Pro plans. New Oct 27 2026: the free Asset Toolbox adds 32 offline tools (no account or credits) that agents use to slice spritesheets, set pivots and colliders, and write Godot, Unity and Phaser import files. New Nov 26 2026: Tileset Generator makes seamless base tiles from text, then blends two into a 16-tile autotile terrain or line set (roads, rivers, fences, walls) for top-down or isometric maps, with optional normal maps, a browser test map, one-sentence edits of the whole set, and export to atlas PNG, JSON, a Godot 4 TileSet (.tres) and Tiled (.tsx). A base tile costs 0.5 credits and a tileset 1 credit; also available to coding agents via the Ludo CLI, MCP and API on Pro and Studio plans.",
     "categories": [
       "Game Art & Sprites",
       "3D & Models",
@@ -3430,7 +3430,8 @@
       "audio",
       "game assets",
       "sprites",
-      "asset pipeline"
+      "asset pipeline",
+      "tilesets"
     ],
     "dateAdded": "2026-10-29",
     "newRelease": true,
@@ -3449,7 +3450,7 @@
     ],
     "exportFormatsSource": "https://ludo.ai/docs/game-asset-generation",
     "rightsChecked": "2026-11-11",
-    "lastChecked": "2026-11-11",
+    "lastChecked": "2026-11-27",
     "platforms": [
       "Web",
       "API",
@@ -5474,11 +5475,11 @@
     "dateAdded": "2026-11-17",
     "newRelease": true,
     "affiliateUrl": "",
-    "lastChecked": "2026-11-17",
+    "lastChecked": "2026-11-27",
     "platformsChecked": "2026-11-17",
     "name": "Unity CLI",
     "url": "https://docs.unity.com/en-us/unity-cli",
-    "description": "Unity's command-line tool for coding agents and scripts, out of beta as 1.0 at Unite Tokyo on Nov 17 2026. It installs and manages Unity Editors, modules and projects, and with the Pipeline package lets an agent drive a running Editor: open a project, run commands, enter Play mode and read the result, build, set up cloud builds and summarise scene or prefab changes in a pull request. `unity setup` installs Unity's official plugin for Claude Code, Codex, Grok Build or Google Antigravity, with skills written by Unity's teams (UI, 2D, URP, audio, physics, in-app purchases, multiplayer, localization), and `unity skill install --all` adds them to other agents. The latest Unity Hub installs it for you.",
+    "description": "Unity's command-line tool for coding agents and scripts, out of beta as 1.0 at Unite Tokyo on Nov 17 2026. It installs and manages Unity Editors, modules and projects, and with the Pipeline package lets an agent drive a running Editor: open a project, run commands, enter Play mode and read the result, build, set up cloud builds and summarise scene or prefab changes in a pull request. `unity setup` installs Unity's official plugin for Claude Code, Codex, Grok Build or Google Antigravity, with skills written by Unity's teams (UI, 2D, URP, audio, physics, in-app purchases, multiplayer, localization), and `unity skill install --all` adds them to other agents. The latest Unity Hub installs it for you. New Nov 23 2026 (open beta): the CLI connects coding agents to the Unity Asset Store and 60+ AI asset generators, so an agent can search, download just the single prefab it needs (via the new Asset Library plugin) or generate sprites, 3D models and sound effects into the project, with free price quotes and a record of each generated file's model, prompt and cost. Free Asset Store assets are open to anyone; AI generators are included on Unity's paid plans and use the plan's AI credits.",
     "categories": [
       "AI Coding Agents & IDEs",
       "Game Design & Narrative"
@@ -6620,5 +6621,114 @@
     "newRelease": true,
     "affiliateUrl": "",
     "lastChecked": "2026-11-26"
+  },
+  {
+    "name": "Hub",
+    "url": "https://usehub.dev",
+    "description": "Free, open-source (Apache-2.0) dispatcher from the Icons8 team that runs many Claude Code or Codex sessions on your own machine or server. Write a goal in plain words in the browser or Telegram; a coordinator hands it to agents that each own an area (executors get their own git worktree), sessions stay alive and can read each other's steps, results come with proof such as screenshots, and only the decisions come back to you. Self-hosted, one-line install, self-updating. Experimental: sessions run with permission prompts off, so treat it like a shell on your machine. #1 Product of the Day on Product Hunt, Nov 26 2026.",
+    "categories": [
+      "Agent Frameworks",
+      "AI Coding Agents & IDEs"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source (Apache-2.0), no paid tier or hosted version; needs your own Claude or ChatGPT subscription",
+    "tags": [
+      "Claude Code",
+      "Codex",
+      "multi-agent",
+      "orchestration",
+      "open source",
+      "self-hosted"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "CLI"
+    ],
+    "platformsSource": "https://usehub.dev",
+    "platformsChecked": "2026-11-27",
+    "dateAdded": "2026-11-27",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Hub is free; model usage comes from your own Claude or ChatGPT plan",
+      "checked": "2026-11-27"
+    },
+    "lastChecked": "2026-11-27"
+  },
+  {
+    "name": "Pax",
+    "url": "https://pydantic.dev/docs/ai/pax/",
+    "description": "Pydantic's official open-source terminal coding agent (beta), built on the Pydantic AI Harness SDK. Everything is a plugin, the coding agent included: toggle sandboxes, MCP and Logfire tracing, install plugins from Git, or point it at your own Pydantic AI agent with --agent. Use any model, sign in with a ChatGPT or GitHub Copilot subscription or bring an API key, swap to cloud sandboxes (E2B, Daytona, Modal, Render and more), and resume sessions from Claude Code or Codex. Reads AGENTS.md/CLAUDE.md and Agent Skills. Runs commands as you with no approval step by default. Released Nov 25 2026 (Product Hunt Nov 26 2026); install with uv tool install pydantic-ai-pax.",
+    "categories": [
+      "AI Coding Agents & IDEs",
+      "Agent Frameworks"
+    ],
+    "pricing": "free",
+    "pricingNote": "Free and open source; you pay for your own model subscription or API usage",
+    "tags": [
+      "terminal",
+      "coding agent",
+      "plugins",
+      "Pydantic AI",
+      "open source",
+      "sandboxes"
+    ],
+    "platforms": [
+      "CLI"
+    ],
+    "platformsSource": "https://pydantic.dev/docs/ai/pax/",
+    "platformsChecked": "2026-11-27",
+    "dateAdded": "2026-11-27",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 0,
+      "heavy": 0,
+      "basis": "Pax is free; model usage billed by your provider or subscription",
+      "checked": "2026-11-27"
+    },
+    "lastChecked": "2026-11-27"
+  },
+  {
+    "name": "QA.tech",
+    "url": "https://qa.tech",
+    "description": "AI QA agents that explore your web or mobile app like a real user, write and run end-to-end tests from plain-language goals (no scripts or selectors) and test every pull request before merge, with screenshots, logs and the agent's reasoning on failures. New Nov 26 2026: QA.tech MCP gives Claude Code, Cursor or Codex an external QA agent from inside the IDE: it maps your app, tests what each change affects, and your coding agent reads the results and fixes what broke. Works with any MCP client.",
+    "categories": [
+      "Code Review & Testing"
+    ],
+    "pricing": "freemium",
+    "pricingNote": "Free trial (10 credits, 1 app, web and PR testing); Starter $89/mo (50 credits, up to 5 users, 2 apps); Growth and Enterprise custom",
+    "tags": [
+      "QA",
+      "end-to-end testing",
+      "PR testing",
+      "MCP",
+      "Claude Code",
+      "Cursor"
+    ],
+    "platforms": [
+      "Web",
+      "API",
+      "CLI"
+    ],
+    "platformsSource": "https://qa.tech/pricing",
+    "platformsChecked": "2026-11-27",
+    "dateAdded": "2026-11-27",
+    "newRelease": true,
+    "affiliateUrl": "",
+    "spend": {
+      "light": 0,
+      "medium": 89,
+      "heavy": 89,
+      "basis": "Free trial 10 credits; Starter $89/mo (Growth custom)",
+      "checked": "2026-11-27"
+    },
+    "lastChecked": "2026-11-27"
   }
 ]
