@@ -121,3 +121,24 @@ a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
 .editors-note h2{font-size:1.15rem;margin:0 0 12px;color:var(--text)}
 .editors-note p{margin:0;color:var(--text);line-height:1.55}
 @media(max-width:800px){.editors-note{padding:16px}}
+
+/* 27 Nov 2026: hands-on review pages */
+.review-hero{text-align:left}
+.review-hero .container,.review-body > .container{max-width:940px}
+.review-hero .subtitle{margin-left:0;margin-right:0}
+.prose h2{margin:32px 0 12px;color:var(--text);font-size:1.35rem;line-height:1.3}
+.prose h3{color:var(--text)}
+.review-byline{margin-bottom:16px}
+.review-cta{margin:16px 0 0}
+.review-figure{margin:20px 0 28px}
+.review-figure img{display:block;width:auto;max-width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--border);background:var(--bg2)}
+.review-figure figcaption{color:var(--muted);font-size:.9rem;margin-top:8px;line-height:1.45}
+.review-related{margin-top:28px}
+.review-index{display:grid;gap:18px}
+.review-index-card{display:grid;grid-template-columns:180px 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;text-decoration:none;color:inherit}
+.review-index-card:hover{border-color:var(--accent);text-decoration:none}
+.review-index-card img{width:100%;height:auto;border-radius:10px;border:1px solid var(--border);background:var(--bg2)}
+.review-index-card h2{font-size:1.15rem;margin:0 0 8px;color:var(--text)}
+.review-index-card p{color:var(--muted);margin:0}
+.review-index-card .review-byline{font-size:.85rem;margin:0 0 8px}
+@media(max-width:700px){.review-index-card{grid-template-columns:1fr}.review-index-card img{max-width:280px}}

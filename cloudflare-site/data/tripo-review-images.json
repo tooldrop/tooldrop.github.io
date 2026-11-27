@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "src": "/img/reviews/tripo/hero.webp",
+    "width": 902,
+    "height": 872,
+    "bytes": 28284,
+    "source": "hero-tripo-original.png"
+  },
+  "og": {
+    "src": "/img/reviews/tripo/og.webp",
+    "width": 1200,
+    "height": 630,
+    "bytes": 18468
+  },
+  "blender-import": {
+    "src": "/img/reviews/tripo/blender-import.webp",
+    "width": 868,
+    "height": 808,
+    "bytes": 30040,
+    "source": "Tripo Model In Blender.png"
+  },
+  "blender-stats-original": {
+    "src": "/img/reviews/tripo/blender-stats-original.webp",
+    "width": 486,
+    "height": 284,
+    "bytes": 17540,
+    "source": "Tripo Poly Stats.png"
+  },
+  "blender-decimate-stats": {
+    "src": "/img/reviews/tripo/blender-decimate-stats.webp",
+    "width": 482,
+    "height": 304,
+    "bytes": 15116,
+    "source": "Tripo Model New Poly Stats with Decimate.png"
+  },
+  "blender-decimate-preview": {
+    "src": "/img/reviews/tripo/blender-decimate-preview.webp",
+    "width": 666,
+    "height": 706,
+    "bytes": 26382,
+    "source": "Tripo Model with Decimate.png"
+  },
+  "blender-decimate-wireframe": {
+    "src": "/img/reviews/tripo/blender-decimate-wireframe.webp",
+    "width": 862,
+    "height": 1106,
+    "bytes": 87490,
+    "source": "Tripo Model Wireframe Blender.png"
+  },
+  "tripo-retopo-shaded": {
+    "src": "/img/reviews/tripo/tripo-retopo-shaded.webp",
+    "width": 782,
+    "height": 748,
+    "bytes": 21552,
+    "source": "Tripo Model Retopology.png"
+  },
+  "tripo-retopo-wireframe": {
+    "src": "/img/reviews/tripo/tripo-retopo-wireframe.webp",
+    "width": 1008,
+    "height": 872,
+    "bytes": 78912,
+    "source": "Tripo Model Wireframe view.png"
+  }
+}
