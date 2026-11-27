@@ -277,6 +277,16 @@ def editors_note_box(t):
 </aside></div></section>
 """
 
+def review_teaser_box(t):
+    r = REVIEW_BY_TOOL.get(t["slug"])
+    if not r:
+        return ""
+    return f"""<section class="section" aria-label="Hands-on review"><div class="container"><aside class="editors-note">
+<h2>Hands-on review</h2>
+<p>Read our hands-on review: <a href="{r["path"]}">{e(r["headline"])}</a>.</p>
+</aside></div></section>
+"""
+
 def card(t, show_date=False):
     cats = "|".join(c.lower() for c in t["categories"])
     pc = "paid" if t["pricing"]=="paid" else ("free" if t["pricing"]=="free" else "")
@@ -332,8 +342,16 @@ def itemlist(name, items):
 def tl(ts): return [(t["name"], tool_path(t)) for t in ts]
 
 titles, descs, pages, lastmods = {}, {}, [], {}
-def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
+def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False, social=None):
     url = SITE + path
+    social = social or {}
+    og_type = social.get("og_type", "website")
+    img_url = social.get("url") or f"{SITE}/img/share.png"
+    if not img_url.startswith("http"):
+        img_url = SITE + img_url
+    img_alt = social.get("alt") or "ToolDrop: AI tools for vibe coders and indie game devs"
+    img_w = social.get("width", 1200)
+    img_h = social.get("height", 630)
     assert len(desc) <= 160, (path, len(desc))
     if not noindex:
         assert title not in titles.values(), ("duplicate title", path, title)
@@ -351,7 +369,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
   <meta name="description" content="{e(desc)}">{robots}
   <meta property="og:title" content="{e(title)}">
   <meta property="og:description" content="{e(desc)}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="{e(og_type)}">
   <meta property="og:url" content="{url}">
   <meta property="og:site_name" content="ToolDrop">
   <meta property="og:locale" content="en_AU">
@@ -359,11 +377,11 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
   <meta name="twitter:site" content="@trytooldrop">
   <meta name="twitter:title" content="{e(title)}">
   <meta name="twitter:description" content="{e(desc)}">
-  <meta name="twitter:image" content="{SITE}/img/share.png">
-  <meta property="og:image" content="{SITE}/img/share.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="ToolDrop: AI tools for vibe coders and indie game devs">
+  <meta name="twitter:image" content="{e(img_url)}">
+  <meta property="og:image" content="{e(img_url)}">
+  <meta property="og:image:width" content="{img_w}">
+  <meta property="og:image:height" content="{img_h}">
+  <meta property="og:image:alt" content="{e(img_alt)}">
   <link rel="canonical" href="{url}">
   <link rel="alternate" type="text/plain" title="llms.txt" href="/llms.txt">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>">
@@ -390,7 +408,7 @@ def page(path, title, desc, body, jsonld="", lastmod=None, noindex=False):
     <div class="footer-content">
       <div class="footer-brand"><span class="logo">🛠️ ToolDrop</span><p>AI tools for vibe coders and indie game devs</p></div>
       <div class="footer-links"><h4>Categories</h4><ul>{footer_cats}</ul></div>
-      <div class="footer-links"><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/new-releases/">New Releases</a></li><li><a href="/compare/">Comparisons</a></li><li><a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a></li><li><a href="/about/">About</a></li><li><a href="/disclosure/">Disclosure</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="{XURL}" target="_blank" rel="noopener">X / Twitter</a></li></ul></div>
+      <div class="footer-links"><h4>Pages</h4><ul><li><a href="/">Home</a></li><li><a href="/new-releases/">New Releases</a></li><li><a href="/compare/">Comparisons</a></li><li><a href="/reviews/">Reviews</a></li><li><a href="{SUB}" target="_blank" rel="noopener" data-goatcounter-click="newsletter-click" data-goatcounter-title="Newsletter link" data-goatcounter-referrer="__GC_PAGE__">Newsletter</a></li><li><a href="/about/">About</a></li><li><a href="/disclosure/">Disclosure</a></li><li><a href="/advertise/">Advertise</a></li><li><a href="{XURL}" target="_blank" rel="noopener">X / Twitter</a></li></ul></div>
       <div class="footer-newsletter"><h4>Newsletter</h4><p>Get weekly AI tool updates</p><a href="{SUB}/subscribe" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="subscribe-click" data-goatcounter-title="Subscribe on Substack" data-goatcounter-referrer="__GC_PAGE__">Subscribe on Substack →</a></div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 ToolDrop. Built for the indie dev community. <a href="/disclosure/">Affiliate disclosure</a></p><p class="footer-disclosure">Some links are affiliate links; ToolDrop may earn a commission at no cost to you.</p></div>
@@ -799,8 +817,42 @@ page("/new-releases/", "New AI Tool Releases | ToolDrop", "The latest AI tools a
 <section class="section"><div class="container">{grid(nr, show_date=True)}</div></section>{SUBSCRIBE}''',
      bcld + "\n" + itemlist("New AI tool releases", tl(nr)), max(t["dateAdded"] for t in nr))
 
+# ---- hands-on reviews ----
+REVIEWS = [
+    {
+        "slug": "tripo",
+        "path": "/reviews/tripo/",
+        "tool_slug": "tripo-ai",
+        "headline": "Tripo hands-on: from prompt to game-ready mesh",
+        "title": "Tripo hands-on: from prompt to game-ready mesh | ToolDrop",
+        "desc": "Hands-on Tripo review: a Christmas cat model, 4.8 million triangles down to 48,000 with Decimate, or 9,870 faces with Tripo retopology.",
+        "datePublished": "2026-11-27",
+        "index_blurb": "From a Christmas cat prompt to Blender, then Decimate and retopology to get the mesh game-ready.",
+    },
+]
+REVIEW_BY_TOOL = {r["tool_slug"]: r for r in REVIEWS}
+
+def review_manifest(slug):
+    path = f"data/{slug}-review-images.json"
+    if not os.path.exists(path):
+        return {}
+    return json.load(open(path))
+
+def review_fig(man, key, alt, caption=None, eager=False, compact=False):
+    info = man.get(key)
+    if not info:
+        return ""
+    loading = "eager" if eager else "lazy"
+    fp = ' fetchpriority="high"' if eager else ""
+    cls = "review-figure review-figure-compact" if compact else "review-figure"
+    cap = f"\n<figcaption>{e(caption)}</figcaption>" if caption else ""
+    return (f'<figure class="{cls}">\n'
+            f'<img src="{e(info["src"])}" alt="{e(alt)}" width="{info["width"]}" height="{info["height"]}" '
+            f'loading="{loading}"{fp} decoding="async">{cap}\n</figure>\n')
+
 # Tool pages
 def similar(t):
+
     scored = []
     for x in tools:
         if x is t: continue
@@ -832,7 +884,7 @@ for t in tools:
     body = f'''<section class="hero hero-small"><div class="container">{bc}
 <h1>{e(t["name"])}{' <span class="new-badge">New</span>' if t.get("newRelease") else ""}{sponsored}{deal_b}</h1><p class="subtitle">{e(t["description"])}</p>
 <p>{visit_link(t, f"Visit {e(t['name'])} →", "tool page button")}</p></div></section>
-{deal_box(t)}{plan_note_box(t)}{editors_note_box(t)}<section class="section"><div class="container"><div class="tool-details">
+{deal_box(t)}{plan_note_box(t)}{editors_note_box(t)}{review_teaser_box(t)}<section class="section"><div class="container"><div class="tool-details">
 <dl><dt>Categories</dt><dd>{cats}</dd><dt>Pricing</dt><dd><span class="tag pricing">{e(PRICE_LABEL.get(t["pricing"], t["pricing"]))}</span> {e(t.get("pricingNote",""))}</dd><dt>Est. monthly spend</dt><dd>{spend_dd(t)}</dd><dt>Commercial use</dt><dd>{cu_dd(t)}</dd><dt>Export formats</dt><dd>{formats_dd(t)}</dd><dt>Platforms</dt><dd>{platforms_dd(t)}</dd><dt>Website</dt><dd>{visit_link(t, e(t["url"]), "tool page link", cls="")}</dd><dt>Added</dt><dd>{nicedate(t["dateAdded"])}</dd><dt>Last checked</dt><dd>{nicedate(t["lastChecked"])} <small class="muted">(the last time we reviewed or updated this listing)</small></dd></dl>
 <p class="spend-caveat">{e(RIGHTS_CAVEAT)}</p>
 <div class="tags">{tags}</div>{compare_links(in_cmp)}</div></div></section>
@@ -893,6 +945,149 @@ page("/compare/", "Compare AI Tools for Game Devs & Vibe Coders | ToolDrop", "Si
 <section class="section"><div class="container"><div class="categories-grid">{cmpcards}</div></div></section>{SUBSCRIBE}''',
      bcld + "\n" + itemlist("ToolDrop comparisons", [(cp["h1"], cp["path"]) for cp in COMPARISONS]))
 
+# Hands-on reviews
+def build_tripo_review():
+    r = next(x for x in REVIEWS if x["slug"] == "tripo")
+    tool = next(t for t in tools if t["slug"] == r["tool_slug"])
+    man = review_manifest("tripo")
+    hero = review_fig(
+        man, "hero",
+        "A fully textured 3D model of a grey and white cat in a Santa hat and red scarf, sitting in front of a decorated Christmas tree with gift boxes, generated in Tripo.",
+        "The model Tripo generated from the prompt: a cat wearing a Santa hat, sitting in front of a Christmas tree.",
+        eager=True,
+    )
+    blender_import = review_fig(
+        man, "blender-import",
+        "The Santa cat and Christmas tree model selected in Blender's Material Preview after import through Tripo's DCC Bridge.",
+        "The model imported into Blender through Tripo's DCC Bridge.",
+    )
+    stats_orig = review_fig(
+        man, "blender-stats-original",
+        "Blender's statistics overlay after import, showing 4,809,762 triangles.",
+        "Blender's statistics after import: 4,809,762 triangles.",
+        compact=True,
+    )
+    decimate_stats = review_fig(
+        man, "blender-decimate-stats",
+        "Blender's statistics overlay after a Decimate modifier at a 0.01 ratio, showing 48,096 triangles.",
+        "After Decimate at a 0.01 ratio: 48,096 triangles.",
+        compact=True,
+    )
+    decimate_preview = review_fig(
+        man, "blender-decimate-preview",
+        "The decimated Santa cat model in Blender's Material Preview, with textures still looking close to the original.",
+        "The decimated model in Blender's Material Preview.",
+    )
+    decimate_wire = review_fig(
+        man, "blender-decimate-wireframe",
+        "Wireframe view in Blender of the decimated mesh, showing a dense, uneven triangle mesh that still reads as the cat, tree and baubles.",
+        "Wireframe view of the Decimate mesh in Blender.",
+    )
+    retopo_shaded = review_fig(
+        man, "tripo-retopo-shaded",
+        "The retopologised Santa cat and Christmas tree model in Tripo, still fully textured.",
+        "The retopology result in Tripo's shaded view, still fully textured.",
+    )
+    retopo_wire = review_fig(
+        man, "tripo-retopo-wireframe",
+        "Tripo's retopology result with a wireframe overlay, showing a clean, even triangle mesh.",
+        "Tripo retopology (Triangle mode at 10,000) in wireframe view: 9,870 faces.",
+    )
+    bc, bcld = crumbs([("Home", "/"), ("Reviews", "/reviews/"), (r["headline"], r["path"])])
+    cta = f'<p class="review-cta">{visit_link(tool, f"Visit {e(tool["name"])} →", "review page button")}</p>'
+    body = f'''<section class="hero hero-small review-hero"><div class="container">{bc}
+<h1>{e(r["headline"])}</h1>
+<p class="subtitle review-byline">{nicedate(r["datePublished"])}</p>
+{cta}</div></section>
+<section class="section review-body"><div class="container prose prose-wide">
+<p>Tripo is an AI tool that turns a text prompt or image into a 3D model. That makes it handy for quickly getting characters and props into a game. I tested it from prompt to Blender to see how usable the output is for an actual game project.</p>
+<h2>The prompt</h2>
+<p>"A cat wearing a Santa hat sitting in front of a Christmas tree." It took a couple of minutes to generate. The result came out fully textured, with plenty of detail in the face, bows and baubles. I like the details of the model and the lighting looks great on it as well. It looks just how I imagined it to be.</p>
+{hero}
+<h2>Getting it into Blender</h2>
+<p>Tripo's DCC Bridge sends models straight into Blender. To set it up, download the Tripo add-on zip, then in Blender go to Preferences, Add-ons, Install from Disk and enable it. The Tripo panel then appears in the N sidebar. Tip for Chrome users: if the bridge sits on "Connecting", open the site settings for Tripo and set Local network access to Allow. Once it connects, it's one click to send the model over. Switch Blender to Material Preview to see the textures.</p>
+{blender_import}
+<h2>The catch: polycount</h2>
+<p>Straight out of Tripo, the model had about 4.8 million triangles. That's fine for a render, but far too heavy for a game. I tried two ways to slim it down.</p>
+{stats_orig}
+<h3>Option 1: Decimate in Blender</h3>
+<p>I used a Decimate modifier at a 0.01 ratio, which brought the model down to about 48,000 triangles. At normal viewing distance it looks almost identical. The trade-off is that Decimate gives a messy, uneven triangle mesh, which is OK for static props but not ideal for animation.</p>
+{decimate_stats}{decimate_preview}{decimate_wire}
+<h3>Option 2: Retopology in Tripo</h3>
+<p>Tripo has a built-in Retopology tool. Quad mode goes up to 10,000 faces for 40 credits, and Triangle mode goes up to 20,000 for 35 credits. I ran Triangle at 10,000 and got 9,870 faces with a clean, even wireframe. That's around 5x lighter than my Decimate version, and it's much more game-ready. Then I sent it to Blender the same way.</p>
+{retopo_shaded}{retopo_wire}
+<h2>Good to know</h2>
+<p>You can also set the polycount before you generate using Smart Topology, which defaults to 5,000 and goes up to 50K triangles or 25K quads. That saves you a step. If you want to keep quads for rigging, export as FBX.</p>
+<h2>Verdict</h2>
+<p>Tripo is great for quickly creating characters, models and props for games. The built-in retopology step is what makes it genuinely game-ready, cutting a heavy mesh down to a sensible polycount in a couple of clicks. I'd recommend it to game developers who want 3D assets fast without modelling everything from scratch.</p>
+{cta}
+<p class="review-related">Related: <a href="{tool_path(tool)}">{e(tool["name"])} in the ToolDrop directory</a> · <a href="/compare/ai-3d-model-generators-for-games/">AI 3D model generators for games</a></p>
+</div></section>{SUBSCRIBE}'''
+    og = man.get("og") or man.get("hero")
+    social = None
+    if og:
+        social = {
+            "url": og["src"],
+            "width": og["width"],
+            "height": og["height"],
+            "alt": "A 3D Santa cat in front of a Christmas tree, generated in Tripo.",
+            "og_type": "article",
+        }
+    article = {
+        "@type": "Article",
+        "headline": r["headline"],
+        "description": r["desc"],
+        "datePublished": r["datePublished"],
+        "dateModified": r["datePublished"],
+        "inLanguage": "en-AU",
+        "mainEntityOfPage": {"@type": "WebPage", "@id": SITE + r["path"]},
+        "author": {"@type": "Organization", "name": "ToolDrop", "url": SITE + "/"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "ToolDrop",
+            "url": SITE + "/",
+            "logo": {"@type": "ImageObject", "url": SITE + "/img/share.png"},
+        },
+        "about": {"@type": "SoftwareApplication", "name": tool["name"], "url": tool["url"]},
+        "isPartOf": {"@type": "WebSite", "name": "ToolDrop", "url": SITE + "/"},
+    }
+    images = []
+    if man.get("hero"):
+        images.append(SITE + man["hero"]["src"])
+    if og and (not images or og["src"] != man.get("hero", {}).get("src")):
+        images.append(SITE + og["src"])
+    if images:
+        article["image"] = images
+    page(r["path"], r["title"], r["desc"], body, ld(article) + "\n" + bcld, r["datePublished"], social=social)
+
+build_tripo_review()
+
+bc, bcld = crumbs([("Home", "/"), ("Reviews", "/reviews/")])
+review_cards = []
+for r in REVIEWS:
+    man = review_manifest(r["slug"])
+    thumb = man.get("hero") or man.get("og")
+    img = ""
+    if thumb:
+        img = (f'<img src="{e(thumb["src"])}" alt="" width="{thumb["width"]}" height="{thumb["height"]}" '
+               f'loading="lazy" decoding="async">')
+    review_cards.append(
+        f'<a class="review-index-card" href="{r["path"]}">{img}<div>'
+        f'<p class="review-byline">{nicedate(r["datePublished"])}</p>'
+        f'<h2>{e(r["headline"])}</h2>'
+        f'<p>{e(r["index_blurb"])}</p>'
+        f'</div></a>'
+    )
+page("/reviews/", "Hands-on AI tool reviews | ToolDrop",
+     "Hands-on reviews of AI tools for indie game devs and vibe coders, starting with Tripo from prompt to a game-ready mesh.",
+     f'''<section class="hero hero-small"><div class="container">{bc}<h1>Hands-on reviews</h1>
+<p class="subtitle">First-hand tests of AI tools, written for indie game devs and vibe coders.</p></div></section>
+<section class="section"><div class="container"><div class="review-index">
+{"".join(review_cards)}
+</div></div></section>{SUBSCRIBE}''',
+     bcld + "\n" + itemlist("ToolDrop hands-on reviews", [(r["headline"], r["path"]) for r in REVIEWS]),
+     max(r["datePublished"] for r in REVIEWS))
+
 # Disclosure
 bc, bcld = crumbs([("Home", "/"), ("Disclosure", "/disclosure/")])
 page("/disclosure/", "Affiliate Disclosure | ToolDrop", "How ToolDrop handles affiliate links, paid placements and sponsored newsletter issues.",
@@ -949,6 +1144,7 @@ for c,_ in CATS:
     L += [f"## {c}", ""] + [f"- [{t['name']}]({SITE}{tool_path(t)}): {t['description']} Pricing: {price_text(t)}. Est. monthly spend: {spend_text(t).replace(" · est.", " (est.)")}" for t in in_cat(c)] + [""]
 L += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
 L += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
+L += ["## Reviews", "", f"- [Hands-on reviews]({SITE}/reviews/): first-hand tests of AI tools for indie game devs and vibe coders."] + [f"- [{r['headline']}]({SITE}{r['path']}): {r['desc']}" for r in REVIEWS] + [""]
 L += ["## About", "", f"- [About ToolDrop]({SITE}/about/): who runs the site and what it covers.",
       f"- [Affiliate disclosure]({SITE}/disclosure/): how ToolDrop handles affiliate links, paid placements and sponsored newsletter issues. Some links on the site are affiliate links; ToolDrop may earn a commission at no cost to you, but it never affects which tools are listed or how they are ranked.", ""]
 L += ["## More", "", f"- [New releases]({SITE}/new-releases/): the newest tools added to the directory.",
@@ -972,6 +1168,7 @@ for c,_ in CATS:
         F.append("")
 F += ["## Categories", ""] + [f"- [{c}]({SITE}/category/{slug(c)}/): {len(in_cat(c))} tools" for c,_ in CATS] + [""]
 F += ["## Comparisons", "", f"- [Compare AI tools]({SITE}/compare/): all comparison pages"] + [f"- [{cp['h1']}]({SITE}{cp['path']}): {cp['desc']}" for cp in COMPARISONS] + [""]
+F += ["## Reviews", "", f"- [Hands-on reviews]({SITE}/reviews/): first-hand tests of AI tools for indie game devs and vibe coders."] + [f"- [{r['headline']}]({SITE}{r['path']}): {r['desc']}" for r in REVIEWS] + [""]
 F += ["## About", "", f"- [About ToolDrop]({SITE}/about/): who runs the site and what it covers.",
       f"- [Affiliate disclosure]({SITE}/disclosure/): how ToolDrop handles affiliate links, paid placements and sponsored newsletter issues. Some links on the site are affiliate links; ToolDrop may earn a commission at no cost to you, but it never affects which tools are listed or how they are ranked.", ""]
 open(f"{OUT}/llms-full.txt", "w").write("\n".join(F))
